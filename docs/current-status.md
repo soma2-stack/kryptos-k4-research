@@ -4,7 +4,7 @@ This is the compact handoff for future sessions. It does **not** replace histori
 
 **Current cryptanalytic checkpoint:** Checkpoint R (`results/2026-09-12-claude-checkpoint-R.md`).
 
-**Documentary work completed after R:** Box 6 Folders 8, 9, 10 and 11, plus Series 9 Box 16 Folder 2, have all been inspected.
+**Documentary work completed after R:** Box 6 Folders 8, 9, 10 and 11, plus Series 9 Box 16 Folder 2, have all been inspected. Checkpoint S2 (`results/2026-09-12-claude-checkpoint-S2.md`) re-evaluated the 1991 ABC Scheidt interview: "custom / adapted" is now STRONGLY SUPPORTED, but no architecture is named and **no EXP-040 is justified**.
 
 **K4 remains unsolved.**
 
@@ -153,10 +153,16 @@ unlock an architecture.
 **Pursue Request 2: the unedited 2005 Zetter/Scheidt interview material** — raw audio or full
 transcript, interviewer notes, cut questions, drafts, fact-check correspondence.
 
+**Secondary documentary target (added at Checkpoint S2):** the original / full 1991 ABC *World
+News Tonight* Scheidt interview audio or video, sought specifically to recover the muffled and cut
+passage (`taking the standard`, `you've got that computer there`, `addons`, `modular`) in context.
+Until that context exists, the fragment supports **no** claim — see
+`docs/external/checkpoint-S2-1991-scheidt-reevaluation.md` §F for the prohibition list.
+
 Checkpoint S locates the bottleneck: the blocker is no longer *testing* architectures but
 *identifying* one. Every architecture nameable from public evidence has been tested and failed,
 and the documentary record now explains why — the harder process was **custom-built for the
-project and then modified by Sanborn**, so its prior coincidence with any nameable family is low.
+project and then adapted**, so its prior coincidence with any nameable family is low.
 Scheidt is the only living source who has publicly described the fourth process, and the
 published article is self-described as a partial transcript edited for length.
 

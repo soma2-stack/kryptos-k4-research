@@ -359,3 +359,11 @@ used. ATHEN absence retracted from direct pixels. Reconstruction and EXP-031
 preregistration published before execution; checksum repair of two transferred
 JPEGs completed before scoring. 384 synthetic X-filler controls, public cribs only.
 No external verifier contacted.
+
+## Claude Checkpoint S2 — no contamination incident
+
+Documentary re-evaluation of the 1991 ABC World News Tonight Scheidt B-roll transcript only.
+No experiment was designed or run, no plaintext candidate was ingested, no claimed-solution
+source was consulted, and no external verifier was contacted. The muffled interview fragment
+was quarantined rather than mined; no words from it were promoted to key material, and the
+Box 6 Folder 9 contamination lock remains in force.
