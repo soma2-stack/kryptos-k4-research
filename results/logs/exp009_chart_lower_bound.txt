@@ -1,0 +1,36 @@
+# EXP-009 chart lower bound and selector information content
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## The witness, by hand
+   plaintext E occurs at positions [21, 30, 64] and enciphers to ['F', 'G', 'Y'] - three different letters.
+   plaintext T occurs at positions [24, 28, 33] and enciphers to ['V', 'R', 'S'] - three different letters.
+   No cipher with only two encryption alphabets can do that.
+
+## bijective charts (substitution alphabets)
+   edges 22   components 5   MINIMUM CHARTS = 3
+   bipartite: NO. Two charts are impossible in this direction.
+
+## charts are functions P->C (encryption direction)
+   edges 12   components 14   MINIMUM CHARTS = 3
+   bipartite: NO. Two charts are impossible in this direction.
+
+## charts are functions C->P (decryption direction)
+   edges 10   components 14   MINIMUM CHARTS = 2
+   consistent binary selectors: 2^14 = 16,384 of 2^24 = 16,777,216
+   probability an arbitrary selector separates every conflict: 1 in 1,024
+
+## Reading
+   Encryption direction: at least THREE alphabets are forced. Any model
+   that assigns one of two charts per position - including a binary
+   parity, Morse or rail selector used that way - is eliminated outright.
+
+   Decryption direction: two charts do suffice, but 16,384 of the 16.7M
+   possible selectors work. An arbitrary bit-stream separates all ten
+   conflicts with probability 1 in 1,024. The inherited observation that
+   parity, a Morse phase and rail alternation each 'had no contradictions'
+   is therefore worth about 10 bits, and `research-state.md` records that
+   multiple Morse phases were searched. A selector family with ~1,000
+   members is expected to contain a winner by chance alone.
+
+   These three leads should be treated as explained, not as anomalies,
+   unless a selector is specified in advance and works without phase search.

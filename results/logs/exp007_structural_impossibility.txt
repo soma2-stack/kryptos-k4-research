@@ -1,0 +1,83 @@
+# EXP-007 structural impossibility results
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## 1. Reflector-based rotor machines (Enigma family)  -> ELIMINATED
+   Invariant: a machine with a reflector can never encipher a letter to itself.
+   Observed fixed points C[i] == P[i]: [(32, 'S'), (73, 'K')]
+   2 violations. Any reflector machine is impossible.
+   (2 fixed points in 24 letters is unremarkable for a general cipher -
+    expected 24/26 = 0.92 - so this eliminates reflectors, nothing more.)
+
+## 2. Playfair  -> ELIMINATED
+   Invariant: Playfair cannot output a doubled letter. If P1,P2 lie in one
+   row or column the outputs are distinct neighbours; otherwise the
+   rectangle rule gives cells (r1,c2) and (r2,c1), equal only if P1 == P2,
+   which Playfair forbids inside a digraph.
+   alignment 0: doubled ciphertext digraphs from distinct plaintext: [(32, 'ST', 'SS')]
+   alignment 1: doubled ciphertext digraphs from distinct plaintext: [(25, 'NO', 'QQ'), (67, 'IN', 'TT')]
+   Both digraph alignments are violated, so no prepended null rescues it.
+
+## 3. Monoalphabetic substitution  -> ELIMINATED
+   10 conflicting position-pairs share a ciphertext letter but differ in plaintext.
+
+## 4. Pure transposition, of any complexity  -> ELIMINATED
+   Invariant: a transposition permutes letters, so it preserves the letter
+   multiset and therefore the index of coincidence exactly.
+   K4 IoC = 0.03608
+   IoC of 97 letters drawn from English unigram frequencies:
+     mean 0.06558, sd 0.00763, 20000 simulations
+   simulations at or below K4's IoC: 0/20000  (p = 0.00000)
+   z = -3.87. Real English scores HIGHER than unigram-random,
+   so this bound is conservative: the true p is smaller still.
+   K4 cannot be an anagram of English. Every route, columnar, spiral and
+   grid transposition applied alone is therefore dead, without enumeration.
+
+## 5. Hill ciphers (linear and affine, block sizes 2 and 3)  -> ELIMINATED
+   A Hill block C = M P + v is linear in the unknowns M and v, so the cribs
+   give an exact linear system over Z_26 rather than a search.
+   m=2 STD align=0 linear blocks=11 eqs=22 unknowns= 4 chance=3.39e-26 solutions=0  no solution
+   m=2 STD align=0 affine blocks=11 eqs=22 unknowns= 6 chance=2.29e-23 solutions=0  no solution
+   m=2 STD align=1 linear blocks=11 eqs=22 unknowns= 4 chance=3.39e-26 solutions=0  no solution
+   m=2 STD align=1 affine blocks=11 eqs=22 unknowns= 6 chance=2.29e-23 solutions=0  no solution
+   m=2 KRY align=0 linear blocks=11 eqs=22 unknowns= 4 chance=3.39e-26 solutions=0  no solution
+   m=2 KRY align=0 affine blocks=11 eqs=22 unknowns= 6 chance=2.29e-23 solutions=0  no solution
+   m=2 KRY align=1 linear blocks=11 eqs=22 unknowns= 4 chance=3.39e-26 solutions=0  no solution
+   m=2 KRY align=1 affine blocks=11 eqs=22 unknowns= 6 chance=2.29e-23 solutions=0  no solution
+   m=3 STD align=0 linear blocks= 7 eqs=21 unknowns= 9 chance=1.05e-17 solutions=0  no solution
+   m=3 STD align=0 affine blocks= 7 eqs=21 unknowns=12 chance=1.84e-13 solutions=0  no solution
+   m=3 STD align=1 linear blocks= 7 eqs=21 unknowns= 9 chance=1.05e-17 solutions=0  no solution
+   m=3 STD align=1 affine blocks= 7 eqs=21 unknowns=12 chance=1.84e-13 solutions=0  no solution
+   m=3 STD align=2 linear blocks= 6 eqs=18 unknowns= 9 chance=1.84e-13 solutions=0  no solution
+   m=3 STD align=2 affine blocks= 6 eqs=18 unknowns=12 chance=3.24e-09 solutions=0  no solution
+   m=3 KRY align=0 linear blocks= 7 eqs=21 unknowns= 9 chance=1.05e-17 solutions=0  no solution
+   m=3 KRY align=0 affine blocks= 7 eqs=21 unknowns=12 chance=1.84e-13 solutions=0  no solution
+   m=3 KRY align=1 linear blocks= 7 eqs=21 unknowns= 9 chance=1.05e-17 solutions=0  no solution
+   m=3 KRY align=1 affine blocks= 7 eqs=21 unknowns=12 chance=2.30e-14 solutions=0  no solution
+   m=3 KRY align=2 linear blocks= 6 eqs=18 unknowns= 9 chance=1.84e-13 solutions=0  no solution
+   m=3 KRY align=2 affine blocks= 6 eqs=18 unknowns=12 chance=3.24e-09 solutions=0  no solution
+   m=4 STD align=0 linear blocks= 4 eqs=16 unknowns=16 chance=2.19e-06 solutions=0  no solution
+   m=4 STD align=0 affine blocks= 4 eqs=16 unknowns=20 chance=1.00e+00 solutions=456976  VACUOUS (under-determined)
+   m=4 STD align=1 linear blocks= 5 eqs=20 unknowns=16 chance=2.19e-06 solutions=0  no solution
+   m=4 STD align=1 affine blocks= 5 eqs=20 unknowns=20 chance=6.25e-02 solutions=0  VACUOUS (under-determined)
+   m=4 STD align=2 linear blocks= 5 eqs=20 unknowns=16 chance=2.19e-06 solutions=0  no solution
+   m=4 STD align=2 affine blocks= 5 eqs=20 unknowns=20 chance=6.25e-02 solutions=0  VACUOUS (under-determined)
+   m=4 STD align=3 linear blocks= 4 eqs=16 unknowns=16 chance=6.25e-02 solutions=0  VACUOUS (under-determined)
+   m=4 STD align=3 affine blocks= 4 eqs=16 unknowns=20 chance=1.00e+00 solutions=456976  VACUOUS (under-determined)
+   m=4 KRY align=0 linear blocks= 4 eqs=16 unknowns=16 chance=6.25e-02 solutions=0  VACUOUS (under-determined)
+   m=4 KRY align=0 affine blocks= 4 eqs=16 unknowns=20 chance=6.25e-02 solutions=0  VACUOUS (under-determined)
+   m=4 KRY align=1 linear blocks= 5 eqs=20 unknowns=16 chance=2.19e-06 solutions=0  no solution
+   m=4 KRY align=1 affine blocks= 5 eqs=20 unknowns=20 chance=6.25e-02 solutions=0  VACUOUS (under-determined)
+   m=4 KRY align=2 linear blocks= 5 eqs=20 unknowns=16 chance=2.19e-06 solutions=0  no solution
+   m=4 KRY align=2 affine blocks= 5 eqs=20 unknowns=20 chance=6.25e-02 solutions=0  VACUOUS (under-determined)
+   m=4 KRY align=3 linear blocks= 4 eqs=16 unknowns=16 chance=3.50e-05 solutions=0  no solution
+   m=4 KRY align=3 affine blocks= 4 eqs=16 unknowns=20 chance=1.00e+00 solutions=456976  VACUOUS (under-determined)
+   Block size 4 is only partly testable: several alignments supply fewer
+   independent equations than the matrix has entries, and those rows are
+   marked VACUOUS and carry no weight. The alignments that are
+   over-determined also return no solution. Block size 5 and above cannot
+   be tested at all with 24 crib letters.
+
+## Positive control
+   planted Hill 2x2 recovered: YES (1 solutions)
+   IoC of a shuffled English sample: 0.05692 (test correctly does not flag it as impossible: PASS)
+   CONTROL PASSED

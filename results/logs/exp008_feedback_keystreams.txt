@@ -1,0 +1,21 @@
+# EXP-008 data-dependent (autokey / feedback / self-referential) keystreams
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Positive control
+  planted k[i] = 5*C[i-7] + 11
+  recovered: YES (1 solution(s), chance 7.42e-32)
+  CONTROL PASSED
+
+## Search
+  systems solved exactly : 259,800
+    single_tap            7200
+    tap_plus_drift        7200
+    tap_plus_reset      237600
+    two_tap               7800
+
+  fits with chance < 1e-6 : 0
+
+## Multiple-testing budget
+  The most permissive family tested has 4 unknowns against >= 20 equations,
+  chance <= 26^-16 = 2.29e-23. Over 259,800 systems the sweep expects
+  5.96e-18 false fits.
