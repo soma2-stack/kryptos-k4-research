@@ -1,0 +1,56 @@
+# EXP-022 is the forced keystream text-like?
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+sample size: 24 forced key letters per convention
+
+## Calibration
+   mean log-likelihood, 24 letters drawn UNIFORMLY :  -93.013
+   mean log-likelihood, 24 letters drawn from ENGLISH:  -69.483
+   an English sample falls below the uniform mean 0.0% of the time,
+   so the test has real but limited power at n=24.
+
+## Forced key letters under each convention
+   convention                         alpha      logL  p(>= obs)  key letters
+   beaufort/P=STD/C=STD               KRY     -79.333     0.0178  CECHPTSDQDDDEHYSSRSHDNLQ
+   vigenere/P=KRY/C=STD               STD     -80.855     0.0331  UELRXLONZVDMOFNOEEADIAGK
+   vigenere/P=KRY/C=KRY               KRY     -83.026     0.0697  RDUMRIYWOYNKYELYOIECBAQK
+   vigenere/P=KRY/C=STD               KRY     -86.389     0.1731  QTELWEHGZUPFHOGHTTKPBKSD
+   beaufort/P=STD/C=KRY               STD     -87.782     0.2326  QRTPHIUUARAYZUGUHMRUKAFK
+   vigenere/P=KRY/C=KRY               STD     -89.189     0.3020  BKVSBPCXFCTACLRCFPLJIHUA
+   variant_beaufort/P=STD/C=KRY       KRY     -89.860     0.3374  MCLWNQHMHLKFGBYHITCDFYZD
+   variant_beaufort/P=STD/C=KRY       STD     -89.904     0.3398  SJRXTUOSORAMNICOPEJKMCZK
+   beaufort/P=KRY/C=KRY               STD     -90.387     0.3665  XYHANZEFHYHMKBNENTXBQRMA
+   vigenere/P=STD/C=KRY               STD     -90.963     0.3981  IRJDHGMIMJAONSYMLWRQOYBQ
+   beaufort/P=STD/C=STD               STD     -92.536     0.4871  JLJODEGKUKKKLOCGGBGOKTRU
+   beaufort/P=KRY/C=KRY               KRY     -92.911     0.5080  WXAKGZTOAXAFDRGTGNWRJLFK
+   vigenere/P=STD/C=STD               STD     -93.667     0.5512  BLZCDCYYGCKAZMUYKLGKORNA
+   variant_beaufort/P=KRY/C=STD       KRY     -94.861     0.6165  SVICPIFGROWHFUGFVVKWMKQJ
+   variant_beaufort/P=KRY/C=STD       STD     -95.754     0.6628  GWPJDPMNBFXOMVNMWWAXSAUQ
+   vigenere/P=STD/C=KRY               KRY     -96.214     0.6861  BLCPASFBFCKHGMXFEVLJHXRJ
+   variant_beaufort/P=KRY/C=KRY       STD     -96.528     0.7015  ZQFIZLYDVYHAYPJYVLPRSTGA
+   vigenere/P=STD/C=STD               KRY    -102.057     0.8985  REZYPYXXSYDKZFQXDESDHLGK
+   variant_beaufort/P=KRY/C=KRY       KRY    -102.624     0.9111  ZJOBZEXPUXAKXICXUEILMNSK
+   variant_beaufort/P=STD/C=STD       STD    -104.918     0.9496  ZPBYXYCCUYQABOGCQPUQMJNA
+   beaufort/P=KRY/C=STD               KRY    -107.261     0.9738  JMWZCUJURLLXVUCJFBFUJDXD
+   beaufort/P=STD/C=KRY               KRY    -109.078     0.9853  JLNIABQQKLKXZQSQAFLQDKOD
+   variant_beaufort/P=STD/C=STD       KRY    -113.158     0.9964  ZIRXWXYYQXJKRHSYJIQJFCGK
+   beaufort/P=KRY/C=STD               STD    -116.942     0.9992  QSXZJVQVBRRYWVJQMIMVQKYK
+
+## Result
+   most text-like: beaufort/P=STD/C=STD / KRY, p = 0.0178
+   tests run: 24 (12 conventions x 2 rendering alphabets)
+   Bonferroni-corrected p for the best: 0.428
+   conventions with uncorrected p < 0.05: 2 (expected 1.2 by chance)
+
+## Reading
+   A running key read off natural text predicts that ONE convention should
+   show clearly text-like key letters while the rest look uniform. That is a
+   sharp, pre-registered signature and it is ABSENT: no convention survives
+   correction for having tested 24 of them.
+
+   Grade: HEURISTIC NEGATIVE for the natural-language running-key class.
+   NOT an elimination. At n=24 the test cannot separate an English sample
+   from a uniform one reliably, as the calibration above shows, and a key
+   read off PROPER NOUNS - city names on a clock drum - need not follow
+   ordinary English letter frequencies at all. The negative is real but weak,
+   and it does not touch keystreams read off a chart, a tableau, or a
+   numeric structure rather than prose.

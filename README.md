@@ -6,6 +6,24 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint D (2026-09-12).** Four sessions converge on one architecture:
+> **a keystream read off an external object, position by position.** The
+> `BERLINCLOCK` crib names such an object. The bottleneck is now one specific piece
+> of missing public data — the 1988–89 Weltzeituhr city configuration. See
+> [the Checkpoint D record](results/2026-09-12d-checkpoint-D.md).
+>
+> Verified this session: K4's carved line structure is **OBKR + three lines of 31**
+> (boundaries at 4, 35, 66), self-verified because the lines concatenate exactly to
+> the canonical ciphertext. This *replaces* the 7×14 layout, which came from a
+> source now on the [contamination exclusion list](docs/contamination-log.md).
+> `EASTNORTHEAST` lies wholly inside line 1; `BERLINCLOCK` straddles the boundary
+> at 66.
+>
+> New diagnostic: the pattern of breakage at the edges of a span shared by two
+> messages measures a cipher's **memory depth and direction** directly. If K5 is
+> ever released, that is the first measurement to make — before any key is guessed.
+
+
 > **Checkpoint C (2026-09-12).** Sanborn confirmed in November 2025 that
 > `BERLINCLOCK` is the **Weltzeituhr** at Alexanderplatz, not the Mengenlehreuhr.
 > The principal World-Clock test has now been run and is negative. More importantly,
@@ -95,7 +113,9 @@ Earned the hard way; read before adding an experiment.
 
 ## Where to start
 
-0. [evidence grades](docs/evidence-grades.md) — **read first.** Regrades every
+0. [contamination log](docs/contamination-log.md) — **read first.** The blind-experiment
+   rule, the standing source-exclusion list, and every logged incident.
+0b. [evidence grades](docs/evidence-grades.md) — Regrades every
    conclusion and states what each argument does not cover.
 1. [research state](docs/research-state.md) — inherited leads, and the facts actually
    verified by code here.
@@ -109,8 +129,8 @@ Earned the hard way; read before adding an experiment.
 ## Status
 
 Prepared from the referenced ChatGPT conversation on 2026-09-11 and published by the
-user. Extended 2026-09-12 with an executable toolchain, nineteen experiments, an exact
-Z₂₆ solver, the testability frontier, a crib-alignment robustness audit, an
-evidence-grade re-audit, the Weltzeituhr/compass-bearing tests, and the unicity
-bound. **K4 remains unsolved, and no candidate
+user. Extended 2026-09-12 with an executable toolchain, twenty-two experiments, an exact
+Z₂₆ solver, the testability frontier, robustness and evidence-grade audits, the
+Weltzeituhr and compass-bearing tests, the unicity bound, the verified carved line
+geometry, and the K4/K5 memory-depth diagnostic. **K4 remains unsolved, and no candidate
 mechanism is claimed.**

@@ -67,3 +67,23 @@ Fifteen experiments now exist. Before proposing anything:
 22. Two closable data gaps block the object branch: primary verification of the
     7×14 K4 layout, and the **1989** Weltzeituhr city configuration. Do not
     substitute a modern city list for the historical one.
+
+## Addendum — 2026-09-12 (Checkpoint D)
+
+23. **Read `docs/contamination-log.md` first.** This is a blind experiment. The only
+    plaintext admitted as a constraint is `EASTNORTHEAST` and `BERLINCLOCK`. Never
+    seek, fetch or ingest a purported K4 plaintext; never use a site whose purpose
+    is publishing one. Log every incident, including near-misses, when it happens.
+24. The verified K4 geometry is **OBKR + three lines of 31** (boundaries 4, 35, 66),
+    not 7×14. The 7×14 layout came from an excluded source.
+25. The engraved line lengths **vary** (Sanborn kerned them), so the ciphertext panel
+    and the tableau panel are not on a common lattice. Panel-overlay mechanisms are
+    strongly disfavoured.
+26. The Weltzeituhr's city-name cylinder is **static**; an hour ring rotates inside.
+27. Before proposing anything, read the convergence in `docs/next-steps.md`: the
+    surviving architecture is a keystream read off an external object, position by
+    position. The blocker is the **1988–89 Weltzeituhr city list**, which is not
+    public. Do not substitute a modern list — 20 names were added in 1997 alone.
+28. If K5 is released, run the EXP-021 memory-depth diagnostic before anything else.
+29. Do not submit to the external verifier without all six conditions in
+    `docs/next-steps.md`.

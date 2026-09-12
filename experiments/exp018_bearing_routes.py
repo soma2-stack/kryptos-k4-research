@@ -23,8 +23,13 @@ the evidence names, listed below.
 
 Pre-registered scope
 --------------------
-grids   14x7 and 7x14  - the reported physical K4 layout (MEDIUM confidence,
-                         data/physical.json; needs primary verification)
+grids   14x7 and 7x14  - WITHDRAWN MOTIVATION. These came from a source later
+                         placed on the contamination exclusion list (see
+                         docs/contamination-log.md, incident 1). The RESULT below
+                         stands - a negative over a badly motivated grid is still a
+                         negative for that grid - but the grids are no longer
+                         claimed to reflect the physical carving. The verified
+                         geometry is 4/31/31/31; see EXP-020.
         24x4 and 4x24  - the Weltzeituhr: 24 segments, four city bands
         22x4           - the inherited UTC+9 world-clock tape length
 bearings  all 16 points of the compass rose as integer lattice steps

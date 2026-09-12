@@ -1,0 +1,66 @@
+# EXP-021 architectural implications of the K4/K5 correspondence
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+NO K5 DATA IS USED OR INVENTED. Synthetic messages only.
+
+Two synthetic 97-char plaintexts sharing 'BERLINCLOCK' at positions 63..73 and differing elsewhere.
+
+## Where does the correspondence break?
+   Two messages share a word at the same positions. Enciphered with the SAME
+   system, at which positions of that span do the ciphertexts still agree?
+   The PATTERN of breakage, not the count, identifies the mechanism.
+
+   mechanism class                            span pattern   breaks  interpretation
+   position-indexed substitution              ===========         0  no memory: key depends on position alone
+   plaintext autokey, lag 1                   x==========         1  leading breaks -> BACKWARD memory of depth 1
+   plaintext autokey, lag 3                   xxx========         3  leading breaks -> BACKWARD memory of depth 3
+   ciphertext feedback                        xxxxxxxxxxx        11  all broken -> UNBOUNDED feedback
+   substitute then transpose (fixed perm)     =xx=xxxxxxx         9  scattered -> relocation (perm-aligned agreements: 15)
+   fractionating / neighbour-mixing (i,i+1)   ==========x         1  trailing breaks -> FORWARD mixing of depth 1
+
+## The diagnostic this yields
+   The edge pattern is a direct measurement of the cipher's MEMORY:
+     0 breaks              key is a function of POSITION alone
+     k leading breaks      backward memory of depth k (autokey lag k)
+     k trailing breaks     forward mixing of depth k (fractionation)
+     whole span broken     unbounded feedback (ciphertext autokey)
+     scattered agreements  a net transposition relocated the material
+
+   So if K5's ciphertext is ever released, the FIRST measurement to make is
+   not a cipher search. It is: line K4 and K5 up, find the positions where
+   they agree, and read the memory depth and direction straight off the edges
+   of each shared run. That fixes the architecture before any key is guessed.
+
+## What can be concluded NOW, with grades
+   Honest limits first. The simulation shows the correspondence survives almost
+   intact under short-memory autokey (one leading break) and under
+   neighbour-mixing (one trailing break). So Sanborn's statement that coded
+   words appear in the same positions does NOT by itself exclude those classes.
+   An earlier draft of this experiment claimed it did; that was wrong.
+
+   1. UNBOUNDED CIPHERTEXT FEEDBACK is STRONGLY DISFAVORED. It is the one class
+      that destroys the correspondence completely (0 of 11 agreeing), because a
+      single difference propagates forever. Independent of EXP-008, which
+      eliminated feedback only within parameter-linear models.
+   2. A NET TRANSPOSITION is STRONGLY DISFAVORED under reading (B): it relocates
+      shared material, so coded words would appear scattered rather than at the
+      same positions. The agreements survive, but not where Sanborn says.
+   3. The system is a REUSABLE, PARAMETERISED DEVICE: a second 97-character
+      message was enciphered with a 'similar but not identical' system, so the
+      construction has at least one tunable parameter. SUPPORTED INTERPRETATION,
+      matching the auction wording of a K4 'coding system' plus 'coding charts'.
+   4. Length is preserved exactly, 97 -> 97, in both messages. Any outer layer
+      that changes length is PROVED IMPOSSIBLE.
+
+   Under reading (A) - only the plaintexts correspond - conclusions 1 and 2 do
+   not follow at all, and only 3 and 4 survive. The ambiguity is unresolved in
+   public sources, so nothing here is graded stronger than STRONGLY DISFAVORED.
+
+## Convergence worth noting
+   Conclusions 1 and 2 push K4 toward the MONOGRAPHIC, POSITION-PRESERVING class
+   - exactly the class in which this repository's strongest structural results
+   are proofs rather than heuristics:
+     * at least THREE alphabets are forced (EXP-009)
+     * periods {1-7, 9, 10, 14, 15, 17} are impossible (EXP-011)
+   docs/evidence-grades.md flagged that those results were conditional on that
+   class. The K5 description is weak independent evidence that the condition
+   holds - which is worth more than the eliminations themselves.

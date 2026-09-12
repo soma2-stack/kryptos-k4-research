@@ -75,6 +75,31 @@ Regenerate with `./run_all.sh`.
   are directly visible; and crib-dragging 24 known letters of one message recovers
   24 letters of the other with no key knowledge. That is the stated K4/K5 relation.
 
+### Added 2026-09-12 (session 4) — verified geometry and the surviving architecture
+
+- **K4's carved line structure is OBKR + three lines of 31** (boundaries at absolute
+  positions 4, 35, 66). Self-verified: the lines concatenate exactly to the canonical
+  ciphertext. This REPLACES the 7×14 layout, which came from a source now on the
+  contamination exclusion list (`docs/contamination-log.md`).
+- `EASTNORTHEAST` lies wholly inside line 1; `BERLINCLOCK` **straddles** the
+  line-2/line-3 boundary at position 66.
+- **The engraved line lengths vary** — Sanborn kerned the lettering — so the
+  ciphertext panel is not on a regular lattice while the tableau panel is. Any
+  panel-to-panel overlay mechanism is STRONGLY DISFAVORED.
+- **Weltzeituhr mechanics corrected**: the 24-sided city-name cylinder is STATIC;
+  an hour ring rotates inside it. The earlier note describing the drum as rotating
+  was wrong.
+- **A new diagnostic (EXP-021).** The pattern of breakage at the edges of a span
+  shared by two messages measures a cipher's memory depth and direction directly:
+  no breaks → position-indexed; k leading breaks → backward memory k; k trailing
+  breaks → forward mixing k; all broken → unbounded feedback; scattered →
+  transposition. This is the first measurement to make if K5 is ever released.
+- **The surviving architecture.** Three independent lines converge on a keystream
+  **read off an external object, position by position**: EXP-019 (long but
+  low-entropy, externally sourced), EXP-021 (position-indexed, no net transposition,
+  no unbounded feedback), and the exhaustive elimination of every short or
+  structured position-indexed key.
+
 ## High-priority inherited program: `TOKIO → 57973`
 
 **Inherited result.** A substantial prior July 2026 handoff reportedly converged on the following chain:

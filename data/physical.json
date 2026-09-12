@@ -137,21 +137,42 @@
       "source": "reported as four longitudinal groupings; whether these are physical ROWS on the drum or a conceptual grouping is NOT established"
     },
     "city_list_per_segment_1989": {
-      "value": "UNKNOWN",
+      "value": "UNKNOWN - STILL NOT RECOVERED AFTER TARGETED SEARCH",
       "confidence": "NONE",
-      "source": "The per-segment city list as it stood in 1988-1989, when Sanborn was building Kryptos, is not available here. The clock was restored in 1997 and 2015 with city names updated. Modern lists MUST NOT be substituted for the historical configuration. This is a concrete missing-evidence item."
+      "status": "Searched in English and German across general and Berlin-specific sources. Counts are available and mutually inconsistent; the ORDERED PER-SEGMENT LIST as it stood in 1988-89 is not published in any source reached. Recorded as a concrete missing-evidence item, NOT guessed.",
+      "why_it_matters": "EXP-021 argues K4 is position-indexed with no net transposition, and EXP-019 argues its key must be long but LOW-ENTROPY and externally sourced. A city-name tape read off the Weltzeituhr is precisely such a source: roughly 900-1000 letters, ordered by the object, hand-readable by an artist, and named by the BERLINCLOCK crib. It is a live running-key candidate that CANNOT BE TESTED without the historical list. Modern lists must not be substituted: 20 names were added in 1997 alone.",
+      "where_to_look": "GDR-era photographs of the drum at readable resolution; Erich John's design documentation; Berlin municipal or Stadtmuseum archives; DDR Museum holdings; the 1997 restoration records, which would document what was changed."
     },
     "rotation": {
-      "value": "the cylinder rotates; an orrery above it turns",
-      "confidence": "MEDIUM",
-      "rates": "UNKNOWN"
+      "value": "CORRECTED: the 24-sided cylinder carrying the city names is STATIC; an HOUR RING rotates inside it, so current times are read from outside. Driven by a converted Trabant gearbox. An orrery above turns separately.",
+      "confidence": "MEDIUM-HIGH",
+      "note": "This corrects the earlier note in this file that described the cylinder itself as rotating."
     },
     "base": {
       "compass_rose_mosaic": true,
       "confidence": "HIGH",
       "source": "the clock stands on a stone mosaic in the form of a compass rose"
     },
-    "history": "Opposition demonstrators gathered at the clock on 7 October 1989 during the GDR's 40th-anniversary celebrations; the Wall fell 33 days later."
+    "history": "Opposition demonstrators gathered at the clock on 7 October 1989 during the GDR's 40th-anniversary celebrations; the Wall fell 33 days later.",
+    "city_counts_CONFLICTING": {
+      "value": "SOURCES DISAGREE - recorded, not resolved",
+      "reports": {
+        "80 in 1969": "one source, original city count",
+        "146 cities and regions plus the date line": "another source, current",
+        "148 cities": "a third source, current",
+        "20 cities added in the 1997 renovation": "cities the GDR omitted for political reasons - Tel Aviv, Cape Town, Seoul among them"
+      },
+      "implication_for_1989": "If ~146 today and 20 were added in 1997, the configuration Sanborn could have seen c.1988-89 held roughly 126 names. That is an INFERENCE from two conflicting sources, not a datum. The 80-in-1969 figure cannot be reconciled with it without further evidence.",
+      "confidence": "LOW"
+    },
+    "date_line": {
+      "value": "the rotunda displays the international date line alongside the city names",
+      "confidence": "MEDIUM"
+    },
+    "construction": {
+      "value": "built in about nine months by 124 volunteers in after-work brigades; opened 30 Sep 1969",
+      "confidence": "MEDIUM"
+    }
   },
   "sanborn_clues_2025": {
     "source": "Announced at the International Spy Museum, 12 November 2025; reported by Scientific American and others.",

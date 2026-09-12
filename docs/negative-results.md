@@ -80,6 +80,12 @@ Regenerate with `./run_all.sh`; full parameters in `results/2026-09-12b-exp006-0
 
 | Compass-bearing routes on the physical and Weltzeituhr grids | 16 compass points as lattice steps x 6 pre-registered grids (14x7 and 7x14 physical layout, 24x5 and 4x25 Weltzeituhr width, 22x5 tape, 26x4 control) x every start cell x 2 composition orders x 12 fixed conventions x 25 keystream models; 20,160 permutations, 6,048,000 gate evaluations | Zero fits. EXP-018. Planted control recovered. This is the principal BERLINCLOCK test that EXP-002 did not perform, since EXP-002 tested the Mengenlehreuhr - the wrong clock. |
 
+| Carved-line hand-encipherment family | key restarting at each carved line (resets FIXED by the object at 4/35/66, not fitted), p<=20; per-line additive offset; key advancing once per line; progressive key per line; OBKR as line 0 or as indicator; 12 conventions; 1,344 systems solved exactly | Zero fits. EXP-020. Planted control recovered. Column-key prediction k[32]=k[63] and k[33]=k[64] satisfied by 0 of 12 conventions. |
+| Panel-to-panel physical overlay (reading one object through another) | invariant, no search | STRONGLY DISFAVORED: the ciphertext panel's engraved line lengths VARY (Sanborn kerned the lettering) while the tableau panel is a regular grid, so the two are not on the same lattice and no exact cell-to-cell alignment exists. |
+| Unbounded ciphertext feedback | architectural argument from the public K4/K5 description, simulated | STRONGLY DISFAVORED: it is the only class that completely destroys a positional correspondence between two messages sharing words at the same positions. EXP-021. |
+| Length-changing outer layers | K4 and K5 are both exactly 97 characters | PROVED IMPOSSIBLE for any outer layer that changes length. EXP-021. |
+| Natural-language running key | prediction test: under the correct convention the 24 forced key letters should look like text | HEURISTIC NEGATIVE only. Best p=0.018 uncorrected, 0.428 after correcting 24 tests. At n=24 the test cannot reliably separate English from uniform, and a key read off PROPER NOUNS need not follow English frequencies. EXP-022. |
+
 ## Undecidable, not negative
 
 These cannot be refuted by 24 crib letters. Searching them yields fits, never evidence.
