@@ -108,4 +108,18 @@ Berliner Zeitung; German and English encyclopaedia summaries. `solvekryptos.com`
 excluded on every query. No claimed-solution site used. No purported K4 plaintext
 sought or seen.
 
+## Session 8 (Checkpoint H) — clean, no incidents
+
+Photographic reconstruction. Historical photographs of the Weltzeituhr are admissible
+object evidence. `solvekryptos.com` excluded on every query; no claimed-solution site
+used; no purported K4 plaintext sought or seen.
+
+Recorded for transparency: the user supplied a partial transcription of Bundesarchiv
+`Bild 183-1989-0830-028` (CHABAROWSK | MAGADAN, SACHALIN) and explicitly asked that it
+not be accepted blindly. This environment cannot fetch or view any image
+(commons.wikimedia.org, upload.wikimedia.org, www.bundesarchiv.de and
+live.staticflickr.com all return HTTP 000), so it could NOT be re-transcribed. It is
+stored as USER-ASSERTED, NOT INDEPENDENTLY VERIFIED, and every downstream statement
+derived from it carries that grade.
+
 ## Incidents 2+ — none recorded.

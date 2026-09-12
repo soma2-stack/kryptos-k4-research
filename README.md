@@ -6,6 +6,18 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint H (2026-09-12).** The reconstruction bar is now **one face**, not the
+> whole drum: a 97-letter window fits inside a single large sector
+> (UTC+1 = 137 letters, UTC+3 = 126, UTC+2 = 108). A legible pre-1997 photograph of
+> the **UTC+1 face** — Berlin's own sector — would on its own permit a restricted run
+> of the frozen EXP-024. See [Checkpoint H](results/2026-09-12h-checkpoint-H.md) and
+> [archive targets](docs/checkpoint-H-archive-targets.md).
+>
+> This agent **cannot view any photograph** (all image hosts return HTTP 000), but
+> **can read and transcribe images uploaded as files**. Current layout graph: 2 of 24
+> faces identified, 1 observed adjacency edge, **0 complete faces**, 0 lower bands.
+
+
 > **Checkpoint F (2026-09-12).** The modern city list is published but **denied by
 > this environment's egress policy** — proven at three levels (`curl` returns
 > `connect_rejected (organization policy)` while `pypi.org` returns HTTP 200).
@@ -161,7 +173,7 @@ Earned the hard way; read before adding an experiment.
 ## Status
 
 Prepared from the referenced ChatGPT conversation on 2026-09-11 and published by the
-user. Extended 2026-09-12 with an executable toolchain, twenty-five experiments, an exact
+user. Extended 2026-09-12 with an executable toolchain, twenty-seven experiments, an exact
 Z₂₆ solver, the testability frontier, robustness and evidence-grade audits, the
 Weltzeituhr and compass-bearing tests, the unicity bound, the verified carved line
 geometry, and the K4/K5 memory-depth diagnostic. **K4 remains unsolved, and no candidate

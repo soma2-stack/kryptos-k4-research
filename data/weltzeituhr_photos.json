@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "purpose": "Photographic evidence for the PHYSICAL layout of the Weltzeituhr drum. Each record is a dated photograph contributing layout constraints. Names alone are not the object; band and within-face order are.",
+  "contamination_note": "Historical photographs are admissible object evidence. No claimed-K4-solution site used. See docs/contamination-log.md.",
+  "CRITICAL_GEOMETRY_RULE": "The city cylinder is STATIC; the hour ring ROTATES. An hour numeral appearing beneath a face therefore does NOT identify that face's time zone. Identify a face from its CITY CONTENTS and physical adjacency only. A record may carry visible_hour_ring_values, but they must never be used to assign utc_sector.",
+  "transcription_rule": "Never force an ambiguous letter. Use '?' for an uncertain character and UNKNOWN for an unreadable name. The modern 146-name list may RAISE confidence in a blurry reading but never independently proves a historical inscription.",
+  "environment_limitation": "This agent cannot fetch or view any of these images: commons.wikimedia.org, upload.wikimedia.org, www.bundesarchiv.de and live.staticflickr.com all return HTTP 000 under the egress policy. Transcriptions below marked USER-ASSERTED were supplied by the user and could NOT be independently re-transcribed here. Images uploaded into the session as files CAN be read and transcribed directly.",
+  "photographs": [
+    {
+      "id": "BArch-183-1989-0830-028",
+      "archive": "German Federal Archives (Bundesarchiv)",
+      "accession": "Bild 183-1989-0830-028",
+      "title": "Berlin, Fernsehturm, Weltzeituhr",
+      "photographer": "Erwin Schneider",
+      "date": "1989-08-30",
+      "date_confidence": "ARCHIVE-DATE VERIFIED (accession encodes the date; caption corroborates)",
+      "predates_1997": true,
+      "is_1988_1989": true,
+      "source_ref": "Bundesarchiv via Wikimedia Commons; accession number as given",
+      "priority": "HIGHEST - within weeks of the target state",
+      "self_transcribed": false,
+      "transcription_status": "USER-ASSERTED, NOT INDEPENDENTLY VERIFIED HERE",
+      "visible_faces": [
+        {
+          "face_ref": "F1",
+          "utc_sector": "UTC+10",
+          "sector_basis": "city contents (Chabarowsk is UTC+10 on the modern list)",
+          "upper_band": [
+            "CHABAROWSK"
+          ],
+          "lower_band": "UNKNOWN",
+          "order_confidence": "single name only; position within band UNKNOWN",
+          "transcription_confidence": "USER-ASSERTED"
+        },
+        {
+          "face_ref": "F2",
+          "utc_sector": "UTC+11",
+          "sector_basis": "city contents (Magadan and Sachalin are UTC+11 on the modern list)",
+          "upper_band": [
+            "MAGADAN",
+            "SACHALIN"
+          ],
+          "lower_band": "UNKNOWN",
+          "order_note": "reported in the order Magadan, Sachalin; whether both are UPPER is not explicitly stated in the report",
+          "transcription_confidence": "USER-ASSERTED"
+        }
+      ],
+      "adjacency_observed": [
+        {
+          "left": "F1",
+          "right": "F2",
+          "basis": "reported as adjacent faces in one frame",
+          "confidence": "USER-ASSERTED"
+        }
+      ],
+      "visible_hour_ring_values": "UNKNOWN - and must not be used to assign sectors",
+      "notes": "Modern UTC+11 contains exactly Magadan and Sachalin, so this face may be COMPLETE - but 14 of the ~20 1997 additions remain unnamed, so completeness is not proven."
+    },
+    {
+      "id": "BArch-183-1989-0811-023",
+      "archive": "Bundesarchiv",
+      "accession": "Bild 183-1989-0811-023",
+      "photographer": "Bernd Settnik",
+      "date": "1989-08-11",
+      "date_confidence": "ARCHIVE-DATE VERIFIED",
+      "predates_1997": true,
+      "is_1988_1989": true,
+      "self_transcribed": false,
+      "transcription_status": "NOT TRANSCRIBED - reported to show mainly the clock base",
+      "visible_faces": [],
+      "adjacency_observed": [],
+      "priority": "LOW for content, HIGH as a sequence anchor",
+      "notes": "Catalogued because Bundesarchiv frames come in shoot sequences. Adjacent accession numbers from the same date and photographer may show far better angles. See docs/checkpoint-H-archive-targets.md."
+    },
+    {
+      "id": "Flickr-vanElk-Alexanderplatz-1988",
+      "archive": "Flickr (private photographer)",
+      "accession": null,
+      "title": "Alexanderplatz, East-Berlin 1988",
+      "photographer": "Johan van Elk",
+      "date": "1988",
+      "date_confidence": "PHOTOGRAPHER-ASSERTED 1988 - NOT ARCHIVE-DATE VERIFIED",
+      "date_caveat": "The Flickr page's automatic machine metadata carries a contradictory later 'taken' date. The photographer states the work is 1988 and a scan from the original negative, which explains a later scan timestamp. Until corroborated, this is photographer-asserted only.",
+      "predates_1997": "ASSERTED",
+      "is_1988_1989": "ASSERTED",
+      "self_transcribed": false,
+      "transcription_status": "NOT TRANSCRIBED - image not viewable in this environment",
+      "visible_faces": [],
+      "adjacency_observed": [],
+      "priority": "HIGH - reported to show a wide run of eastern sectors with many readable inscriptions",
+      "notes": "Reported to show a WIDE RUN of faces, which is exactly what the adjacency graph needs: one frame spanning several faces fixes several edges at once."
+    },
+    {
+      "id": "BArch-183-1984-1419-014",
+      "archive": "Bundesarchiv",
+      "accession": "Bild 183-1984-1419-014",
+      "photographer": "Peter Heinz Junge",
+      "date": "1984-04-19",
+      "date_confidence": "ARCHIVE-DATE VERIFIED (original caption)",
+      "predates_1997": true,
+      "is_1988_1989": false,
+      "self_transcribed": false,
+      "transcription_status": "NOT TRANSCRIBED - image not viewable in this environment",
+      "visible_faces": [],
+      "adjacency_observed": [],
+      "priority": "MEDIUM - pre-1997 layout evidence, and a STABILITY control against the 1989 frames",
+      "notes": "Its main value may be stability testing: if a face reads identically in 1984 and 1989, older well-photographed years become usable for the 1989 reconstruction."
+    }
+  ],
+  "stability_question": {
+    "statement": "Did any inscription or layout change occur BETWEEN 1969 and 1997?",
+    "why_it_matters": "If layout is stable across decades, the far larger pool of 1970s-80s photographs becomes usable for reconstructing the 1989 state, massively expanding available evidence.",
+    "status": "UNTESTED - requires the same face read in two well-separated dated photographs",
+    "rule": "Do NOT assume 1969 layout equals 1989 layout merely because both predate 1997."
+  },
+  "half_hour_placement_question": {
+    "statement": "Marquesas (-9:30), Teheran (+3:30), Kabul (+4:30), Neu-Delhi and Colombo (+5:30), Rangun (+6:30) cannot each own one of the 24 whole-hour faces.",
+    "candidates": [
+      "own narrow strip between faces",
+      "placed on a neighbouring whole-hour face",
+      "a '+30' or half-hour annotation",
+      "grouped by some other convention"
+    ],
+    "status": "UNKNOWN - a photograph of the Teheran/Kabul/Delhi region of the drum would settle it",
+    "why_it_matters": "It reveals how the inscription SYSTEM works, which constrains any reading procedure."
+  },
+  "candidate_accessions": {
+    "note": "Bundesarchiv Bild 183 (ADN) Weltzeituhr frames located by search but NOT viewable in this environment and NOT yet dated. Listed so a human can pull them directly.",
+    "accession_structure": {
+      "observed": "Modern-form accessions read 183-YYYY-MMDD-frame, e.g. 183-1989-0830-028 (30 Aug 1989). Older ADN accessions read 183-<LETTER>MMDD-frame, e.g. 183-H1218-0025-001.",
+      "inference": "The LETTER encodes the year and MMDD the month/day. INFERRED, not sourced.",
+      "internal_check": "183-H1218-0025-001 is captioned 'Winter'. H1218 -> 18 December, which is winter. The MMDD reading is consistent with the caption.",
+      "todo": "Decode the ADN letter-to-year mapping, or simply read each Commons file page, which carries the date. Either immediately dates all eight candidates."
+    },
+    "candidates": [
+      {
+        "accession": "Bild 183-L0105-0018",
+        "caption": "Berlin, Alexanderplatz, Hotel 'Stadt Berlin', Weltzeituhr",
+        "mmdd_inferred": "01-05",
+        "year": "UNKNOWN"
+      },
+      {
+        "accession": "Bild 183-R0729-0017",
+        "caption": "Berlin, Weltzeituhr am Alexanderplatz",
+        "mmdd_inferred": "07-29",
+        "year": "UNKNOWN"
+      },
+      {
+        "accession": "Bild 183-U0414-0014",
+        "caption": "Berlin, Alexanderplatz, Weltzeituhr",
+        "mmdd_inferred": "04-14",
+        "year": "UNKNOWN"
+      },
+      {
+        "accession": "Bild 183-E1003-0001-001",
+        "caption": "Berlin, Weltzeituhr am Alexanderplatz",
+        "mmdd_inferred": "10-03",
+        "year": "UNKNOWN"
+      },
+      {
+        "accession": "Bild 183-H1218-0025-001",
+        "caption": "Berlin, Alexanderplatz, Weltzeituhr, Winter",
+        "mmdd_inferred": "12-18",
+        "year": "UNKNOWN"
+      },
+      {
+        "accession": "Bild 183-W0715-0026",
+        "caption": "Berlin, Alexanderplatz, Weltzeituhr",
+        "mmdd_inferred": "07-15",
+        "year": "UNKNOWN"
+      },
+      {
+        "accession": "Bild 183-N1005-0011",
+        "caption": "Berlin, Alexanderplatz, Fernsehturm, Weltzeituhr, Nacht",
+        "mmdd_inferred": "10-05",
+        "year": "UNKNOWN",
+        "note": "night shot - inscriptions may be hard to read"
+      }
+    ],
+    "commons_categories": [
+      "Category:Urania-Weltzeituhr and Berliner Fernsehturm",
+      "Category:Urania-Weltzeituhr (and its 'Details' subcategory)",
+      "Category:Photographs by Peter Heinz Junge",
+      "Commons:Bundesarchiv (the 80,000+ file donation these come from)"
+    ]
+  }
+}

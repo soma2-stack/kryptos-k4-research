@@ -24,7 +24,33 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint G: the priority has REVERSED
+## 0 — Status after Checkpoint H: the bar is ONE FACE
+
+EXP-027 establishes the operational threshold, and it is far lower than Checkpoint G
+implied. A running-key test needs one contiguous 97-letter window, and single faces
+already exceed that: **UTC+1 = 137 letters, UTC+3 = 126, UTC+2 = 108**.
+
+> **Minimum faces needed for a 97-letter window: 1.**
+
+**TIER 1 (restricted run permitted):** one contiguous arc of COMPLETE faces — both
+bands, order known — totalling >= 97 letters. A restricted run must report the
+fraction of the preregistered alignment space it covers. Currently 0 complete faces:
+NOT MET.
+**TIER 2 (full preregistered run):** all 24 faces complete plus the 1997 reversal.
+NOT MET.
+
+**The single highest-value acquisition** is a legible pre-1997 photograph of the
+**UTC+1 face** — Berlin's own sector, 19 names, 137 letters, and the side a visitor is
+most likely to photograph. UTC+1/+2/+3 carry 45.6% of all remaining layout entropy;
+the Aug 1989 frame in hand (UTC+10/+11) carries 3.7%.
+
+**Upload images as files.** This agent cannot fetch any image host, but CAN read and
+transcribe uploaded image files directly — turning assertion into evidence.
+
+See `docs/checkpoint-H-archive-targets.md` for the accession list and the decoded
+Bundesarchiv accession structure.
+
+## 0b — Earlier status after Checkpoint G: the priority has REVERSED
 
 Blocker 1 is closed — the official 146-place modern list is stored and validated.
 But EXP-026 establishes that **a name list can never unblock EXP-024**: even a

@@ -151,3 +151,25 @@ Fifteen experiments now exist. Before proposing anything:
 49. Classification lives in `data/weltzeituhr_classification.json`: 12/146 (8.2%)
     determined. Classify only from evidence — geopolitical intuition is not evidence.
 50. EXP-024 remains frozen, unmodified and unrun.
+
+## Addendum — 2026-09-12 (Checkpoint H)
+
+51. The threshold to run EXP-024 is **ONE FACE**, not the drum. A 97-letter window
+    fits inside UTC+1 (137 letters), UTC+3 (126) or UTC+2 (108). TIER 1 = one
+    contiguous arc of COMPLETE faces >= 97 letters, run restricted and reported as
+    such. TIER 2 = all 24 faces. Currently 0 complete faces.
+52. Highest-value acquisition: a legible pre-1997 photograph of the **UTC+1 face**,
+    both bands, names in order. UTC+1/+2/+3 hold 45.6% of remaining layout entropy.
+53. This agent cannot fetch ANY image host (HTTP 000) but CAN read images uploaded
+    as session files. Ask for uploads; do not accept transcriptions blindly.
+54. `data/weltzeituhr_photos.json` + `k4lib/wz_graph.py` hold the evidence and the
+    adjacency graph. Edges are OBSERVED or TRANSITIVE and must never be conflated.
+55. **Geometry rule, non-negotiable:** the cylinder is STATIC, the hour ring ROTATES.
+    An hour numeral beneath a face NEVER identifies that face. Assign sectors from
+    city contents and adjacency only.
+56. Bundesarchiv accessions read `183-YYYY-MMDD-frame` (modern) or
+    `183-<LETTER>MMDD-frame` (ADN, letter = year). Seven undated Weltzeituhr
+    candidates are listed in `docs/checkpoint-H-archive-targets.md`.
+57. Stability 1969-1997 is UNTESTED. Proving it would unlock the whole 1970s-80s
+    photo pool. Never assume it.
+58. EXP-024 remains frozen, unmodified and unrun.

@@ -1,0 +1,75 @@
+# EXP-027 layout readiness
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Photographic evidence catalogued
+   BArch-183-1989-0830-028                1989-08-30  NOT self-transcribed
+      date confidence: ARCHIVE-DATE VERIFIED (accession encodes the date; caption corroborates)
+   BArch-183-1989-0811-023                1989-08-11  NOT self-transcribed
+      date confidence: ARCHIVE-DATE VERIFIED
+   Flickr-vanElk-Alexanderplatz-1988      1988        NOT self-transcribed
+      date confidence: PHOTOGRAPHER-ASSERTED 1988 - NOT ARCHIVE-DATE VERIFIED
+   BArch-183-1984-1419-014                1984-04-19  NOT self-transcribed
+      date confidence: ARCHIVE-DATE VERIFIED (original caption)
+
+   This agent cannot fetch or view any of these images: commons.wikimedia.org, up...
+
+## Layout reconstruction metric
+   faces total                          : 24
+   faces identified                     : 2
+   faces with UPPER band transcribed    : 2
+   faces with LOWER band transcribed    : 0
+   faces COMPLETE (both bands, ordered) : 0
+   adjacency edges OBSERVED             : 1
+   adjacency edges TRANSITIVE           : 0
+   circumference fraction identified    : 8.3%
+   longest contiguous chain             : 2 faces
+   faces verified by 1988-89 evidence   : 2 (both from the Aug 1989 frame)
+   faces from older photos + stability  : 0 (stability UNTESTED)
+
+## Letters per face, and what a 97-letter window needs
+   total letters across 24 faces: 1106
+   largest faces: UTC+1=137, UTC+3=126, UTC+2=108, UTC+8=70, UTC±0=64, UTC-5=63
+
+   Minimal contiguous ARCS reaching 97 letters (sliding around the drum):
+      1 faces, 108 letters: UTC+2
+      1 faces, 126 letters: UTC+3
+      1 faces, 137 letters: UTC+1
+      2 faces, 97 letters: UTC+8 - UTC+9
+      2 faces, 97 letters: UTC-5 - UTC-4
+      2 faces, 120 letters: UTC+7 - UTC+8
+      2 faces, 120 letters: UTC-6 - UTC-5
+      2 faces, 201 letters: UTC±0 - UTC+1
+      3 faces, 106 letters: UTC+4 - UTC+5 - UTC+6
+      3 faces, 107 letters: UTC-4 - UTC-3 - UTC-2
+      3 faces, 108 letters: UTC-8 - UTC-7 - UTC-6
+      3 faces, 122 letters: UTC+5 - UTC+6 - UTC+7
+      3 faces, 134 letters: UTC-7 - UTC-6 - UTC-5
+      3 faces, 143 letters: UTC+6 - UTC+7 - UTC+8
+      3 faces, 215 letters: UTC-1 - UTC±0 - UTC+1
+
+   MINIMUM faces needed for one 97-letter window: 1
+
+## The threshold, stated explicitly
+   TIER 1 - RESTRICTED RUN PERMITTED:
+     one contiguous arc of COMPLETE faces (both bands, order known) totalling
+     >= 97 letters. Currently 0 faces are complete, so: NOT MET.
+     A restricted run must report what fraction of the preregistered alignment
+     space it covers, and may not be presented as the full EXP-024.
+   TIER 2 - FULL PREREGISTERED RUN PERMITTED:
+     all 24 faces complete, plus the 1997 reversal applied. Currently: NOT MET.
+
+   Neither tier is met. EXP-024 remains frozen and unrun.
+
+## Where further photographs are worth most
+   face      names   share of remaining layout entropy
+   UTC+1        19     18.6%
+   UTC+3        15     13.5%
+   UTC+2        15     13.5%
+   UTC±0        10      7.8%
+   UTC+8         9      6.7%
+   UTC-5         8      5.7%
+
+   UTC+1, +2 and +3 together carry 45.6% of the total.
+   The Aug 1989 frame in hand shows UTC+10 and UTC+11 - between them 3.7% of the entropy.
+   So the single highest-value acquisition is a legible pre-1997 photograph of
+   the EUROPEAN side of the drum, not more Pacific frames.
