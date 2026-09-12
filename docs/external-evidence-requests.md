@@ -87,3 +87,59 @@ Unchanged from Checkpoint J and still open: a 1985–1996 close frame rotated ro
 `docs/codex-image-request.md`. This is now the *least* urgent of the three: EXP-029,
 EXP-030 and EXP-031 have accumulated bounded negatives against direct clock-letter
 running keys, so more of the same arc buys less than either request above.
+
+---
+
+## REQUEST 1 — FULFILLED (2026-09-12), with a correction
+
+Rows 1–24 were supplied in `docs/external/checkpoint-K-nsa-cipher-rows-1-24.md` and are
+now preserved and verified in `data/cipher_side_rows.json`. Three independent
+corroborations passed: rows 15–25 give exactly 336 K3 letters; row 25 after its `?` is
+exactly `OBKR` and rows 26–28 equal `K4[4:35]`, `K4[35:66]`, `K4[66:97]`; row 1 and row 15
+are the canonical K1 and K3 ciphertext openings.
+
+**The correction is accepted:** rows 1–24 hold 29–33 characters, not a uniform 31. The
+`32 + 27×31 = 869` sentence I repeated in Checkpoint K gives the right total but is a false
+description of the row structure, and is retracted going forward.
+
+---
+
+## REQUEST 4 — one straight-on photograph of the cipher side (NEW, and decisive)
+
+**What is needed is very small: whether the right-hand edge of the engraved cipher text is
+ragged or flush.**
+
+| field | value |
+|---|---|
+| Source | any orthographic / straight-on high-resolution photograph of the Kryptos cipher-side copper screen; or a fabrication drawing, punch template, shop drawing, or measured survey |
+| Candidate holders | CIA Fine Arts Commission / CIA Museum installation records; Jim Sanborn's own studio material; the sculpture fabricator's shop drawings; NSA DOCID 4145036's original photographic plates rather than its typeset transcription |
+| Exactly what is needed | (a) is the right edge of rows 1–24 ragged or flush; (b) do the left edges of all rows start at a common x; (c) is the inter-character pitch constant within a row and across rows |
+
+### Why it matters, precisely
+
+Rows 1–24 hold 29–33 characters. With a monospaced punch and a common row width every row
+would hold the same count. So either row width varies (ragged right edge → constant pitch,
+in which case row-local index **is** a physical column) or the pitch varies by row (flush
+right edge → no common lattice, and "the character physically above" is undefined by
+index). A single straight-on photograph distinguishes these, and the two hypotheses differ
+by 13.8% in pitch between the shortest and longest rows, which is visible rather than
+metrological.
+
+Until then the physical "characters above K4" architecture is **underdetermined, and
+currently disfavoured** by `data/physical.json → engraving_line_lengths` ("Sanborn kerned
+the lettering for aesthetics; fixed-width spacing was avoided", MEDIUM). It is parked, not
+tested with a manufactured lattice.
+
+**A typeset transcription cannot answer this.** It must be an image or a drawing that
+preserves real indentation.
+
+---
+
+## REQUEST 5 — a primary character count for K1 and K2 ciphertext (minor)
+
+`data/cipher_side_rows.json` records an unresolved discrepancy: rows 1–14 supply **432
+letters plus 3 question marks**, while the commonly cited section lengths K1 = 63 and
+K2 = 372 sum to **435 letters**. Needed: a character-by-character count of the K1 and K2
+*ciphertext* from the same CIA/NSA primary source, or NSA DOCID 4145036's cipher-side
+slide at legible resolution. It does not affect any result that uses only rows 15–28 or K4
+itself, but it bears on any model keyed to rows 1–14.

@@ -45,13 +45,23 @@ print("# EXP-032 key as an arbitrary function of engraving column")
 print(f"ciphertext sha256 {k4.sha256}\n")
 
 print("## Geometry cross-check against the ciphertext (not taken on trust)")
-NSA = {25: "ECDMRIPFEIMEHNLSSTTRTVDOHW?OBKR", 26: "UOXOGHULBSOLIFBBWFLRVQQPRNGKSSO",
-       27: "TWTQSJQSSEKZZWATJKLUDIAWINFBNYP", 28: "VTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR"}
-checks = [("row 25 is 31 chars ending in OBKR", len(NSA[25]) == 31 and NSA[25].endswith("OBKR")),
+# Row strings come from data/cipher_side_rows.json, which carries the authoritative CIA
+# transcription and its provenance. An earlier draft of this experiment also printed
+# "cipher side 32 + 27*31 == 869" as a structural check. That arithmetic gives the right
+# TOTAL but is a FALSE description: the authoritative rows 1-24 range from 29 to 33
+# characters. The check is replaced by the real row-length table.
+_rows = json.load(open(os.path.join(REPO_ROOT, "data", "cipher_side_rows.json")))
+NSA = {int(k): v for k, v in _rows["rows"].items()}
+_len = {r: len(NSA[r]) for r in NSA}
+checks = [("row 25 is 31 chars ending in OBKR", _len[25] == 31 and NSA[25].endswith("OBKR")),
           ("row 26 == K4[4:35]", NSA[26] == CT[4:35]),
           ("row 27 == K4[35:66]", NSA[27] == CT[35:66]),
           ("row 28 == K4[66:97]", NSA[28] == CT[66:97]),
-          ("cipher side 32 + 27*31 == 869", 32 + 27 * 31 == 869)]
+          ("K4's own rows 25-28 are 31 characters each",
+           all(_len[r] == 31 for r in range(25, 29))),
+          ("rows 1-24 are NOT uniformly 31 (29-33), so '32 + 27*31' is retracted as a "
+           "description", sorted({_len[r] for r in range(1, 25)}) == [29, 30, 31, 32, 33]),
+          ("all 28 rows total 869 characters", sum(_len.values()) == 869)]
 for name, ok in checks:
     print(f"   [{'PASS' if ok else 'FAIL'}] {name}")
 assert all(ok for _, ok in checks)
