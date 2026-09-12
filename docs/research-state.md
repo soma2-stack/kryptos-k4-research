@@ -123,6 +123,29 @@ Regenerate with `./run_all.sh`.
 - **Sanborn's Morse material tested as a key tape and failed** (EXP-023): 13,680
   alignments, best 5/24, below chance.
 
+### Added 2026-09-12 (session 7) — the modern endpoint, and a reversed priority
+
+- **Blocker 1 CLOSED.** The official 146-place modern list with UTC assignments is
+  stored in `data/weltzeituhr_modern_official.json`, validated and marked MODERN.
+- **The 24 faces are confirmed**: the list holds exactly 24 distinct whole-hour
+  zones, contiguous UTC−10…+13. Five half-hour places are extra; how they sit
+  physically is a new open question.
+- **Table order is NOT physical order — demonstrated.** The sourced adjacency
+  Bern–Preßburg–Belgrad has Rom, Tunis and Kinshasa interposed in the table.
+- **2015 was MONUMENT PROTECTION, not a restoration.** Checkpoint F's seventh blocker
+  was a misreading and is retired. Denkmalschutz since July 2015 also bounds later
+  change, so 1997 is the principal reversal boundary.
+- **Apia resolved**: UTC+13 ≡ UTC−11 one day apart, so the 2011 change is a date-line
+  label matter on the same face, not a panel change.
+- **1997 change set advanced** (taz, July 2015): **Managua** added; **"Mexico City" →
+  "Mexiko-Stadt"** — the GDR clock carried the English form. Now 6 of ~20 additions
+  and 5 renames documented.
+- **THE MAIN RESULT — the priority is reversed.** Even a *perfect* 1989 name list
+  leaves **~10^125** physical arrangements consistent with it, because EXP-024 reads
+  bands in physical order. A name list can never unblock the test. The binding
+  constraint is not which names were on the clock but **where they sat** — band and
+  order — recoverable only from dated, legible pre-1990 photographs.
+
 ## High-priority inherited program: `TOKIO → 57973`
 
 **Inherited result.** A substantial prior July 2026 handoff reportedly converged on the following chain:

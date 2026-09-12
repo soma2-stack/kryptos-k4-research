@@ -130,3 +130,24 @@ Fifteen experiments now exist. Before proposing anything:
     Retrieving the city list is a browser task, not a research task.
 43. EXP-024 is unaltered and unrun. Do not tune its 22 preregistered procedures
     after the data arrives.
+
+## Addendum — 2026-09-12 (Checkpoint G)
+
+44. Blocker 1 is CLOSED. The official 146-place modern list lives in
+    `data/weltzeituhr_modern_official.json`, validated, marked MODERN. Never copy a
+    value from it into a `pre1997_*` field without documented evidence of reversal.
+45. **Table order is NOT physical order — demonstrated**, not merely cautioned: the
+    sourced adjacency Bern–Preßburg–Belgrad has Rom, Tunis and Kinshasa interposed
+    in the table. Parenthetical forms ("Bratislava (Pressburg)", "Vilnius (Wilna)")
+    are a website convention, not engraved text.
+46. The 24 faces are CONFIRMED: exactly 24 whole-hour zones, UTC−10…+13. The five
+    half-hour places cannot own a face; their physical placement is an open question.
+47. 2015 was **monument protection**, not a restoration. Checkpoint F's blocker 7 is
+    retired. Apia's 2011 change is a date-line label matter on the same face.
+48. **THE PRIORITY IS REVERSED (EXP-026).** Even a perfect 1989 name list leaves
+    ~10^125 physical arrangements, so a name list can NEVER unblock EXP-024. The
+    dominant blocker is dated, legible pre-1990 photographs giving band and order.
+    Do not spend further effort on the name list believing it will unblock the test.
+49. Classification lives in `data/weltzeituhr_classification.json`: 12/146 (8.2%)
+    determined. Classify only from evidence — geopolitical intuition is not evidence.
+50. EXP-024 remains frozen, unmodified and unrun.

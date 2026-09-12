@@ -90,4 +90,22 @@ Noted for transparency: search summaries were asked repeatedly to enumerate the
 146-name list and consistently DECLINED rather than inventing one. That is the
 correct behaviour and no fabricated list entered the dataset.
 
+## Session 7 (Checkpoint G) — clean, no incidents
+
+The user supplied `weltzeituhr_modern_146_official.json`, independently retrieved
+from the official Weltzeituhr Berlin site because this environment's egress policy
+denies that domain. It is **object/history data, not K4 plaintext**, and is
+admissible. Provenance (publisher, page title, URL, retrieval date, sha256) is
+recorded in `data/weltzeituhr_modern_official.json`, and every record in it is
+marked MODERN.
+
+The file was validated before use — count, completeness, contiguity, duplicates —
+and cross-checked against five facts this repository had established independently.
+No historical field was overwritten with a modern value.
+
+Sources used this session: the supplied official list; taz (July 2015); Tagesspiegel;
+Berliner Zeitung; German and English encyclopaedia summaries. `solvekryptos.com`
+excluded on every query. No claimed-solution site used. No purported K4 plaintext
+sought or seen.
+
 ## Incidents 2+ — none recorded.

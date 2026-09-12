@@ -1,0 +1,56 @@
+# EXP-026 reconstruction progress, and the sufficiency question
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Blocker 1: CLOSED for the MODERN list
+   source   : Weltzeituhr Berlin official site - Places on the Worldtimeclock
+   url      : https://www.weltzeituhr-berlin.de/en/places-worldtimeclock
+   retrieved: 2026-09-12 (supplied; this environment denies the domain)
+   sha256   : 06b777abf1f3cd39cbde71d1dbc0d16d...
+   validated: 146/146 entries, indices contiguous, no duplicates, all cross-checks passed
+   HISTORICAL 1988-89 list: STILL UNKNOWN / PARTIALLY RECONSTRUCTED
+
+## Completion metric
+   entries whose pre-1997 presence is DETERMINED : 12 / 146  (8.2%)
+     CONFIRMED_ADDED_1997     6
+     RENAMED_1997             5
+     UNKNOWN                134
+     ZONE_MOVED_1997          1
+   zones containing >=1 classified entry          : 7 / 29
+   sectors FULLY reconstructed (1989 names)       : 0 / 24
+   historical BAND assignments known              : 0 / 146
+   historical ORDER relations known               : 1  (Bern-Bratislava-Belgrad)
+   unresolved 1997 additions                      : 15 of 20 unnamed
+   unresolved 1997 zone moves                     : all but Kiew
+   unresolved 1997 removals                       : entirely unknown
+   unresolved 2015 change set                     : entirely unknown
+
+## The sufficiency question: would a perfect name list be enough?
+   EXP-024's preregistered procedures read each sector's UPPER band and LOWER
+   band, in physical order. A name list gives neither. So suppose the 1989
+   names per sector were known exactly - how many physical arrangements would
+   remain consistent with them?
+
+   zone      names   orderings k!      band splits 2^k
+   UTC+1        19   10^17.1          10^5.7  
+   UTC+2        15   10^12.1          10^4.5  
+   UTC+3        15   10^12.1          10^4.5  
+   UTC+8         9   10^5.6           10^2.7  
+   UTC±0        10   10^6.6           10^3.0  
+
+   TOTAL arrangements consistent with a perfect name list: ~10^125
+   For comparison, EXP-024 as preregistered tries ~10^6 alignments.
+
+   CONSEQUENCE, and it is the main result of this session:
+   A NAME LIST ALONE CAN NEVER UNBLOCK EXP-024. Recovering every 1989 name
+   would still leave ~10^125 physical arrangements, and guessing among them
+   would both be computationally impossible and destroy the preregistration
+   by unbounded multiple testing. The binding constraint is not WHICH NAMES
+   were on the clock - it is WHERE THEY SAT: band and order within each
+   sector. That is recoverable only from dated photographs of the object.
+
+## Observations on the MODERN tape - NOT a K4 test
+   146 names, 1148 letters after normalisation, mean 7.86 letters
+   letters if parentheticals are stripped first: 1134
+   Any coincidence with 97 here would concern the MODERN clock, which
+   Sanborn never saw, and would be one of many numbers this file can produce.
+   Recorded as an observation only; no prediction is derived from it.

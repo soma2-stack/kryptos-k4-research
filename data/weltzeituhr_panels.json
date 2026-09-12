@@ -3,15 +3,17 @@
   "purpose": "Panel evidence matrix for the Weltzeituhr, one entry per displayed sector. This layer exists so the clock is NOT collapsed into a running text before the per-sector reconstruction is real. UNKNOWN means unknown; it is never filled from modern data.",
   "contamination_note": "No claimed-K4-solution site used. See docs/contamination-log.md.",
   "displayed_range": {
-    "value": "INFERRED as UTC-10 .. UTC+13 (24 sectors)",
-    "basis": "Reported that the published list spans Honolulu through Apia. Honolulu is UTC-10; Apia is UTC+13 since 2011 (it was UTC-11 before). -10..+13 inclusive is exactly 24 sectors, which is consistent.",
-    "confidence": "INFERRED",
-    "caution": "An alternative reading is UTC-11..+12 with the list wrapping. Both give 24 sectors. This must be settled from the published list itself, not assumed."
+    "value": "CONFIRMED as UTC-10 .. UTC+13 (24 whole-hour zones)",
+    "basis": "The supplied official 146-entry list contains exactly 24 distinct WHOLE-HOUR zones, contiguous from UTC-10 to UTC+13, matching the 24 physical faces. Five half-hour places (Marquesas, Teheran, Kabul, Neu-Delhi/Colombo, Rangun) are extra and cannot have their own faces.",
+    "confidence": "MULTIPLE INDEPENDENT SOURCES (official list + 24-face geometry)",
+    "open_question": "HOW the five half-hour places are physically placed - own strip, shared face, or boundary - is UNKNOWN."
   },
   "post_1997_changes_warning": {
-    "value": "The clock was ALSO restored in 2015, and Apia's own UTC offset changed in 2011 (-11 to +13).",
-    "implication": "Reconstructing 1988-89 from the MODERN list requires reversing the 2015 changes as well as the 1997 ones. Checkpoint E framed this as a single 1997 subtraction; that is now known to be insufficient.",
-    "confidence": "MULTIPLE INDEPENDENT SOURCES for the 2015 restoration; the 2015 change set is UNKNOWN"
+    "value": "CORRECTED 2026-09-12 (Checkpoint G). 2015 was NOT a restoration. In July 2015 the Weltzeituhr was placed under MONUMENT PROTECTION (Denkmalschutz) by the Berlin State Heritage Office. Checkpoint F recorded a '2015 restoration change set' as a seventh blocker; that was a misreading of an earlier summary and is RETIRED.",
+    "implication": "Monument protection since July 2015 additionally BOUNDS later change: inscriptions cannot be altered without permission, so the modern published list most likely reflects the post-1997 state. Reversal therefore targets 1997 as the principal boundary, as Checkpoint E originally framed it.",
+    "apia_note": "UTC+13 is the same HOUR as UTC-11, one day apart, so Apia's 2011 change is a date-line/label matter on the SAME physical face, not evidence of a panel change.",
+    "known_later_physical_event": "September 2024: a delivery truck struck the clock and dented the 'Wellington' panel; repair quoted at 23,000 euro requiring complete refabrication of the damaged metal plates (Tagesspiegel). Post-dates everything relevant to 1989 but shows panels ARE individually refabricable.",
+    "confidence": "MULTIPLE INDEPENDENT SOURCES for Denkmalschutz July 2015"
   },
   "change_set_1997": {
     "additions_documented": [
@@ -34,10 +36,15 @@
       {
         "name": "Seoul",
         "confidence": "SINGLE RELIABLE SOURCE"
+      },
+      {
+        "name": "Managua",
+        "confidence": "SINGLE RELIABLE SOURCE",
+        "source": "taz, July 2015: names missing in the original state included not only Tel Aviv but also Managua"
       }
     ],
     "additions_total_reported": 20,
-    "additions_still_unnamed": 15,
+    "additions_still_unnamed": 14,
     "renames_documented": [
       {
         "from": "Leningrad",
@@ -54,6 +61,13 @@
       {
         "from": "Bratislava",
         "to": "Preszburg"
+      },
+      {
+        "from": "Mexico City",
+        "to": "Mexiko-Stadt",
+        "confidence": "SINGLE RELIABLE SOURCE",
+        "source": "taz, July 2015",
+        "note": "Counterintuitive: the GDR clock carried the ENGLISH form 'Mexico City'. The writer flags it as surprising, which argues against confusion."
       }
     ],
     "zone_moves_documented": [
@@ -139,13 +153,24 @@
       "modern_names_unsplit": "UNKNOWN",
       "pre1997_upper": "UNKNOWN",
       "pre1997_lower": "UNKNOWN",
-      "added_1997": [],
-      "renamed_1997": [],
+      "added_1997": [
+        {
+          "name": "Managua",
+          "confidence": "SINGLE RELIABLE SOURCE"
+        }
+      ],
+      "renamed_1997": [
+        {
+          "from": "Mexico City",
+          "to": "Mexiko-Stadt",
+          "confidence": "SINGLE RELIABLE SOURCE"
+        }
+      ],
       "moved_1997": [],
       "removed_1997": "UNKNOWN",
       "unresolved": [],
       "sources": [],
-      "confidence": "UNKNOWN"
+      "confidence": "2 of 5 modern entries classified; band and order UNKNOWN"
     },
     "-5": {
       "utc_offset": -5,

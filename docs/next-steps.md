@@ -24,7 +24,26 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint F
+## 0 — Status after Checkpoint G: the priority has REVERSED
+
+Blocker 1 is closed — the official 146-place modern list is stored and validated.
+But EXP-026 establishes that **a name list can never unblock EXP-024**: even a
+perfect 1989 list leaves ~10^125 physical arrangements, because the preregistered
+procedures read upper/lower bands *in physical order*.
+
+**So the dominant blocker is no longer the 1997 name changes. It is dated, legible
+pre-1990 photographs of the drum**, at resolution sufficient to read the upper and
+lower bands of individual sectors plus enough neighbouring faces to fix order.
+Candidate holders: DDR-Bildarchiv, picture-alliance (1969–1982 material), Getty
+(~231 tagged images), Bundesarchiv, DDR Museum. This is a human visual-transcription
+task; images are not readable through this toolchain.
+
+The 146-name endpoint makes that task much easier: a photograph no longer has to be
+read cold, only matched against a known candidate set for its zone.
+
+Blocker 7 (a "2015 restoration") is **retired** — July 2015 was monument protection.
+
+## 0b — Earlier status after Checkpoint F
 
 Blockers 2–4 are partially closed from contemporary December 1997 reporting: five of
 ~20 additions (Jerusalem, Tel Aviv, Cape Town, Oslo, Seoul), four renames (adding

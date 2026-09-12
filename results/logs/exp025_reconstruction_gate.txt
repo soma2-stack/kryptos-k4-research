@@ -13,17 +13,19 @@ ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ce
    allow_incomplete=True, which stamps the result NOT historical.
 
 ## 1997 change set recovered so far
-   additions documented : 5 of 20 reported (15 still unnamed)
+   additions documented : 6 of 20 reported (14 still unnamed)
      + Jerusalem  [MULTIPLE INDEPENDENT SOURCES]
      + Tel Aviv  [MULTIPLE INDEPENDENT SOURCES]
      + Kapstadt / Cape Town  [MULTIPLE INDEPENDENT SOURCES]
      + Oslo  [SINGLE RELIABLE SOURCE]
      + Seoul  [SINGLE RELIABLE SOURCE]
-   renames documented   : 4
+     + Managua  [SINGLE RELIABLE SOURCE]
+   renames documented   : 5
      ~ Leningrad -> Sankt Petersburg
      ~ Alma-Ata -> Almaty
      ~ Aschchabad -> Aschgabat
      ~ Bratislava -> Preszburg
+     ~ Mexico City -> Mexiko-Stadt
    zone moves documented: 1 (Kiew / Kyiv; from/to UNKNOWN)
    removals             : UNKNOWN - no source reached documents any removal
 
@@ -46,8 +48,8 @@ ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ce
    This is the quantitative justification for not taking the shortcut.
 
 ## A complication Checkpoint E did not account for
-   The clock was ALSO restored in 2015, and Apia's own UTC offset changed in 2011 (-11 to +13).
-   Reconstructing 1988-89 from the MODERN list requires reversing the 2015 changes as well as the 1997 ones. Checkpoint E framed this as a single 1997 subtraction; that is now known to be insufficient.
+   CORRECTED 2026-09-12 (Checkpoint G). 2015 was NOT a restoration. In July 2015 the Weltzeituhr was placed under MONUMENT PROTECTION (Denkmalschutz) by the Berlin State Heritage Office. Checkpoint F recorded a '2015 restoration change set' as a seventh blocker; that was a misreading of an earlier summary and is RETIRED.
+   Monument protection since July 2015 additionally BOUNDS later change: inscriptions cannot be altered without permission, so the modern published list most likely reflects the post-1997 state. Reversal therefore targets 1997 as the principal boundary, as Checkpoint E originally framed it.
    Reversing 1997 alone is therefore NOT sufficient; the 2015 change set is
    also UNKNOWN and must be reversed too.
 
