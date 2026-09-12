@@ -1,124 +1,111 @@
 # Next experiments
 
-Rewritten 2026-09-12 after the second research session. The ordering changed
-substantially because two sessions of elimination changed what is worth doing.
+Rewritten 2026-09-12 after Checkpoint C. Read `docs/evidence-grades.md` first: it
+regrades every earlier conclusion and states what each argument does *not* cover.
 
-## What changed, and why the list is shorter
+## The situation in one paragraph
 
-Session 1 built the toolchain and closed the obvious families. Session 2 set out to
-pursue the position-63 lead and instead **demoted it** while closing far more:
-parameter-linear keystreams, feedback keystreams, five cipher classes by invariant,
-two-chart models, fractionation, and Quagmire I.
+Three sessions have eliminated short-key and structured-key models at scale and
+found nothing. EXP-019 explains why in one line of arithmetic: K4's 97 characters
+carry ~310–359 bits of redundancy, so they can determine a key of at most 66–76
+letters. What matters is key **entropy**, not length. A random 97-letter key is
+information-theoretically ambiguous and *no* method recovers it. A structured long
+key — a running key from text, or a keystream read off a physical object — has low
+entropy and remains recoverable, **but only once the right source is guessed**. The
+surviving hypotheses differ from one another almost solely in *which external
+source supplied the key*, and 24 crib letters cannot tell them apart.
 
-The most important result is not an elimination at all. **24 crib letters supply
-112.8 bits, and many remaining families have more parameter entropy than that.**
-They are not unsolved — they are *unfalsifiable with the evidence in hand*.
-Distinguishing those two is now the main thing this repository offers, and it makes
-"try another cipher" a much less valuable move than it looks.
+That reframes the work. The bottleneck is no longer ideas or compute. It is
+external evidence.
 
 ---
 
-## 1 — Treat acquiring constraint as the primary objective
+## 1 — Acquire evidence, in this order
 
-Priority: **highest**. See `ideas.md` § 1 and EXP-011.
+Priority: **highest**, and it dominates everything below.
 
-Between **3 and 35** more known plaintext letters would re-open every family
-currently beyond reach. One further released clue the size of NORTHEAST would make
-Quagmire I decidable outright. Concretely:
+1. **K5's ciphertext.** 97 characters in depth with K4 would very likely break both,
+   *even against a one-time pad*: EXP-019 shows by simulation that `C1−C2 = P1−P2`,
+   that shared words at shared positions are directly visible, and that dragging 24
+   known letters of one message reads 24 letters of the other with no key knowledge.
+   Sanborn releases it only once K4 is solved — a circular lock, but worth tracking.
+2. **The K4 plaintext.** It exists. It was found in September 2025 and sealed for 50
+   years. If it becomes available, stop searching and run
+   `k4lib.recover.diagnose` (EXP-005 validates the harness).
+3. **More crib letters.** EXP-011 quantifies: 3 to 35 more re-open every family now
+   beyond reach. Re-run EXP-011 whenever the crib set changes.
 
-- Track any further Sanborn clue or archive disclosure; each one changes what is
-  testable, and EXP-011 already computes by how much.
-- If a candidate 97-character plaintext appears from any source, **stop searching**
-  and run `k4lib.recover.diagnose` on it (`ideas.md` § 2). The harness exists and is
-  validated.
-- Re-run EXP-011 whenever the crib set changes. It is cheap and it re-plans the work.
+## 2 — Close the two physical-data gaps
 
-## 2 — Transposition with a pre-fixed alphabet: finish the remaining corner
+Priority: **high**. These are the only gaps a researcher can close without waiting
+on a release, and both currently block the object-based branch.
 
-Priority: **high**, and **mostly done** — EXP-016 closed the main cross product:
-10,160 permutations × 12 conventions × 25 keystream models, 4,145,280 gate
-evaluations, zero fits.
+- **Primary verification of the K4 physical layout.** `data/physical.json` records
+  7 rows × 14 columns, 98 cells, one blank — at MEDIUM confidence, because it traces
+  mainly to a site whose solution claim Sanborn disputes. Verify against the NSA
+  transcript or a photograph. EXP-018's grids depend on it.
+- **The 1989 Weltzeituhr city configuration.** Recorded as UNKNOWN. The clock carried
+  ~80 city names in 1969 and ~148 today, and was restored in 1997 and 2015 with names
+  updated. **A modern city list must not be substituted for the one Sanborn could
+  have seen.** Without it, no city-name keystream from the World Clock can be tested
+  honestly. Sources to try: GDR-era photographs, Erich John's design documentation,
+  Berlin municipal archives.
 
-Two declared gaps remain, both small and both worth closing:
+## 3 — The residual opening the audit re-opened
 
-- **Order B for the progressive and polynomial models.** The key indexed on the
-  ciphertext side makes the coefficient matrix depend on the permutation, so it
-  cannot be pre-factored the way EXP-016 does. It is untested, *not* negative.
-  Either accept the cost of a per-permutation solve, or derive an O(24) check the
-  way the periodic case has one.
-- **Feedback and relative-phase models under transposition.** EXP-016 covered
-  progressive, polynomial and periodic. The EXP-008 and EXP-015 model families have
-  not been crossed with the permutation family.
+Priority: medium. `docs/evidence-grades.md` found one family that Checkpoint B
+closed wrongly: **a 25-symbol system followed by a second encoding layer** that
+re-expands to 26 letters. The output-alphabet coverage argument only ever sees the
+final layer, so it says nothing about a composite. Before searching it, count free
+parameters — a two-layer composite may well land above the evidence budget, in which
+case record it as undecidable rather than searching it.
 
-Keep the alphabet fixed and declared in advance: EXP-011 shows transposition plus a
-*free* keyed alphabet is vacuous (10⁺⁷·⁹ expected chance fits) while transposition
-plus a fixed alphabet is comfortably testable (10⁻¹⁸·⁷).
+## 4 — Declared gaps in completed sweeps
 
-## 3 — Machine-readable physical transcript
+Priority: medium-low, but they are gaps, not negatives, and should be labelled as
+such wherever they are cited.
 
-Priority: **high**, and EXP-017 raised it: the Playfair and reflector-machine
-eliminations are contingent on the crib positions being exactly right, so verifying
-them against a primary transcript now has a concrete payoff rather than being tidiness., and it is the only route to genuinely new evidence that does not
-depend on someone else releasing it. See `ideas.md` § 7.
+- **EXP-016 order B** for the progressive and polynomial models: the coefficient
+  matrix depends on the permutation and cannot be pre-factored. Untested.
+- **Feedback and relative-phase models under transposition** (EXP-008 and EXP-015
+  families crossed with the permutation family). Untested.
 
-Nothing here records the sculpture's line breaks, panel boundaries, tableau
-orientation, or the punctuation and misspelling handling that
-`data/mask_sources.json` currently guesses at. EXP-004's K1–K3 rows remain
-`inconclusive` rather than `negative` solely because of this. Transcribe from the
-NSA primary reference in `sources.md`; do not reconstruct from memory.
+## 5 — Specify, do not reconstruct, the `TOKIO → 57973` corpus
 
-## 4 — Specify, do not reconstruct, the `TOKIO → 57973` corpus
-
-Priority: medium, unchanged from session 1, and still a specification task.
-
-Its route definitions and hash were never committed. Reconstructing 942 cases from a
-count alone is inventing an enumeration, which `resume-prompt.md` explicitly warns
-against. Write the specification, state exactly which source evidence is missing, and
-stop there until it is found.
-
-## 5 — Bounded `4 × 22` lookup experiments
-
-Priority: medium, and now strongly pre-filtered.
-
-Before writing any search, apply the four free checks in `ideas.md` § 5. In
-particular the bounded-source lemma kills any lookup whose output is bounded below
-25 for 8 of the 12 conventions, and the block-coverage rule shows how quickly 24 crib
-letters collapse to nothing once a cipher has block structure.
+Unchanged. Its route definitions and hash were never committed; reconstructing 942
+cases from a count alone is inventing an enumeration.
 
 ## 6 — Do not pursue
 
-Recorded so effort is not re-spent:
-
-- **Position 63 / segmentation.** Demoted. `ideas.md` § 4 gives the ceiling argument.
-- **The parity, K0 Morse and Kryptos rail selectors.** Explained as a 1-in-1,024
-  selection effect by EXP-009.
-- **More route or grid transpositions applied alone.** Killed by the IoC invariant.
-- **Any model with a free per-position selector or a free keyed alphabet.** Above the
-  evidence budget; a fit would be meaningless.
+- **Position 63 / segmentation.** Demoted in Checkpoint B; no independent support.
+- **Parity, K0 Morse, Kryptos rail selectors.** A 1-in-1,024 selection effect.
+- **The Mengenlehreuhr.** The wrong clock, now confirmed.
+- **Compass-bearing routes.** Eliminated by EXP-018 within a specified model.
+- **More generic cipher-family enumeration.** Bounded above by the unicity result:
+  if the key is long, this cannot succeed however long it is run.
+- **Berlin→Moscow as a cipher mechanism.** The bearing coincidence is real but
+  deflates under jitter and sector width; keep it as an interpretation of what the
+  plaintext *says*, not of how it was enciphered.
 
 ---
 
 ## Required result record
 
-Unchanged, and exemplified by `results/2026-09-12-exp001-005.md` and
-`results/2026-09-12b-exp006-014.md`. Hypothesis; input source and hash; code revision;
-full parameters; number of variants; crib result; output/hash; conclusion; and the
-exact reason it differs from prior work.
+Unchanged, and exemplified by the three dated records in `results/`. Six additions
+learned across the sessions:
 
-Five additions learned across the two sessions:
-
-- **State the null.** "Best 7/24" means nothing without the expected best over the
-  number of trials run — and check whether those trials were independent. EXP-014's
-  apparent excess is correlation between tableau alignments, not signal.
-- **Self-test the apparatus.** A negative from code that cannot produce a positive is
-  not a negative. Every experiment here carries a planted positive control.
-- **Report whether the search finished.** EXP-013's first run hit a node cap and found
-  nothing; that is heuristic failure, not elimination. Re-ordering the search cut it
-  60-fold and made the negative real.
-- **Count degrees of freedom before searching.** `modlin.chance_solvable` gives the
-  exact probability that a model class admits *any* solution for random data. If that
-  is near 1, the class is vacuous and the search is theatre.
-- **Prefer an invariant to a search.** A search reports "not found". An invariant
-  reports "cannot exist", costs nothing, and retires an entire class at once. The most
-  productive results in this repository — three alphabets forced, all 26 letters
-  present, IoC versus transposition — are all one-line arguments.
+- **State the null, and check trial independence.**
+- **Plant a positive control.** Every experiment here carries one.
+- **Report whether the search finished.** A node cap is heuristic failure, not
+  elimination.
+- **Count free parameters before searching.** `modlin.chance_solvable` gives the
+  exact chance a model class admits any solution for random data — but note the
+  audit's correction: the penalty applies to **free** parameters, not to
+  dimensionality. A physically-determined mechanism has almost none and is
+  *maximally* testable however large it looks.
+- **Prefer an invariant to a search**, and then **state its model class**. The most
+  productive results here are one-line arguments — but three of them were originally
+  over-scoped, and the qualifier is part of the result.
+- **Grade every conclusion.** PROVED IMPOSSIBLE / EXHAUSTIVELY ELIMINATED WITHIN A
+  SPECIFIED MODEL / STRONGLY DISFAVORED / HEURISTIC NEGATIVE / UNTESTABLE WITH
+  CURRENT DATA. "Negative" alone hides which one you mean.

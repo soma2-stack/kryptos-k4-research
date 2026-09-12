@@ -46,3 +46,24 @@ Fifteen experiments now exist. Before proposing anything:
 16. Do not build on position 63. It was pursued hard in session 2 and demoted.
 17. If your search hits an iteration or node cap, report it as inconclusive. Only a
     completed search is an elimination.
+
+## Addendum — 2026-09-12 (Checkpoint C)
+
+18. **Read `docs/evidence-grades.md` before anything else.** Several earlier
+    conclusions were over-scoped. The three-alphabet bound, the period elimination
+    and the conflict census hold only for **monographic, position-preserving**
+    ciphers; the output-alphabet argument sees only the final layer; the IoC
+    argument is statistical; the bit-budget frontier is a heuristic.
+19. `BERLINCLOCK` is the **Weltzeituhr**, not the Mengenlehreuhr (Sanborn,
+    Nov 2025). EXP-002 tested the wrong clock. EXP-018 is the real test: negative.
+20. Before proposing any new cipher search, read EXP-019. K4 can determine a key of
+    at most ~66–76 letters. If the key is long and random, nothing works; if it is
+    long and structured, only knowing its **source** helps. Searching short-key
+    families further is bounded above by this.
+21. The bit-budget penalty applies to **free** parameters, not dimensionality. A
+    mechanism read off a physical object has almost no free parameters and is
+    *maximally* testable — this is the one direction the frontier argument
+    encourages rather than blocks.
+22. Two closable data gaps block the object branch: primary verification of the
+    7×14 K4 layout, and the **1989** Weltzeituhr city configuration. Do not
+    substitute a modern city list for the historical one.

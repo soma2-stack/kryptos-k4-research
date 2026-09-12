@@ -1,0 +1,29 @@
+# EXP-018 compass-bearing routes on the physical grid
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Pre-registered grids
+   14 x 7  ( 98 cells,  1 blank)   reported physical K4 layout
+    7 x 14 ( 98 cells,  1 blank)   transpose of it
+   24 x 5  (120 cells, 23 blank)   Weltzeituhr: 24 segments x 4 city bands (96 cells - one short of 97)
+    4 x 25 (100 cells,  3 blank)   transpose of it
+   22 x 5  (110 cells, 13 blank)   inherited UTC+9 world-clock tape
+   24 x 5  SKIPPED as duplicate of an earlier grid   Weltzeituhr width, height raised to fit 97
+   26 x 4  (104 cells,  7 blank)   alphabet-width control
+
+## Bearings: N, NNE, NE, ENE, E, ESE, SE, SSE, S, SSW, SW, WSW, W, WNW, NW, NNW
+   ENE = (2, -1) (dcol, drow): two east for one north
+
+## Positive control
+   planted progressive(L=5,delta=7) under the ENE route on 14x7
+   recovered by the same code path: YES
+   CONTROL PASSED
+
+## Search
+   permutations built : 20,160
+   gate evaluations   : 6,048,000
+   fits               : 0
+
+## Multiple-testing budget
+   The most permissive model is periodic(p=16): 24 constraints, 16 unknowns,
+   chance 26^-8 = 4.79e-12. Over 6,048,000 evaluations the sweep expects
+   2.90e-05 false fits.

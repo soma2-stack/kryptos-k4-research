@@ -52,6 +52,29 @@ Regenerate with `./run_all.sh`.
   are contingent on the exact alignment** and would need rechecking if the crib
   positions moved. Verify `data/k4.json` against a primary transcript.
 
+### Added 2026-09-12 (session 3) — external evidence and the unicity bound
+
+- **`BERLINCLOCK` is the Weltzeituhr**, Alexanderplatz, not the Mengenlehreuhr
+  (Sanborn, 12 November 2025). EXP-002 therefore tested the wrong clock; EXP-018 is
+  the principal `BERLINCLOCK` test and is negative.
+- **The K4 plaintext exists and is not public.** Found September 2025 in Sanborn's
+  Smithsonian donation; the finders declined to publish and the material is sealed
+  for 50 years. Sanborn: "They did not solve K4 and they certainly did not find the
+  key." The *method* is unknown to everyone, including the plaintext's finders.
+- **K5 exists**: 97 characters, "similar but not identical" system, shares coded
+  words with K4 **in the same positions** — released only once K4 is solved.
+- **Unicity bound (EXP-019).** K4's 97 characters carry ~310–359 bits of redundancy
+  and can therefore determine a key of at most **66–76 letters**. What matters is
+  key *entropy*, not length: a random 97-letter key (456 bits) makes K4
+  **information-theoretically ambiguous**, while a structured long key — a running
+  key from text, or a keystream read off a physical object (~30 bits) — stays
+  recoverable *if the source is known*. This single fact explains the whole pattern
+  of results across three sessions.
+- **Depth would break it.** Simulated against a true one-time pad, two messages
+  sharing a keystream give `C1−C2 = P1−P2` exactly; shared words at shared positions
+  are directly visible; and crib-dragging 24 known letters of one message recovers
+  24 letters of the other with no key knowledge. That is the stated K4/K5 relation.
+
 ## High-priority inherited program: `TOKIO → 57973`
 
 **Inherited result.** A substantial prior July 2026 handoff reportedly converged on the following chain:

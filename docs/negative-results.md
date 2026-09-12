@@ -1,3 +1,11 @@
+> **Read `docs/evidence-grades.md` first.** Several entries below were originally
+> stated more universally than their arguments support. That document regrades every
+> one against a five-level scale (PROVED IMPOSSIBLE / EXHAUSTIVELY ELIMINATED WITHIN
+> A SPECIFIED MODEL / STRONGLY DISFAVORED / HEURISTIC NEGATIVE / UNTESTABLE WITH
+> CURRENT DATA) and says what each argument does **not** cover. In particular the
+> three-alphabet, period-elimination and conflict results hold only for
+> **monographic, position-preserving** ciphers.
+
 # Tested and ruled-out paths
 
 The items below were reported in the inherited conversation. They are retained to prevent duplicate work; replicate a result if it becomes a premise for a new method.
@@ -69,6 +77,8 @@ Regenerate with `./run_all.sh`; full parameters in `results/2026-09-12b-exp006-0
 | Linear recurrences over Z26 | order <= 3, fitted on EASTNORTHEAST's 13 consecutive forced key values | No recurrence fits even the fitting crib, let alone predicts BERLINCLOCK. |
 
 | Complete transposition family x keystream models | 10,160 permutations (9,312 affine mod 97, complete + 848 routes) x 12 conventions x 25 models (progressive L<=12, polynomial deg<=5, periodic 8<=p<=16); 4,145,280 gate evaluations | Zero fits. EXP-016. Alphabet fixed in advance, since transposition + a free keyed alphabet is vacuous. Order B untested for the progressive and polynomial models - see the record. |
+
+| Compass-bearing routes on the physical and Weltzeituhr grids | 16 compass points as lattice steps x 6 pre-registered grids (14x7 and 7x14 physical layout, 24x5 and 4x25 Weltzeituhr width, 22x5 tape, 26x4 control) x every start cell x 2 composition orders x 12 fixed conventions x 25 keystream models; 20,160 permutations, 6,048,000 gate evaluations | Zero fits. EXP-018. Planted control recovered. This is the principal BERLINCLOCK test that EXP-002 did not perform, since EXP-002 tested the Mengenlehreuhr - the wrong clock. |
 
 ## Undecidable, not negative
 

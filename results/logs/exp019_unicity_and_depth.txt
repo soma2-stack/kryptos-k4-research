@@ -1,0 +1,85 @@
+# EXP-019 unicity distance and the value of depth
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Part 1 - the longest key K4 could possibly determine
+   ciphertext length n = 97, log2(26) = 4.700 bits per letter
+
+   H_Eng  D=log2(26)-H_Eng   redundancy n*D   max key length L*
+   (bits/letter)                    (bits)     with H(K)=L*log2(26)
+    1.0          3.70             358.9           76.4 letters
+    1.2          3.50             339.5           72.2 letters
+    1.5          3.20             310.4           66.0 letters
+    2.0          2.70             261.9           55.7 letters
+
+   Reading: with the usual English estimate H_Eng ~ 1.2 bits/letter, K4 can
+   uniquely determine a key of at most about 76 letters. A key as long as the
+   message - a running key or a one-time pad - carries 97*4.70 = 456 bits,
+   far above the 340 bits of redundancy available.
+
+   IMPORTANT NUANCE - a long key is not automatically fatal. What matters is
+   the key's ENTROPY, not its length. Compare, against the ~340 bits of
+   redundancy a 97-letter English plaintext carries:
+
+     random 97-letter key (true one-time pad)              456 bits   AMBIGUOUS - unbreakable from ciphertext alone
+     97-letter running key drawn from English text         116 bits   in principle recoverable
+     key read off a physical object (which object + how)     30 bits   in principle recoverable
+     keyword of length 12                                   56 bits   in principle recoverable
+     keyword of length 22                                  103 bits   in principle recoverable
+
+   So the correct conclusion is narrower than 'long keys are hopeless':
+     * a long RANDOM key makes K4 information-theoretically ambiguous, and
+       no method recovers it - not cleverness, not compute;
+     * a long STRUCTURED key - a running key from natural text, or a
+       keystream read off a physical object - has low entropy and IS
+       recoverable in principle, but only once you guess the right source.
+
+   That is exactly where the surviving hypothesis space now sits, and it
+   explains the whole pattern of this repository's results: short and
+   structured keys are eliminated at scale, while the remaining candidates
+   differ from one another only in WHICH EXTERNAL SOURCE supplied the key.
+   The cribs cannot distinguish those; only knowing the source can.
+
+## Part 2 - what the 24 crib letters buy, and what they leave
+   The cribs pin the key at 24 of 97 positions. Under a fully aperiodic key
+   the remaining 73 key letters stay free, so the surviving plaintext space is
+   every English string that fits the 73 unknown positions:
+     H_Eng=1.0: ~2^73 = 10^22 plausible completions
+     H_Eng=1.2: ~2^88 = 10^26 plausible completions
+     H_Eng=1.5: ~2^110 = 10^33 plausible completions
+   The cribs constrain the MECHANISM, which is why they eliminate structured
+   models so effectively, but they do not constrain a long key at all.
+
+## Part 3 - depth: what K5 would give, validated by simulation
+   Sanborn confirmed K5 is 97 characters, uses a 'similar but not identical'
+   system, and shares coded words with K4 in the same positions.
+   If two messages share a keystream, the key cancels exactly:
+       C1[i] - C2[i] = P1[i] - P2[i]   for every i
+
+   simulation with a genuinely random 97-letter key (an OTP):
+     C1-C2 equals P1-P2 at all 97 positions: True
+     positions where C1[i]==C2[i]: 60
+     positions where P1[i]==P2[i]: 60  -> identical sets: True
+     So shared plaintext words at shared positions are DIRECTLY VISIBLE in
+     the ciphertexts, with no cryptanalysis at all.
+
+   crib-drag demonstration (no key knowledge used, differing region):
+     knowing P1[0:24] = BETWEENSUBTLESHADINGANDT
+     gives   P2[0:24] = ITWASTOTALLYINVISIBLEHOW
+     actual  P2[0:24] = ITWASTOTALLYINVISIBLEHOW
+     correct: True
+
+   The same 24 crib letters that cannot dent a long key on ONE message
+   propagate into the other message for free once there is depth.
+
+## Part 4 - what this means for where effort should go
+   Ranked by information gained per unit of effort:
+     1. K5's ciphertext. 97 characters in depth with K4 would very likely
+        break both, even against a one-time pad, by the mechanism above.
+        It is withheld until K4 is solved - a deliberate circular lock.
+     2. The K4 plaintext. Found Sept 2025 in the Smithsonian donation,
+        not published, sealed 50 years. With it, k4lib.recover.diagnose
+        reads the method off directly (EXP-005 validates the harness).
+     3. More crib letters. EXP-011 quantifies: 3 to 35 more re-open every
+        family currently beyond reach.
+     4. Further searching of short-key models. Bounded above by Part 1:
+        if the key is long, this cannot succeed however long it is run.

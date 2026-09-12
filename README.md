@@ -6,6 +6,28 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint C (2026-09-12).** Sanborn confirmed in November 2025 that
+> `BERLINCLOCK` is the **Weltzeituhr** at Alexanderplatz, not the Mengenlehreuhr.
+> The principal World-Clock test has now been run and is negative. More importantly,
+> a unicity calculation explains three sessions of failure at once, and identifies
+> the bottleneck as external evidence rather than ideas. See
+> [the Checkpoint C record](results/2026-09-12c-checkpoint-C.md) and
+> [evidence grades](docs/evidence-grades.md).
+>
+> **K4's 97 characters can determine a key of at most ~66–76 letters.** What matters
+> is key *entropy*, not length: a random 97-letter key is information-theoretically
+> ambiguous and no method recovers it, while a structured long key — a running key
+> from text, or a keystream read off a physical object — stays recoverable *only
+> once its source is known*. The surviving hypotheses differ almost solely in which
+> external source supplied the key, and 24 crib letters cannot tell them apart.
+>
+> The K4 **plaintext exists** — found September 2025 in Sanborn's Smithsonian
+> donation, unpublished, sealed 50 years. Sanborn: *"They did not solve K4 and they
+> certainly did not find the key."* **K5** exists too: 97 characters, shares coded
+> words with K4 in the same positions — released only once K4 is solved. Simulation
+> shows two messages in depth break each other even against a one-time pad.
+
+
 Two sessions of work have moved this from "many untested ideas" to a narrow, documented
 position. The most useful result is not an elimination:
 
@@ -73,6 +95,8 @@ Earned the hard way; read before adding an experiment.
 
 ## Where to start
 
+0. [evidence grades](docs/evidence-grades.md) — **read first.** Regrades every
+   conclusion and states what each argument does not cover.
 1. [research state](docs/research-state.md) — inherited leads, and the facts actually
    verified by code here.
 2. [new ideas](docs/ideas.md) — the surviving hypothesis space, ranked, with what is
@@ -85,6 +109,8 @@ Earned the hard way; read before adding an experiment.
 ## Status
 
 Prepared from the referenced ChatGPT conversation on 2026-09-11 and published by the
-user. Extended 2026-09-12 with an executable toolchain, seventeen experiments, an exact
-Z₂₆ solver, the testability frontier, and a crib-alignment robustness audit. **K4 remains unsolved, and no candidate
+user. Extended 2026-09-12 with an executable toolchain, nineteen experiments, an exact
+Z₂₆ solver, the testability frontier, a crib-alignment robustness audit, an
+evidence-grade re-audit, the Weltzeituhr/compass-bearing tests, and the unicity
+bound. **K4 remains unsolved, and no candidate
 mechanism is claimed.**
