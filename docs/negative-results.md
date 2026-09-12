@@ -86,6 +86,9 @@ Regenerate with `./run_all.sh`; full parameters in `results/2026-09-12b-exp006-0
 | Length-changing outer layers | K4 and K5 are both exactly 97 characters | PROVED IMPOSSIBLE for any outer layer that changes length. EXP-021. |
 | Natural-language running key | prediction test: under the correct convention the 24 forced key letters should look like text | HEURISTIC NEGATIVE only. Best p=0.018 uncorrected, 0.428 after correcting 24 tests. At n=24 the test cannot reliably separate English from uniform, and a key read off PROPER NOUNS need not follow English frequencies. EXP-022. |
 
+| K0 Morse material as a running-key tape | 7 fragments + 2 concatenations, every offset, both directions, both key alphabets, 12 conventions; 13,680 alignments | 0 exact hits, best 5/24; 11 alignments at >=5/24 against 26.5 expected, i.e. BELOW chance. EXP-023. HEURISTIC NEGATIVE only: community transcriptions, one plate continues under a rock, DIGETALINTERPRETATIT's ending disputed, slab order unknown. Does not touch non-tape uses of the Morse material. |
+| Place-name statistics in the forced keystream | 12 conventions x 2 rendering alphabets against a generic world-city letter profile | Best p=0.0158, Bonferroni 0.380; 3 of 24 below p<0.05 against 1.2 expected. EXP-022. HEURISTIC NEGATIVE. Preserves rather than rescues the Checkpoint D English-prose result. |
+
 ## Undecidable, not negative
 
 These cannot be refuted by 24 crib letters. Searching them yields fits, never evidence.

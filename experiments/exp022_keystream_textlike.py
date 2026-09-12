@@ -97,6 +97,61 @@ print(f"   Bonferroni-corrected p for the best: {min(1.0, best[0]*len(rows)):.3f
 nsig = sum(1 for p, *_ in rows if p < 0.05)
 print(f"   conventions with uncorrected p < 0.05: {nsig} (expected {0.05*len(rows):.1f} by chance)")
 print()
+# ---- second profile: PLACE NAMES, the specific hypothesis at issue -----------
+# The Weltzeituhr tape would be proper nouns, not prose. Their letter statistics
+# differ from English: more A and O, far fewer E and T endings, heavy N/R/L.
+# This profile is built from a generic list of major world cities - general public
+# knowledge, NOT reconstructed clock data - so it tests the city-tape hypothesis
+# without needing the clock at all.
+CITIES = ("LONDON PARIS BERLIN MADRID ROME VIENNA PRAGUE WARSAW MOSCOW KIEV MINSK "
+          "OSLO STOCKHOLM HELSINKI COPENHAGEN AMSTERDAM BRUSSELS LISBON ATHENS SOFIA "
+          "BUCHAREST BUDAPEST BELGRADE ZAGREB ANKARA ISTANBUL CAIRO ALGIERS TUNIS "
+          "LAGOS NAIROBI KHARTOUM ADDIS ABABA DAKAR ACCRA LUANDA KINSHASA HARARE "
+          "TEHRAN BAGHDAD RIYADH KABUL KARACHI DELHI BOMBAY MADRAS CALCUTTA COLOMBO "
+          "DHAKA RANGOON BANGKOK HANOI SAIGON MANILA JAKARTA SINGAPORE PEKING SHANGHAI "
+          "CANTON TOKYO OSAKA SEOUL PYONGYANG VLADIVOSTOK YAKUTSK NOVOSIBIRSK TASHKENT "
+          "ALMA ATA BAKU TBILISI SYDNEY MELBOURNE PERTH AUCKLAND WELLINGTON HONOLULU "
+          "ANCHORAGE VANCOUVER SEATTLE CHICAGO TORONTO MONTREAL NEWYORK WASHINGTON "
+          "MIAMI HAVANA MEXICO PANAMA BOGOTA LIMA SANTIAGO BUENOSAIRES MONTEVIDEO "
+          "RIODEJANEIRO BRASILIA CARACAS REYKJAVIK DUBLIN LENINGRAD ODESSA RIGA VILNIUS")
+cnt = collections.Counter(c for c in CITIES if c.isalpha())
+tot = sum(cnt.values())
+CITY = {c: (cnt.get(c, 0) + 0.5) / (tot + 13) for c in LETTERS}
+
+
+def loglik_city(s):
+    return sum(math.log(CITY[c]) for c in s)
+
+
+city_null = sorted(loglik_city([random.choice(LETTERS) for _ in range(N)])
+                   for _ in range(REPS // 4))
+print()
+print("## Second profile: PLACE NAMES rather than English prose")
+print("   The Weltzeituhr tape would be proper nouns. This profile comes from a")
+print("   generic list of major world cities (general knowledge, NOT reconstructed")
+print("   clock data), so it tests the city-tape hypothesis without the clock.")
+crows = []
+for cv in conventions:
+    ks = [cv.key_index(p, c) for _, p, c in cribs]
+    for alpha in ("STD", "KRY"):
+        A = ALPHABETS[alpha]
+        st = "".join(A[k] for k in ks)
+        ll = loglik_city(st)
+        pv = sum(1 for x in city_null if x >= ll) / len(city_null)
+        crows.append((pv, ll, cv.name, alpha))
+crows.sort()
+for pv, ll, name, alpha in crows[:4]:
+    print(f"   {name.ljust(34)} {alpha:<5} logL {ll:9.3f}  p {pv:.4f}")
+cbest = crows[0]
+print(f"   best p = {cbest[0]:.4f}; Bonferroni over {len(crows)} tests = "
+      f"{min(1.0, cbest[0]*len(crows)):.3f}")
+print(f"   tests with uncorrected p < 0.05: {sum(1 for r in crows if r[0] < 0.05)} "
+      f"(expected {0.05*len(crows):.1f})")
+print("   Grade: HEURISTIC NEGATIVE for a place-name keystream too. Same n=24")
+print("   weakness applies - this cannot eliminate the hypothesis, only fail to")
+print("   support it.")
+
+print()
 print("## Reading")
 print("   A running key read off natural text predicts that ONE convention should")
 print("   show clearly text-like key letters while the rest look uniform. That is a")

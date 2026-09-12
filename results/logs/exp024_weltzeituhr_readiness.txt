@@ -1,0 +1,73 @@
+# EXP-024 Weltzeituhr test: preregistered, validated, blocked on data
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## What the object model records as RECOVERED
+   24 sectors, 15 degrees each; three-part cylinder      [MULTIPLE INDEPENDENT SOURCES]
+   upper and lower aluminium disks carry the city names  [SINGLE RELIABLE SOURCE]
+   the city cylinder is STATIC; the hour ring rotates     [MULTIPLE INDEPENDENT SOURCES]
+   compass-rose mosaic at the base                        [presence HIGH]
+   lettering is STAMPED from punches/templates            [MULTIPLE INDEPENDENT SOURCES]
+   1997 restoration under Hans-Joachim Kunsch, who also built it in 1969
+
+## What is UNKNOWN, and therefore blocks the test
+   1. the modern per-sector list (published, but not retrievable here)
+   2. the full list of the 20 names added in 1997 (only 4 named in sources reached)
+   3. the full list of 1997 zone reassignments (only Kyiv named)
+   4. any removals in 1997 (undocumented in sources reached)
+   5. upper-versus-lower band assignment for every name (undocumented)
+   6. the cylinder's orientation relative to north (undocumented)
+
+## Preregistered reading procedures (defined before any data exists)
+   cw/start0/ul
+   cw/start0/ul/wholeband
+   cw/berlin/ul
+   cw/start0/lu
+   cw/start0/lu/wholeband
+   cw/berlin/lu
+   cw/start0/alt-upper
+   cw/berlin/alt-upper
+   cw/start0/alt-lower
+   cw/berlin/alt-lower
+   ccw/start0/ul
+   ccw/start0/ul/wholeband
+   ccw/berlin/ul
+   ccw/start0/lu
+   ccw/start0/lu/wholeband
+   ccw/berlin/lu
+   ccw/start0/alt-upper
+   ccw/berlin/alt-upper
+   ccw/start0/alt-lower
+   ccw/berlin/alt-lower
+   utc-order/ul
+   utc-order/lu
+   total: 22 procedures
+
+## End-to-end validation on a SYNTHETIC clock (fake names, real structure)
+   planted: reading 'cw/start0/ul', STD alphabet, dir +1, offset 137, vigenere/P=STD/C=STD
+   alignments scanned: 480,384
+   exact 24/24 recoveries: 3
+     ('cw/start0/ul', 'STD', 1, 137, 'vigenere/P=STD/C=STD')
+     ('cw/berlin/ul', 'STD', 1, 383, 'vigenere/P=STD/C=STD')
+     ('utc-order/ul', 'STD', 1, 417, 'vigenere/P=STD/C=STD')
+   CONTROL PASSED - the pipeline detects a genuine
+   Weltzeituhr-derived keystream when one is present.
+
+## Status of the real test
+   NOT RUN. The per-sector name list for 1988-89 is UNKNOWN and was not
+   guessed. Supplying the six blocking items above makes this experiment
+   executable immediately: replace synthetic_clock() with the real structure
+   and the same 22 procedures, 2 alphabets, 2 directions, every offset and 12
+   conventions run unchanged.
+
+   Scale when it runs: ~480,384 alignments for a clock of this size, so the
+   multiple-testing correction is known in advance too. At 24 crib letters the
+   exact binomial tail governs, as in EXP-004 and EXP-023.
+
+## Grade
+   UNTESTABLE WITH CURRENT PUBLIC DATA - in this environment. The modern
+   per-sector list IS published; it could not be retrieved here because the
+   network policy blocks direct page fetches and search summaries decline to
+   enumerate. This is an environment limit, NOT a claim that the data is
+   unavailable to a human researcher. The 1988-89 list additionally requires
+   the full 1997 change record, of which only three renames and four of the
+   twenty additions are documented in sources reached.

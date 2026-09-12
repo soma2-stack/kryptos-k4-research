@@ -1,0 +1,55 @@
+# EXP-023 K0 Morse material as an external keystream source
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Sources (all community transcriptions, graded below primary)
+   morse_virtually_invisible         18 letters  VIRTUALLYINVISIBLE
+   morse_shadow_forces               12 letters  SHADOWFORCES
+   morse_lucid_memory                11 letters  LUCIDMEMORY
+   morse_digetal_interpretatit       20 letters  DIGETALINTERPRETATIT
+   morse_what_is_your_position       18 letters  WHATISYOURPOSITION
+   morse_t_is_your_position          15 letters  TISYOURPOSITION
+   morse_sos                          3 letters  SOS
+   morse_all_concat                  94 letters  VIRTUALLYINVISIBLESHADOWFORCESLUCIDMEMORYDIGETALINTERPRETATITWHATISYOURPOSITIONTISYOURPOSITION
+   morse_all_concat_alt              94 letters  TISYOURPOSITIONWHATISYOURPOSITIONDIGETALINTERPRETATITLUCIDMEMORYSHADOWFORCESVIRTUALLYINVISIBLE
+
+## Positive control
+   a keystream planted from 'morse_all_concat' at offset 17 is recovered by
+   the same alignment scan: YES (1 matching offset(s))
+   CONTROL PASSED
+
+## Search
+   alignments evaluated : 13,680
+   exact 24/24 hits     : 0
+   best score           : 5/24
+
+## Top 8 (calibration, not findings)
+    5/24  morse_what_is_your_position      alpha=STD dir=-1 off=4   variant_beaufort/P=STD/C=KRY
+    5/24  morse_virtually_invisible        alpha=KRY dir=+1 off=17  vigenere/P=KRY/C=KRY
+    5/24  morse_shadow_forces              alpha=STD dir=-1 off=0   vigenere/P=KRY/C=KRY
+    5/24  morse_all_concat_alt             alpha=KRY dir=+1 off=37  beaufort/P=STD/C=STD
+    5/24  morse_all_concat_alt             alpha=KRY dir=-1 off=85  beaufort/P=STD/C=STD
+    5/24  morse_all_concat_alt             alpha=KRY dir=-1 off=3   vigenere/P=KRY/C=KRY
+    5/24  morse_all_concat                 alpha=STD dir=+1 off=45  variant_beaufort/P=STD/C=KRY
+    5/24  morse_all_concat                 alpha=STD dir=+1 off=17  vigenere/P=STD/C=KRY
+
+## Null calibration
+   P(single alignment >= 5/24) = 1.937e-03
+   expected count over 13,680 alignments = 26.50
+   observed at >= 5/24 = 11
+
+## Score histogram
+    0/24 :    5693
+    1/24 :    5148
+    2/24 :    2157
+    3/24 :     545
+    4/24 :     126
+    5/24 :      11
+
+## Grade
+   HEURISTIC NEGATIVE for the Morse material as a direct running-key tape,
+   at the scope stated above. NOT an elimination: the transcriptions are
+   community-sourced, one plate's text is reported to continue under a rock,
+   the ending of DIGETALINTERPRETATIT is disputed, and the physical order of
+   the slabs is unknown, so the concatenations are conventions rather than
+   evidence. It also does not touch the Morse material used as anything other
+   than a letter tape - for example as a source of DOT/DASH structure.

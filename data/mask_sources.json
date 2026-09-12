@@ -37,6 +37,60 @@
       "verified": false,
       "provenance": "widely published K3 solution, transcribed for this repo; NOT yet checked against a primary source",
       "text": "SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDEBRISTHATENCUMBEREDTHELOWERPARTOFTHEDOORWAYWASREMOVEDWITHTREMBLINGHANDSIMADEATINYBREACHINTHEUPPERLEFTHANDCORNERANDTHENWIDENINGTHEHOLEALITTLEIINSERTEDTHECANDLEANDPEEREDINTHEHOTAIRESCAPINGFROMTHECHAMBERCAUSEDTHEFLAMETOFLICKERBUTPRESENTLYDETAILSOFTHEROOMWITHINEMERGEDFROMTHEMISTXCANYOUSEEANYTHINGQ"
+    },
+    {
+      "id": "morse_virtually_invisible",
+      "verified": false,
+      "provenance": "Kryptos K0 Morse material. community transcription of the K0 Morse copper plates; widely reported Community transcriptions from long-running research sites (Elonka Dunin mirror, rumkin, kryptosfan); NOT from any claimed-solution site. Graded SINGLE/MULTIPLE COMMUNITY SOURCE, not primary.",
+      "text": "VIRTUALLYINVISIBLE"
+    },
+    {
+      "id": "morse_shadow_forces",
+      "verified": false,
+      "provenance": "Kryptos K0 Morse material. community transcription Community transcriptions from long-running research sites (Elonka Dunin mirror, rumkin, kryptosfan); NOT from any claimed-solution site. Graded SINGLE/MULTIPLE COMMUNITY SOURCE, not primary.",
+      "text": "SHADOWFORCES"
+    },
+    {
+      "id": "morse_lucid_memory",
+      "verified": false,
+      "provenance": "Kryptos K0 Morse material. community transcription Community transcriptions from long-running research sites (Elonka Dunin mirror, rumkin, kryptosfan); NOT from any claimed-solution site. Graded SINGLE/MULTIPLE COMMUNITY SOURCE, not primary.",
+      "text": "LUCIDMEMORY"
+    },
+    {
+      "id": "morse_digetal_interpretatit",
+      "verified": false,
+      "provenance": "Kryptos K0 Morse material. community transcription; the ENDING IS DISPUTED (reported variously as INTERPRETATIT / INTERPRETATU). Contains Sanborn's deliberate misspelling DIGETAL. Community transcriptions from long-running research sites (Elonka Dunin mirror, rumkin, kryptosfan); NOT from any claimed-solution site. Graded SINGLE/MULTIPLE COMMUNITY SOURCE, not primary.",
+      "text": "DIGETALINTERPRETATIT"
+    },
+    {
+      "id": "morse_what_is_your_position",
+      "verified": false,
+      "provenance": "Kryptos K0 Morse material. reported as the intended reading; the visible plate reads T IS YOUR POSITION with the text said to continue under the rock. Q-code QTH means 'what is your position'. Community transcriptions from long-running research sites (Elonka Dunin mirror, rumkin, kryptosfan); NOT from any claimed-solution site. Graded SINGLE/MULTIPLE COMMUNITY SOURCE, not primary.",
+      "text": "WHATISYOURPOSITION"
+    },
+    {
+      "id": "morse_t_is_your_position",
+      "verified": false,
+      "provenance": "Kryptos K0 Morse material. the literally visible reading, without the concealed prefix Community transcriptions from long-running research sites (Elonka Dunin mirror, rumkin, kryptosfan); NOT from any claimed-solution site. Graded SINGLE/MULTIPLE COMMUNITY SOURCE, not primary.",
+      "text": "TISYOURPOSITION"
+    },
+    {
+      "id": "morse_sos",
+      "verified": false,
+      "provenance": "Kryptos K0 Morse material. prosign present on the plates Community transcriptions from long-running research sites (Elonka Dunin mirror, rumkin, kryptosfan); NOT from any claimed-solution site. Graded SINGLE/MULTIPLE COMMUNITY SOURCE, not primary.",
+      "text": "SOS"
+    },
+    {
+      "id": "morse_all_concat",
+      "verified": false,
+      "provenance": "Concatenation of the Morse fragments in the order they are usually listed. The PHYSICAL order of the slabs is UNKNOWN, so this ordering is a convention, not evidence.",
+      "text": "VIRTUALLYINVISIBLESHADOWFORCESLUCIDMEMORYDIGETALINTERPRETATITWHATISYOURPOSITIONTISYOURPOSITION"
+    },
+    {
+      "id": "morse_all_concat_alt",
+      "verified": false,
+      "provenance": "Same fragments, reverse listing order. Included precisely because the physical order is unknown.",
+      "text": "TISYOURPOSITIONWHATISYOURPOSITIONDIGETALINTERPRETATITLUCIDMEMORYSHADOWFORCESVIRTUALLYINVISIBLE"
     }
   ]
 }

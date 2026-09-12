@@ -100,6 +100,29 @@ Regenerate with `./run_all.sh`.
   no unbounded feedback), and the exhaustive elimination of every short or
   structured position-indexed key.
 
+### Added 2026-09-12 (session 5) — the authentic Weltzeituhr, as far as it goes
+
+- **Structure corrected and established.** The 24-sided city-name cylinder is
+  **static**; a **rotating hour ring** carries the hours through the zones (Trabant
+  gearbox). The cylinder is in **three parts**: city names on the **upper** disk,
+  hour ring in the **middle**, city names on the **lower** disk. Letters are
+  **stamped** from punches. An orrery above turns once per minute; a compass-rose
+  mosaic sits at the base. Earlier notes describing the drum as rotating were wrong.
+- **Hans-Joachim Kunsch** executed the 1969 construction on site and led the Oct–Dec
+  1997 restoration — one person spanning both states of the object. His restoration
+  records are the single highest-value missing document.
+- **1997 changes, partial**: Leningrad→Sankt Petersburg, Alma Ata→Almaty,
+  Bratislava→Pressburg; ~20 politically-omitted cities added (only Tel Aviv, Cape
+  Town, Seoul, Jerusalem named); some zone moves (only Kyiv named).
+- **Totals conflict irreconcilably**: 80 (1969) / 146 / 148.
+- **The 1988–89 per-sector name list is UNKNOWN** and was not guessed. See
+  `docs/checkpoint-E-research-log.md`.
+- **The Weltzeituhr test is built, preregistered and validated but NOT RUN**
+  (EXP-024): 22 reading procedures fixed while the data is unavailable, validated
+  end-to-end on a synthetic clock with a planted keystream.
+- **Sanborn's Morse material tested as a key tape and failed** (EXP-023): 13,680
+  alignments, best 5/24, below chance.
+
 ## High-priority inherited program: `TOKIO → 57973`
 
 **Inherited result.** A substantial prior July 2026 handoff reportedly converged on the following chain:

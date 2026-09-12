@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "purpose": "Structured representation of the Urania-Weltzeituhr, Alexanderplatz, as a physical object rather than a text string. Built so that later experiments can read it in physically meaningful ways. Fields carry confidence grades: PRIMARY VERIFIED / MULTIPLE INDEPENDENT SOURCES / SINGLE RELIABLE SOURCE / INFERRED / UNKNOWN. UNKNOWN fields are NOT filled with modern data.",
+  "contamination_note": "No claimed-K4-solution site was used as a source. See docs/contamination-log.md.",
+
+  "identity": {
+    "name": "Urania-Weltzeituhr",
+    "location": "Alexanderplatz, Berlin",
+    "designer": "Erich John, within the Alexanderplatz redesign planning group led by Walter Womacka",
+    "opened": "1969-09-30",
+    "confidence": "MULTIPLE INDEPENDENT SOURCES"
+  },
+
+  "construction": {
+    "on_site_execution": "Hans-Joachim Kunsch, metalsmith and metal sculptor",
+    "team": "about 120 specialists across trades, including the Coswig gear factory; built with volunteer after-work brigades",
+    "duration": "about nine months",
+    "lettering": "city names composed of STAMPED letters on aluminium plates",
+    "confidence": "MULTIPLE INDEPENDENT SOURCES",
+    "note": "Stamped lettering implies physical letter punches/templates existed. Whether any survive is UNKNOWN."
+  },
+
+  "geometry": {
+    "form": "three-part cylinder with 24 corners and 24 sides, on a column",
+    "column_height_m": 2.7,
+    "column_diameter_m": 1.5,
+    "total_height_m": 10,
+    "weight_tonnes": 16,
+    "sectors": 24,
+    "sector_angular_width_deg": 15,
+    "confidence": "MULTIPLE INDEPENDENT SOURCES",
+    "three_parts": {
+      "upper": "aluminium disk carrying city names",
+      "middle": "rotating hour ring - 24 reddish-brown enamelled rectangular plates with gilded numerals, carrying the hours through the time zones",
+      "lower": "aluminium disk carrying city names",
+      "confidence": "SINGLE RELIABLE SOURCE",
+      "note": "This is the upper/lower band structure. Which names sit upper versus lower is UNKNOWN."
+    },
+    "rotation": {
+      "cylinder": "STATIC - the city-name cylinder does not rotate",
+      "hour_ring": "rotates, driven by a converted Trabant gearbox",
+      "orrery": "simplified solar system above the cylinder, rotates once per minute about its own axis",
+      "confidence": "MULTIPLE INDEPENDENT SOURCES",
+      "correction_note": "Earlier notes in this repository described the cylinder itself as rotating. That was wrong."
+    },
+    "base": {
+      "compass_rose_mosaic": true,
+      "points_marked": "UNKNOWN",
+      "confidence": "HIGH for presence, UNKNOWN for the number of marked points"
+    },
+    "orientation_relative_to_north": {
+      "value": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "why_it_matters": "Any reading that starts from a compass bearing - which EASTNORTHEAST would supply - requires knowing which sector faces which direction. Without it, a bearing cannot be converted into a sector. Note also that with 24 faces every 15 degrees, ANY bearing lies within 7.5 degrees of a face centre, so proximity alone carries no information."
+    }
+  },
+
+  "contents": {
+    "total_places_modern": {
+      "value": "CONFLICTING: 146, 148 reported; plus one entry for the international date line",
+      "confidence": "MULTIPLE INDEPENDENT SOURCES BUT MUTUALLY INCONSISTENT"
+    },
+    "total_places_1969": {"value": "80 reported by one source; cannot be reconciled with the modern counts", "confidence": "SINGLE RELIABLE SOURCE"},
+    "international_date_line": {"present": true, "position": "UNKNOWN", "confidence": "MULTIPLE INDEPENDENT SOURCES for presence"},
+    "per_sector_names_1989": {
+      "value": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "status": "NOT RECOVERED. See docs/checkpoint-E-research-log.md for what was searched."
+    },
+    "per_sector_names_modern": {
+      "value": "NOT RETRIEVED IN THIS ENVIRONMENT",
+      "confidence": "UNKNOWN",
+      "status": "The modern list IS published (weltzeituhr-berlin.de publishes a places-by-time-zone page). It could not be retrieved here: this session's network policy blocks WebFetch to all external domains, and search summaries decline to enumerate. This is an ENVIRONMENT limitation, not a claim that the data is unavailable to a human researcher."
+    },
+    "berlin_position": {"value": "UNKNOWN", "confidence": "UNKNOWN"},
+    "moscow_position": {"value": "UNKNOWN", "confidence": "UNKNOWN"}
+  },
+
+  "changes_1997": {
+    "restoration": "October to December 1997, cost 350,000 DM, metal restoration under Hans-Joachim Kunsch",
+    "confidence": "MULTIPLE INDEPENDENT SOURCES",
+    "renames_documented": [
+      {"from": "Leningrad", "to": "Sankt Petersburg", "confidence": "MULTIPLE INDEPENDENT SOURCES"},
+      {"from": "Alma Ata", "to": "Almaty", "confidence": "MULTIPLE INDEPENDENT SOURCES"},
+      {"from": "Bratislava", "to": "Pressburg", "confidence": "SINGLE RELIABLE SOURCE", "note": "reported to have drawn diplomatic protest from Slovakia"}
+    ],
+    "additions_documented": {
+      "count_reported": 20,
+      "named_so_far": ["Tel Aviv", "Cape Town", "Seoul", "Jerusalem"],
+      "confidence": "SINGLE/MULTIPLE for the count; only four of the twenty are named in sources reached",
+      "reason": "cities the GDR had omitted for political reasons"
+    },
+    "zone_reassignments": {"example": "Kyiv", "full_list": "UNKNOWN", "confidence": "SINGLE RELIABLE SOURCE for the fact, UNKNOWN for the list"},
+    "removals": {"value": "UNKNOWN", "confidence": "UNKNOWN"}
+  },
+
+  "reconstruction_status": {
+    "verdict": "INCOMPLETE - the 1988-89 configuration cannot be reconstructed from sources reachable in this environment.",
+    "method_that_would_work": "Take the published modern per-sector list, subtract the 20 names added in 1997, reverse the documented renames, and revert the documented zone reassignments.",
+    "blocking_items": [
+      "the modern per-sector list (published, but not retrievable here)",
+      "the full list of the 20 names added in 1997 (only 4 named in sources reached)",
+      "the full list of 1997 zone reassignments (only Kyiv named)",
+      "any removals in 1997 (undocumented in sources reached)",
+      "upper-versus-lower band assignment for every name (undocumented)",
+      "the cylinder's orientation relative to north (undocumented)"
+    ]
+  },
+
+  "history": "Opposition demonstrators gathered at the clock on 7 October 1989 during the GDR's 40th-anniversary celebrations; the Wall fell 33 days later."
+}

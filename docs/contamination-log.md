@@ -58,4 +58,22 @@ Sites not to be used as evidence and not to be fetched:
 - any site, blog, gist or video whose headline claims a complete K4 solution,
   "reconstructed plaintext", or "the answer to K4".
 
+## Session 5 (Checkpoint E) — clean, no incidents
+
+Historical research on the Weltzeituhr. `solvekryptos.com` was excluded on every
+query. No claimed-solution site was used as a historical source. No purported K4
+plaintext was sought, seen, or ingested.
+
+Sources used for historical facts were: German and English encyclopaedia summaries,
+Kunsch Metallbau's own reference page, Berlin tourism and local-history sites, and
+long-running Kryptos *research* sites (Elonka Dunin mirror, rumkin, kryptosfan) for
+the K0 Morse transcriptions only. The last three are research archives, not
+solution-claim publishers, and were used only for text that has been public since
+the 1990s.
+
+One judgement call recorded for transparency: the K0 Morse fragments are community
+transcriptions of publicly visible copper plates, not plaintext of any K section.
+They are admissible. They are nonetheless graded below primary and EXP-023's result
+is graded HEURISTIC NEGATIVE partly because of that.
+
 ## Incidents 2+ — none recorded.

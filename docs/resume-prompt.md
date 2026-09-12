@@ -87,3 +87,22 @@ Fifteen experiments now exist. Before proposing anything:
 28. If K5 is released, run the EXP-021 memory-depth diagnostic before anything else.
 29. Do not submit to the external verifier without all six conditions in
     `docs/next-steps.md`.
+
+## Addendum — 2026-09-12 (Checkpoint E)
+
+30. The Weltzeituhr object model is `data/weltzeituhr.json`, with confidence grades
+    and six explicit blocking items. The city-name cylinder is **static**; a
+    rotating hour ring sits between an **upper** and a **lower** band of names;
+    letters are **stamped**. Do not re-introduce the "rotating drum" error.
+31. `EXP-024` is built, preregistered and validated on a synthetic clock — but NOT
+    RUN. It needs the per-sector name list. Fill the six blocking items and it runs
+    unchanged. Do not invent names to make it run.
+32. The modern list is published at `weltzeituhr-berlin.de`; this environment blocks
+    `WebFetch` for all external domains. Retrieving it is a browser task, not a
+    research task.
+33. Circular clock readings share substrings — the planted control was recovered
+    under three procedure labels. Those alignments are NOT independent.
+34. The Morse material as a running-key tape is a HEURISTIC NEGATIVE (EXP-023,
+    below chance). Its non-tape uses are untested.
+35. Both keystream-statistics probes (English prose, place names) fail correction.
+    Do not rescue the city-tape hypothesis with arbitrary transformations.

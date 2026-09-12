@@ -6,6 +6,22 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint E (2026-09-12).** The 1988–89 Weltzeituhr could **not** be
+> reconstructed, and the hypothesis was not rescued. What changed: the object model
+> is now correct — the city-name cylinder is **static**, with a rotating hour ring
+> between an **upper** and a **lower** band of names, letters **stamped** from
+> punches. The Weltzeituhr test is **built, preregistered and validated** on a
+> synthetic clock, and blocked only on the name list
+> ([EXP-024](results/2026-09-12e-checkpoint-E.md)).
+>
+> Sanborn's own Morse material — which he named in 2025 — was tested as a key tape
+> and failed: 13,680 alignments, best 5/24, **below chance**.
+>
+> The immediate blocker is retrievability, not history: the modern per-sector list
+> **is published**, but `WebFetch` is blocked here for every external domain. A
+> human with a browser could supply it in minutes and run EXP-024 unchanged.
+
+
 > **Checkpoint D (2026-09-12).** Four sessions converge on one architecture:
 > **a keystream read off an external object, position by position.** The
 > `BERLINCLOCK` crib names such an object. The bottleneck is now one specific piece
@@ -129,7 +145,7 @@ Earned the hard way; read before adding an experiment.
 ## Status
 
 Prepared from the referenced ChatGPT conversation on 2026-09-11 and published by the
-user. Extended 2026-09-12 with an executable toolchain, twenty-two experiments, an exact
+user. Extended 2026-09-12 with an executable toolchain, twenty-four experiments, an exact
 Z₂₆ solver, the testability frontier, robustness and evidence-grade audits, the
 Weltzeituhr and compass-bearing tests, the unicity bound, the verified carved line
 geometry, and the K4/K5 memory-depth diagnostic. **K4 remains unsolved, and no candidate

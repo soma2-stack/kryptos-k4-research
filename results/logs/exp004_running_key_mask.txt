@@ -8,9 +8,18 @@ ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ce
   K1_plaintext       len=  63  UNVERIFIED - see docs/next-steps.md
   K2_plaintext       len= 370  UNVERIFIED - see docs/next-steps.md
   K3_plaintext       len= 336  UNVERIFIED - see docs/next-steps.md
+  morse_virtually_invisible len=  18  UNVERIFIED - see docs/next-steps.md
+  morse_shadow_forces len=  12  UNVERIFIED - see docs/next-steps.md
+  morse_lucid_memory len=  11  UNVERIFIED - see docs/next-steps.md
+  morse_digetal_interpretatit len=  20  UNVERIFIED - see docs/next-steps.md
+  morse_what_is_your_position len=  18  UNVERIFIED - see docs/next-steps.md
+  morse_t_is_your_position len=  15  UNVERIFIED - see docs/next-steps.md
+  morse_sos          len=   3  UNVERIFIED - see docs/next-steps.md
+  morse_all_concat   len=  94  UNVERIFIED - see docs/next-steps.md
+  morse_all_concat_alt len=  94  UNVERIFIED - see docs/next-steps.md
 
 ## Search
-alignments evaluated : 43,872
+alignments evaluated : 57,552
 exact 24/24 hits     : 0
 best score           : 7/24
 
@@ -24,19 +33,19 @@ best score           : 7/24
    5/24  world_clock_tape   keyalpha=STD dir=+1 offset=18   beaufort/P=STD/C=STD
    5/24  world_clock_tape   keyalpha=STD dir=+1 offset=10   vigenere/P=KRY/C=STD
    5/24  world_clock_tape   keyalpha=STD dir=-1 offset=12   beaufort/P=STD/C=STD
-   5/24  kryptos_alphabet   keyalpha=STD dir=-1 offset=7    vigenere/P=KRY/C=KRY
+   5/24  morse_what_is_your_position keyalpha=STD dir=-1 offset=4    variant_beaufort/P=STD/C=KRY
 
 ## Null calibration
 P(single alignment scores >= 7/24) = 2.414e-05
-expected count over 43,872 alignments = 1.06
+expected count over 57,552 alignments = 1.39
 observed count at >= 7/24 = 1
 
 ## Score histogram
-   0/24 :   18417
-   1/24 :   15973
-   2/24 :    6993
-   3/24 :    2020
-   4/24 :     391
-   5/24 :      72
+   0/24 :   24110
+   1/24 :   21121
+   2/24 :    9150
+   3/24 :    2565
+   4/24 :     517
+   5/24 :      83
    6/24 :       5
    7/24 :       1

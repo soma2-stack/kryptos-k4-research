@@ -41,6 +41,21 @@ sample size: 24 forced key letters per convention
    Bonferroni-corrected p for the best: 0.428
    conventions with uncorrected p < 0.05: 2 (expected 1.2 by chance)
 
+
+## Second profile: PLACE NAMES rather than English prose
+   The Weltzeituhr tape would be proper nouns. This profile comes from a
+   generic list of major world cities (general knowledge, NOT reconstructed
+   clock data), so it tests the city-tape hypothesis without the clock.
+   vigenere/P=KRY/C=STD               STD   logL   -79.069  p 0.0158
+   beaufort/P=STD/C=STD               STD   logL   -80.023  p 0.0249
+   vigenere/P=KRY/C=KRY               KRY   logL   -81.330  p 0.0423
+   variant_beaufort/P=STD/C=KRY       STD   logL   -82.819  p 0.0724
+   best p = 0.0158; Bonferroni over 24 tests = 0.380
+   tests with uncorrected p < 0.05: 3 (expected 1.2)
+   Grade: HEURISTIC NEGATIVE for a place-name keystream too. Same n=24
+   weakness applies - this cannot eliminate the hypothesis, only fail to
+   support it.
+
 ## Reading
    A running key read off natural text predicts that ONE convention should
    show clearly text-like key letters while the rest look uniform. That is a
