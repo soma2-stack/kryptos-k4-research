@@ -4,7 +4,7 @@ This file is a navigation aid for future research sessions. It does **not** repl
 
 **Current research checkpoint:** Checkpoint Q (`results/2026-09-12-claude-checkpoint-Q.md`).
 
-**Parent branch state when this handoff was created:** `claude/k4-post-j` at `81d928dce9569d5afc8b1fc061f2e279856e8063`.
+**Current branch state when this handoff was refreshed:** `claude/k4-post-j` at `d69102d828f79599a8ade42a997396539d33760b`.
 
 **K4 remains unsolved.**
 
@@ -28,19 +28,19 @@ See `docs/external/checkpoint-O-public-crib-primary-verification.md` and Checkpo
 
 - Standard Fractionated Morse is structurally incompatible with the **published K4 positional crib semantics**. Do not generalise this to all Morse-derived systems, all fractionation, or every non-position-preserving cipher.
 - Reflector-machine and Playfair eliminations are restored to **PROVED IMPOSSIBLE within the monographic, position-preserving class**, because their rejecting witnesses lie in directly numbered public spans.
-- EXP-032 through EXP-037 artifacts are committed and the verifier suite was repaired for clean-checkout reproducibility.
+- EXP-032 through EXP-038 artifacts are committed and reproducible from clean checkout.
 - EXP-036 remains only a scoped negative for the declared periodic shift-family + transposition space; it does not eliminate all periodic polyalphabetic ciphers.
 - EXP-037 eliminates the declared standard Porta family at its exact scope.
 - Quagmire I–III and Gronsfeld reduce to already-covered families; Quagmire IV requires an unsupported second alphabet.
 - Standard CM Bifid reduces to EXP-012; standard Fractionated Morse is closed as above; named classical fractionation is substantially narrowed, not globally eliminated.
 - Direct Gromark was rejected structurally before primer search because legal key digits 0–9 cannot realise enough public crib pairs under the evidenced component-alphabet treatments.
-- **EXP-038 (Checkpoint Q) closed the full-Z26 second-order affine recursive-key family**: 210,912 exact linear solves, zero feasible, verified exhaustively and independently over all 26⁴ + 26⁵ tuples. Read it narrowly — it is *not* an elimination of recursive or stateful keys in general, and higher-order, nonlinear, reset and externally seeded state machines remain open.
+- **EXP-038 (Checkpoint Q) closed the full-Z26 second-order affine recursive-key family**: F1 and F2 were preregistered together; 11,881,376 raw F2 tuples collapse to 7,585,006 unique 97-key streams and 4,481,750 distinct crib projections; 1,701,518 streams are already covered by period ≤23; 5,883,488 streams are genuinely new. The preregistered null expected about `5.91e-27` survivors across the 12 convention targets. Result: **zero feasible**, with neither crib block satisfiable on its own. Independent direct-iteration verification was exhaustive. Read this narrowly — it is *not* an elimination of recursive or stateful keys in general.
 - Direct World Clock city-letter models have multiple bounded negatives; do not rescue them by adding post-hoc parameters.
 - The physical same-column-above-K4 model is parked because a common horizontal lattice is not established.
 
 ## Do not rerun
 
-Do not rerun EXP-029 through EXP-037 merely for reassurance. Their exact scope, controls, and verifier status are already recorded.
+Do not rerun EXP-029 through EXP-038 merely for reassurance. Their exact scope, controls, and verifier status are already recorded.
 
 In particular, do not restart old claims that were retracted:
 
@@ -56,21 +56,15 @@ In particular, do not restart old claims that were retracted:
 
 ## One recommended next cryptanalytic direction
 
-**Monoalphabetic substitution composed with DOUBLE transposition, both keys drawn from a
-precommitted list of published Kryptos keywords** (`KRYPTOS`, `PALIMPSEST`, `ABSCISSA`).
+**Monoalphabetic substitution composed with DOUBLE transposition, both keys drawn from a precommitted list of published Kryptos keywords** (`KRYPTOS`, `PALIMPSEST`, `ABSCISSA`).
 
-Motivated rather than speculative: K3 is a transposition Sanborn implemented himself and those
-keywords are demonstrably his. Not duplicate: EXP-033 and EXP-036 each composed their
-substitution with a **single** transposition from a declared family, and a product of two
-columnar transpositions lies outside both. Decidable: EXP-033's exact test has a
-chance-feasibility of 6.6e-17 per permutation, so the family stays falsifiable up to about
-1e14 permutations — but full double columnar at widths ≤ 11 is ≈1.9e15, which is precisely why
-the key list must stay **precommitted and small**. Compute the family size and null from the
-keyword list before implementing, and if the list needs padding with unevidenced words to make
-the search interesting, do not run it.
+Motivated rather than speculative: K3 is a transposition Sanborn implemented himself and those keywords are demonstrably his. Not duplicate: EXP-033 and EXP-036 each composed their substitution with a **single** transposition from a declared family, and a product of two columnar transpositions can lie outside both. Decidable: use EXP-033's exact consistency test for an arbitrary fixed monoalphabetic substitution after composing the two permutations. Keep the family small and precommitted; do not pad it with unevidenced words merely to enlarge the search.
 
-Do **not** extend EXP-038 from order 2 to order 3 without independent motivation — that is the
-rescue pattern this programme rejects. See Checkpoint Q §9 for the full setup.
+Important algebraic simplification: a fixed monoalphabetic substitution commutes with a pure transposition, so `S ∘ T2 ∘ T1` and `T2 ∘ T1 ∘ S` are the same model up to writing the same permutation in the opposite convention. Do not count substitution/transposition order as a separate free parameter.
+
+Before assigning a new experiment number, freeze the exact columnar-transposition convention, repeated-letter tie rule, padding/no-padding rule, orientation, and whether each pass is encryption-direction or inverse-direction. Deduplicate identical composed permutations. Then compute the exact family size and chance survival before running.
+
+Do **not** extend EXP-038 from order 2 to order 3 without independent motivation — that is the rescue pattern this programme rejects. See Checkpoint Q §9 for the full setup.
 
 ## External evidence
 
