@@ -1,0 +1,33 @@
+# EXP-005 toolchain validation and method recovery
+synthetic plaintext (97 chars): ITWASTOTALLYINVISIBLEHOWSTHATPOSSIBLETHEYUSEDTHEEARTHSMAGNETICFIELDXTHEINFORMATIONWASGATHEREDANDS
+
+## Part 1 - self-test: can the apparatus find a key it knows is there?
+  (a) period-10 keyword Vigenere  -> RECOVERED  periods found: [10, 20, 30, 40]
+  (b) affine keystream 7i+3       -> RECOVERED  fits=[(7, 3)]
+  (c) running-key mask            -> RECOVERED  key IoC=0.0638 (English ~0.066, random ~0.038), aperiodic=True
+  (d) transposition + period-7    -> RECOVERED  candidates surviving gate: 1 ['affine a=11 b=5']
+
+  SELF-TEST PASSED (4/4 probes recovered a planted method)
+  The negatives reported by EXP-001..004 are therefore not artefacts of
+  broken tooling: the same code recovers a planted key when one exists.
+
+## Part 2 - K4 itself, 24 of 97 positions known
+  A full diagnosis needs all 97 plaintext letters. With 24, the harness
+  can only report what is already excluded:
+    vigenere/P=STD/C=STD               periods<=48: NONE  affine fits: 0
+    vigenere/P=STD/C=KRY               periods<=48: NONE  affine fits: 0
+    vigenere/P=KRY/C=STD               periods<=48: NONE  affine fits: 0
+    vigenere/P=KRY/C=KRY               periods<=48: NONE  affine fits: 0
+    beaufort/P=STD/C=STD               periods<=48: NONE  affine fits: 0
+    beaufort/P=STD/C=KRY               periods<=48: NONE  affine fits: 0
+    beaufort/P=KRY/C=STD               periods<=48: NONE  affine fits: 0
+    beaufort/P=KRY/C=KRY               periods<=48: NONE  affine fits: 0
+    variant_beaufort/P=STD/C=STD       periods<=48: NONE  affine fits: 0
+    variant_beaufort/P=STD/C=KRY       periods<=48: NONE  affine fits: 0
+    variant_beaufort/P=KRY/C=STD       periods<=48: NONE  affine fits: 0
+    variant_beaufort/P=KRY/C=KRY       periods<=48: NONE  affine fits: 0
+
+  To run a real diagnosis, supply a candidate 97-character plaintext:
+      python3 -c "import sys; sys.path.insert(0,'.'); \
+        from k4lib.data import load; from k4lib import recover; \
+        print(recover.summarise(recover.diagnose(PT, load().ciphertext)))"
