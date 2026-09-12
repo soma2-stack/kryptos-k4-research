@@ -1,0 +1,42 @@
+# EXP-004 running-key mask from sculpture text
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Mask sources
+  K4_ciphertext      len=  97  verified
+  kryptos_alphabet   len=  26  verified
+  world_clock_tape   len=  22  UNVERIFIED - see docs/next-steps.md
+  K1_plaintext       len=  63  UNVERIFIED - see docs/next-steps.md
+  K2_plaintext       len= 370  UNVERIFIED - see docs/next-steps.md
+  K3_plaintext       len= 336  UNVERIFIED - see docs/next-steps.md
+
+## Search
+alignments evaluated : 43,872
+exact 24/24 hits     : 0
+best score           : 7/24
+
+## Top 10 alignments (calibration, not findings)
+   7/24  K3_plaintext       keyalpha=KRY dir=-1 offset=73   beaufort/P=STD/C=STD
+   6/24  K4_ciphertext      keyalpha=STD dir=+1 offset=58   beaufort/P=STD/C=STD
+   6/24  K3_plaintext       keyalpha=STD dir=+1 offset=207  beaufort/P=KRY/C=KRY
+   6/24  K3_plaintext       keyalpha=STD dir=+1 offset=47   vigenere/P=KRY/C=STD
+   6/24  K3_plaintext       keyalpha=KRY dir=-1 offset=244  vigenere/P=KRY/C=KRY
+   6/24  K2_plaintext       keyalpha=STD dir=-1 offset=172  vigenere/P=KRY/C=STD
+   5/24  world_clock_tape   keyalpha=STD dir=+1 offset=18   beaufort/P=STD/C=STD
+   5/24  world_clock_tape   keyalpha=STD dir=+1 offset=10   vigenere/P=KRY/C=STD
+   5/24  world_clock_tape   keyalpha=STD dir=-1 offset=12   beaufort/P=STD/C=STD
+   5/24  kryptos_alphabet   keyalpha=STD dir=-1 offset=7    vigenere/P=KRY/C=KRY
+
+## Null calibration
+P(single alignment scores >= 7/24) = 2.414e-05
+expected count over 43,872 alignments = 1.06
+observed count at >= 7/24 = 1
+
+## Score histogram
+   0/24 :   18417
+   1/24 :   15973
+   2/24 :    6993
+   3/24 :    2020
+   4/24 :     391
+   5/24 :      72
+   6/24 :       5
+   7/24 :       1

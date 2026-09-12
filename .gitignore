@@ -5,5 +5,11 @@ __pycache__/
 .venv/
 
 # Generated search outputs: store only documented, versioned results intentionally.
-results/
+# Bulk candidate dumps stay out; the curated dated records and the small, regenerable
+# experiment logs they cite are versioned deliberately (all of results/ is ~15 KB).
+results/*
+!results/*.md
+!results/logs/
+results/logs/*
+!results/logs/*.txt
 scratch/

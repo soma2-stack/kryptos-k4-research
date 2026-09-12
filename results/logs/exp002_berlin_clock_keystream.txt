@@ -1,0 +1,32 @@
+# EXP-002 Mengenlehreuhr lamp-count keystream
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+lamp rows (4, 4, 11, 4), max lit 23
+
+## Analytic pre-filter (d = 0 forced)
+A readout bounded by R cannot produce a required key index above R.
+  vigenere/P=STD/C=STD               required 0-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+  vigenere/P=STD/C=KRY               required 0-24  lamps_lit:EXCLUDED  lamps_lit_sec:possible  minutes_mod26:possible
+  vigenere/P=KRY/C=STD               required 0-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+  vigenere/P=KRY/C=KRY               required 0-23  lamps_lit:possible  lamps_lit_sec:possible  minutes_mod26:possible
+  beaufort/P=STD/C=STD               required 1-20  lamps_lit:possible  lamps_lit_sec:possible  minutes_mod26:possible
+  beaufort/P=STD/C=KRY               required 0-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+  beaufort/P=KRY/C=STD               required 1-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+  beaufort/P=KRY/C=KRY               required 0-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+  variant_beaufort/P=STD/C=STD       required 0-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+  variant_beaufort/P=STD/C=KRY       required 0-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+  variant_beaufort/P=KRY/C=STD       required 0-23  lamps_lit:possible  lamps_lit_sec:possible  minutes_mod26:possible
+  variant_beaufort/P=KRY/C=KRY       required 0-25  lamps_lit:EXCLUDED  lamps_lit_sec:EXCLUDED  minutes_mod26:possible
+
+## Search
+parameter sets evaluated : 6,220,800
+equivalent full space    : 161,740,800  (offset d solved, not searched)
+exact 24/24 hits         : 0
+
+## Best partial match per readout (calibration, not a finding)
+  lamps_lit       10/24  t0=9 step=59 d=24 beaufort/P=STD/C=STD
+  lamps_lit_sec   10/24  t0=528 step=-59 d=19 vigenere/P=STD/C=STD
+  minutes_mod26   8/24  t0=528 step=-22 d=2 vigenere/P=STD/C=STD
+
+Expected best-of-N under the null: with ~5.2M independent draws of 24
+letters at p=1/26 each, the modal count alone reaches 7-8/24 by chance.
+Anything at or below that level is noise, exactly as prior 4x22 work found.

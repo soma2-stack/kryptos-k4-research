@@ -1,0 +1,27 @@
+# EXP-003 transposition + periodic key
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+periods [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  min constraints 8  conventions 12
+
+## Search
+permutations     : 10,160  (9312 affine mod 97 + 848 rectangular routes)
+gate evaluations : 2,926,080
+exact hits       : 0
+
+## Best partial: most period-constraints satisfied, by period
+   (a period-p test on 24 positions offers 24 - min(p,24) constraints)
+   p= 1  best 15 / 23 satisfied
+   p= 2  best 12 / 22 satisfied
+   p= 3  best 11 / 21 satisfied
+   p= 4  best 10 / 20 satisfied
+   p= 5  best 10 / 19 satisfied
+   p= 6  best  9 / 18 satisfied
+   p= 7  best  9 / 17 satisfied
+   p= 8  best  8 / 16 satisfied
+   p= 9  best  8 / 15 satisfied
+   p=10  best  7 / 14 satisfied
+   p=11  best  8 / 13 satisfied
+   p=12  best  7 / 12 satisfied
+
+Reading: full satisfaction at any p >= 2 with >= 8 constraints would be
+decisive. Partial satisfaction is expected and carries no information --
+with 10.1M gate evaluations, runs of a few agreeing pairs are certain.

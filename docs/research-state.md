@@ -8,6 +8,26 @@ This is an editorial reconstruction of the referenced ChatGPT conversation, not 
 - **Inherited result** — reported by the prior researcher; preserve it, but independently reproduce it before relying on it.
 - **Hypothesis** — a bounded, falsifiable idea, not evidence of a solution.
 
+## Independently verified facts (2026-09-12)
+
+These are the only statements in this document backed by code in this repository.
+Regenerate with `./run_all.sh`.
+
+- `data/k4.json` is internally consistent: 97 characters, both crib spans match their
+  recorded ciphertext segments, the Kryptos alphabet is a permutation of A-Z.
+  Ciphertext SHA-256 `eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab`.
+- **The "ten conflicts" claim replicates, and its definition is now pinned.** Nine
+  ciphertext letters appear at crib positions against differing plaintext letters,
+  forming exactly **10** conflicting position-pairs (and 12 pairs in the reverse
+  direction). No monoalphabetic layer can exist. See EXP-001.
+- K4's index of coincidence is **0.03608** (random ~0.0385, English ~0.0667).
+- **New.** The `DIAWINFBN` `+5` run at lag 4 occupies positions 55-63 and terminates
+  **exactly on position 63, the first letter of the BERLINCLOCK crib**. The full set of
+  lag-4 `+5` positions is {22, 29, 55, 56, 57, 58, 59}. See `ideas.md` § 2 — this is
+  now the highest-value untested lead.
+- The tooling is self-validating: EXP-005 plants four known constructions and recovers
+  all four, so the negatives recorded here are not artefacts of broken code.
+
 ## High-priority inherited program: `TOKIO → 57973`
 
 **Inherited result.** A substantial prior July 2026 handoff reportedly converged on the following chain:
@@ -63,4 +83,6 @@ At known crib positions, repeated plaintext-letter occurrences were reported to 
 
 ### `DIAWINFBN` +5 run
 
-**Inherited observation.** The substring `DIAWINFBN` exhibits five consecutive relations `C[i+4] = C[i] + 5 (mod 26)`. Its previously reported post-hoc adjusted significance was approximately 0.00156. No cryptanalytic consequence has yet been derived, so treat it as low-priority until a mechanism predicts it.
+**Inherited observation.** The substring `DIAWINFBN` exhibits five consecutive relations `C[i+4] = C[i] + 5 (mod 26)`. Its previously reported post-hoc adjusted significance was approximately 0.00156. A mechanism is now proposed and the run has been localised: it ends on the first letter
+of the BERLINCLOCK crib, which is consistent with either a segment boundary at position 63
+or a progressive key. **Promoted from low-priority to a primary lead.** See `ideas.md` § 2.

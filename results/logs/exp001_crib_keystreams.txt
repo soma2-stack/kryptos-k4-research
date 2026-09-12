@@ -1,0 +1,81 @@
+# EXP-001 forced crib keystreams
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+known positions  24 of 97
+
+## Crib conflict census
+same ciphertext letter, different plaintext: 9 letters
+  C=F: pos21->E, pos71->O
+  C=K: pos31->A, pos73->K
+  C=N: pos29->H, pos63->B
+  C=P: pos27->R, pos65->R, pos72->C
+  C=Q: pos25->N, pos26->O
+  C=R: pos23->S, pos28->T
+  C=S: pos32->S, pos33->T
+  C=T: pos67->I, pos68->N
+  C=V: pos24->T, pos66->L
+same plaintext letter, different ciphertext: 8 letters
+  P=A: pos22->L, pos31->K
+  P=C: pos69->M, pos72->P
+  P=E: pos21->F, pos30->G, pos64->Y
+  P=L: pos66->V, pos70->Z
+  P=N: pos25->Q, pos68->T
+  P=O: pos26->Q, pos71->F
+  P=S: pos23->R, pos32->S
+  P=T: pos24->V, pos28->R, pos33->S
+
+## Forced key indices (plaintext position -> key index)
+convention                          21  22  23  24  25  26  27  28  29  30  31  32  33  63  64  65  66  67  68  69  70  71  72  73
+vigenere/P=STD/C=STD                 1  11  25   2   3   2  24  24   6   2  10   0  25  12  20  24  10  11   6  10  14  17  13   0
+vigenere/P=STD/C=KRY                 8  17   9   3   7   6  12   8  12   9   0  14  13  18  24  12  11  22  17  16  14  24   1  16
+vigenere/P=KRY/C=STD                20   4  11  17  23  11  14  13  25  21   3  12  14   5  13  14   4   4   0   3   8   0   6  10
+vigenere/P=KRY/C=KRY                 1  10  21  18   1  15   2  23   5   2  19   0   2  11  17   2   5  15  11   9   8   7  20   0
+beaufort/P=STD/C=STD                 9  11   9  14   3   4   6  10  20  10  10  10  11  14   2   6   6   1   6  14  10  19  17  20
+beaufort/P=STD/C=KRY                16  17  19  15   7   8  20  20   0  17   0  24  25  20   6  20   7  12  17  20  10   0   5  10
+beaufort/P=KRY/C=STD                16  18  23  25   9  21  16  21   1  17  17  24  22  21   9  16  12   8  12  21  16  10  24  10
+beaufort/P=KRY/C=KRY                23  24   7   0  13  25   4   5   7  24   7  12  10   1  13   4  13  19  23   1  16  17  12   0
+variant_beaufort/P=STD/C=STD        25  15   1  24  23  24   2   2  20  24  16   0   1  14   6   2  16  15  20  16  12   9  13   0
+variant_beaufort/P=STD/C=KRY        18   9  17  23  19  20  14  18  14  17   0  12  13   8   2  14  15   4   9  10  12   2  25  10
+variant_beaufort/P=KRY/C=STD         6  22  15   9   3  15  12  13   1   5  23  14  12  21  13  12  22  22   0  23  18   0  20  16
+variant_beaufort/P=KRY/C=KRY        25  16   5   8  25  11  24   3  21  24   7   0  24  15   9  24  21  11  15  17  18  19   6   0
+
+## Key letters, split by crib (rendered in STD and KRY)
+vigenere/P=STD/C=STD               EASTNORTHEAST: STD=BLZCDCYYGCKAZ KRY=REZYPYXXSYDKZ | BERLINCLOCK: STD=MUYKLGKORNA KRY=FQXDESDHLGK
+vigenere/P=STD/C=KRY               EASTNORTHEAST: STD=IRJDHGMIMJAON KRY=BLCPASFBFCKHG | BERLINCLOCK: STD=SYMLWRQOYBQ KRY=MXFEVLJHXRJ
+vigenere/P=KRY/C=STD               EASTNORTHEAST: STD=UELRXLONZVDMO KRY=QTELWEHGZUPFH | BERLINCLOCK: STD=FNOEEADIAGK KRY=OGHTTKPBKSD
+vigenere/P=KRY/C=KRY               EASTNORTHEAST: STD=BKVSBPCXFCTAC KRY=RDUMRIYWOYNKY | BERLINCLOCK: STD=LRCFPLJIHUA KRY=ELYOIECBAQK
+beaufort/P=STD/C=STD               EASTNORTHEAST: STD=JLJODEGKUKKKL KRY=CECHPTSDQDDDE | BERLINCLOCK: STD=OCGGBGOKTRU KRY=HYSSRSHDNLQ
+beaufort/P=STD/C=KRY               EASTNORTHEAST: STD=QRTPHIUUARAYZ KRY=JLNIABQQKLKXZ | BERLINCLOCK: STD=UGUHMRUKAFK KRY=QSQAFLQDKOD
+beaufort/P=KRY/C=STD               EASTNORTHEAST: STD=QSXZJVQVBRRYW KRY=JMWZCUJURLLXV | BERLINCLOCK: STD=VJQMIMVQKYK KRY=UCJFBFUJDXD
+beaufort/P=KRY/C=KRY               EASTNORTHEAST: STD=XYHANZEFHYHMK KRY=WXAKGZTOAXAFD | BERLINCLOCK: STD=BNENTXBQRMA KRY=RGTGNWRJLFK
+variant_beaufort/P=STD/C=STD       EASTNORTHEAST: STD=ZPBYXYCCUYQAB KRY=ZIRXWXYYQXJKR | BERLINCLOCK: STD=OGCQPUQMJNA KRY=HSYJIQJFCGK
+variant_beaufort/P=STD/C=KRY       EASTNORTHEAST: STD=SJRXTUOSORAMN KRY=MCLWNQHMHLKFG | BERLINCLOCK: STD=ICOPEJKMCZK KRY=BYHITCDFYZD
+variant_beaufort/P=KRY/C=STD       EASTNORTHEAST: STD=GWPJDPMNBFXOM KRY=SVICPIFGROWHF | BERLINCLOCK: STD=VNMWWAXSAUQ KRY=UGFVVKWMKQJ
+variant_beaufort/P=KRY/C=KRY       EASTNORTHEAST: STD=ZQFIZLYDVYHAY KRY=ZJOBZEXPUXAKX | BERLINCLOCK: STD=PJYVLPRSTGA KRY=ICXUEILMNSK
+
+## Structure probes
+vigenere/P=STD/C=STD               range=0-25 distinct=14 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+vigenere/P=STD/C=KRY               range=0-24 distinct=16 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+vigenere/P=KRY/C=STD               range=0-25 distinct=16 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+vigenere/P=KRY/C=KRY               range=0-23 distinct=16 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+beaufort/P=STD/C=STD               range=1-20 distinct=12 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+beaufort/P=STD/C=KRY               range=0-25 distinct=14 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+beaufort/P=KRY/C=STD               range=1-25 distinct=13 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+beaufort/P=KRY/C=KRY               range=0-25 distinct=14 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+variant_beaufort/P=STD/C=STD       range=0-25 distinct=14 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+variant_beaufort/P=STD/C=KRY       range=0-25 distinct=16 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+variant_beaufort/P=KRY/C=STD       range=0-23 distinct=16 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+variant_beaufort/P=KRY/C=KRY       range=0-25 distinct=16 periods<=48 consistent=none affine_fits=0 EASTNORTHEAST:no BERLINCLOCK:no
+
+## First differences of the forced key, per crib
+vigenere/P=STD/C=STD               EASTNORTHEAST=[10, 14, 3, 1, 25, 22, 0, 8, 22, 8, 16, 25] BERLINCLOCK=[8, 4, 12, 1, 21, 4, 4, 3, 22, 13]
+vigenere/P=STD/C=KRY               EASTNORTHEAST=[9, 18, 20, 4, 25, 6, 22, 4, 23, 17, 14, 25] BERLINCLOCK=[6, 14, 25, 11, 21, 25, 24, 10, 3, 15]
+vigenere/P=KRY/C=STD               EASTNORTHEAST=[10, 7, 6, 6, 14, 3, 25, 12, 22, 8, 9, 2] BERLINCLOCK=[8, 1, 16, 0, 22, 3, 5, 18, 6, 4]
+vigenere/P=KRY/C=KRY               EASTNORTHEAST=[9, 11, 23, 9, 14, 13, 21, 8, 23, 17, 7, 2] BERLINCLOCK=[6, 11, 3, 10, 22, 24, 25, 25, 13, 6]
+beaufort/P=STD/C=STD               EASTNORTHEAST=[2, 24, 5, 15, 1, 2, 4, 10, 16, 0, 0, 1] BERLINCLOCK=[14, 4, 0, 21, 5, 8, 22, 9, 24, 3]
+beaufort/P=STD/C=KRY               EASTNORTHEAST=[1, 2, 22, 18, 1, 12, 0, 6, 17, 9, 24, 1] BERLINCLOCK=[12, 14, 13, 5, 5, 3, 16, 16, 5, 5]
+beaufort/P=KRY/C=STD               EASTNORTHEAST=[2, 5, 2, 10, 12, 21, 5, 6, 16, 0, 7, 24] BERLINCLOCK=[14, 7, 22, 22, 4, 9, 21, 20, 14, 12]
+beaufort/P=KRY/C=KRY               EASTNORTHEAST=[1, 9, 19, 13, 12, 5, 1, 2, 17, 9, 5, 24] BERLINCLOCK=[12, 17, 9, 6, 4, 4, 15, 1, 21, 14]
+variant_beaufort/P=STD/C=STD       EASTNORTHEAST=[16, 12, 23, 25, 1, 4, 0, 18, 4, 18, 10, 1] BERLINCLOCK=[18, 22, 14, 25, 5, 22, 22, 23, 4, 13]
+variant_beaufort/P=STD/C=KRY       EASTNORTHEAST=[17, 8, 6, 22, 1, 20, 4, 22, 3, 9, 12, 1] BERLINCLOCK=[20, 12, 1, 15, 5, 1, 2, 16, 23, 11]
+variant_beaufort/P=KRY/C=STD       EASTNORTHEAST=[16, 19, 20, 20, 12, 23, 1, 14, 4, 18, 17, 24] BERLINCLOCK=[18, 25, 10, 0, 4, 23, 21, 8, 20, 22]
+variant_beaufort/P=KRY/C=KRY       EASTNORTHEAST=[17, 15, 3, 17, 12, 13, 5, 18, 3, 9, 19, 24] BERLINCLOCK=[20, 15, 23, 16, 4, 2, 1, 1, 13, 20]

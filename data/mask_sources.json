@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "note": "Candidate running-key ('mask') sources. Each entry carries a `verified` flag. Entries with verified=false are working transcriptions and MUST be checked against the NSA primary transcript before any exact-match negative result derived from them is published. Experiments that use them report fuzzy match scores precisely so that a single transcription error cannot manufacture a false negative.",
+  "sources": [
+    {
+      "id": "K4_ciphertext",
+      "verified": true,
+      "provenance": "data/k4.json, self-referential mask",
+      "text": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR"
+    },
+    {
+      "id": "kryptos_alphabet",
+      "verified": true,
+      "provenance": "data/k4.json kryptos_alphabet",
+      "text": "KRYPTOSABCDEFGHIJLMNQUVWXZ"
+    },
+    {
+      "id": "world_clock_tape",
+      "verified": false,
+      "provenance": "inherited research; UTC+9 city tape, 22 letters",
+      "text": "JAKUTSKPJOENGJANGTOKIO"
+    },
+    {
+      "id": "K1_plaintext",
+      "verified": false,
+      "provenance": "widely published K1 solution, transcribed for this repo; NOT yet checked against a primary source",
+      "text": "BETWEENSUBTLESHADINGANDTHEABSENCEOFLIGHTLIESTHENUANCEOFIQLUSION"
+    },
+    {
+      "id": "K2_plaintext",
+      "verified": false,
+      "provenance": "widely published K2 solution, transcribed for this repo; punctuation handling and the UNDERGRUUND misspelling are exactly the points a primary check must confirm",
+      "text": "ITWASTOTALLYINVISIBLEHOWSTHATPOSSIBLETHEYUSEDTHEEARTHSMAGNETICFIELDXTHEINFORMATIONWASGATHEREDANDTRANSMITTEDUNDERGRUUNDTOANUNKNOWNLOCATIONXDOESLANGLEYKNOWABOUTTHISTHEYSHOULDITSBURIEDOUTTHERESOMEWHEREXWHOKNOWSTHEEXACTLOCATIONONLYWWTHISWASHISLASTMESSAGEXTHIRTYEIGHTDEGREESFIFTYSEVENMINUTESSIXPOINTFIVESECONDSNORTHSEVENTYSEVENDEGREESEIGHTMINUTESFORTYFOURSECONDSWESTXLAYERTWO"
+    },
+    {
+      "id": "K3_plaintext",
+      "verified": false,
+      "provenance": "widely published K3 solution, transcribed for this repo; NOT yet checked against a primary source",
+      "text": "SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDEBRISTHATENCUMBEREDTHELOWERPARTOFTHEDOORWAYWASREMOVEDWITHTREMBLINGHANDSIMADEATINYBREACHINTHEUPPERLEFTHANDCORNERANDTHENWIDENINGTHEHOLEALITTLEIINSERTEDTHECANDLEANDPEEREDINTHEHOTAIRESCAPINGFROMTHECHAMBERCAUSEDTHEFLAMETOFLICKERBUTPRESENTLYDETAILSOFTHEROOMWITHINEMERGEDFROMTHEMISTXCANYOUSEEANYTHINGQ"
+    }
+  ]
+}
