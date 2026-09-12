@@ -1,0 +1,30 @@
+# EXP-006 exact elimination of parameter-linear keystream models
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+boundary neighbourhood: 48..80 (33 values)
+
+## Positive control (planted solution, same code path)
+  planted: progressive_reset(L=5,b=63) delta=7 key=[3, 11, 20, 1, 17]
+  joint fit recovered      : YES  [('progressive_reset(L=5,b=63)', 'vigenere/P=STD/C=STD', 1, 3.392186617807266e-26)]
+  out-of-sample recovered  : YES  (12 solutions)
+  CONTROL PASSED
+
+## K4
+  systems solved exactly : 22,584
+    periodic                192
+    periodic_offset        6336
+    periodic_reset         6336
+    polynomial               72
+    polynomial_offset      2376
+    polynomial_reset       2376
+    progressive             144
+    progressive_reset      4752
+
+  joint fits (all 24 crib letters, chance < 1e-6) : 0
+  out-of-sample hits (fit EASTNORTHEAST, predict BERLINCLOCK) : 0
+
+## Multiple-testing budget
+  22,584 systems tested. A model class is only notable if its
+  chance_solvable satisfies chance * 22,584 << 1. The most permissive
+  class tested (period-16 with reset, 24 equations, 16 unknowns) has
+  chance 26^-8 = 4.79e-12, so the whole sweep expects
+  1.08e-07 false joint fits. None were found.
