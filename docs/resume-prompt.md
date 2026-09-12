@@ -1,3 +1,7 @@
+> **Checkpoint I supersedes stale interpretations below.** Read
+> [the audit](codex-audit.md) and [current result](../results/2026-09-12-codex-checkpoint-I.md)
+> first. Preserve the frozen 120-letter tape. Do not rerun historical large searches.
+
 # AI resume prompt
 
 You are continuing a reproducible Kryptos K4 investigation. This repository is a research handoff, not a claim that K4 has been solved.

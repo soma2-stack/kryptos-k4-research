@@ -1,3 +1,7 @@
+> **Checkpoint I supersedes stale interpretations below.** Read
+> [the audit](codex-audit.md) and [current result](../results/2026-09-12-codex-checkpoint-I.md)
+> first. Preserve the frozen 120-letter tape. Do not rerun historical large searches.
+
 # Next experiments
 
 Rewritten 2026-09-12 after Checkpoint D. Read in this order:

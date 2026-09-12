@@ -195,3 +195,12 @@ Protocol points worth recording:
   nothing downstream was built on it.
 
 ## Incidents 2+ — none recorded.
+
+## Codex Checkpoint I — no plaintext contamination incident
+
+Audited the specified commit and tested only the existing public crib constraints.
+Synthetic controls use X filler; no candidate full plaintext was ingested. Exact-ID
+archive searches for the three supplied photo targets yielded no usable image.
+One archive snippet and unrelated numeric-ID search matches were returned; no
+claimed-solution source was accessed and no new historical transcription was added.
+No external verifier submission. See codex-image-request.md for the paused evidence task.

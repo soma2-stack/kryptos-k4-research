@@ -1,3 +1,9 @@
+> **Current audit (Checkpoint I):** see [Codex audit](docs/codex-audit.md) and
+> [verified continuation](results/2026-09-12-codex-checkpoint-I.md). Historical
+> entries below include superseded interpretations; the audit takes precedence.
+> EXP-030: 172,800 constant-step CET tape cases, any fixed letter-to-number lookup,
+> zero feasible mappings; 120 controls and independent certificates pass. K4 unsolved.
+
 # Kryptos K4 research handoff
 
 This repository preserves an ongoing, **unsolved** investigation into the 97-character

@@ -1,3 +1,7 @@
+> **Checkpoint I supersedes stale interpretations below.** Read
+> [the audit](codex-audit.md) and [current result](../results/2026-09-12-codex-checkpoint-I.md)
+> first. Preserve the frozen 120-letter tape. Do not rerun historical large searches.
+
 > **Read `docs/evidence-grades.md` first.** Several entries below were originally
 > stated more universally than their arguments support. That document regrades every
 > one against a five-level scale (PROVED IMPOSSIBLE / EXHAUSTIVELY ELIMINATED WITHIN

@@ -12,4 +12,7 @@ results/*
 !results/logs/
 results/logs/*
 !results/logs/*.txt
+!results/exp030/
+!results/exp030/summary.json
+!results/exp030/cases.jsonl.gz
 scratch/

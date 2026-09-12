@@ -1,4 +1,4 @@
-# Codex handoff audit — preliminary findings
+# Codex handoff audit — findings and resolution
 
 Base: `0cb2b38d2b81980d9c7b099c3727423335f9d86e`; continuation only on
 `codex/k4-continuation`. Main and Claude's branch are preserved.
@@ -13,7 +13,7 @@ Confirmed: frozen upper 62 + lower 58 = 120, including the nine lower names in
 the supplied order. EXP-028 baseline passes 21/21. EXP-005 recovers 4/4 planted
 methods. The original 97-letter coincidence remains withdrawn.
 
-Findings to resolve:
+Findings:
 
 1. EXP-029 uses modulo-120 windows, contrary to its promise to stay inside a
    known arc. The two usable tapes are circular rotations, so its 11,520 labels
@@ -45,4 +45,6 @@ Findings to resolve:
    with this audit taking precedence over their overbroad interpretations.
 
 No external plaintext source accessed; no new plaintext assumptions; no verifier.
-Pending: independent scoped replication, fixes, then preregistered EXP-030.
+Resolved at Checkpoint I: independent scoped replication matches the histogram;
+graph fixes and adversarial controls pass; EXP-030 eliminates all 172,800 declared
+cases. See results/2026-09-12-codex-checkpoint-I.md. Visual provenance remains open.

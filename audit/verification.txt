@@ -1,0 +1,6 @@
+12 x 26 x 26 independent arithmetic checks PASS
+EXP-024 synthetic planted construction arithmetic PASS (full search not rerun)
+96 nonwrapping endpoint controls PASS
+{"distinct_full_stream_conventions": 5760, "legacy_histogram": {"0": 4668, "1": 4186, "2": 1870, "3": 646, "4": 134, "5": 14, "7": 2}, "nonwrapping_histogram": {"0": 943, "1": 833, "2": 369, "3": 124, "4": 30, "5": 4, "7": 1}}
+Graph conflict controls, actual frozen graph, historical completeness guard PASS
+Audit PASS; no photograph or exact date independently verified.
