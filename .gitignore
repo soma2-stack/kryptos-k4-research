@@ -37,3 +37,7 @@ scratch/
 !results/exp035/rows.jsonl.gz
 !results/exp036/
 !results/exp036/summary.json
+
+# Checkpoint N.
+!results/exp037/
+!results/exp037/summary.json

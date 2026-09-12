@@ -1,0 +1,165 @@
+{
+ "experiment": "EXP-037",
+ "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+ "prereg": "docs/exp037-preregistration.md",
+ "grade": "structural/historical candidate only; no Sanborn/Scheidt evidence",
+ "periods": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23
+ ],
+ "orderings": [
+  "KRY",
+  "STD"
+ ],
+ "constraints": {
+  "1": 23,
+  "2": 22,
+  "3": 21,
+  "4": 20,
+  "5": 19,
+  "6": 18,
+  "7": 17,
+  "8": 16,
+  "9": 15,
+  "10": 14,
+  "11": 13,
+  "12": 12,
+  "13": 11,
+  "14": 11,
+  "15": 9,
+  "16": 8,
+  "17": 7,
+  "18": 7,
+  "19": 9,
+  "20": 11,
+  "21": 11,
+  "22": 9,
+  "23": 7,
+  "24": 5
+ },
+ "direct": {
+  "STD": {
+   "unrealisable_pairs": 16,
+   "examples": [
+    [
+     21,
+     "E",
+     "F"
+    ],
+    [
+     22,
+     "A",
+     "L"
+    ],
+    [
+     23,
+     "S",
+     "R"
+    ],
+    [
+     24,
+     "T",
+     "V"
+    ],
+    [
+     25,
+     "N",
+     "Q"
+    ]
+   ],
+   "feasible_periods": []
+  },
+  "KRY": {
+   "unrealisable_pairs": 16,
+   "examples": [
+    [
+     21,
+     "E",
+     "F"
+    ],
+    [
+     23,
+     "S",
+     "R"
+    ],
+    [
+     25,
+     "N",
+     "Q"
+    ],
+    [
+     27,
+     "R",
+     "P"
+    ],
+    [
+     28,
+     "T",
+     "R"
+    ]
+   ],
+   "feasible_periods": []
+  }
+ },
+ "composed": {
+  "cases": 1485951616,
+  "parity_survivors": 0,
+  "feasible": 0,
+  "per_width": {
+   "2": 8,
+   "3": 24,
+   "4": 96,
+   "5": 480,
+   "6": 2880,
+   "7": 20160,
+   "8": 161280,
+   "9": 1451520,
+   "10": 14515200
+  }
+ },
+ "T2_T3": {
+  "perms": 1936,
+  "cases": 178112,
+  "parity_survivors": 0,
+  "feasible": 0,
+  "dupes": 548
+ },
+ "total_composed_cases": 1486129728,
+ "feasible": 0,
+ "hits": [],
+ "controls": {
+  "planted_total": 80,
+  "planted_pass": 80,
+  "adv_total": 80,
+  "adv_pass": 80,
+  "perioddisc_total": 74,
+  "perioddisc_pass": 74,
+  "wrong_family_total": 80,
+  "wrong_family_pass": 80,
+  "wrong_family_rev_total": 80,
+  "wrong_family_rev_pass": 80,
+  "perioddisc_degenerate_excluded": 6
+ },
+ "porta_rows_exercised_by_controls": 13
+}
