@@ -247,3 +247,27 @@ from the session-10 record, which now carries a supersession notice.
   (1991, circumstantial), `15638904` (1982, narrows only).
 
 If it is still not supplied, say so and stop. Do not infer the 1988–89 CET face.
+
+## Addendum — 2026-09-12 (Checkpoint H, Tier 1 met — session 12)
+
+Read `results/2026-09-12h5-checkpoint-H-tier1-met-and-negative.md` first.
+
+- **Tier 1 is MET** on the CET/UTC+1 face from a 4 Nov 1989 frame: 120 letters, frozen in
+  `data/weltzeituhr_photos.json → tier1_frozen_reconstruction`. That block is FROZEN — change
+  it only on new image evidence, never in response to a test result.
+- **EXP-029 ran the permitted restricted test and it is NEGATIVE**: 11,520 alignments,
+  0 exact matches, best 7/24 (chance mean 0.92), positive control passed on the real tape.
+  EXP-024 itself remains unmodified and not re-run.
+- **The 97-letter coincidence is WITHDRAWN** — my own transcription error (LONDON belongs to
+  the UTC+0 upper band). Do not resurrect it. EXP-028 asserts it cannot creep back.
+- Also withdrawn: "upper = northern / lower = southern", and the hope that order follows from
+  membership. Each face's order must be read off a photograph.
+- Two alignments hit 7/24 (`STD dir+1 variant_beaufort/P=KRY/C=KRY`, offsets 78 and 16),
+  Poisson p ≈ 0.03 on a post-hoc maximum. **Do not pursue them and do not consult the
+  external verifier.**
+- What is still open: multi-face readings (most of EXP-024's space), non-running-key uses of
+  the object. Blocked on the UTC+0 and UTC+2 bands.
+- Ask: a target-era close frame from a different bearing — picture-alliance `16008401` /
+  `16008415` (whichever was not uploaded), or HanisauLand `153695.jpg`.
+
+K4 remains unsolved. The first mechanism this programme could finally test came back negative.

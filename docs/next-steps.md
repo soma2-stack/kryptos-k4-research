@@ -24,7 +24,47 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint H, 1974 correction (session 11)
+## 0 — Status after Checkpoint H, Tier 1 met (session 12)
+
+**Tier 1 is MET and the test has been run. It came back negative.**
+
+A 4 Nov 1989 frame shows the complete CET/UTC+1 face — upper `AMSTERDAM BERLIN BRUSSEL
+BUDAPEST MADRID PARIS PRAG STOCKHOLM WARSCHAU` (62), lower `KOPENHAGEN WIEN BERN BELGRAD ROM
+TUNIS BRAZZAVILLE KINSHASA LUANDA` (58) = **120 letters**, target era, date corroborated by
+the image's own `NEUES FORUM`/`SDP` banners. Frozen in
+`data/weltzeituhr_photos.json → tier1_frozen_reconstruction` before testing; EXP-024 left
+unmodified; restricted run executed as **EXP-029**.
+
+**EXP-029: 11,520 alignments, 0 exact 24/24 matches, best 7/24, chance mean 0.92, positive
+control passed on the real tape.** Eliminated exhaustively within the model: the single-face
+running-key reading of the Berlin face. Not eliminated: multi-face readings (most of
+EXP-024's space), non-running-key uses of the object, or the Weltzeituhr hypothesis itself.
+
+**Three retractions of my own session-10 claims:**
+
+1. **The 97 is withdrawn.** It was a transcription error — LONDON belongs to the neighbouring
+   UTC+0 *upper* band, and BERN/BRAZZAVILLE/KINSHASA/LUANDA were missed. The face carries 120
+   letters. It had been graded OBSERVATION, NOT EVIDENCE and refused as grounds to run the
+   test, so nothing downstream was built on it.
+2. **"Upper = northern, lower = southern" does not generalise** — KOPENHAGEN (55.7 °N) is
+   lower while MADRID (40.4 °N) is upper. The 2^k layout-entropy reduction is withdrawn.
+3. **Order does not follow from membership** — CET upper is alphabetical, UTC+0 upper is
+   latitude-descending, UTC+0 lower is neither. Each face's order must be read off a photo.
+
+Still standing: half-hour faces inscribed `+30`; membership non-monotonic (NOWOSIBIRSK moved
+faces); LENINGRAD/MURMANSK/KIEW now attested in the target era itself.
+
+**NEXT EVIDENCE — one target-era close frame from a different bearing** (≈45–90° around), so
+UTC+0 and UTC+2 present frontally. Those two faces are what block the multi-face readings:
+UTC+0's lower band ends are unseen, and UTC+2 has an UNKNOWN upper line between SOFIA and
+NIKOSIA.
+
+> Ask: **picture-alliance `16008401` / `16008415` (04.11.1989)** — whichever was *not* the
+> frame uploaded — and **HanisauLand `153695.jpg` (04.11.1989)**, which may be a third
+> distinct same-day frame. Success criterion: UTC+0 and/or UTC+2 frontal, both bands legible
+> line by line, band ends visible.
+
+## 0a — Earlier status after Checkpoint H, 1974 correction (session 11)
 
 Metric: **15 of 24 sectors identified (62.5%)**, 20 face-era records, a **7-face contiguous
 chain**, **14 observed adjacency edges**, **1 complete face** (CET @1970s, local visual,

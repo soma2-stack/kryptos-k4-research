@@ -26,17 +26,40 @@ check("the CET 1970s face exists", f is not None)
 
 UPPER = ["AMSTERDAM", "BERLIN", "BRUSSEL", "BUDAPEST", "MADRID", "PARIS", "PRAG",
          "STOCKHOLM", "WARSCHAU"]
-LOWER = ["KOPENHAGEN", "LONDON", "WIEN", "ROM", "BELGRAD", "TUNIS"]
+LOWER89 = ["KOPENHAGEN", "WIEN", "BERN", "BELGRAD", "ROM", "TUNIS",
+           "BRAZZAVILLE", "KINSHASA", "LUANDA"]
+TGT = "UTC+1 @1988-89"
+t = g.faces.get(TGT)
 
-check("CET upper band verbatim, in transcribed order", f["upper"] == UPPER, str(f["upper"]))
-check("CET lower band verbatim, in transcribed order", f["lower"] == LOWER, str(f["lower"]))
-check("CET face carries no unknowns", f["unknown"] == [], str(f["unknown"]))
-check("CET face is COMPLETE", g.face_complete(CET))
-check("CET letter total is 97",
-      sum(len(n.replace(" ", "")) for n in f["upper"] + f["lower"]) == 97)
-check("the 1974 frame is recorded as corroboration, not as new data",
-      any("subset" in c for c in f["corroborated"]), str(f["corroborated"]))
-check("no unresolved conflicts on the CET face", f["conflicts"] == [], str(f["conflicts"]))
+check("the 1970s CET upper band is verbatim", f["upper"] == UPPER, str(f["upper"]))
+check("the 1970s CET lower band is NO LONGER claimed complete (LONDON misassignment)",
+      not g.face_complete(CET) and "lower" not in f["complete_bands"],
+      f"complete_bands={f['complete_bands']}")
+check("the retracted 97-letter reading is not resurrected anywhere",
+      "LONDON" not in f["lower"], str(f["lower"]))
+
+check("the target-era CET face exists", t is not None)
+check("target-era CET upper band verbatim", t["upper"] == UPPER, str(t["upper"]))
+check("target-era CET lower band verbatim, in transcribed order",
+      t["lower"] == LOWER89, str(t["lower"]))
+check("target-era CET face carries no unknowns", t["unknown"] == [], str(t["unknown"]))
+check("target-era CET face is COMPLETE", g.face_complete(TGT))
+check("target-era CET letter total is 120",
+      sum(len(n.replace(" ", "")) for n in t["upper"] + t["lower"]) == 120)
+check("target-era CET lower band is strictly latitude-descending (internal corroboration)",
+      LOWER89 == ["KOPENHAGEN", "WIEN", "BERN", "BELGRAD", "ROM", "TUNIS",
+                  "BRAZZAVILLE", "KINSHASA", "LUANDA"])
+check("LONDON is on the UTC+0 face, not CET",
+      "LONDON" in g.faces["UTC+0-W @1988-89"]["upper"] and "LONDON" not in t["lower"])
+check("no unresolved conflicts on either CET face",
+      f["conflicts"] == [] and t["conflicts"] == [], str(f["conflicts"] + t["conflicts"]))
+
+# the frozen tape must match the dataset's own frozen block
+fr = doc["tier1_frozen_reconstruction"]
+check("frozen block matches the graph's target-era face",
+      fr["upper"] == t["upper"] and fr["lower"] == t["lower"])
+check("frozen block letter total is self-consistent",
+      fr["letters"]["total"] == 120)
 
 # era separation
 check("faces are keyed by (sector, era), never merged across eras",
@@ -48,7 +71,7 @@ check("circumference counts distinct sectors, not face-era records",
 
 # no target-era completeness may be claimed
 tgt = [k for k in g.sector_faces() if k.endswith("@1988-89") and g.face_complete(k)]
-check("NO complete face is claimed for the 1988-89 target era", not tgt, str(tgt))
+check("exactly ONE complete target-era face is claimed", tgt == [TGT], str(tgt))
 
 # every face-era record traces to a photograph with an era
 ids = {p["id"] for p in doc["photographs"]}

@@ -175,4 +175,23 @@ Worth recording as protocol: this correction cut *against* the programme's prefe
 hypothesis, and was incorporated in full. Two of my own session-10 conclusions were
 retracted rather than defended.
 
+## Session 12 (Checkpoint H, Tier 1 met) — clean, no incidents
+
+Three 4 Nov 1989 photographs were uploaded and read visually by this agent. Historical press
+images of a public monument and a public demonstration. No claimed-solution site used or
+cited; no purported K4 plaintext sought or seen. Cribs used: EASTNORTHEAST and BERLINCLOCK only.
+
+Protocol points worth recording:
+
+- The Tier-1 reconstruction was **frozen in the dataset before any test ran**, with its
+  confidence grades and stated risk, and EXP-029 cites it verbatim. It cannot be retuned to a
+  result after the fact.
+- EXP-024 was left unmodified and was not re-run; the restricted run is a separate experiment.
+- Two alignments reached 7/24 cribs (Poisson p ≈ 0.03 on a post-hoc maximum). **The external
+  verifier was not consulted**, and the blip was recorded rather than pursued.
+- The session's main finding is a retraction of the programme's most attractive prior
+  observation: the 97-letter coincidence was my own transcription error. It had been graded
+  OBSERVATION, NOT EVIDENCE and refused as grounds to run the test, which is the only reason
+  nothing downstream was built on it.
+
 ## Incidents 2+ — none recorded.

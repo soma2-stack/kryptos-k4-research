@@ -329,26 +329,15 @@
      ],
      "upper_band_confidence": "LOCAL VISUAL HIGH. My own reading of UPLOAD-1 reproduces the nine external names exactly, in the same order, independently. Order is alphabetical.",
      "upper_band_letters": 62,
-     "lower_band": [
-      "KOPENHAGEN",
-      "LONDON",
-      "WIEN",
-      "ROM",
-      "BELGRAD",
-      "TUNIS"
-     ],
      "lower_band_readable_subset": [
       "KOPENHAGEN",
       "WIEN",
       "BELGRAD",
       "TUNIS"
      ],
-     "lower_band_confidence": "LOCAL VISUAL MEDIUM-HIGH for the six names; I read LONDON, which the external handoff did not report, and read ROM in the lower band. MEDIUM because the band is small in frame: I am confident there are six lines and no seventh, but a fully obscured seventh line cannot be excluded from one viewpoint.",
-     "lower_band_membership_count": 6,
+     "lower_band_confidence": "RETRACTED AND DOWNGRADED. The six-name ordered reading is withdrawn: the 1989 frame at much higher resolution shows LONDON belongs to the neighbouring UTC+0 UPPER band and the CET lower band holds nine names. What survives from this frame is that five of those nine (KOPENHAGEN, WIEN, ROM, BELGRAD, TUNIS) were present in the 1970s. Membership and order from this frame: UNKNOWN. See findings.london_misassignment.",
+     "lower_band_membership_count": "UNKNOWN (five of the nine known names legible)",
      "lower_band_letters": 35,
-     "lower_band_order": "NOT alphabetical. Latitudes 55.68/51.51/48.21/41.90/44.79/36.81: north-to-south with one inversion (ROM before BELGRAD). So the lower band is not alphabetically ordered, unlike the upper band.",
-     "face_letter_total": 97,
-     "face_letter_total_note": "62 + 35 = 97, the length of K4. See findings.face_97_observation - graded OBSERVATION, NOT EVIDENCE.",
      "superseded_external": {
       "lower_band_readable_subset": [
        "KOPENHAGEN",
@@ -357,7 +346,23 @@
        "TUNIS"
       ],
       "note": "external handoff called the lower band not transcribable; local reading resolves it to six names"
-     }
+     },
+     "lower_band_RETRACTED": [
+      "KOPENHAGEN",
+      "LONDON",
+      "WIEN",
+      "ROM",
+      "BELGRAD",
+      "TUNIS"
+     ],
+     "lower_band_partial": [
+      "KOPENHAGEN",
+      "WIEN",
+      "ROM",
+      "BELGRAD",
+      "TUNIS"
+     ],
+     "face_letter_total_RETRACTED": "97 - an artefact of the LONDON misassignment; the real face carries 120"
     }
    ],
    "adjacency_observed": [
@@ -388,7 +393,8 @@
    "local_visual_notes": [
     "LENINGRAD and MOSKAU both legible -> frame predates the 1991/1997 renamings. Independent of the caption.",
     "ATHEN is not visible in the UTC+2 lower block where the modern clock and the 1985-addition claim would put it.",
-    "No '+30' notation is legible anywhere in this frame (the half-hour faces are not toward the camera)."
+    "No '+30' notation is legible anywhere in this frame (the half-hour faces are not toward the camera).",
+    "Upper band 9/9 EXACT match to the 1989 frame, names and order - so this frame's upper reading is vindicated even though its lower reading was wrong."
    ],
    "local_visual_faces": [
     {
@@ -563,6 +569,169 @@
     "The modern list's PJOENGJANG vs the 1984 PHOENGJANG is an orthography change, not a membership change."
    ],
    "era": "modern"
+  },
+  {
+   "id": "PA-19891104-demo-CET",
+   "archive": "picture alliance / akg (per handoff); exact ID among 16008401 / 16008415 / HanisauLand 153695 NOT established",
+   "accession": "UNKNOWN - see id_uncertainty",
+   "title": "Alexanderplatz demonstration, Weltzeituhr in the foreground",
+   "photographer": null,
+   "date": "1989-11-04",
+   "era": "1988-89",
+   "date_confidence": "HIGH, and corroborated by image content independently of any caption: hand-painted banners reading NEUES FORUM and SDP, and 'Kreml...Moskau / Reformen allein Werk so Politburo und ZK ... och so?', place this in the autumn-1989 East German demonstrations. The 4 Nov 1989 Alexanderplatz rally is the one such event of this scale. So the target-era dating does not rest on the handoff's metadata alone.",
+   "predates_1997": true,
+   "is_1988_1989": true,
+   "source_ref": "docs/external/checkpoint-H-1989-image-acquisition.md; uploaded as UPLOAD-5/6/7",
+   "self_transcribed": true,
+   "transcription_status": "LOCAL VISUAL EVIDENCE (UPLOAD-6, ~2000px)",
+   "id_uncertainty": "The handoff names three candidate same-day frames and explicitly declines to assert they are the same image. I cannot tell which of the three I was given. This does NOT affect the date (established from content) but it does mean the accession is unresolved and a later worker cannot re-pull 'the' image by ID with certainty.",
+   "visible_faces": [
+    {
+     "face_ref": "N89-CET",
+     "utc_sector": "UTC+1",
+     "sector_basis": "contents (BERLIN, PARIS, MADRID, WARSCHAU)",
+     "upper_band": [
+      "AMSTERDAM",
+      "BERLIN",
+      "BRUSSEL",
+      "BUDAPEST",
+      "MADRID",
+      "PARIS",
+      "PRAG",
+      "STOCKHOLM",
+      "WARSCHAU"
+     ],
+     "upper_band_letters": 62,
+     "upper_band_confidence": "LOCAL VISUAL HIGH. Nine lines, alphabetical, and an EXACT match - names and order - to my independent reading of the 1970s Straube frame.",
+     "lower_band": [
+      "KOPENHAGEN",
+      "WIEN",
+      "BERN",
+      "BELGRAD",
+      "ROM",
+      "TUNIS",
+      "BRAZZAVILLE",
+      "KINSHASA",
+      "LUANDA"
+     ],
+     "lower_band_letters": 58,
+     "lower_band_confidence": "LOCAL VISUAL MEDIUM-HIGH. Nine lines. Text is small; the grade is not HIGH because I misread this very band once already. It is not lower because the reading is internally corroborated: the nine names are in STRICTLY DESCENDING LATITUDE (55.7, 48.2, 46.9, 44.8, 41.9, 36.8, -4.3, -4.4, -8.8), which is not something a misreading would produce.",
+     "face_letter_total": 120,
+     "band_ends_visible": true
+    },
+    {
+     "face_ref": "N89-0",
+     "utc_sector": "UTC+0-W",
+     "upper_band": [
+      "REYKJAVIK",
+      "DUBLIN",
+      "LONDON",
+      "LISSABON",
+      "ALGIER",
+      "MADEIRA",
+      "BISSAU"
+     ],
+     "lower_band_partial": [
+      "CASABLANCA",
+      "CONAKRY",
+      "DAKAR",
+      "BAMAKO",
+      "ACCRA"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM-HIGH upper (strictly descending latitude 64.1>53.3>51.5>38.7>36.8>32.8>11.9); MEDIUM lower",
+     "note": "THIS IS WHERE LONDON ACTUALLY SITS. See findings.london_misassignment."
+    },
+    {
+     "face_ref": "N89-p2",
+     "utc_sector": "UTC+2",
+     "upper_band_partial": [
+      "BUKAREST",
+      "HELSINKI",
+      "SOFIA",
+      "UNKNOWN",
+      "NIKOSIA"
+     ],
+     "lower_band_partial": [
+      "BEIRUT",
+      "DAMASKUS",
+      "KAIRO",
+      "KHARTUM",
+      "LUSAKA",
+      "MAPUTO"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM; one upper line between SOFIA and NIKOSIA is not resolvable and is recorded UNKNOWN",
+     "note": "ATHEN is still not visible here in Nov 1989, which is a further problem for the Athens-1985-addition reading."
+    },
+    {
+     "face_ref": "N89-p3",
+     "utc_sector": "UTC+3",
+     "upper_band_partial": [
+      "MURMANSK",
+      "LENINGRAD",
+      "MOSKAU",
+      "KIEW"
+     ],
+     "lower_band_partial": [
+      "ANKARA",
+      "TEHERAN",
+      "BAGDAD",
+      "ADDIS ABEBA",
+      "MOGADISCHU",
+      "DARESSALAM"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM; oblique, and the lower block's line order is not certain"
+    },
+    {
+     "face_ref": "N89-m1",
+     "utc_sector": "UTC-1-W",
+     "upper_band_partial": [
+      "AZOREN"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM"
+    },
+    {
+     "face_ref": "N89-m2",
+     "utc_sector": "UTC-2-W",
+     "upper_band_partial": [
+      "OSTGROENLAND"
+     ],
+     "confidence": "LOCAL VISUAL LOW-MEDIUM"
+    },
+    {
+     "face_ref": "N89-m3",
+     "utc_sector": "UTC-3-W",
+     "upper_band_partial": [
+      "WESTGROENLAND"
+     ],
+     "lower_band_partial": [
+      "RIO DE JANEIRO",
+      "SAO PAULO",
+      "MONTEVIDEO",
+      "BUENOS AIRES"
+     ],
+     "confidence": "LOCAL VISUAL LOW-MEDIUM, frame edge"
+    }
+   ],
+   "adjacency_observed": [
+    {
+     "kind": "OBSERVED",
+     "upper_sequence": [
+      "N89-m3",
+      "N89-m2",
+      "N89-m1",
+      "N89-0",
+      "N89-CET",
+      "N89-p2",
+      "N89-p3"
+     ],
+     "confidence": "LOCAL VISUAL, single frame, left to right across the drum"
+    }
+   ],
+   "visible_hour_ring_values": "7 8 9 10 11 12 13 14 15 16 legible; per CRITICAL_GEOMETRY_RULE these do NOT identify faces and were not used",
+   "local_visual_notes": [
+    "The drum's full CET face - both bands, both ends visible - is legible for the first time in this programme.",
+    "UPLOAD-5 is the same frame downscaled and adds nothing; UPLOAD-7 shows no panel text."
+   ]
   }
  ],
  "stability_question": {
@@ -755,6 +924,21 @@
     "ref": "UPLOAD-4",
     "content": "Second modern/recent frame overlapping UPLOAD-3, used only to cross-check the +30 notation and the band rule.",
     "maps_to": "MODERN-upload-asia-pacific"
+   },
+   {
+    "ref": "UPLOAD-5",
+    "content": "B/W elevated frame of the 4 Nov 1989 Alexanderplatz demonstration, clock left-of-centre, ~600px wide. Same frame as UPLOAD-6 at lower resolution; panel text not readable at this size.",
+    "maps_to": "PA-19891104-demo-CET"
+   },
+   {
+    "ref": "UPLOAD-6",
+    "content": "The SAME frame at ~2000px. The drum occupies a large area and the city panels are readable line by line. This is the only image this programme has ever had in which a full face is legible.",
+    "maps_to": "PA-19891104-demo-CET"
+   },
+   {
+    "ref": "UPLOAD-7",
+    "content": "Vertical B/W frame of the same demonstration with the Interhotel Stadt Berlin tower; the clock is small and distant. NO panel text legible. Corroborates event/date context only.",
+    "maps_to": "PA-19891104-demo-context"
    }
   ]
  },
@@ -771,13 +955,15 @@
    "answer": "Upper = northern places, lower = southern places, within each UTC sector.",
    "evidence": "LOCAL VISUAL on four independent face pairs in UPLOAD-3/4 (KRASNOJARSK over HANOI/BANGKOK/PHNOM PENH/JAKARTA; IRKUTSK/ULAN-BATOR over PEKING..SINGAPUR; JAKUTSK over PJOENGJANG/TOKYO/SEOUL; CHABAROWSK/WLADIWOSTOK over SYDNEY/CANBERRA/MELBOURNE). Corroborates the Tagesspiegel account that the upper metal ring is the northern-hemisphere structural ring and the lower the southern.",
    "grade": "CONFIRMED (modern), STRONGLY SUPPORTED (structural, hence era-independent).",
-   "consequence": "Band assignment is now PREDICTABLE from latitude rather than free. This removes the 2^k half of the per-face layout entropy and makes the upper/lower question answerable from a place list alone - a real reduction in the reconstruction problem, though the k! within-band ordering remains."
+   "consequence": "Band assignment is now PREDICTABLE from latitude rather than free. This removes the 2^k half of the per-face layout entropy and makes the upper/lower question answerable from a place list alone - a real reduction in the reconstruction problem, though the k! within-band ordering remains.",
+   "refuted_for_cet": "REFUTED as a general latitude split. The 1989 CET face has KOPENHAGEN (55.7 N) in the LOWER band while MADRID (40.4 N) is in the UPPER, and the lower band mixes northern European with sub-Saharan African places. The rule holds on the Asian faces observed but is NOT the drum's organising principle. Downgraded from CONFIRMED to LOCAL REGULARITY. The 2^k entropy reduction claimed last session is WITHDRAWN."
   },
   "band_ordering": {
    "upper": "Alphabetical, confirmed locally on the CET face (9/9).",
    "lower": "NOT alphabetical on the CET face. Reads roughly north-to-south with one inversion (ROM before BELGRAD).",
    "grade": "SUPPORTED for upper; the lower rule is UNRESOLVED - one face, one inversion, and I cannot exclude that the true rule is something else (installation convenience, name length) that merely correlates with latitude.",
-   "consequence": "A single ordering rule does NOT govern both bands. Any reading procedure that assumes one does is wrong."
+   "consequence": "A single ordering rule does NOT govern both bands. Any reading procedure that assumes one does is wrong.",
+   "refuted_single_rule": "No single ordering rule across faces. In the 1989 frame: CET upper is ALPHABETICAL (not latitude - STOCKHOLM 59.3 is eighth); UTC+0 upper is STRICTLY LATITUDE-DESCENDING (64.1 to 11.9) and not alphabetical; CET lower is strictly latitude-descending; UTC+0 lower (CASABLANCA CONAKRY DAKAR BAMAKO ACCRA) is neither. So order does NOT follow from membership, and the hope that it might - which made reconstruction look tractable - is WITHDRAWN. Each face's order must be read from a photograph."
   },
   "face_membership_moved": {
    "statement": "NOWOSIBIRSK appears with KRASNOJARSK in 1984 (UPLOAD-2) and with OMSK/ALMATY/TASCHKENT in the modern frame (UPLOAD-3).",
@@ -805,7 +991,8 @@
    ],
    "non_free_element": "The one thing not chosen after the fact is WHICH face: it is the Berlin/CET face named by the BERLINCLOCK crib, and the face this programme was already targeting before the count was taken.",
    "grade": "OBSERVATION, NOT EVIDENCE. It does not raise the Weltzeituhr hypothesis above PROMISING HYPOTHESIS and must not be used to motivate running EXP-024.",
-   "date_note": "Revised: the face now reads as mid-1970s rather than date-disputed. The 97 is therefore a count on a frame about fourteen years before the target period. This weakens, not strengthens, any inference from it. Grade unchanged: OBSERVATION, NOT EVIDENCE."
+   "date_note": "Revised: the face now reads as mid-1970s rather than date-disputed. The 97 is therefore a count on a frame about fourteen years before the target period. This weakens, not strengthens, any inference from it. Grade unchanged: OBSERVATION, NOT EVIDENCE.",
+   "status": "WITHDRAWN ENTIRELY. The 97 was an artefact of the LONDON misassignment; the real CET face carries 120 letters. Recorded here rather than deleted, because the useful part is the process: it was graded OBSERVATION, NOT EVIDENCE and explicitly refused as grounds to run EXP-024, so nothing was built on it."
   },
   "nineteen_eighty_five_reinterpretation": {
    "question": "What did the 1985 first major maintenance actually do?",
@@ -819,6 +1006,24 @@
    "status": "Valid only under MONOTONIC growth - names added, never moved or removed.",
    "why_it_is_not_safe": "Monotonicity is REFUTED as a general rule: NOWOSIBIRSK changed faces between 1984 and the modern drum (findings.face_membership_moved). A face could therefore gain and lose a name between two matching frames. Bracketing is strong circumstantial evidence, not attestation.",
    "consequence": "A direct 1988-89 frame of the CET face is strictly better than any pair of brackets, and is what Tier 1 requires."
+  },
+  "london_misassignment": {
+   "statement": "My session-10 reading of the 1970s CET lower band as KOPENHAGEN / LONDON / WIEN / ROM / BELGRAD / TUNIS is REFUTED. The 1989 frame shows LONDON in the UPPER band of the NEIGHBOURING UTC+0 face (REYKJAVIK DUBLIN LONDON LISSABON ALGIER MADEIRA BISSAU), and the CET lower band holding nine names, not six: KOPENHAGEN WIEN BERN BELGRAD ROM TUNIS BRAZZAVILLE KINSHASA LUANDA.",
+   "what_i_got_wrong": [
+    "imported LONDON across a sector boundary from the adjacent face",
+    "missed BERN entirely",
+    "missed the three sub-Saharan names BRAZZAVILLE, KINSHASA, LUANDA, which are genuinely UTC+1",
+    "reported an inversion (ROM before BELGRAD) that was an artefact of the misreading - the real band is strictly latitude-ordered"
+   ],
+   "why": "The colour frame's lower band is small, oblique and partly occluded by passers-by, and I graded my reading MEDIUM-HIGH anyway. The neighbouring face's band is physically adjacent in the image, which is exactly the error a foreshortened view invites.",
+   "consequence_for_the_97": "THE 97-LETTER COINCIDENCE IS DESTROYED. The real CET face carries 62 + 58 = 120 letters, not 97. The exact-97 result was an artefact of my own transcription error. Since I graded it OBSERVATION, NOT EVIDENCE and refused to run EXP-024 on it, nothing downstream was built on it - which is the only reason this is a corrected error rather than a wasted programme.",
+   "grade": "REFUTED BY DIRECT OBSERVATION at higher resolution, in the target era."
+  },
+  "cet_stability_1970s_to_1989": {
+   "question": "Is the CET face stable from the 1970s into the 1988-89 target period?",
+   "answer": "NO CONTRADICTION OBSERVED, on everything still trustworthy. The upper band matches 9/9 exactly, names and order. Five of the nine 1989 lower-band names are legible in the 1970s frame; the other four (BERN, BRAZZAVILLE, KINSHASA, LUANDA) are unresolved there, neither confirmed nor excluded.",
+   "grade": "SUPPORTED, and now SECONDARY: with direct target-era attestation in hand, stability from the 1970s is no longer needed for Tier 1. It is recorded because it is a genuine consistency check on the drum's behaviour, and it slightly weakens the general non-monotonicity worry for this particular face.",
+   "not_claimed": "That the CET face was unchanged. Four lower-band names are simply unreadable in the 1970s frame."
   }
  },
  "face_aliases": {
@@ -835,5 +1040,43 @@
   "ANKARA/DAMASKUS/KAIRO-face": "UTC+2",
   "BAGDAD/TEHERAN+/ADDIS-ABEBA-face": "UTC+3"
  },
- "era_rule": "Faces are keyed by (sector, era). A face is never merged across eras, because completeness and membership are per-era properties: a second photograph from a different decade must not dilute or complete a face transcribed in another. Circumference is counted over DISTINCT SECTORS so that the same sector seen in two eras is not double-counted."
+ "era_rule": "Faces are keyed by (sector, era). A face is never merged across eras, because completeness and membership are per-era properties: a second photograph from a different decade must not dilute or complete a face transcribed in another. Circumference is counted over DISTINCT SECTORS so that the same sector seen in two eras is not double-counted.",
+ "tier1_frozen_reconstruction": {
+  "declared": "2026-09-12, session 12, BEFORE any test was run against it",
+  "basis": "PA-19891104-demo-CET, LOCAL VISUAL, dated 4 Nov 1989 (content-corroborated), both band ends visible",
+  "sector": "UTC+1 (Berlin / CET) - the face named by the BERLINCLOCK crib",
+  "upper": [
+   "AMSTERDAM",
+   "BERLIN",
+   "BRUSSEL",
+   "BUDAPEST",
+   "MADRID",
+   "PARIS",
+   "PRAG",
+   "STOCKHOLM",
+   "WARSCHAU"
+  ],
+  "lower": [
+   "KOPENHAGEN",
+   "WIEN",
+   "BERN",
+   "BELGRAD",
+   "ROM",
+   "TUNIS",
+   "BRAZZAVILLE",
+   "KINSHASA",
+   "LUANDA"
+  ],
+  "letters": {
+   "upper": 62,
+   "lower": 58,
+   "total": 120
+  },
+  "confidence": {
+   "upper": "HIGH",
+   "lower": "MEDIUM-HIGH"
+  },
+  "freeze_rule": "This reconstruction is FROZEN. It may be changed only by new image evidence, never in response to a test result. Any test reported against it must cite this block verbatim.",
+  "known_risk": "A single misread lower-band name changes the tape and invalidates the specific alignments tested. A NEGATIVE result is therefore conditional on this transcription; it is not a claim about every possible CET tape."
+ }
 }

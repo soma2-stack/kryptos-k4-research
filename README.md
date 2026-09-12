@@ -6,6 +6,22 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint H, Tier 1 met (2026-09-12).** A 4 Nov 1989 press photograph — dated from its
+> own `NEUES FORUM` / `SDP` banners, not from caption metadata — shows the **complete CET /
+> UTC+1 face**, both bands and order: upper 9 names/62 letters (alphabetical), lower 9
+> names/58 letters (strictly latitude-descending), **120 letters** in the target era.
+> **Tier 1 is MET.** It also **refutes my own session-10 reading**: LONDON is on the
+> neighbouring UTC+0 face, BERN and BRAZZAVILLE/KINSHASA/LUANDA were missed, and the
+> **97-letter coincidence is withdrawn entirely** — it was a transcription error. Because it
+> had been graded OBSERVATION, NOT EVIDENCE and refused as grounds to run the test, nothing
+> was built on it. Reconstruction frozen first, EXP-024 left unmodified, then the permitted
+> restricted run executed as **EXP-029: 11,520 alignments, 0 exact matches, best 7/24 against
+> a chance mean of 0.92, positive control passed on the real tape — NEGATIVE.** The
+> single-face running-key reading of the Berlin face is eliminated; multi-face readings are
+> not, and are blocked on the neighbours' bands. Also withdrawn: the "upper = northern /
+> lower = southern" rule and the hope that order follows from membership. See
+> [Checkpoint H Tier 1](results/2026-09-12h5-checkpoint-H-tier1-met-and-negative.md).
+
 > **Checkpoint H, 1974 correction (2026-09-12).** New external evidence — a Straube
 > photograph explicitly dated **1974** already showing KOPENHAGEN and WIEN — forces two
 > retractions of the previous checkpoint. The Tagesspiegel `nachgraviert 1985` wording may
