@@ -3,46 +3,174 @@
   "note": "Physical facts about the Kryptos sculpture and the Berlin Weltzeituhr, each with an explicit confidence level and source. Nothing here is invented. Items marked UNKNOWN are recorded as missing evidence rather than guessed, per docs/next-steps.md.",
   "kryptos": {
     "k4_grid": {
-      "rows": 7, "cols": 14, "cells": 98, "letters": 97,
-      "blank_cell": {"row": 7, "col": 13, "indexing": "1-based as reported"},
-      "confidence": "MEDIUM",
-      "source": "Reported by solvekryptos.com, a site whose K4 solution claim Sanborn disputes. Independently corroborated only indirectly: the inherited handoff (docs/research-state.md) refers to '7x14/31-column geometry' as a known Kryptos geometry. NEEDS PRIMARY VERIFICATION against the NSA transcript or a photograph before any result depending on it is published."
+      "rows": 7,
+      "cols": 14,
+      "cells": 98,
+      "letters": 97,
+      "blank_cell": {
+        "row": 7,
+        "col": 13,
+        "indexing": "1-based as reported"
+      },
+      "confidence": "DISALLOWED-SOURCE / UNVERIFIED",
+      "source": "Originally taken from solvekryptos.com, which is now on the standing exclusion list in docs/contamination-log.md because its primary purpose is publishing a claimed complete K4 plaintext. NOT admissible as evidence. The inherited handoff mentions '7x14/31-column geometry' as a known community geometry, which is weak indirect corroboration only. TREAT AS UNVERIFIED until confirmed from an institutional source (NSA FOIA transcript, CIA, or archival photography). See EXP-020."
     },
-    "tableau_letters": {"count": 867, "confidence": "HIGH", "source": "widely and consistently reported"},
-    "compass_rose": {"present": true, "points": "UNKNOWN", "confidence": "HIGH for presence, UNKNOWN for point count",
-      "source": "Kryptos courtyard contains a compass rose; the number of points is not established here."},
-    "letters_cut_through": {"value": true, "confidence": "HIGH",
-      "source": "the copper screen's letters are cut through, so light passes and the reverse reads mirrored"}
+    "tableau_letters": {
+      "count": 867,
+      "confidence": "HIGH",
+      "source": "widely and consistently reported"
+    },
+    "compass_rose": {
+      "present": true,
+      "points": "UNKNOWN",
+      "confidence": "HIGH for presence, UNKNOWN for point count",
+      "source": "Kryptos courtyard contains a compass rose; the number of points is not established here."
+    },
+    "letters_cut_through": {
+      "value": true,
+      "confidence": "HIGH",
+      "source": "the copper screen's letters are cut through, so light passes and the reverse reads mirrored"
+    },
+    "k4_line_structure": {
+      "lines": [
+        {
+          "index": 0,
+          "text": "OBKR",
+          "len": 4,
+          "positions": [
+            0,
+            3
+          ]
+        },
+        {
+          "index": 1,
+          "len": 31,
+          "positions": [
+            4,
+            34
+          ]
+        },
+        {
+          "index": 2,
+          "len": 31,
+          "positions": [
+            35,
+            65
+          ]
+        },
+        {
+          "index": 3,
+          "len": 31,
+          "positions": [
+            66,
+            96
+          ]
+        }
+      ],
+      "boundaries_absolute": [
+        4,
+        35,
+        66
+      ],
+      "total": 97,
+      "confidence": "MEDIUM-HIGH as the canonical TRANSCRIPTION line structure; MEDIUM as the physical engraving",
+      "verification": "Self-verified: the four lines concatenate exactly to the canonical ciphertext in data/k4.json, so the split is internally consistent rather than merely asserted. It is also the universal rendering of K4 in print, and it matches the '31-column geometry' the inherited handoff refers to.",
+      "caveat": "Reporting states that the engraved line lengths VARY because Sanborn kerned the lettering for aesthetics. So the 4/31/31/31 split may be the transcription convention rather than the exact copper engraving. Do not build a mechanism that requires exact physical column alignment without primary photographic confirmation.",
+      "crib_relation": "EASTNORTHEAST (21-33) lies wholly inside line 1. BERLINCLOCK (63-73) STRADDLES the line-2/line-3 boundary at position 66."
+    },
+    "panel_layout": {
+      "value": "CONFLICTING REPORTS",
+      "report_a": "left half of the copper screen is the encoded text, right half is the alphabet tableau",
+      "report_b": "K1-K3 occupy the left curve of the S-screen and K4 the right curve",
+      "confidence": "LOW - sources disagree; not usable until resolved from photographs"
+    },
+    "totals": {
+      "copperplate_letters_cut": 1735,
+      "ciphertext_chars_all_sections": 869,
+      "k1": 63,
+      "k2": 373,
+      "k3": 336,
+      "k4": 97,
+      "note": "63+373+336+97 = 869, internally consistent. K2 includes 3 question marks and K3 one.",
+      "confidence": "MEDIUM-HIGH"
+    },
+    "engraving_line_lengths": {
+      "value": "vary, not a uniform grid",
+      "reason": "Sanborn kerned the lettering for aesthetics; fixed-width spacing was avoided",
+      "confidence": "MEDIUM",
+      "implication": "A mechanism requiring exact cell-to-cell physical alignment between the ciphertext panel and the regular tableau grid is STRONGLY DISFAVORED: the two are not on the same lattice."
+    }
   },
   "weltzeituhr": {
     "location": "Alexanderplatz, Berlin",
     "designer": "Erich John",
     "opened": "1969-09-30",
-    "segments": {"count": 24, "confidence": "HIGH", "source": "24-cornered cylinder, one face per time zone; consistently reported"},
-    "height_m": 10, "weight_tonnes": 16, "column_height_m": 2.7, "column_diameter_m": 1.5,
+    "segments": {
+      "count": 24,
+      "confidence": "HIGH",
+      "source": "24-cornered cylinder, one face per time zone; consistently reported"
+    },
+    "height_m": 10,
+    "weight_tonnes": 16,
+    "column_height_m": 2.7,
+    "column_diameter_m": 1.5,
     "confidence_dimensions": "MEDIUM",
-    "cities_1969": {"count": 80, "confidence": "MEDIUM", "source": "reported as the original city count; single-source"},
-    "cities_modern": {"count": 148, "confidence": "MEDIUM", "source": "commonly reported current count"},
-    "city_bands": {"count": 4, "labels": ["Europe/Africa", "Americas", "Asia/Australia", "polar"],
+    "cities_1969": {
+      "count": 80,
+      "confidence": "MEDIUM",
+      "source": "reported as the original city count; single-source"
+    },
+    "cities_modern": {
+      "count": 148,
+      "confidence": "MEDIUM",
+      "source": "commonly reported current count"
+    },
+    "city_bands": {
+      "count": 4,
+      "labels": [
+        "Europe/Africa",
+        "Americas",
+        "Asia/Australia",
+        "polar"
+      ],
       "confidence": "LOW-MEDIUM",
-      "source": "reported as four longitudinal groupings; whether these are physical ROWS on the drum or a conceptual grouping is NOT established"},
-    "city_list_per_segment_1989": {"value": "UNKNOWN", "confidence": "NONE",
-      "source": "The per-segment city list as it stood in 1988-1989, when Sanborn was building Kryptos, is not available here. The clock was restored in 1997 and 2015 with city names updated. Modern lists MUST NOT be substituted for the historical configuration. This is a concrete missing-evidence item."},
-    "rotation": {"value": "the cylinder rotates; an orrery above it turns", "confidence": "MEDIUM", "rates": "UNKNOWN"},
-    "base": {"compass_rose_mosaic": true, "confidence": "HIGH",
-      "source": "the clock stands on a stone mosaic in the form of a compass rose"},
+      "source": "reported as four longitudinal groupings; whether these are physical ROWS on the drum or a conceptual grouping is NOT established"
+    },
+    "city_list_per_segment_1989": {
+      "value": "UNKNOWN",
+      "confidence": "NONE",
+      "source": "The per-segment city list as it stood in 1988-1989, when Sanborn was building Kryptos, is not available here. The clock was restored in 1997 and 2015 with city names updated. Modern lists MUST NOT be substituted for the historical configuration. This is a concrete missing-evidence item."
+    },
+    "rotation": {
+      "value": "the cylinder rotates; an orrery above it turns",
+      "confidence": "MEDIUM",
+      "rates": "UNKNOWN"
+    },
+    "base": {
+      "compass_rose_mosaic": true,
+      "confidence": "HIGH",
+      "source": "the clock stands on a stone mosaic in the form of a compass rose"
+    },
     "history": "Opposition demonstrators gathered at the clock on 7 October 1989 during the GDR's 40th-anniversary celebrations; the Wall fell 33 days later."
   },
   "sanborn_clues_2025": {
     "source": "Announced at the International Spy Museum, 12 November 2025; reported by Scientific American and others.",
-    "berlin_clock_is_weltzeituhr": {"value": true, "confidence": "HIGH",
-      "note": "Supersedes 11 years of community assumption that BERLINCLOCK meant the Mengenlehreuhr. Makes EXP-002 a test of the wrong object."},
-    "k5": {"exists": true, "length": 97, "system": "similar but not identical to K4",
+    "berlin_clock_is_weltzeituhr": {
+      "value": true,
+      "confidence": "HIGH",
+      "note": "Supersedes 11 years of community assumption that BERLINCLOCK meant the Mengenlehreuhr. Makes EXP-002 a test of the wrong object."
+    },
+    "k5": {
+      "exists": true,
+      "length": 97,
+      "system": "similar but not identical to K4",
       "shares_coded_words_in_same_positions_as_k4": true,
       "ciphertext_public": false,
-      "note": "K5 is to be released only once K4 is cryptographically solved. Its ciphertext is therefore NOT available, which forecloses a two-messages-in-depth attack."},
+      "note": "K5 is to be released only once K4 is cryptographically solved. Its ciphertext is therefore NOT available, which forecloses a two-messages-in-depth attack."
+    },
     "k4_plaintext_status": {
-      "found": true, "public": false,
+      "found": true,
+      "public": false,
       "note": "Found September 2025 by Jarett Kobek and Richard Byrne in Sanborn's Smithsonian Archives of American Art donation, as taped-together scraps. The finders declined to publish it and the Smithsonian sealed the material for 50 years. Sanborn: 'They did not solve K4 and they certainly did not find the key.' The METHOD remains unknown to everyone, including the plaintext's finders."
     }
   }

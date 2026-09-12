@@ -88,3 +88,73 @@ def build_system(rowfn, nunk, positions, forced):
     A = [rowfn(i) for i in positions]
     b = [forced[i] for i in positions]
     return A, b
+
+
+# --- Physically-motivated models: the carved line structure of K4 ------------
+# K4 is rendered as OBKR + three lines of 31 characters (boundaries at absolute
+# positions 4, 35, 66). These models take that structure as GIVEN by the object:
+# the reset positions are not searched, so they add no free parameters at all.
+
+K4_LINE_STARTS = (0, 4, 35, 66)
+
+
+def _line_of(i, starts=K4_LINE_STARTS):
+    ln = 0
+    for k, s in enumerate(starts):
+        if i >= s:
+            ln = k
+    return ln, i - starts[ln]
+
+
+def line_reset(p, starts=K4_LINE_STARTS):
+    """Key of period p restarting at every carved line. Unknowns: p."""
+    def f(i):
+        _, off = _line_of(i, starts)
+        r = [0] * p
+        r[off % p] = 1
+        return r
+    return f, p, f"line_reset(p={p})"
+
+
+def line_offset(p, starts=K4_LINE_STARTS):
+    """Period-p key restarting per line, plus a constant added per line."""
+    n = len(starts)
+    def f(i):
+        ln, off = _line_of(i, starts)
+        r = [0] * (p + n)
+        r[off % p] = 1
+        r[p + ln] = 1
+        return r
+    return f, p + n, f"line_offset(p={p})"
+
+
+def line_progressive(L, starts=K4_LINE_STARTS):
+    """Progressive key restarting at each line: K[j mod L] + delta*(j//L)."""
+    def f(i):
+        _, j = _line_of(i, starts)
+        r = [0] * (L + 1)
+        r[j % L] = 1
+        r[L] = j // L
+        return r
+    return f, L + 1, f"line_progressive(L={L})"
+
+
+def line_index_key(p, starts=K4_LINE_STARTS):
+    """Key advances once per LINE, not per character: k[i] = K[line(i) mod p]."""
+    def f(i):
+        ln, _ = _line_of(i, starts)
+        r = [0] * p
+        r[ln % p] = 1
+        return r
+    return f, p, f"line_index_key(p={p})"
+
+
+def column_key(width=31, starts=K4_LINE_STARTS):
+    """k[i] = K[column within its line]. 31 unknowns - vacuous as a fit, but it
+    makes a sharp testable PREDICTION wherever two crib positions share a column."""
+    def f(i):
+        _, off = _line_of(i, starts)
+        r = [0] * width
+        r[off % width] = 1
+        return r
+    return f, width, f"column_key(w={width})"

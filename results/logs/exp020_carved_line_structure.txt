@@ -1,0 +1,54 @@
+# EXP-020 carved line structure as the coding geometry
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Geometry (self-verified: the lines concatenate to the canonical ciphertext)
+   line 0: positions  0..3  (4 chars)
+   line 1: positions  4..34 (31 chars)
+   line 2: positions 35..65 (31 chars)
+   line 3: positions 66..96 (31 chars)
+   EASTNORTHEAST 21-33 lies wholly inside line 1
+   BERLINCLOCK   63-73 straddles the boundary at 66
+
+## Positive control
+   planted line_reset(p=9) with resets at (0, 4, 35, 66)
+   recovered: YES (1 solution(s), chance 5.96e-22)
+   CONTROL PASSED
+
+## Search
+   systems solved exactly : 1,344
+   fits (chance < 1e-3)   : 0
+
+   models skipped as UNTESTABLE (more free parameters than the cribs
+   constrain, chance_solvable > 1e-3):
+     OBKR as indicator/column_key(w=31)
+     OBKR as line 0/column_key(w=31)
+
+## The column-key prediction, stated before testing
+   If the key depends only on the column within a carved line, then two crib
+   positions sharing a column must force the same key index. Columns 28 and 29
+   occur in BOTH cribs:
+     position 32 (line 1, col 28)  vs  position 63 (line 2, col 28)
+     position 33 (line 1, col 29)  vs  position 64 (line 2, col 29)
+   That is two independent 1/26 constraints - chance 26^-2 = 1.5e-3 per
+   convention, so ~0.018 hits expected across 12 conventions.
+
+   vigenere/P=STD/C=STD               k[32]= 0 k[63]=12 | k[33]=25 k[64]=20  no
+   vigenere/P=STD/C=KRY               k[32]=14 k[63]=18 | k[33]=13 k[64]=24  no
+   vigenere/P=KRY/C=STD               k[32]=12 k[63]= 5 | k[33]=14 k[64]=13  no
+   vigenere/P=KRY/C=KRY               k[32]= 0 k[63]=11 | k[33]= 2 k[64]=17  no
+   beaufort/P=STD/C=STD               k[32]=10 k[63]=14 | k[33]=11 k[64]= 2  no
+   beaufort/P=STD/C=KRY               k[32]=24 k[63]=20 | k[33]=25 k[64]= 6  no
+   beaufort/P=KRY/C=STD               k[32]=24 k[63]=21 | k[33]=22 k[64]= 9  no
+   beaufort/P=KRY/C=KRY               k[32]=12 k[63]= 1 | k[33]=10 k[64]=13  no
+   variant_beaufort/P=STD/C=STD       k[32]= 0 k[63]=14 | k[33]= 1 k[64]= 6  no
+   variant_beaufort/P=STD/C=KRY       k[32]=12 k[63]= 8 | k[33]=13 k[64]= 2  no
+   variant_beaufort/P=KRY/C=STD       k[32]=14 k[63]=21 | k[33]=12 k[64]=13  no
+   variant_beaufort/P=KRY/C=KRY       k[32]= 0 k[63]=15 | k[33]=24 k[64]= 9  no
+
+   conventions satisfying the prediction: 0 of 12 (expected ~0.018)
+
+## Reading
+   The line-restart family is the cheapest hand procedure consistent with the
+   object, and its reset positions are given by the carving rather than fitted.
+   A negative here is therefore informative about hand-executed constructions,
+   not merely about one more parameter family.
