@@ -135,7 +135,31 @@ preserves real indentation.
 
 ---
 
-## REQUEST 5 — a primary character count for K1 and K2 ciphertext (minor)
+## REQUEST 5 — FULFILLED (2026-09-12). No discrepancy; the error was mine
+
+Resolved by `docs/external/checkpoint-L-web-audit-requests-4-5.md` and verified here
+against `data/cipher_side_rows.json`:
+
+| span | physical characters | letters | `?` |
+|---|---|---|---|
+| K1 = rows 1–2 | 63 | 63 | 0 |
+| K2 = rows 3–14 | 372 | 369 | 3 |
+| rows 1–14 | **435** | **432** | 3 |
+
+`63 + 372 = 435` counts **physical ciphertext characters**. Checkpoint L compared 432
+**letters** against it as though the units matched. **There is no transcription
+discrepancy on this basis**, and it is no longer carried as open.
+
+Kept separate, and not mixed into the physical source: NSA DOCID 4050989's early working
+convention (K2 as 373, three solved sections 773, total 870, 97 unresolved), and Sanborn's
+report to WIRED (2006) that he deleted an `X` from the end of a K2 line for aesthetic
+balance. Those bear on an **intended pre-aesthetic cryptographic source**, which is a
+distinct thing from the **physical engraved source**. If the restored-`X` stream is ever
+tested it must be a separately preregistered source variant; it will not be inserted
+silently. EXP-035 tested the physical engraved 869-character source and keeps that
+interpretation and its result unchanged.
+
+### The original wording of this request, for the record
 
 `data/cipher_side_rows.json` records an unresolved discrepancy: rows 1–14 supply **432
 letters plus 3 question marks**, while the commonly cited section lengths K1 = 63 and
@@ -143,3 +167,38 @@ K2 = 372 sum to **435 letters**. Needed: a character-by-character count of the K
 *ciphertext* from the same CIA/NSA primary source, or NSA DOCID 4145036's cipher-side
 slide at legible resolution. It does not affect any result that uses only rows 15–28 or K4
 itself, but it bears on any model keyed to rows 1–14.
+
+---
+
+## REQUEST 4 — still OPEN; exact archival target now identified
+
+The external audit found official CIA photographs, a Library of Congress Carol M.
+Highsmith record (`LC-DIG-highsm-13337` / `LC-HS503-2081`, high-resolution derivatives up
+to an 83 MB TIFF, no known publication restrictions), and the Smithsonian Jim Sanborn
+papers — but **no public image proven orthographic enough** to establish a common
+character-centre lattice. The CIA text rendering left-aligns variable-length rows, but it
+is a presentation rendering and must not be promoted into surveyed geometry; the CIA
+physical close-up is too oblique to show the cipher-side right edge.
+
+**Highest-value exact target if this becomes important again:**
+
+| field | value |
+|---|---|
+| Collection | Jim Sanborn papers, Archives of American Art, Smithsonian Institution |
+| Series | Series 3 — Commission Files |
+| Location | **Box 6, Folder 10 — `Pre-Production and Notes, 1990–1999`** |
+| Also relevant | Box 6 Folder 8 (`"Kryptos" CIA Headquarters — Sculpture, 1993–2009`); Box 6 Folder 11 (`Codes Research, circa 1980s–circa 2002`) |
+| Finding aid | `https://www.aaa.si.edu/collections/jim-sanborn-papers-22298/series-3` |
+| Exactly what is needed | a punch layout, fabrication drawing, type-work template, or measured line-layout sheet showing row start positions and character pitch |
+| Secondary | the LOC Highsmith TIFF at full resolution, inspected for whether the cipher-side right edge is ragged or flush |
+
+A drawing or template would settle this far more cleanly than any angled photograph.
+
+**Also new, and pointing the same way:** Sanborn told WIRED in 2006 that he removed an `X`
+from the end of a K2 line *for aesthetic balance*. That is direct evidence the final
+engraved line lengths were artistically adjusted rather than treated as inviolable
+cryptographic blocks — which strengthens the Checkpoint-L decision to **park rather than
+rescue** the fixed-lattice, same-column-above model.
+
+**Do not block cryptanalysis on this.** The physical architecture stays PARKED, and work
+continues on families that need no horizontal coordinate.

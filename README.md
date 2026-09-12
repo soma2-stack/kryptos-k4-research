@@ -18,6 +18,30 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint M (2026-09-12, `claude/k4-post-j`).** Two of my own Checkpoint-L claims are
+> **retracted**. (1) The "432 vs 435" discrepancy was my unit error: K1 = 63 characters,
+> K2 = 372 *physical* characters = 369 letters + 3 `?`, so rows 1–14 = 435 characters = 432
+> letters + 3 `?`. **Request 5 fulfilled, no discrepancy.** (2) The "alphabet frontier" was
+> wrong: rebuilding the KRYPTOS keyword-mixed sequence from the keyword gives exactly
+> `k4lib`'s `KRY`, all four STD/KRY plaintext×ciphertext combinations were already
+> enumerated, and NSA gives KRYPTOS-mixed as both components for K1 *and* K2 — so the
+> evidenced alphabet was covered all along. `PALIMPSEST`/`ABSCISSA` are repeating **keys**,
+> not component keywords, so alphabets built from them are speculative; that candidate is
+> **rejected**.
+> Instead **EXP-036** closed the real gap — the hybrid the section sequence points at:
+> K1/K2's **periodic polyalphabetic** over K3's **transposition**, sitting between EXP-003
+> (this gate, 9,312 permutations) and EXP-033 (175 M permutations, one fixed monoalphabetic
+> map). Decidability was computed *before* naming it: contiguous crib runs keep 7–22
+> constraints across periods 2–23, and p = 24 was excluded in advance by the preregistered
+> `N·26⁻ᶜ < 0.01` rule. The key is decided existentially, so every repeating key word of
+> those lengths — `PALIMPSEST` and `ABSCISSA` included — is covered without adding
+> parameters. **4,313,878,272 cases, zero feasible**, both composition orders; controls
+> 72/72 planted, 72/72 adversarial (all capable of flipping the verdict), 72/72 period
+> discrimination; independently verified 17/17 with 1.84 M cases re-decided by explicit
+> grid simulation. Next: **vary the combiner** — the one structural assumption every
+> experiment here still shares. See
+> [Checkpoint M](results/2026-09-12-claude-checkpoint-M.md).
+
 > **Checkpoint L (2026-09-12, `claude/k4-post-j`).** Checkpoint K's evidence request was
 > fulfilled — the authoritative CIA/NSA cipher-side rows 1–24 — and it **corrected the
 > geometry**: rows 1–24 hold **29–33** characters, not a uniform 31, so `32 + 27×31 = 869`

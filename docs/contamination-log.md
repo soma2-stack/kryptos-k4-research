@@ -232,6 +232,25 @@ Protocol points:
 - `k12` (rows 1–14) is flagged in the data and in every verdict that touches it, because of
   the unresolved 432-vs-435 letter count.
 
+## Session 15 (Checkpoint M, branch claude/k4-post-j) — clean, no incidents
+
+Input was `docs/external/checkpoint-L-web-audit-requests-4-5.md`: CIA and NSA primary
+transcription and solution material, two WIRED reports, a Library of Congress catalogue
+record, and a Smithsonian finding aid. All public documentary evidence. No
+claimed-solution site used or cited; no alleged K4 plaintext, solution dump, or private K5
+material sought, accessed or inferred. Cribs used: EASTNORTHEAST and BERLINCLOCK only.
+
+Protocol points:
+
+- Both corrections in the handoff were **verified against repository data before use**, and
+  both turned out to be corrections of my own errors rather than of the evidence.
+- The physical/intended source distinction is now recorded explicitly: the omitted `X`
+  Sanborn removed from a K2 line belongs to an *intended pre-aesthetic* source and will
+  only ever be tested as a separately preregistered source variant, never inserted
+  silently into the physical stream.
+- Candidate A (alphabets built from PALIMPSEST/ABSCISSA) was **rejected for lack of
+  documentary support**, not tested speculatively — the same gate that admitted EXP-036.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident

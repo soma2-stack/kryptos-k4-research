@@ -32,7 +32,43 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint L (session 14, `claude/k4-post-j`)
+## 0 — Status after Checkpoint M (session 15, `claude/k4-post-j`)
+
+Two Checkpoint-L claims **retracted**: the 432-vs-435 "discrepancy" was my unit error
+(letters vs physical characters — Request 5 fulfilled, nothing wrong with the
+transcription), and the "alphabet frontier" was wrong because `KRY` *is* the KRYPTOS
+keyword-mixed sequence NSA names as both components for K1 and K2, already present in all
+12 conventions. Alphabets built from `PALIMPSEST`/`ABSCISSA` have no documentary support as
+components and that candidate is **rejected**.
+
+**EXP-036** closed the genuine gap between EXP-003 and EXP-033: K1/K2's periodic
+polyalphabetic composed with K3's transposition, over the EXP-033-scale transposition
+family, key decided existentially. **4,313,878,272 cases, zero feasible**, both composition
+orders, independently verified 17/17. Periods 2–23 admitted by a preregistered
+`N·26⁻ᶜ < 0.01` rule; p = 24 excluded in advance. Aggregate expected chance survivors 0.073.
+
+**The last shared structural assumption is the combiner.** Every experiment in this
+repository — all 36 — uses Vigenère, Beaufort or variant Beaufort. Six sessions have varied
+the key, the source, the permutation and the component alphabet; none has varied the
+combining rule. Unlike the alphabet claim I retracted, this one is real: Scheidt's "fourth,
+different process that masks English better" is exactly where a non-shift combiner lives.
+
+**Next, in order:**
+
+1. **A precommitted small family of structured non-shift tables** — Quagmire-type
+   constructions with a shifted mixed tableau, Porta-type reciprocal tables, each generated
+   by a declared rule rather than fitted. A free 26×26 table is unfalsifiable, so compute
+   crib constraint density and expected chance survival per family *first* and drop any
+   whose failure would teach nothing.
+2. A **specific named full-26 fractionating** construction — name it before searching.
+3. **Double transposition**, or keyed columnar width ≥ 12 from a precommitted key family.
+4. Aperiodic / progressive / reset keys over the EXP-033 transposition family — but compute
+   constraint density first: resets destroy the residue collisions EXP-036 relied on.
+
+Parked: physical panel alignment (Request 4 / AAA Box 6 Folder 10). Rejected: additional
+keyword-derived component alphabets.
+
+## 0a — Earlier status — Status after Checkpoint L (session 14, `claude/k4-post-j`)
 
 The rows-1–24 evidence request was fulfilled and **corrected the geometry**: rows 1–24 hold
 29–33 characters, so `32 + 27×31` is retracted as a description. Verified, with three
