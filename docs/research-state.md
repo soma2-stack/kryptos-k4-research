@@ -58,7 +58,11 @@ Regenerate with `./run_all.sh`.
   as does the impossibility of periods {1-7, 9}. The IoC and output-alphabet arguments
   use no crib positions at all. But the **Playfair and reflector-machine eliminations
   are contingent on the exact alignment** and would need rechecking if the crib
-  positions moved. Verify `data/k4.json` against a primary transcript.
+  positions moved. **RESOLVED at Checkpoint P:** the crib positions are public-source
+  verified (NYT fixes BERLIN 64–69, CLOCK 70–74, NORTHEAST 26–34, one-based), and the
+  violating observations for both eliminations lie inside the directly numbered spans —
+  reflector at 33 and 74, and 7 of Playfair's 10 conflicting pairs. The contingency is
+  lifted; see `docs/evidence-grades.md`.
 
 ### Added 2026-09-12 (session 3) — external evidence and the unicity bound
 

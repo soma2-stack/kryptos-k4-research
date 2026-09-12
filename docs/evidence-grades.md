@@ -83,10 +83,27 @@ extreme. **Does not constrain:** substitution *followed by* transposition, which
 always outside the claim.
 
 ### Reflector machines; Playfair (EXP-007)
-**PROVED IMPOSSIBLE given the recorded crib positions**, but **alignment-contingent**:
-EXP-017 shows the violating observations do not survive every ±3 crib offset.
-Downgrade to **STRONGLY DISFAVORED** until `data/k4.json` is checked against a
-primary transcript.
+**PROVED IMPOSSIBLE given the crib positions** — and as of Checkpoint P the alignment
+contingency is **lifted**, because the crib positions are now public-source verified rather
+than an inherited convention.
+
+The earlier caveat was that EXP-017's ±3 offset sweep breaks these two eliminations, so they
+were downgraded to STRONGLY DISFAVORED pending verification. Contemporaneous New York Times
+reporting now fixes BERLIN at one-based 64–69, CLOCK at 70–74 and NORTHEAST at 26–34
+directly, so those offsets are excluded by evidence.
+
+Checked at Checkpoint P rather than asserted, because `EAST` (one-based 22–25) rests on a
+slightly weaker chain than the three directly numbered spans:
+
+- **Reflector machines:** both violating positions (a plaintext letter equal to its
+  ciphertext letter) are at one-based **33 and 74**, i.e. inside the directly numbered
+  NORTHEAST and CLOCK spans. The elimination does **not** depend on the EAST span at all.
+- **Playfair:** **7 of the 10** conflicting position-pairs lie entirely inside the directly
+  numbered spans; only 3 touch 22–25. The elimination therefore survives on the
+  directly-reported positions alone.
+
+Both are restored to **PROVED IMPOSSIBLE within the monographic, position-preserving class**,
+on grade A/B positional evidence.
 
 ### The linear-model sweeps (EXP-006, 008, 015, 016)
 **EXHAUSTIVELY ELIMINATED WITHIN A SPECIFIED MODEL** — correct as stated. Each

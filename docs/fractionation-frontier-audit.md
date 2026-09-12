@@ -12,9 +12,11 @@ K4 remains unsolved.
 - K4 contains **all 26 letters**, `J` included (positions 40, 51, 81, 1-indexed) — the
   coverage argument EXP-012 rests on.
 - The public cribs are the only plaintext constraints: `EASTNORTHEAST` at [21,34) and
-  `BERLINCLOCK` at [63,74), zero-based. `data/k4.json` itself records that these are "the
-  canonical working positions used in the inherited research" and asks for verification
-  against a primary transcript — that caveat matters in §C below and is not glossed over.
+  `BERLINCLOCK` at [63,74), zero-based. **As of Checkpoint P these positions are
+  public-source verified**, not an inherited convention: contemporaneous New York Times
+  reporting fixes BERLIN at one-based 64–69, CLOCK at 70–74 and NORTHEAST at 26–34, and EAST
+  is publicly confirmed as the four letters immediately before NORTHEAST. That upgrade is
+  what settles §C below.
 
 ---
 
@@ -116,30 +118,33 @@ length-preserving nor position-preserving**: ciphertext position `i` does not co
 plaintext position `i`, because each ciphertext letter absorbs three ternary symbols that
 straddle variable-length Morse letters.
 
-### The semantic check, stated honestly
+### The semantic check — resolved at Checkpoint P
 
-The repository's crib model is `P[i] ↔ C[i]` — length- and position-preserving. Under that
-reading, Fractionated Morse is rejected twice over: by the per-segment table above and by the
-global mean-marks requirement.
+When this audit was written the rejection was made **conditional** on the repository's
+inherited position-preserving crib model, because the primary clue wording could not be
+checked offline. **That condition is now satisfied by external verification.**
 
-**I cannot verify the primary clue wording offline**, and `data/k4.json` flags the crib
-positions as inherited-canonical rather than primary-verified. So, precisely:
+Contemporaneous New York Times reporting states that the 64th through 69th characters of the
+final panel, *when deciphered*, spell BERLIN; that the five letters at 70–74 spell CLOCK; and
+that 64–74 therefore spell BERLIN CLOCK. NORTHEAST is likewise placed at 26–34. These are
+**local plaintext/ciphertext positional anchors**, not statements that the words occur
+somewhere in the plaintext.
 
-- **If** the public clues mean cipher positions 63–73 decrypt to `BERLINCLOCK` at plaintext
-  positions 63–73, then standard Fractionated Morse is **structurally rejected**, and no
-  keyed alphabet can repair it — a keyword permutes which triple maps to which letter and
-  changes no length.
-- **If** the clues do not establish local position preservation, then a Fractionated-Morse
-  reading would have to restate every one of the 24 crib constraints: define how ciphertext
-  position 63 indexes into the variable-length ternary stream, define what "plaintext
-  position 63" means when plaintext letters occupy 1–4 symbols plus separators, and show how
-  the disclosed segments are recovered from stream offsets rather than letter indices. That
-  reformulation is a different research programme, and **no crib is to be slid to a new
-  position to make it work.**
+BERLIN at one-based 64–69 is six ciphertext letters, which under standard Fractionated Morse
+carry exactly 18 ternary symbols, while BERLIN needs at least 21. CLOCK at 70–74 is five
+ciphertext letters, 15 symbols, against a minimum of 22. The contradiction is therefore
+between the construction and the **published** positional semantics.
 
-> **Verdict: STANDARD Fractionated Morse is structurally rejected under the repository's
-> position-preserving crib model. No keyword search — not `KRYPTOS`, not `PALIMPSEST`, not
-> `ABSCISSA`, not `BERLINCLOCK`, not dictionary keys.**
+> **Verdict: STANDARD Fractionated Morse is structurally incompatible with the published K4
+> positional crib semantics.** No keyed alphabet can repair a length contradiction — a
+> keyword permutes which triple maps to which letter and changes no length. No keyword search
+> was run: not `KRYPTOS`, not `PALIMPSEST`, not `ABSCISSA`, not `BERLINCLOCK`, not dictionary
+> keys.
+
+**The scope stays narrow, deliberately.** This does *not* eliminate all Morse-derived systems,
+all length-changing systems, all fractionation, or every non-position-preserving cipher. A
+more elaborate architecture may still exist — but it must **explain the numbered plaintext
+anchors**, not slide the clue words to different positions after seeing a result.
 
 ### What this closes in EXP-023, and what it does not
 

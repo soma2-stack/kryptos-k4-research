@@ -18,6 +18,20 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint P (2026-09-12, `claude/k4-post-j`).** The public crib positions are now
+> **externally verified** rather than inherited convention: contemporaneous NYT reporting
+> fixes `BERLIN` at one-based 64–69, `CLOCK` at 70–74 and `NORTHEAST` at 26–34, and `EAST` is
+> reporter-confirmed as the four letters immediately before `NORTHEAST` (grade B+, one step
+> weaker, and recorded as such). Audited against the repository: every span reproduces the
+> committed ciphertext and **no crib text or index changed**. Two consequences, both kept
+> narrow: standard Fractionated Morse is now **structurally incompatible with the published
+> positional crib semantics** (BERLIN needs 21 ternary symbols where six ciphertext letters
+> supply 18) — *not* generalised to all Morse or all fractionation; and the alignment
+> contingency on the **reflector-machine and Playfair** eliminations is **lifted**, checked by
+> confirming their witnesses sit in the directly numbered spans (reflector at 33 and 74; 7 of
+> Playfair's 10 pairs). No experiment was run. See
+> [Checkpoint P](results/2026-09-12-claude-checkpoint-P.md).
+
 > **Checkpoint O (2026-09-12, `claude/k4-post-j`).** Conservative session: symbolic audit
 > only, **no new experiment run** — both candidate families were closed by exact structural
 > observations costing seconds. **CM Bifid** reduces to EXP-012 (two 5×5 squares cannot emit

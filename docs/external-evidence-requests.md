@@ -202,3 +202,28 @@ rescue** the fixed-lattice, same-column-above model.
 
 **Do not block cryptanalysis on this.** The physical architecture stays PARKED, and work
 continues on families that need no horizontal coordinate.
+
+---
+
+## REQUEST 6 — FULFILLED (2026-09-12): public crib positions verified
+
+Checkpoint O's single highest-priority action was to pin the 24 crib constraints to a cited
+public source rather than to inherited convention. **Done**, in
+`docs/external/checkpoint-O-public-crib-primary-verification.md`, and audited against the
+repository here: every cited span reproduces the committed ciphertext exactly, and no crib
+text or index changed.
+
+| clue | one-based span | repo zero-based | ciphertext | evidence grade |
+|---|---|---|---|---|
+| `BERLIN` | 64–69 | part of [63,74) | `NYPVTT` | **A/B** — contemporaneous NYT, position-specific |
+| `CLOCK` | 70–74 | part of [63,74) | `MZFPK` | **A/B** — same NYT report, position-specific |
+| `NORTHEAST` | 26–34 | part of [21,34) | `QQPRNGKSS` | **A/B** NYT positions + **A** Sanborn NPR authorship |
+| `EAST` | 22–25 | part of [21,34) | `FLRV` | **B+** — reporter-confirmed private release; position inferred as "immediately before NORTHEAST" |
+
+The four releases do **not** share identical provenance and the repository does not pretend
+they do. The combined span is nonetheless sufficient for repository use, and the two
+eliminations that were alignment-contingent were re-checked against the *directly numbered*
+spans only (see `docs/evidence-grades.md`).
+
+**Request 4 (fabrication geometry, AAA Series 3 Box 6 Folder 10) remains the only open
+request that matters, and nothing is blocked on it.**

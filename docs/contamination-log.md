@@ -268,6 +268,25 @@ Protocol points:
 - A near-miss was recorded and deliberately not pursued: EASTNORTHEAST fits Fractionated
   Morse exactly at 39 = 13x3, while BERLINCLOCK in the same message fails by 11.
 
+## Session 17 (Checkpoint P, branch claude/k4-post-j) — clean, no incidents
+
+Input was an external evidence handoff citing contemporaneous New York Times reporting, an
+NPR interview transcript, and a reporter's public confirmation, all concerning the *positions*
+of Sanborn's published clue words. Public reporting about public clues; no alleged K4
+plaintext, purported solution, or private K5 material was sought, accessed or inferred beyond
+the four already-public clue words this repository has always used.
+
+Protocol points:
+
+- The handoff's positional claims were re-derived against the committed ciphertext before
+  acceptance; no crib text or index changed.
+- The four clue releases were graded separately rather than flattened; `EAST` is recorded at
+  B+ because its position is inferred from "immediately before NORTHEAST".
+- The upgrade was propagated only as far as the evidence licenses: the Fractionated-Morse
+  rejection was made unconditional against the *published* semantics and explicitly not
+  generalised, and the lifted Playfair/reflector contingency was checked against the directly
+  numbered spans rather than assumed.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident

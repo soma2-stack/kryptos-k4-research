@@ -1,5 +1,12 @@
 # Checkpoint O — named fractionation audit and next exact frontier
 
+> **SUPERSEDED IN PART — see [Checkpoint P](2026-09-12-claude-checkpoint-P.md).** Checkpoint O
+> made two statements conditional on the crib positions being unverified: §1C's rejection of
+> standard Fractionated Morse, and §7's recommended next action. Both are now resolved —
+> the positions are public-source verified, so the Fractionated-Morse rejection is
+> unconditional against the *published* positional semantics, and §7's action is **fulfilled**.
+> The body below is left exactly as written.
+
 ## Repository status
 
 | | |
