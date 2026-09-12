@@ -197,3 +197,29 @@ Fifteen experiments now exist. Before proposing anything:
 65. Best stability test available: fully transcribe the UTC+10 face in both a 1984
     and a 1988-89 frame. CHABAROWSK is already attested in both.
 66. EXP-024 remains frozen, unmodified and unrun.
+
+## Addendum — 2026-09-12 (Checkpoint H, local visual — session 10)
+
+Read `results/2026-09-12h3-checkpoint-H-local-visual.md` first, then
+`data/weltzeituhr_photos.json` (fields `local_visual_session`, `findings`,
+`date_problem`, `face_aliases`).
+
+State you are resuming into:
+
+- **15/24 faces identified (62.5%), 7-face chain, 11 observed edges, 1 complete face.**
+- The **CET/UTC+1 face is fully transcribed at 97 letters** from my own visual reading.
+  Treat the 97 as OBSERVATION, NOT EVIDENCE — it is not a reason to run EXP-024.
+- **Tier 1 NOT met.** The tape exists; its **date** does not. EXP-024 remains frozen,
+  unrun and unmodified.
+- The four source images were conversation attachments with no path or hash. You cannot
+  re-verify my readings. They are recorded as this agent's testimony, not as files.
+- Established physical rules, era-independent and safe to build on: upper band =
+  northern places, lower = southern; half-hour faces inscribed `+30`; upper bands
+  alphabetical, lower bands not.
+- Established negative: **membership is not stable** — NOWOSIBIRSK changed faces between
+  1984 and the modern drum. Do not reverse the modern list assuming fixed faces.
+- The blocker is a single external lookup: the **akg-images / picture-alliance catalogue
+  record** for the Straube photograph (WELT article 217168174, image 1920313707). Its
+  shoot date decides Tier 1. Egress to archive and image hosts is closed here.
+
+Do not date the image by inference to get past this. If it stays unresolved, say so.

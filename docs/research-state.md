@@ -174,6 +174,22 @@ and proposed:
 
 `OBKR` indicator → W counts identify TOKIO → 22 specifies the clock tape → 88-character body in a 4 × 22 array → tape controls a bespoke lookup.
 
+**Correction from local visual evidence (session 10) — the 22-letter tape is wrong.**
+I read the UTC+9 face directly: upper band **JAKUTSK**, lower band **PJOENGJANG, TOKYO,
+SEOUL**. Three consequences for this construction:
+
+- **SEOUL is on the face** and the inherited tape omits it, so the tape is not 22 letters.
+- The drum spells **TOKYO**, not TOKIO — so the `TOKIO` of the W-run coincidence is not
+  the drum's own string.
+- The 1984 frame shows the historical spelling **PHOENGJANG**, not the modern
+  PJOENGJANG, so even the retained letters differ in the target era.
+
+The `4 × 22` construction therefore rests on a tape that the physical object does not
+carry. Its numerology (five W-runs → TOKIO → 22) survives as a coincidence about K4's
+own letters, but its claimed *external* anchor is **withdrawn**. Grade: the World Clock
+tape premise is **REFUTED by direct observation**; the W-run pattern itself is untouched
+and remains an unexplained anomaly.
+
 The 22-length coincidence is interesting, but ordinary transpositions and simple keyed operations did not work. The only remaining version worth testing is a small, pre-declared lookup rule `P = f(C, clock letter, row, column)`, with strict parameter bounds and an out-of-sample rule.
 
 ## Other retained leads

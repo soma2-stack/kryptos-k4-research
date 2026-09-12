@@ -1,362 +1,742 @@
 {
-  "schema_version": 1,
-  "purpose": "Photographic evidence for the PHYSICAL layout of the Weltzeituhr drum. Each record is a dated photograph contributing layout constraints. Names alone are not the object; band and within-face order are.",
-  "contamination_note": "Historical photographs are admissible object evidence. No claimed-K4-solution site used. See docs/contamination-log.md.",
-  "CRITICAL_GEOMETRY_RULE": "The city cylinder is STATIC; the hour ring ROTATES. An hour numeral appearing beneath a face therefore does NOT identify that face's time zone. Identify a face from its CITY CONTENTS and physical adjacency only. A record may carry visible_hour_ring_values, but they must never be used to assign utc_sector.",
-  "transcription_rule": "Never force an ambiguous letter. Use '?' for an uncertain character and UNKNOWN for an unreadable name. The modern 146-name list may RAISE confidence in a blurry reading but never independently proves a historical inscription.",
-  "environment_limitation": "This agent cannot fetch or view any of these images: commons.wikimedia.org, upload.wikimedia.org, www.bundesarchiv.de and live.staticflickr.com all return HTTP 000 under the egress policy. Transcriptions below marked USER-ASSERTED were supplied by the user and could NOT be independently re-transcribed here. Images uploaded into the session as files CAN be read and transcribed directly.",
-  "photographs": [
+ "schema_version": 1,
+ "purpose": "Photographic evidence for the PHYSICAL layout of the Weltzeituhr drum. Each record is a dated photograph contributing layout constraints. Names alone are not the object; band and within-face order are.",
+ "contamination_note": "Historical photographs are admissible object evidence. No claimed-K4-solution site used. See docs/contamination-log.md.",
+ "CRITICAL_GEOMETRY_RULE": "The city cylinder is STATIC; the hour ring ROTATES. An hour numeral appearing beneath a face therefore does NOT identify that face's time zone. Identify a face from its CITY CONTENTS and physical adjacency only. A record may carry visible_hour_ring_values, but they must never be used to assign utc_sector.",
+ "transcription_rule": "Every transcription carries transcription_status: LOCAL VISUAL EVIDENCE (this agent read the image pixels itself, in-session) or EXTERNAL-AGENT TRANSCRIPTION (a text handoff only). LOCAL VISUAL supersedes EXTERNAL-AGENT for the same face. Unclear letters/lines are UNKNOWN, never guessed.",
+ "environment_limitation": "This agent cannot fetch or view any of these images: commons.wikimedia.org, upload.wikimedia.org, www.bundesarchiv.de and live.staticflickr.com all return HTTP 000 under the egress policy. Transcriptions below marked USER-ASSERTED were supplied by the user and could NOT be independently re-transcribed here. Images uploaded into the session as files CAN be read and transcribed directly.",
+ "photographs": [
+  {
+   "id": "BArch-183-1989-0830-028",
+   "archive": "German Federal Archives (Bundesarchiv)",
+   "accession": "Bild 183-1989-0830-028",
+   "title": "Berlin, Fernsehturm, Weltzeituhr",
+   "photographer": "Erwin Schneider",
+   "date": "1989-08-30",
+   "date_confidence": "ARCHIVE-DATE VERIFIED (accession encodes the date; caption corroborates)",
+   "predates_1997": true,
+   "is_1988_1989": true,
+   "source_ref": "Bundesarchiv via Wikimedia Commons; accession number as given",
+   "priority": "HIGHEST - within weeks of the target state",
+   "self_transcribed": false,
+   "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (handoff Source 1); not locally re-transcribed",
+   "visible_faces": [
     {
-      "id": "BArch-183-1989-0830-028",
-      "archive": "German Federal Archives (Bundesarchiv)",
-      "accession": "Bild 183-1989-0830-028",
-      "title": "Berlin, Fernsehturm, Weltzeituhr",
-      "photographer": "Erwin Schneider",
-      "date": "1989-08-30",
-      "date_confidence": "ARCHIVE-DATE VERIFIED (accession encodes the date; caption corroborates)",
-      "predates_1997": true,
-      "is_1988_1989": true,
-      "source_ref": "Bundesarchiv via Wikimedia Commons; accession number as given",
-      "priority": "HIGHEST - within weeks of the target state",
-      "self_transcribed": false,
-      "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (handoff Source 1); not locally re-transcribed",
-      "visible_faces": [
-        {
-          "face_ref": "F1",
-          "utc_sector": "UTC+10",
-          "sector_basis": "city contents (Chabarowsk is UTC+10 on the modern list)",
-          "upper_band": [
-            "CHABAROWSK"
-          ],
-          "lower_band": "UNKNOWN",
-          "order_confidence": "single name only; position within band UNKNOWN",
-          "transcription_confidence": "USER-ASSERTED"
-        },
-        {
-          "face_ref": "F2",
-          "utc_sector": "UTC+11",
-          "sector_basis": "city contents (Magadan and Sachalin are UTC+11 on the modern list)",
-          "upper_band": [
-            "MAGADAN",
-            "SACHALIN"
-          ],
-          "lower_band": "UNKNOWN",
-          "order_note": "reported in the order Magadan, Sachalin; whether both are UPPER is not explicitly stated in the report",
-          "transcription_confidence": "USER-ASSERTED"
-        }
-      ],
-      "adjacency_observed": [
-        {
-          "left": "F1",
-          "right": "F2",
-          "basis": "reported as adjacent faces in one frame",
-          "confidence": "USER-ASSERTED"
-        }
-      ],
-      "visible_hour_ring_values": "UNKNOWN - and must not be used to assign sectors",
-      "notes": "Modern UTC+11 contains exactly Magadan and Sachalin, so this face may be COMPLETE - but 14 of the ~20 1997 additions remain unnamed, so completeness is not proven.",
-      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-1989-0830-028,_Berlin,_Fernsehturm,_Weltzeituhr.jpg",
-      "image_sha1": "0c3d0288dc6711e386112dc22df050eac4f3abfc",
-      "image_dims": "567x800, 68001 bytes"
+     "face_ref": "F1",
+     "utc_sector": "UTC+10",
+     "sector_basis": "city contents (Chabarowsk is UTC+10 on the modern list)",
+     "upper_band": [
+      "CHABAROWSK"
+     ],
+     "lower_band": "UNKNOWN",
+     "order_confidence": "single name only; position within band UNKNOWN",
+     "transcription_confidence": "USER-ASSERTED"
     },
     {
-      "id": "BArch-183-1989-0811-023",
-      "archive": "Bundesarchiv",
-      "accession": "Bild 183-1989-0811-023",
-      "photographer": "Bernd Settnik",
-      "date": "1989-08-11",
-      "date_confidence": "ARCHIVE-DATE VERIFIED",
-      "predates_1997": true,
-      "is_1988_1989": true,
-      "self_transcribed": false,
-      "transcription_status": "NOT TRANSCRIBED - reported to show mainly the clock base",
-      "visible_faces": [],
-      "adjacency_observed": [],
-      "priority": "LOW for content, HIGH as a sequence anchor",
-      "notes": "Catalogued because Bundesarchiv frames come in shoot sequences. Adjacent accession numbers from the same date and photographer may show far better angles. See docs/checkpoint-H-archive-targets.md."
-    },
-    {
-      "id": "Flickr-vanElk-Alexanderplatz-1988",
-      "archive": "Flickr (private photographer)",
-      "accession": null,
-      "title": "Alexanderplatz, East-Berlin 1988",
-      "photographer": "Johan van Elk",
-      "date": "1988",
-      "date_confidence": "PHOTOGRAPHER-ASSERTED 1988 - NOT ARCHIVE-DATE VERIFIED",
-      "date_caveat": "The Flickr page's automatic machine metadata carries a contradictory later 'taken' date. The photographer states the work is 1988 and a scan from the original negative, which explains a later scan timestamp. Until corroborated, this is photographer-asserted only.",
-      "predates_1997": "ASSERTED",
-      "is_1988_1989": "ASSERTED",
-      "self_transcribed": false,
-      "transcription_status": "NOT TRANSCRIBED - image not viewable in this environment",
-      "visible_faces": [],
-      "adjacency_observed": [],
-      "priority": "HIGH - reported to show a wide run of eastern sectors with many readable inscriptions",
-      "notes": "Reported to show a WIDE RUN of faces, which is exactly what the adjacency graph needs: one frame spanning several faces fixes several edges at once."
-    },
-    {
-      "id": "BArch-183-1984-1419-014",
-      "archive": "Bundesarchiv",
-      "accession": "Bild 183-1984-1419-014",
-      "photographer": "Peter Heinz Junge",
-      "date": "1984-04-19",
-      "date_confidence": "ARCHIVE-DATE VERIFIED (original caption)",
-      "predates_1997": true,
-      "is_1988_1989": false,
-      "self_transcribed": false,
-      "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (handoff Source 2); face grouping graded MEDIUM by the source itself",
-      "visible_faces": [
-        {
-          "face_ref": "E1",
-          "utc_sector": "HISTORICAL SOVIET BAND (modern UTC+5/+6 split)",
-          "sector_basis": "contents ALMA-ATA + TASCHKENT. These sit in DIFFERENT modern zones, but Tashkent moved from the Soviet UTC+6 band to UTC+5 after 1991, so a 1984 grouping is historically correct.",
-          "band": "UNKNOWN",
-          "names": [
-            "ALMA-ATA",
-            "TASCHKENT"
-          ],
-          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping"
-        },
-        {
-          "face_ref": "E2",
-          "utc_sector": "UTC+7",
-          "sector_basis": "contents",
-          "band": "UNKNOWN",
-          "names": [
-            "KRASNOJARSK",
-            "NOWOSIBIRSK"
-          ],
-          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
-          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
-        },
-        {
-          "face_ref": "E3",
-          "utc_sector": "UTC+8",
-          "sector_basis": "contents",
-          "band": "UNKNOWN",
-          "names": [
-            "IRKUTSK",
-            "ULAN-BATOR"
-          ],
-          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
-          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
-        },
-        {
-          "face_ref": "E4",
-          "utc_sector": "UTC+9",
-          "sector_basis": "contents",
-          "band": "UNKNOWN",
-          "names": [
-            "JAKUTSK"
-          ],
-          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
-          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
-        },
-        {
-          "face_ref": "E5",
-          "utc_sector": "UTC+10",
-          "sector_basis": "contents",
-          "band": "UNKNOWN",
-          "names": [
-            "CHABAROWSK",
-            "WLADIWOSTOK"
-          ],
-          "partial": true,
-          "transcription_confidence": "EXTERNAL-AGENT, described as a PARTIAL region",
-          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
-        }
-      ],
-      "adjacency_observed": [
-        {
-          "left": "E1",
-          "right": "E2",
-          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
-          "confidence": "EXTERNAL-AGENT, MEDIUM"
-        },
-        {
-          "left": "E2",
-          "right": "E3",
-          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
-          "confidence": "EXTERNAL-AGENT, MEDIUM"
-        },
-        {
-          "left": "E3",
-          "right": "E4",
-          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
-          "confidence": "EXTERNAL-AGENT, MEDIUM"
-        },
-        {
-          "left": "E4",
-          "right": "E5",
-          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
-          "confidence": "EXTERNAL-AGENT, MEDIUM"
-        }
-      ],
-      "priority": "HIGH - five consecutive eastern faces, and a stability control against Aug 1989",
-      "notes": "Its main value may be stability testing: if a face reads identically in 1984 and 1989, older well-photographed years become usable for the 1989 reconstruction.",
-      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-1984-1419-014,_Berlin,_Weltzeituhr_am_Alexanderplatz.jpg",
-      "image_sha1": "3d84b3dd285ffaaee40d78f58ccf0b4ec5ac680b"
-    },
-    {
-      "id": "WELT-akg-Straube-mid1970s-UTC+1",
-      "archive": "akg-images / picture-alliance, via WELT",
-      "accession": null,
-      "title": "Weltzeituhr und 'Interhotel Stadt Berlin' am Alexanderplatz",
-      "photographer": "credited pa/akg-images/Straube",
-      "date": "mid-1970s",
-      "date_confidence": "SOURCE-CAPTIONED MID-1970s - NOT an exact year, and NOT the 1988-89 target",
-      "predates_1997": true,
-      "is_1988_1989": false,
-      "source_ref": "WELT article 217168174 (9 Nov 2021); image img.welt.de/.../1920313707-coriginal-w1200",
-      "self_transcribed": false,
-      "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (handoff Source 3)",
-      "priority": "HIGHEST for the UTC+1 Tier-1 goal, but SEE THE DATE PROBLEM",
-      "visible_faces": [
-        {
-          "face_ref": "W1",
-          "utc_sector": "UTC+1",
-          "sector_basis": "contents (Berlin, Paris, Madrid, Warschau ... all CET)",
-          "upper_band": [
-            "AMSTERDAM",
-            "BERLIN",
-            "BRUSSEL",
-            "BUDAPEST",
-            "MADRID",
-            "PARIS",
-            "PRAG",
-            "STOCKHOLM",
-            "WARSCHAU"
-          ],
-          "upper_band_confidence": "EXTERNAL-AGENT HIGH for the nine names; ORDER graded SUPPORTED - see ordering_analysis",
-          "upper_band_letters": 62,
-          "lower_band": "INCOMPLETE - NOT KNOWN",
-          "lower_band_readable_subset": [
-            "KOPENHAGEN",
-            "WIEN",
-            "BELGRAD",
-            "TUNIS"
-          ],
-          "lower_band_confidence": "the source states the lower band is NOT sharp enough for a responsible full transcription; remaining lines are UNKNOWN",
-          "lower_band_membership_count": "UNKNOWN"
-        }
-      ],
-      "adjacency_observed": []
+     "face_ref": "F2",
+     "utc_sector": "UTC+11",
+     "sector_basis": "city contents (Magadan and Sachalin are UTC+11 on the modern list)",
+     "upper_band": [
+      "MAGADAN",
+      "SACHALIN"
+     ],
+     "lower_band": "UNKNOWN",
+     "order_note": "reported in the order Magadan, Sachalin; whether both are UPPER is not explicitly stated in the report",
+     "transcription_confidence": "USER-ASSERTED"
     }
-  ],
-  "stability_question": {
-    "statement": "Did any inscription or layout change occur BETWEEN 1969 and 1997?",
-    "why_it_matters": "If layout is stable across decades, the far larger pool of 1970s-80s photographs becomes usable for reconstructing the 1989 state, massively expanding available evidence.",
-    "status": "UNTESTED - requires the same face read in two well-separated dated photographs",
-    "rule": "Do NOT assume 1969 layout equals 1989 layout merely because both predate 1997."
+   ],
+   "adjacency_observed": [
+    {
+     "left": "F1",
+     "right": "F2",
+     "basis": "reported as adjacent faces in one frame",
+     "confidence": "USER-ASSERTED"
+    }
+   ],
+   "visible_hour_ring_values": "UNKNOWN - and must not be used to assign sectors",
+   "notes": "Modern UTC+11 contains exactly Magadan and Sachalin, so this face may be COMPLETE - but 14 of the ~20 1997 additions remain unnamed, so completeness is not proven.",
+   "commons_file_page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-1989-0830-028,_Berlin,_Fernsehturm,_Weltzeituhr.jpg",
+   "image_sha1": "0c3d0288dc6711e386112dc22df050eac4f3abfc",
+   "image_dims": "567x800, 68001 bytes"
   },
-  "half_hour_placement_question": {
-    "statement": "Marquesas (-9:30), Teheran (+3:30), Kabul (+4:30), Neu-Delhi and Colombo (+5:30), Rangun (+6:30) cannot each own one of the 24 whole-hour faces.",
-    "candidates": [
-      "own narrow strip between faces",
-      "placed on a neighbouring whole-hour face",
-      "a '+30' or half-hour annotation",
-      "grouped by some other convention"
-    ],
-    "status": "UNKNOWN - a photograph of the Teheran/Kabul/Delhi region of the drum would settle it",
-    "why_it_matters": "It reveals how the inscription SYSTEM works, which constrains any reading procedure."
+  {
+   "id": "BArch-183-1989-0811-023",
+   "archive": "Bundesarchiv",
+   "accession": "Bild 183-1989-0811-023",
+   "photographer": "Bernd Settnik",
+   "date": "1989-08-11",
+   "date_confidence": "ARCHIVE-DATE VERIFIED",
+   "predates_1997": true,
+   "is_1988_1989": true,
+   "self_transcribed": false,
+   "transcription_status": "NOT TRANSCRIBED - reported to show mainly the clock base",
+   "visible_faces": [],
+   "adjacency_observed": [],
+   "priority": "LOW for content, HIGH as a sequence anchor",
+   "notes": "Catalogued because Bundesarchiv frames come in shoot sequences. Adjacent accession numbers from the same date and photographer may show far better angles. See docs/checkpoint-H-archive-targets.md."
   },
-  "candidate_accessions": {
-    "note": "Bundesarchiv Bild 183 (ADN) Weltzeituhr frames located by search but NOT viewable in this environment and NOT yet dated. Listed so a human can pull them directly.",
-    "accession_structure": {
-      "observed": "Modern-form accessions read 183-YYYY-MMDD-frame, e.g. 183-1989-0830-028 (30 Aug 1989). Older ADN accessions read 183-<LETTER>MMDD-frame, e.g. 183-H1218-0025-001.",
-      "inference": "The LETTER encodes the year and MMDD the month/day. INFERRED, not sourced.",
-      "internal_check": "183-H1218-0025-001 is captioned 'Winter'. H1218 -> 18 December, which is winter. The MMDD reading is consistent with the caption.",
-      "todo": "Decode the ADN letter-to-year mapping, or simply read each Commons file page, which carries the date. Either immediately dates all eight candidates."
+  {
+   "id": "Flickr-vanElk-Alexanderplatz-1988",
+   "archive": "Flickr (private photographer)",
+   "accession": null,
+   "title": "Alexanderplatz, East-Berlin 1988",
+   "photographer": "Johan van Elk",
+   "date": "1988",
+   "date_confidence": "PHOTOGRAPHER-ASSERTED 1988 - NOT ARCHIVE-DATE VERIFIED",
+   "date_caveat": "The Flickr page's automatic machine metadata carries a contradictory later 'taken' date. The photographer states the work is 1988 and a scan from the original negative, which explains a later scan timestamp. Until corroborated, this is photographer-asserted only.",
+   "predates_1997": "ASSERTED",
+   "is_1988_1989": "ASSERTED",
+   "self_transcribed": false,
+   "transcription_status": "NOT TRANSCRIBED - image not viewable in this environment",
+   "visible_faces": [],
+   "adjacency_observed": [],
+   "priority": "HIGH - reported to show a wide run of eastern sectors with many readable inscriptions",
+   "notes": "Reported to show a WIDE RUN of faces, which is exactly what the adjacency graph needs: one frame spanning several faces fixes several edges at once."
+  },
+  {
+   "id": "BArch-183-1984-1419-014",
+   "archive": "Bundesarchiv",
+   "accession": "Bild 183-1984-1419-014",
+   "photographer": "Peter Heinz Junge",
+   "date": "1984-04-19",
+   "date_confidence": "ARCHIVE-DATE VERIFIED (original caption)",
+   "predates_1997": true,
+   "is_1988_1989": false,
+   "self_transcribed": true,
+   "transcription_status": "LOCAL VISUAL EVIDENCE (UPLOAD-2)",
+   "visible_faces": [
+    {
+     "face_ref": "E1",
+     "utc_sector": "HISTORICAL SOVIET BAND (modern UTC+5/+6 split)",
+     "sector_basis": "contents ALMA-ATA + TASCHKENT. These sit in DIFFERENT modern zones, but Tashkent moved from the Soviet UTC+6 band to UTC+5 after 1991, so a 1984 grouping is historically correct.",
+     "band": "UNKNOWN",
+     "names": [
+      "ALMA-ATA",
+      "TASCHKENT"
+     ],
+     "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping"
     },
-    "candidates": [
-      {
-        "accession": "Bild 183-L0105-0018",
-        "caption": "Berlin, Alexanderplatz, Hotel 'Stadt Berlin', Weltzeituhr",
-        "mmdd_inferred": "01-05",
-        "year": "UNKNOWN"
-      },
-      {
-        "accession": "Bild 183-R0729-0017",
-        "caption": "Berlin, Weltzeituhr am Alexanderplatz",
-        "mmdd_inferred": "07-29",
-        "year": "UNKNOWN"
-      },
-      {
-        "accession": "Bild 183-U0414-0014",
-        "caption": "Berlin, Alexanderplatz, Weltzeituhr",
-        "mmdd_inferred": "04-14",
-        "year": "UNKNOWN"
-      },
-      {
-        "accession": "Bild 183-E1003-0001-001",
-        "caption": "Berlin, Weltzeituhr am Alexanderplatz",
-        "mmdd_inferred": "10-03",
-        "year": "UNKNOWN"
-      },
-      {
-        "accession": "Bild 183-H1218-0025-001",
-        "caption": "Berlin, Alexanderplatz, Weltzeituhr, Winter",
-        "mmdd_inferred": "12-18",
-        "year": "UNKNOWN"
-      },
-      {
-        "accession": "Bild 183-W0715-0026",
-        "caption": "Berlin, Alexanderplatz, Weltzeituhr",
-        "mmdd_inferred": "07-15",
-        "year": "UNKNOWN"
-      },
-      {
-        "accession": "Bild 183-N1005-0011",
-        "caption": "Berlin, Alexanderplatz, Fernsehturm, Weltzeituhr, Nacht",
-        "mmdd_inferred": "10-05",
-        "year": "UNKNOWN",
-        "note": "night shot - inscriptions may be hard to read"
-      }
-    ],
-    "commons_categories": [
-      "Category:Urania-Weltzeituhr and Berliner Fernsehturm",
-      "Category:Urania-Weltzeituhr (and its 'Details' subcategory)",
-      "Category:Photographs by Peter Heinz Junge",
-      "Commons:Bundesarchiv (the 80,000+ file donation these come from)"
-    ]
-  },
-  "external_agent_rule": "Sources added from docs/external/checkpoint-H-web-photo-handoff.md are EXTERNAL-AGENT TRANSCRIPTIONS made from web-rendered images. They are NOT this agent's own visual verification and were NOT re-transcribed locally (all image hosts return HTTP 000). They may not be promoted to historical ground truth without a second source or a locally viewable image.",
-  "ordering_analysis": {
-    "question": "Is within-band order alphabetical, geographic, or neither?",
-    "evidence_for_alphabetical": {
-      "utc+1_upper_1970s": "AMSTERDAM BERLIN BRUSSEL BUDAPEST MADRID PARIS PRAG STOCKHOLM WARSCHAU is in STRICT alphabetical order. P(random)=1/9!=2.76e-6.",
-      "multi_name_groups": "All five reported multi-name groups across the 1984 and 1989 frames are alphabetical (ALMA-ATA/TASCHKENT, KRASNOJARSK/NOWOSIBIRSK, IRKUTSK/ULAN-BATOR, CHABAROWSK/WLADIWOSTOK, MAGADAN/SACHALIN). P(random)=2^-5=0.031.",
-      "discriminator": "The SAME external agent transcribed the modern lower band (Source 7) as OSLO KOPENHAGEN WIEN BERN PRESSBURG BELGRAD ROM TUNIS KINSHASA, which is NOT alphabetical. So the agent does not alphabetise by habit, which argues the alphabetical readings are genuine physical order."
+    {
+     "face_ref": "E2",
+     "utc_sector": "UTC+7",
+     "sector_basis": "contents",
+     "band": "UNKNOWN",
+     "names": [
+      "KRASNOJARSK",
+      "NOWOSIBIRSK"
+     ],
+     "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
+     "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
     },
-    "evidence_against_a_universal_rule": {
-      "historical_lower_subset": "KOPENHAGEN WIEN BELGRAD TUNIS is NOT alphabetical but IS strictly decreasing in latitude (55.7, 48.2, 44.8, 36.8).",
-      "modern_lower_band": "OSLO KOPENHAGEN WIEN BERN PRESSBURG BELGRAD ROM TUNIS KINSHASA is latitude-ordered north-to-south with a single inversion (Bern before Pressburg), 1 of 8 adjacent comparisons against 18 expected at random."
+    {
+     "face_ref": "E3",
+     "utc_sector": "UTC+8",
+     "sector_basis": "contents",
+     "band": "UNKNOWN",
+     "names": [
+      "IRKUTSK",
+      "ULAN-BATOR"
+     ],
+     "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
+     "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
     },
-    "current_reading": "UPPER bands look ALPHABETICAL; LOWER bands look GEOGRAPHIC (north to south). Two different rules on one face is odd but is what the data shows.",
-    "why_it_matters": "If a band's order is rule-determined, ORDER follows from MEMBERSHIP. That turns the acquisition requirement from 'a fully legible ordered transcription' into 'enough legibility to identify WHICH names are present' - a much weaker requirement.",
-    "grade": "SUPPORTED, NOT PROVEN. Rests on one external agent and cannot be verified locally."
-  },
-  "date_problem": {
-    "statement": "The arithmetic of the name counts does not close, and it undermines the reversal premise.",
-    "numbers": {
-      "1969_original": 80,
-      "added_1997": 20,
-      "implied_total": 100,
-      "actual_modern": 146,
-      "unexplained": 46
+    {
+     "face_ref": "E4",
+     "utc_sector": "UTC+9",
+     "sector_basis": "contents",
+     "band": "UNKNOWN",
+     "names": [
+      "JAKUTSK"
+     ],
+     "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
+     "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
     },
-    "implications": [
-      "~46 names entered the clock at some time OTHER than the 1997 restoration.",
-      "If any entered between 1969 and 1997, the clock was still growing during the target period.",
-      "Therefore a MID-1970s photograph is NOT evidence for the 1989 state without demonstrated stability.",
-      "Source 3's nine-name UTC+1 upper band may be an earlier, smaller state of that face."
-    ],
-    "supporting_note": "Casablanca is the one modern-upper UTC+1 name absent from the 1970s band, and under an alphabetical rule it would sit exactly between BUDAPEST and MADRID, where the 1970s transcription shows no entry. Consistent with a later addition - but an INFERENCE, since the name could simply be obscured.",
-    "grade": "The 80-name figure is a RELIABLE GOVERNMENT PUBLICATION (Source 6); the gap is arithmetic and therefore solid unless that figure counts something else."
+    {
+     "face_ref": "E5",
+     "utc_sector": "UTC+10",
+     "sector_basis": "contents",
+     "band": "UNKNOWN",
+     "names": [
+      "CHABAROWSK",
+      "WLADIWOSTOK"
+     ],
+     "partial": true,
+     "transcription_confidence": "EXTERNAL-AGENT, described as a PARTIAL region",
+     "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
+    }
+   ],
+   "adjacency_observed": [
+    {
+     "left": "E1",
+     "right": "E2",
+     "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+     "confidence": "EXTERNAL-AGENT, MEDIUM"
+    },
+    {
+     "left": "E2",
+     "right": "E3",
+     "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+     "confidence": "EXTERNAL-AGENT, MEDIUM"
+    },
+    {
+     "left": "E3",
+     "right": "E4",
+     "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+     "confidence": "EXTERNAL-AGENT, MEDIUM"
+    },
+    {
+     "left": "E4",
+     "right": "E5",
+     "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+     "confidence": "EXTERNAL-AGENT, MEDIUM"
+    }
+   ],
+   "priority": "HIGH - five consecutive eastern faces, and a stability control against Aug 1989",
+   "notes": "Its main value may be stability testing: if a face reads identically in 1984 and 1989, older well-photographed years become usable for the 1989 reconstruction.",
+   "commons_file_page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-1984-1419-014,_Berlin,_Weltzeituhr_am_Alexanderplatz.jpg",
+   "image_sha1": "3d84b3dd285ffaaee40d78f58ccf0b4ec5ac680b",
+   "local_visual_faces": [
+    {
+     "face_ref": "L84-1",
+     "utc_sector": "UTC+5 (approx, by contents)",
+     "upper_band_partial": [
+      "SWERDLOWSK",
+      "ASCHCHABAD"
+     ],
+     "confidence": "LOCAL VISUAL HIGH on both spellings",
+     "note": "SWERDLOWSK is the Soviet-era name of Yekaterinburg and ASCHCHABAD the German-transliterated Soviet form; neither appears in the modern 146-place list. Hard evidence that the drum carried Soviet-era toponyms."
+    },
+    {
+     "face_ref": "L84-2",
+     "utc_sector": "UTC+6 (approx)",
+     "upper_band_partial": [
+      "OMSK",
+      "ALMA-ATA",
+      "TASCHKENT"
+     ],
+     "confidence": "LOCAL VISUAL HIGH",
+     "note": "ALMA-ATA is the Soviet-era form; the modern list has ALMATY."
+    },
+    {
+     "face_ref": "L84-3",
+     "utc_sector": "UTC+7 (approx)",
+     "upper_band_partial": [
+      "KRASNOJARSK",
+      "NOWOSIBIRSK"
+     ],
+     "confidence": "LOCAL VISUAL HIGH"
+    },
+    {
+     "face_ref": "L84-4",
+     "utc_sector": "UTC+8 (approx)",
+     "upper_band_partial": [
+      "IRKUTSK",
+      "ULAN BATOR"
+     ],
+     "confidence": "LOCAL VISUAL HIGH"
+    },
+    {
+     "face_ref": "L84-5",
+     "utc_sector": "UTC+9 (approx)",
+     "upper_band_partial": [
+      "JAKUTSK"
+     ],
+     "confidence": "LOCAL VISUAL HIGH"
+    },
+    {
+     "face_ref": "L84-6",
+     "utc_sector": "UTC+8/+9 lower",
+     "lower_band_partial": [
+      "PEKING",
+      "SHANGHAI",
+      "PHOENGJANG"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM on PHOENGJANG spelling (the modern list has PJOENGJANG); HIGH on PEKING/SHANGHAI"
+    }
+   ],
+   "local_visual_notes": [
+    "Within-band order not established for these faces: only two or three lines are legible per face and I cannot see band ends.",
+    "No lower band fully readable in this frame."
+   ]
   },
-  "new_blocker_soviet_zones": {
-    "statement": "Historical ZONE MEMBERSHIP differs from modern, beyond the single documented Kiew move.",
-    "evidence": "The 1984 frame groups ALMA-ATA with TASCHKENT on one face. They sit in different modern zones (UTC+6 and UTC+5), but Tashkent moved out of the Soviet UTC+6 band after 1991, so the 1984 grouping is historically correct.",
-    "consequence": "Reversing the clock requires reversing post-Soviet time-zone reorganisation as well as the 1997 name changes. This was not in any previous blocker list.",
-    "side_effect": "It also RAISES confidence in Source 2: a careless transcription would be unlikely to reproduce a correct Soviet-era grouping."
+  {
+   "id": "WELT-akg-Straube-mid1970s-UTC+1",
+   "archive": "akg-images / picture-alliance, via WELT",
+   "accession": null,
+   "title": "Weltzeituhr und 'Interhotel Stadt Berlin' am Alexanderplatz",
+   "photographer": "credited pa/akg-images/Straube",
+   "date": "DISPUTED",
+   "date_confidence": "DISPUTED. The WELT caption says mid-1970s and the clothing/vehicles look 1970s. But the face carries KOPENHAGEN, WIEN and ROM, which the Tagesspiegel 2019 John profile says were newly engraved at the 1985 maintenance, and carries LENINGRAD (so pre-1997). Those two datings cannot both be right. ATHEN, also a claimed 1985 addition, is NOT visible where expected, which cuts against the >=1985 reading. Until this is resolved the image cannot be used as 1988-89 evidence.",
+   "predates_1997": true,
+   "is_1988_1989": false,
+   "source_ref": "WELT article 217168174 (9 Nov 2021); image img.welt.de/.../1920313707-coriginal-w1200",
+   "self_transcribed": true,
+   "transcription_status": "LOCAL VISUAL EVIDENCE (UPLOAD-1), superseding the EXTERNAL-AGENT handoff for this face",
+   "priority": "HIGHEST for the UTC+1 Tier-1 goal, but SEE THE DATE PROBLEM",
+   "visible_faces": [
+    {
+     "face_ref": "W1",
+     "utc_sector": "UTC+1",
+     "sector_basis": "contents (Berlin, Paris, Madrid, Warschau ... all CET)",
+     "upper_band": [
+      "AMSTERDAM",
+      "BERLIN",
+      "BRUSSEL",
+      "BUDAPEST",
+      "MADRID",
+      "PARIS",
+      "PRAG",
+      "STOCKHOLM",
+      "WARSCHAU"
+     ],
+     "upper_band_confidence": "LOCAL VISUAL HIGH. My own reading of UPLOAD-1 reproduces the nine external names exactly, in the same order, independently. Order is alphabetical.",
+     "upper_band_letters": 62,
+     "lower_band": [
+      "KOPENHAGEN",
+      "LONDON",
+      "WIEN",
+      "ROM",
+      "BELGRAD",
+      "TUNIS"
+     ],
+     "lower_band_readable_subset": [
+      "KOPENHAGEN",
+      "WIEN",
+      "BELGRAD",
+      "TUNIS"
+     ],
+     "lower_band_confidence": "LOCAL VISUAL MEDIUM-HIGH for the six names; I read LONDON, which the external handoff did not report, and read ROM in the lower band. MEDIUM because the band is small in frame: I am confident there are six lines and no seventh, but a fully obscured seventh line cannot be excluded from one viewpoint.",
+     "lower_band_membership_count": 6,
+     "lower_band_letters": 35,
+     "lower_band_order": "NOT alphabetical. Latitudes 55.68/51.51/48.21/41.90/44.79/36.81: north-to-south with one inversion (ROM before BELGRAD). So the lower band is not alphabetically ordered, unlike the upper band.",
+     "face_letter_total": 97,
+     "face_letter_total_note": "62 + 35 = 97, the length of K4. See findings.face_97_observation - graded OBSERVATION, NOT EVIDENCE.",
+     "superseded_external": {
+      "lower_band_readable_subset": [
+       "KOPENHAGEN",
+       "WIEN",
+       "BELGRAD",
+       "TUNIS"
+      ],
+      "note": "external handoff called the lower band not transcribable; local reading resolves it to six names"
+     }
+    }
+   ],
+   "adjacency_observed": [
+    {
+     "kind": "OBSERVED",
+     "upper_sequence": [
+      "AZOREN-face",
+      "REYKJAVIK-face",
+      "DUBLIN/LISSABON/ALGIER-face",
+      "UTC+1-CET-face",
+      "BUKAREST/HELSINKI/SOFIA-face",
+      "LENINGRAD/MOSKAU-face",
+      "BAKU-face"
+     ],
+     "confidence": "LOCAL VISUAL. Face contents read off UPLOAD-1; left-to-right order as seen. Extreme faces are foreshortened, so their membership lists are partial."
+    },
+    {
+     "kind": "OBSERVED",
+     "lower_sequence": [
+      "CASABLANCA/CONAKRY/DAKAR-face",
+      "UTC+1-CET-face-lower",
+      "ANKARA/DAMASKUS/KAIRO-face",
+      "BAGDAD/TEHERAN+/ADDIS-ABEBA-face"
+     ],
+     "confidence": "LOCAL VISUAL, lower band, same frame"
+    }
+   ],
+   "local_visual_notes": [
+    "LENINGRAD and MOSKAU both legible -> frame predates the 1991/1997 renamings. Independent of the caption.",
+    "ATHEN is not visible in the UTC+2 lower block where the modern clock and the 1985-addition claim would put it.",
+    "No '+30' notation is legible anywhere in this frame (the half-hour faces are not toward the camera)."
+   ],
+   "local_visual_faces": [
+    {
+     "face_ref": "W1-m2",
+     "utc_sector": "UTC-2-W",
+     "upper_band_partial": [
+      "AZOREN"
+     ],
+     "confidence": "LOCAL VISUAL LOW-MEDIUM - face strongly foreshortened at frame edge; the one name I can read is AZOREN"
+    },
+    {
+     "face_ref": "W1-m1",
+     "utc_sector": "UTC-1-W",
+     "upper_band_partial": [
+      "REYKJAVIK"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM"
+    },
+    {
+     "face_ref": "W1-0",
+     "utc_sector": "UTC+0-W",
+     "upper_band_partial": [
+      "DUBLIN",
+      "LISSABON",
+      "ALGIER"
+     ],
+     "lower_band_partial": [
+      "CASABLANCA",
+      "CONAKRY",
+      "DAKAR"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM-HIGH; band ends not visible, so both bands are partial",
+     "note": "ALGIER in the upper band and CASABLANCA/CONAKRY/DAKAR in the lower is consistent with findings.north_south_band_rule"
+    },
+    {
+     "face_ref": "W1-p2",
+     "utc_sector": "UTC+2",
+     "upper_band_partial": [
+      "BUKAREST",
+      "HELSINKI",
+      "SOFIA"
+     ],
+     "lower_band_partial": [
+      "ANKARA",
+      "DAMASKUS",
+      "KAIRO"
+     ],
+     "confidence": "LOCAL VISUAL MEDIUM",
+     "note": "ATHEN, claimed a 1985 addition, is NOT among the lower lines I can read here. Central to date_problem.open_part."
+    },
+    {
+     "face_ref": "W1-p3",
+     "utc_sector": "UTC+3",
+     "upper_band_partial": [
+      "LENINGRAD",
+      "MOSKAU"
+     ],
+     "lower_band_partial": [
+      "BAGDAD",
+      "ADDIS ABEBA"
+     ],
+     "confidence": "LOCAL VISUAL HIGH on LENINGRAD and MOSKAU (the dating evidence); MEDIUM on the lower lines",
+     "note": "a further lower line reads as TEHERAN with a suffix I cannot resolve - possibly the '+30' notation, recorded as UNKNOWN"
+    },
+    {
+     "face_ref": "W1-p4",
+     "utc_sector": "UTC+4",
+     "upper_band_partial": [
+      "BAKU"
+     ],
+     "confidence": "LOCAL VISUAL LOW-MEDIUM - frame edge"
+    }
+   ]
+  },
+  {
+   "id": "MODERN-upload-asia-pacific",
+   "archive": "user upload, provenance not stated",
+   "accession": null,
+   "title": "Modern/recent colour frames of the Asian-Pacific sectors (UPLOAD-3, UPLOAD-4)",
+   "photographer": null,
+   "date": "MODERN (post-1997; undated)",
+   "date_confidence": "NOT target era. Usable only for physical RULES that are era-independent, never for 1988-89 membership.",
+   "predates_1997": false,
+   "is_1988_1989": false,
+   "source_ref": "conversation attachments UPLOAD-3, UPLOAD-4",
+   "self_transcribed": true,
+   "transcription_status": "LOCAL VISUAL EVIDENCE",
+   "purpose": "Resolve two physical questions: the half-hour notation, and whether upper/lower within a zone is a north/south split.",
+   "visible_faces": [
+    {
+     "face_ref": "M-1",
+     "utc_sector": "UTC+7",
+     "upper_band_partial": [
+      "KRASNOJARSK"
+     ],
+     "lower_band_partial": [
+      "HANOI",
+      "BANGKOK",
+      "PHNOM PENH",
+      "JAKARTA"
+     ]
+    },
+    {
+     "face_ref": "M-2",
+     "utc_sector": "UTC+8",
+     "upper_band_partial": [
+      "IRKUTSK",
+      "ULAN-BATOR"
+     ],
+     "lower_band_partial": [
+      "PEKING",
+      "...",
+      "SINGAPUR"
+     ]
+    },
+    {
+     "face_ref": "M-3",
+     "utc_sector": "UTC+9",
+     "upper_band_partial": [
+      "JAKUTSK"
+     ],
+     "lower_band_partial": [
+      "PJOENGJANG",
+      "TOKYO",
+      "SEOUL"
+     ]
+    },
+    {
+     "face_ref": "M-4",
+     "utc_sector": "UTC+10",
+     "upper_band_partial": [
+      "CHABAROWSK",
+      "WLADIWOSTOK"
+     ],
+     "lower_band_partial": [
+      "SYDNEY",
+      "CANBERRA",
+      "MELBOURNE"
+     ]
+    },
+    {
+     "face_ref": "M-5",
+     "utc_sector": "half-hour faces",
+     "entries_with_notation": [
+      "NEW DELHI +30",
+      "COLOMBO +30",
+      "RANGUN +30",
+      "KABUL +30"
+     ]
+    }
+   ],
+   "adjacency_observed": [
+    {
+     "kind": "OBSERVED",
+     "upper_sequence": [
+      "M-1",
+      "M-2",
+      "M-3",
+      "M-4"
+     ],
+     "confidence": "LOCAL VISUAL, single frame, left to right"
+    }
+   ],
+   "local_visual_notes": [
+    "NOWOSIBIRSK is NOT on the KRASNOJARSK face here; in UPLOAD-2 (1984) it is. See findings.face_membership_moved.",
+    "The modern list's PJOENGJANG vs the 1984 PHOENGJANG is an orthography change, not a membership change."
+   ]
   }
+ ],
+ "stability_question": {
+  "question": "Was the drum's text stable across 1984 / 1988 / 1989?",
+  "answer": "NO - not across 1984-to-modern, and untested across 1984-to-1989.",
+  "evidence": "NOWOSIBIRSK changed faces between 1984 and the modern frame (findings.face_membership_moved).",
+  "gap": "I have no two frames of the SAME face in different target-era years. The 1988 and 1989 frames do not share a fully legible face with the 1984 frame. So 1984-vs-1989 stability is UNTESTED, not established.",
+  "grade": "HEURISTIC NEGATIVE on global stability; UNTESTED within the target window."
+ },
+ "half_hour_placement_question": {
+  "statement": "Marquesas (-9:30), Teheran (+3:30), Kabul (+4:30), Neu-Delhi and Colombo (+5:30), Rangun (+6:30) cannot each own one of the 24 whole-hour faces.",
+  "candidates": [
+   "own narrow strip between faces",
+   "placed on a neighbouring whole-hour face",
+   "a '+30' or half-hour annotation",
+   "grouped by some other convention"
+  ],
+  "status": "UNKNOWN - a photograph of the Teheran/Kabul/Delhi region of the drum would settle it",
+  "why_it_matters": "It reveals how the inscription SYSTEM works, which constrains any reading procedure."
+ },
+ "candidate_accessions": {
+  "note": "Bundesarchiv Bild 183 (ADN) Weltzeituhr frames located by search but NOT viewable in this environment and NOT yet dated. Listed so a human can pull them directly.",
+  "accession_structure": {
+   "observed": "Modern-form accessions read 183-YYYY-MMDD-frame, e.g. 183-1989-0830-028 (30 Aug 1989). Older ADN accessions read 183-<LETTER>MMDD-frame, e.g. 183-H1218-0025-001.",
+   "inference": "The LETTER encodes the year and MMDD the month/day. INFERRED, not sourced.",
+   "internal_check": "183-H1218-0025-001 is captioned 'Winter'. H1218 -> 18 December, which is winter. The MMDD reading is consistent with the caption.",
+   "todo": "Decode the ADN letter-to-year mapping, or simply read each Commons file page, which carries the date. Either immediately dates all eight candidates."
+  },
+  "candidates": [
+   {
+    "accession": "Bild 183-L0105-0018",
+    "caption": "Berlin, Alexanderplatz, Hotel 'Stadt Berlin', Weltzeituhr",
+    "mmdd_inferred": "01-05",
+    "year": "UNKNOWN"
+   },
+   {
+    "accession": "Bild 183-R0729-0017",
+    "caption": "Berlin, Weltzeituhr am Alexanderplatz",
+    "mmdd_inferred": "07-29",
+    "year": "UNKNOWN"
+   },
+   {
+    "accession": "Bild 183-U0414-0014",
+    "caption": "Berlin, Alexanderplatz, Weltzeituhr",
+    "mmdd_inferred": "04-14",
+    "year": "UNKNOWN"
+   },
+   {
+    "accession": "Bild 183-E1003-0001-001",
+    "caption": "Berlin, Weltzeituhr am Alexanderplatz",
+    "mmdd_inferred": "10-03",
+    "year": "UNKNOWN"
+   },
+   {
+    "accession": "Bild 183-H1218-0025-001",
+    "caption": "Berlin, Alexanderplatz, Weltzeituhr, Winter",
+    "mmdd_inferred": "12-18",
+    "year": "UNKNOWN"
+   },
+   {
+    "accession": "Bild 183-W0715-0026",
+    "caption": "Berlin, Alexanderplatz, Weltzeituhr",
+    "mmdd_inferred": "07-15",
+    "year": "UNKNOWN"
+   },
+   {
+    "accession": "Bild 183-N1005-0011",
+    "caption": "Berlin, Alexanderplatz, Fernsehturm, Weltzeituhr, Nacht",
+    "mmdd_inferred": "10-05",
+    "year": "UNKNOWN",
+    "note": "night shot - inscriptions may be hard to read"
+   }
+  ],
+  "commons_categories": [
+   "Category:Urania-Weltzeituhr and Berliner Fernsehturm",
+   "Category:Urania-Weltzeituhr (and its 'Details' subcategory)",
+   "Category:Photographs by Peter Heinz Junge",
+   "Commons:Bundesarchiv (the 80,000+ file donation these come from)"
+  ]
+ },
+ "external_agent_rule": "Sources added from docs/external/checkpoint-H-web-photo-handoff.md are EXTERNAL-AGENT TRANSCRIPTIONS made from web-rendered images. They are NOT this agent's own visual verification and were NOT re-transcribed locally (all image hosts return HTTP 000). They may not be promoted to historical ground truth without a second source or a locally viewable image.",
+ "ordering_analysis": {
+  "question": "Is within-band order alphabetical, geographic, or neither?",
+  "evidence_for_alphabetical": {
+   "utc+1_upper_1970s": "AMSTERDAM BERLIN BRUSSEL BUDAPEST MADRID PARIS PRAG STOCKHOLM WARSCHAU is in STRICT alphabetical order. P(random)=1/9!=2.76e-6.",
+   "multi_name_groups": "All five reported multi-name groups across the 1984 and 1989 frames are alphabetical (ALMA-ATA/TASCHKENT, KRASNOJARSK/NOWOSIBIRSK, IRKUTSK/ULAN-BATOR, CHABAROWSK/WLADIWOSTOK, MAGADAN/SACHALIN). P(random)=2^-5=0.031.",
+   "discriminator": "The SAME external agent transcribed the modern lower band (Source 7) as OSLO KOPENHAGEN WIEN BERN PRESSBURG BELGRAD ROM TUNIS KINSHASA, which is NOT alphabetical. So the agent does not alphabetise by habit, which argues the alphabetical readings are genuine physical order."
+  },
+  "evidence_against_a_universal_rule": {
+   "historical_lower_subset": "KOPENHAGEN WIEN BELGRAD TUNIS is NOT alphabetical but IS strictly decreasing in latitude (55.7, 48.2, 44.8, 36.8).",
+   "modern_lower_band": "OSLO KOPENHAGEN WIEN BERN PRESSBURG BELGRAD ROM TUNIS KINSHASA is latitude-ordered north-to-south with a single inversion (Bern before Pressburg), 1 of 8 adjacent comparisons against 18 expected at random."
+  },
+  "current_reading": "UPPER bands look ALPHABETICAL; LOWER bands look GEOGRAPHIC (north to south). Two different rules on one face is odd but is what the data shows.",
+  "why_it_matters": "If a band's order is rule-determined, ORDER follows from MEMBERSHIP. That turns the acquisition requirement from 'a fully legible ordered transcription' into 'enough legibility to identify WHICH names are present' - a much weaker requirement.",
+  "grade": "SUPPORTED, NOT PROVEN. Rests on one external agent and cannot be verified locally.",
+  "local_visual_update": "Superseded in part. The upper band's alphabetical rule is now LOCAL VISUAL confirmed on the CET face. The lower band is confirmed NOT alphabetical, which the earlier analysis had left open."
+ },
+ "date_problem": {
+  "status": "REVISED. The arithmetic gap that generated this problem is CLOSED; a sharper problem replaces it.",
+  "closed_part": {
+   "old_gap": "146 modern - 80 original (1969) - 20 added (1997) = 46 names unexplained.",
+   "resolution": "The 1985 first major maintenance (Tagesspiegel, 14 Apr 2019, Erich John profile) is a third change boundary. 146 - 80 - 20 = 46 is exactly the quantity the 1985 event has to account for.",
+   "grade": "The arithmetic closes exactly, which is suggestive but is not itself proof that 1985 added 46 names; the source names only four (Athen, Kopenhagen, Wien, Rom).",
+   "consequence": "If the change boundaries are 1969, 1985 and 1997, then any frame datable to [1985, 1997) shows the 1988-89 target state. Dating becomes a yes/no question instead of an open-ended growth curve."
+  },
+  "open_part": {
+   "crux": "UPLOAD-1 (the only frame with a fully transcribed face) is internally contradictory on date.",
+   "for_1985_or_later": [
+    "KOPENHAGEN present",
+    "WIEN present",
+    "ROM present - all three named as 1985 additions"
+   ],
+   "for_before_1985": [
+    "WELT caption says mid-1970s",
+    "clothing and vehicles read as 1970s",
+    "ATHEN, the fourth named 1985 addition, is NOT visible"
+   ],
+   "for_before_1997": [
+    "LENINGRAD present",
+    "MOSKAU present - LOCAL VISUAL, independent of any caption"
+   ],
+   "logic": "Either the Tagesspiegel 1985 change set is wrong (or is a re-engraving of names already present, which would reconcile everything), or the WELT caption is wrong. A re-engraving reading is the cheapest reconciliation and would put the frame in the 1970s with those names already on the drum - in which case the frame still is not target-era evidence, only evidence of stability.",
+   "consequence": "Tier 1 hinges entirely on dating this one image. No amount of further analysis of the pixels I have can settle it."
+  }
+ },
+ "new_blocker_soviet_zones": {
+  "statement": "Historical ZONE MEMBERSHIP differs from modern, beyond the single documented Kiew move.",
+  "evidence": "The 1984 frame groups ALMA-ATA with TASCHKENT on one face. They sit in different modern zones (UTC+6 and UTC+5), but Tashkent moved out of the Soviet UTC+6 band after 1991, so the 1984 grouping is historically correct.",
+  "consequence": "Reversing the clock requires reversing post-Soviet time-zone reorganisation as well as the 1997 name changes. This was not in any previous blocker list.",
+  "side_effect": "It also RAISES confidence in Source 2: a careless transcription would be unlikely to reproduce a correct Soviet-era grouping."
+ },
+ "local_visual_session": {
+  "session": "Checkpoint H (session 10)",
+  "what_was_uploaded": "Four images pasted into the conversation. No image bytes were in the ZIP (its own README says so), so these four are the only pixels this programme has ever had.",
+  "caveat": "The uploads are conversation attachments, not files on disk; they have no local path or sha256. They are identified here by content. A future session without the attachments cannot re-verify these readings and must treat them as this session's testimony.",
+  "uploads": [
+   {
+    "ref": "UPLOAD-1",
+    "content": "Colour frame, clock from the north-west, the CET/UTC+1 face near-frontal. Matches handoff Source 3 (WELT/akg/Straube).",
+    "maps_to": "WELT-akg-Straube-mid1970s-UTC+1"
+   },
+   {
+    "ref": "UPLOAD-2",
+    "content": "Black-and-white frame matching BArch 183-1984-1419-014, Asian/Soviet sectors legible.",
+    "maps_to": "BArch-183-1984-1419-014"
+   },
+   {
+    "ref": "UPLOAD-3",
+    "content": "Modern colour frame, Asian/Pacific sectors, half-hour notation legible.",
+    "maps_to": "MODERN-upload-asia-pacific"
+   },
+   {
+    "ref": "UPLOAD-4",
+    "content": "Second modern/recent frame overlapping UPLOAD-3, used only to cross-check the +30 notation and the band rule.",
+    "maps_to": "MODERN-upload-asia-pacific"
+   }
+  ]
+ },
+ "findings": {
+  "plus30_notation": {
+   "question": "How are the half-hour zones written on the drum?",
+   "answer": "As a literal '+30' suffix on the place name: NEW DELHI +30, COLOMBO +30, RANGUN +30, KABUL +30.",
+   "evidence": "LOCAL VISUAL (UPLOAD-3/4), independently confirming the Tagesspiegel 2019 report of a '+ 30' inscription.",
+   "grade": "CONFIRMED for the modern drum; the 2019 profile attributes the practice to the original design, so probable but not locally verified for 1988-89.",
+   "consequence": "Any tape-reading procedure over the drum must decide what to do with these digits. K4 is 97 letters with no digits, so a reading that includes the half-hour faces must either skip the notation or transliterate it - a free choice, i.e. an extra degree of freedom that must be penalised."
+  },
+  "north_south_band_rule": {
+   "question": "Is the upper/lower split within a face meaningful, or arbitrary?",
+   "answer": "Upper = northern places, lower = southern places, within each UTC sector.",
+   "evidence": "LOCAL VISUAL on four independent face pairs in UPLOAD-3/4 (KRASNOJARSK over HANOI/BANGKOK/PHNOM PENH/JAKARTA; IRKUTSK/ULAN-BATOR over PEKING..SINGAPUR; JAKUTSK over PJOENGJANG/TOKYO/SEOUL; CHABAROWSK/WLADIWOSTOK over SYDNEY/CANBERRA/MELBOURNE). Corroborates the Tagesspiegel account that the upper metal ring is the northern-hemisphere structural ring and the lower the southern.",
+   "grade": "CONFIRMED (modern), STRONGLY SUPPORTED (structural, hence era-independent).",
+   "consequence": "Band assignment is now PREDICTABLE from latitude rather than free. This removes the 2^k half of the per-face layout entropy and makes the upper/lower question answerable from a place list alone - a real reduction in the reconstruction problem, though the k! within-band ordering remains."
+  },
+  "band_ordering": {
+   "upper": "Alphabetical, confirmed locally on the CET face (9/9).",
+   "lower": "NOT alphabetical on the CET face. Reads roughly north-to-south with one inversion (ROM before BELGRAD).",
+   "grade": "SUPPORTED for upper; the lower rule is UNRESOLVED - one face, one inversion, and I cannot exclude that the true rule is something else (installation convenience, name length) that merely correlates with latitude.",
+   "consequence": "A single ordering rule does NOT govern both bands. Any reading procedure that assumes one does is wrong."
+  },
+  "face_membership_moved": {
+   "statement": "NOWOSIBIRSK appears with KRASNOJARSK in 1984 (UPLOAD-2) and with OMSK/ALMATY/TASCHKENT in the modern frame (UPLOAD-3).",
+   "grade": "LOCAL VISUAL on both ends. The sector assignment of a place CHANGED between 1984 and now.",
+   "consequence": "Backward reversal from the modern list cannot assume a place stays on its face. Membership is per-era and must be read per-era. This is the strongest single argument against reconstructing 1988-89 from the modern list plus a change-log."
+  },
+  "soviet_era_toponyms": {
+   "observed": [
+    "SWERDLOWSK",
+    "ASCHCHABAD",
+    "ALMA-ATA",
+    "LENINGRAD",
+    "PHOENGJANG"
+   ],
+   "grade": "LOCAL VISUAL (UPLOAD-1, UPLOAD-2).",
+   "consequence": "At least five target-era names differ from the modern list, so the target-era letter multiset differs from the modern one. Confirms and extends new_blocker_soviet_zones: the blocker is real and is not limited to zone boundaries but reaches individual spellings."
+  },
+  "face_97_observation": {
+   "statement": "My own reading of the CET/UTC+1 face gives 62 upper + 35 lower = 97 letters, the length of K4.",
+   "deflation": [
+    "I did not predict 97 in advance.",
+    "There are 24 faces and at least 3 natural quantities per face (upper, lower, total), so ~72 values over a plausible 4-137 range: about 0.54 exact hits at 97 are expected by chance. One hit is unremarkable.",
+    "The count is fragile: drop LONDON (the one name the external transcription missed) and it is 91; add an unseen seventh lower line and it exceeds 97.",
+    "The face's date is DISPUTED, so this may not even be the target-era face."
+   ],
+   "non_free_element": "The one thing not chosen after the fact is WHICH face: it is the Berlin/CET face named by the BERLINCLOCK crib, and the face this programme was already targeting before the count was taken.",
+   "grade": "OBSERVATION, NOT EVIDENCE. It does not raise the Weltzeituhr hypothesis above PROMISING HYPOTHESIS and must not be used to motivate running EXP-024."
+  }
+ },
+ "face_aliases": {
+  "_why": "UPLOAD-1's adjacency was recorded with descriptive labels (read off face contents) because the hour ring cannot name a face. These labels denote the SAME physical faces as the sector-labelled nodes, and the CET upper/lower labels denote ONE face. Without this map the graph double-counts faces and reports more than 24.",
+  "UTC+1-CET-face": "UTC+1",
+  "UTC+1-CET-face-lower": "UTC+1",
+  "DUBLIN/LISSABON/ALGIER-face": "UTC+0-W",
+  "REYKJAVIK-face": "UTC-1-W",
+  "AZOREN-face": "UTC-2-W",
+  "BUKAREST/HELSINKI/SOFIA-face": "UTC+2",
+  "LENINGRAD/MOSKAU-face": "UTC+3",
+  "BAKU-face": "UTC+4",
+  "CASABLANCA/CONAKRY/DAKAR-face": "UTC+0-W",
+  "ANKARA/DAMASKUS/KAIRO-face": "UTC+2",
+  "BAGDAD/TEHERAN+/ADDIS-ABEBA-face": "UTC+3"
+ }
 }

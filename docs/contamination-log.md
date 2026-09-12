@@ -137,4 +137,27 @@ re-transcribed locally and no external reading was promoted to ground truth.
 
 No claimed-solution site used. No purported K4 plaintext sought or seen.
 
+
+
+## Session 10 (Checkpoint H, local visual) — clean, no incidents
+
+Four photographs were pasted into the conversation by the user and read visually by this
+agent. All four are historical/contemporary object evidence of a public monument. No
+claimed-solution site was used, visited or cited; no purported K4 plaintext was sought,
+seen or inferred. The only plaintext constraints in use remain EASTNORTHEAST and
+BERLINCLOCK.
+
+Two protocol points worth recording:
+
+- The uploaded ZIP contained no image bytes, and its copy of the modern 146-place list is
+  content-identical to the repo copy — so nothing new entered the corpus from it.
+- Readings taken from the pasted images are marked LOCAL VISUAL EVIDENCE and supersede
+  the EXTERNAL-AGENT handoff for the same faces. The images are conversation attachments
+  with no path or hash, so they cannot be re-verified by a later session; that limitation
+  is recorded in `data/weltzeituhr_photos.json` rather than being papered over.
+
+A 97-letter coincidence was found on the CET face. It was graded OBSERVATION, NOT
+EVIDENCE and explicitly refused as grounds for running EXP-024, precisely because
+acting on it would be the failure mode this protocol exists to prevent.
+
 ## Incidents 2+ — none recorded.

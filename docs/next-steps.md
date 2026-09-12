@@ -24,7 +24,59 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint H continued (session 9)
+## 0 — Status after Checkpoint H, local visual (session 10)
+
+First session with actual pixels: four photographs pasted into the conversation and
+read by this agent directly. Metric now **15 of 24 faces identified (62.5%), a 7-face
+contiguous chain, 11 observed adjacency edges, 1 COMPLETE face**.
+
+**The CET/UTC+1 face is fully transcribed** — upper 9 names/62 letters (alphabetical),
+lower 6 names/35 letters (north-to-south, one inversion) — **97 letters total**. Graded
+OBSERVATION, NOT EVIDENCE: not predicted in advance, ~0.54 such hits expected by chance
+across 72 natural face quantities, and fragile to one name either way.
+
+**Tier 1 is NOT met**, and for a single reason: the face's **date is unresolved**.
+Tier 1 needs (a) a complete 97-letter tape — satisfied — and (b) that tape attested for
+1988–89 — not satisfied. EXP-024 stays frozen, unrun, unmodified.
+
+What changed since session 9:
+
+1. **The arithmetic gap CLOSED.** 146 − 80 − 20 = 46, and the 1985 first major
+   maintenance is the third change boundary that quantity requires. With boundaries at
+   1969/1985/1997, any frame datable to **[1985, 1997)** shows the target state. Dating
+   is now a yes/no question.
+2. **But the one complete face is internally contradictory on date.** KOPENHAGEN, WIEN
+   and ROM present (claimed 1985 additions) vs. a mid-1970s caption, 1970s clothing, and
+   ATHEN — the fourth claimed 1985 addition — absent. LENINGRAD/MOSKAU fix it pre-1997.
+   Either the 1985 change set or the caption is wrong; a 1985 *re-engraving* of existing
+   names reconciles both.
+3. **Stability: demonstrated NEGATIVE.** NOWOSIBIRSK changed faces between 1984 and the
+   modern drum. Backward reversal cannot assume a place keeps its face. Within the
+   target window, stability remains UNTESTED.
+4. **Band assignment is no longer free.** Upper = northern, lower = southern within each
+   sector, on four independent face pairs. This removes the 2^k half of per-face layout
+   entropy; the k! within-band ordering remains.
+5. **Half-hour faces carry a literal `+30`.** Read directly. Any tape reading crossing
+   them must skip or transliterate digits — a free choice, so a penalised degree of
+   freedom.
+6. **Ordering is not one rule.** Upper alphabetical (9/9), lower not. Procedures assuming
+   a single rule for both bands are wrong.
+7. **Five target-era spellings differ from the modern list** (SWERDLOWSK, ASCHCHABAD,
+   ALMA-ATA, LENINGRAD, PHOENGJANG), so the target-era letter multiset differs.
+
+**THE SINGLE HIGHEST-VALUE NEXT ITEM — dating one image.** In cost order:
+
+1. the **akg-images / picture-alliance catalogue record** for the Straube photograph used
+   by WELT (article 217168174, image 1920313707) — its caption metadata carries a shoot
+   date; one archive page decides (b);
+2. any **dated 1985–1996 photograph of the CET/Berlin face**, legible;
+3. **primary documentation of the 1985 maintenance change set**, to settle whether 1985
+   added or re-engraved Athen/Kopenhagen/Wien/Rom.
+
+Web-only, and this environment's egress to archive and image hosts is closed (re-tested:
+`i.pinimg.com` → `connect_rejected`). Not being worked around by guessing.
+
+## 0a — Earlier status after Checkpoint H continued (session 9)
 
 Reconstruction advanced: **7 of 24 faces identified (29.2%), a 6-face contiguous
 chain, 5 observed adjacency edges**. But **0 faces are COMPLETE and 0 lower bands

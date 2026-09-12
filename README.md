@@ -6,6 +6,23 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint H, local visual (2026-09-12).** First session with actual photographs:
+> four images read directly, lifting the reconstruction to **15 of 24 faces (62.5%)**,
+> a **7-face contiguous chain**, **11 observed adjacency edges**, and the **first
+> COMPLETE face** — the Berlin/CET face, upper 9 names (alphabetical, 62 letters) plus
+> lower 6 names (north-to-south, 35 letters) = **97 letters**, K4's length. That 97 is
+> graded **OBSERVATION, NOT EVIDENCE** (not predicted in advance; ~0.54 such hits
+> expected by chance; fragile to one name). **Tier 1 is still NOT met** for one reason:
+> that face's **date is unresolved** between a mid-1970s caption and a [1985, 1997)
+> reading. **EXP-024 stays frozen, unrun and unmodified.** Also established: band
+> assignment is northern-over-southern (removing the 2^k layout entropy), half-hour
+> faces carry a literal `+30`, upper and lower bands do **not** share one ordering rule,
+> and **a place changed faces between 1984 and today** — so backward reversal from the
+> modern list cannot assume stable membership. The single highest-value next item is
+> **dating one image**: the akg-images/picture-alliance catalogue record for the Straube
+> photograph. See
+> [Checkpoint H local visual](results/2026-09-12h3-checkpoint-H-local-visual.md).
+
 > **Checkpoint H continued (2026-09-12).** External photographic evidence lifted the
 > reconstruction to **7 of 24 faces (29.2%)** with a **6-face contiguous chain** —
 > but **0 complete faces and 0 lower bands**, so Tier-1 is still NOT met and EXP-024
