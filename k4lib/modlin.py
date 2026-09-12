@@ -121,3 +121,32 @@ def chance_solvable(A):
     for p in (2, 13):
         q *= p ** (rank_mod_p(A, p) - m)
     return q
+
+
+def left_nullspace_mod_p(A, p):
+    """Basis of {y : y^T A = 0 (mod p)} - the consistency conditions for A x = b."""
+    if not A:
+        return []
+    At = [[A[i][j] % p for i in range(len(A))] for j in range(len(A[0]))]
+    r = solve_mod_p(At, [0] * len(At), p)
+    return [] if r is None else r[1]
+
+
+def make_consistency_checker(A):
+    """Precompute a fast test for 'does A x = b have a solution mod 26?'.
+
+    The coefficient matrix is often fixed while the right-hand side varies over
+    millions of cases (one per permutation, per convention). Factoring A once and
+    testing each b against the left null space turns an exact solve into a handful
+    of dot products.
+    """
+    bases = {p: left_nullspace_mod_p(A, p) for p in (2, 13)}
+
+    def check(b):
+        for p, basis in bases.items():
+            for y in basis:
+                if sum(yi * bi for yi, bi in zip(y, b)) % p:
+                    return False
+        return True
+
+    return check

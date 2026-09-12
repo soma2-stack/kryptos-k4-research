@@ -1,0 +1,57 @@
+# EXP-012 fractionation closed
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Part 1 - output alphabet coverage
+   distinct letters in K4: 26 -> ABCDEFGHIJKLMNOPQRSTUVWXYZ
+   absent: none, all 26 occur
+   P(all 26 appear in 97 uniform draws) = 0.5425, so this is an
+   ordinary property of the text, not a designed feature - but it is an
+   exact eliminator for any cipher with a smaller output alphabet.
+
+   ELIMINATED, each because its ciphertext alphabet is too small:
+     Playfair                               output alphabet 25 < 26   (5x5 square, one letter merged (usually I/J))
+     Bifid                                  output alphabet 25 < 26   (5x5 Polybius square)
+     Two-square                             output alphabet 25 < 26   (two 5x5 squares)
+     Four-square                            output alphabet 25 < 26   (four 5x5 squares)
+     Nihilist (letter form)                 output alphabet 25 < 26   (5x5 square)
+     Straddling checkerboard (letter form)  output alphabet 25 < 26   (reduced alphabet)
+     ADFGX                                  output alphabet  5 < 26   (output uses only A,D,F,G,X)
+     ADFGVX                                 output alphabet  6 < 26   (output uses only A,D,F,G,V,X)
+     Baconian                               output alphabet  2 < 26   (binary output alphabet)
+     Any I/J-merged or 25-letter scheme     output alphabet 25 < 26   (one letter unavailable)
+
+   Concretely: K4 contains J at positions [40, 51, 81], so no I/J-merged square
+   can have produced it, independently of the counting argument.
+
+## Part 2 - block coverage, and why trifid is undecidable
+   A 27-cell trifid cube is 26 letters plus one filler in 27 cells:
+   27! / 1! = 10^28.0 arrangements.
+
+   d   usable blocks   covered positions   constraint   verdict
+   2   11              22                  10^31.1      TESTABLE
+   3   7               21                  10^29.7      MARGINAL
+   4   4               16                  10^22.6      VACUOUS
+   5   2               10                  10^14.1      VACUOUS
+   6   2               12                  10^17.0      VACUOUS
+   7   2               14                  10^19.8      VACUOUS
+   8   2               16                  10^22.6      VACUOUS
+   9   1               9                   10^12.7      VACUOUS
+   10  0               0                   10^0.0       VACUOUS
+   11  1               11                  10^15.6      VACUOUS
+   12  0               0                   10^0.0       VACUOUS
+   13  0               0                   10^0.0       VACUOUS
+
+   Periods 2 and 3 clear the cube's 10^28.0 of freedom and ARE
+   testable; EXP-013 tests them directly. Period 4 and above are vacuous:
+   do not search them, since any fit found there would be meaningless.
+
+## General lesson
+   Crib evidence does not survive block boundaries. A cipher with block
+   size d keeps only the blocks lying wholly inside a crib, so 24 known
+   letters can fall to 9 or 0 usable constraints. Before searching any
+   block-structured cipher, count the covered positions first.
+
+   One filler symbol would be expected to appear about 97/27 = 3.6 times
+   in 97 characters; P(a 27th symbol never appears) = 0.026.
+   K4 is pure letters, so trifid additionally requires that a 1-in-40
+   event occurred. Suggestive against it, but not decisive.

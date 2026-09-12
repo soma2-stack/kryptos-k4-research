@@ -1,116 +1,122 @@
 # Next experiments
 
-Updated 2026-09-12. The inherited priorities are preserved below the new ones, with an
-explicit note on why the ordering changed.
+Rewritten 2026-09-12 after the second research session. The ordering changed
+substantially because two sessions of elimination changed what is worth doing.
 
-## Why the ordering changed
+## What changed, and why the list is shorter
 
-The inherited plan put reconstructing the `TOKIO → 57973` corpus first. That was the right
-call for a repository with no code, because it was the narrowest finite piece of unfinished
-work. It is now second, for one reason: the corpus cannot be reconstructed. Its route
-definitions, enumeration order and hash were never committed anywhere in this repository,
-and `resume-prompt.md` already anticipates this — *"if no original corpus is available,
-create a precise specification and identify the missing source evidence rather than
-inventing an enumeration."* Reconstructing 942 route cases from a count alone **is**
-inventing an enumeration. The honest version of that task is a specification plus a
-request for the missing evidence, which is item 3.
+Session 1 built the toolchain and closed the obvious families. Session 2 set out to
+pursue the position-63 lead and instead **demoted it** while closing far more:
+parameter-linear keystreams, feedback keystreams, five cipher classes by invariant,
+two-chart models, fractionation, and Quagmire I.
 
-Meanwhile a lead that *is* actionable has appeared. See item 1.
+The most important result is not an elimination at all. **24 crib letters supply
+112.8 bits, and many remaining families have more parameter entropy than that.**
+They are not unsolved — they are *unfalsifiable with the evidence in hand*.
+Distinguishing those two is now the main thing this repository offers, and it makes
+"try another cipher" a much less valuable move than it looks.
 
 ---
 
-## 1 — Segment boundary at position 63
+## 1 — Treat acquiring constraint as the primary objective
 
-Priority: **highest**. See `ideas.md` § 2.
+Priority: **highest**. See `ideas.md` § 1 and EXP-011.
 
-The `DIAWINFBN` `+5` run terminates exactly on the first letter of the BERLINCLOCK crib.
-Two cheap experiments follow directly and neither has been run:
+Between **3 and 35** more known plaintext letters would re-open every family
+currently beyond reach. One further released clue the size of NORTHEAST would make
+Quagmire I decidable outright. Concretely:
 
-- **Per-segment periodicity.** Re-run EXP-001's period probes within `[0,21)`, `[21,34)`,
-  `[34,63)`, `[63,74)`, `[74,97)` instead of globally. A key that restarts mid-message is
-  aperiodic globally but periodic within a segment — which would explain every negative in
-  this repository at once.
-- **Constant lag-4 key advance.** Under each convention, test whether the crib-forced keys
-  satisfy `k[i+4] − k[i] = c` for a constant `c` across the crib spans.
+- Track any further Sanborn clue or archive disclosure; each one changes what is
+  testable, and EXP-011 already computes by how much.
+- If a candidate 97-character plaintext appears from any source, **stop searching**
+  and run `k4lib.recover.diagnose` on it (`ideas.md` § 2). The harness exists and is
+  validated.
+- Re-run EXP-011 whenever the crib set changes. It is cheap and it re-plans the work.
 
-Extend `experiments/exp001_crib_keystreams.py`; the probes already exist in `k4lib/analysis.py`.
+## 2 — Transposition with a pre-fixed alphabet: finish the remaining corner
 
-## 2 — Progressive-key and Gromark-family generators
+Priority: **high**, and **mostly done** — EXP-016 closed the main cross product:
+10,160 permutations × 12 conventions × 25 keystream models, 4,145,280 gate
+evaluations, zero fits.
 
-Priority: **high**. See `ideas.md` § 6.
+Two declared gaps remain, both small and both worth closing:
 
-Every negative recorded here assumes the key repeats or is a fixed external text. The
-classical family that is neither — progressive keys, and lagged-Fibonacci generators over
-a short numeric primer — defeats period tests by construction, was standard in the relevant
-literature, is small enough to enumerate, and is the only family that gives item 1's `+5`
-run a natural mechanism. Gate on all 24 crib letters. Report the total variant count.
+- **Order B for the progressive and polynomial models.** The key indexed on the
+  ciphertext side makes the coefficient matrix depend on the permutation, so it
+  cannot be pre-factored the way EXP-016 does. It is untested, *not* negative.
+  Either accept the cost of a per-permutation solve, or derive an O(24) check the
+  way the periodic case has one.
+- **Feedback and relative-phase models under transposition.** EXP-016 covered
+  progressive, polynomial and periodic. The EXP-008 and EXP-015 model families have
+  not been crossed with the permutation family.
 
-## 3 — Specify, do not reconstruct, the `TOKIO → 57973` corpus
+Keep the alphabet fixed and declared in advance: EXP-011 shows transposition plus a
+*free* keyed alphabet is vacuous (10⁺⁷·⁹ expected chance fits) while transposition
+plus a fixed alphabet is comfortably testable (10⁻¹⁸·⁷).
 
-Priority: **high**, but as a specification-and-evidence task, not a search task.
+## 3 — Machine-readable physical transcript
 
-- Write the specification before any code: source data, normalisation, physical coordinate
-  system, the definition of every route family, enumeration order, and the expected hash.
-- State precisely which source evidence is missing and where it would have to come from.
-- Do **not** enumerate 942 cases chosen to hit the number 942. A count is not a definition.
-- Only once real definitions are recovered: implement, hash, and publish a status table for
-  every case before touching the 935 double-route cases.
+Priority: **high**, and it is the only route to genuinely new evidence that does not
+depend on someone else releasing it. See `ideas.md` § 7.
 
-## 4 — Audit the selector leads for degrees of freedom
+Nothing here records the sculpture's line breaks, panel boundaries, tableau
+orientation, or the punctuation and misspelling handling that
+`data/mask_sources.json` currently guesses at. EXP-004's K1–K3 rows remain
+`inconclusive` rather than `negative` solely because of this. Transcribe from the
+NSA primary reference in `sources.md`; do not reconstruct from memory.
 
-Priority: **medium**, and it should precede any further work on them. See `ideas.md` § 7.
+## 4 — Specify, do not reconstruct, the `TOKIO → 57973` corpus
 
-The two-chart homophonic model, the K0 Morse selector and the Kryptos rail alternation are
-all the same kind of claim: a selector that produces no contradiction at the cribs. Absence
-of contradiction is what any sufficiently flexible model produces. Count the consistent
-selectors. If the count is astronomical the lead is vacuous and can be demoted to `negative`
-on information-theoretic grounds, with no further cryptanalysis. If it is small the selector
-becomes a real prediction. Either result is worth more than more searching.
+Priority: medium, unchanged from session 1, and still a specification task.
+
+Its route definitions and hash were never committed. Reconstructing 942 cases from a
+count alone is inventing an enumeration, which `resume-prompt.md` explicitly warns
+against. Write the specification, state exactly which source evidence is missing, and
+stop there until it is found.
 
 ## 5 — Bounded `4 × 22` lookup experiments
 
-Priority: medium. Unchanged from the inherited plan, with one addition: apply the
-bounded-source lemma (`ideas.md` § 9) as a pre-filter. Any lookup whose output is bounded
-below 25 is already excluded for 8 of the 12 conventions, with no search.
+Priority: medium, and now strongly pre-filtered.
 
-Test only small, pre-registered rule classes of the form `P = f(C, T[col], row, col)` where
-`T = JAKUTSKPJOENGJANGTOKIO`. Constrain every degree of freedom, require all crib letters,
-reserve a holdout family of positions, and report the total search count, not just the best
-score.
+Before writing any search, apply the four free checks in `ideas.md` § 5. In
+particular the bounded-source lemma kills any lookup whose output is bounded below
+25 for 8 of the 12 conventions, and the block-coverage rule shows how quickly 24 crib
+letters collapse to nothing once a cipher has block structure.
 
-## 6 — Audit the source transcription and geometry
+## 6 — Do not pursue
 
-Priority: supporting work, now with a concrete consumer. See `ideas.md` § 10.
+Recorded so effort is not re-spent:
 
-`data/mask_sources.json` currently carries **unverified** K1–K3 plaintexts, which is why
-EXP-004's result for those sources is `inconclusive` rather than `negative`. A machine-readable
-physical transcript preserving row/column alignment, panel boundaries, tableau orientation,
-omissions and exact normalisation would close that gap and is a prerequisite for testing the
-segmentation hypothesis against physical structure. Transcribe it from the NSA primary
-reference in `sources.md`. Do not reconstruct it from memory.
-
-## 7 — The carved tableau as a running key
-
-Priority: medium. See `ideas.md` § 5.
-
-EXP-004 consumed every long text in this repository except the one physically on the
-sculpture: the tableau block itself, read by row, column and diagonal.
-`k4lib/alphabets.vigenere_tableau` already generates it; the experiment is a small extension
-of `experiments/exp004_running_key_mask.py`.
+- **Position 63 / segmentation.** Demoted. `ideas.md` § 4 gives the ceiling argument.
+- **The parity, K0 Morse and Kryptos rail selectors.** Explained as a 1-in-1,024
+  selection effect by EXP-009.
+- **More route or grid transpositions applied alone.** Killed by the IoC invariant.
+- **Any model with a free per-position selector or a free keyed alphabet.** Above the
+  evidence budget; a fit would be meaningless.
 
 ---
 
 ## Required result record
 
-Unchanged, and now exemplified by `results/2026-09-12-exp001-005.md`. For each experiment
-create a dated Markdown record with: hypothesis; input source and hash; code revision; full
-parameters; number of variants; crib result; output/hash; negative or positive conclusion;
-and the exact reason it differs from prior work.
+Unchanged, and exemplified by `results/2026-09-12-exp001-005.md` and
+`results/2026-09-12b-exp006-014.md`. Hypothesis; input source and hash; code revision;
+full parameters; number of variants; crib result; output/hash; conclusion; and the
+exact reason it differs from prior work.
 
-Two additions learned from this round:
+Five additions learned across the two sessions:
 
-- **State the null.** A "best 7/24" means nothing without the expected best over the number
-  of trials run. EXP-004 reports the exact binomial tail; do the same.
-- **Self-test the apparatus.** A negative from code that cannot produce a positive is not a
-  negative. `experiments/exp005_recovery_selftest.py` plants known constructions and checks
-  they are recovered; extend it whenever you add a probe.
+- **State the null.** "Best 7/24" means nothing without the expected best over the
+  number of trials run — and check whether those trials were independent. EXP-014's
+  apparent excess is correlation between tableau alignments, not signal.
+- **Self-test the apparatus.** A negative from code that cannot produce a positive is
+  not a negative. Every experiment here carries a planted positive control.
+- **Report whether the search finished.** EXP-013's first run hit a node cap and found
+  nothing; that is heuristic failure, not elimination. Re-ordering the search cut it
+  60-fold and made the negative real.
+- **Count degrees of freedom before searching.** `modlin.chance_solvable` gives the
+  exact probability that a model class admits *any* solution for random data. If that
+  is near 1, the class is vacuous and the search is theatre.
+- **Prefer an invariant to a search.** A search reports "not found". An invariant
+  reports "cannot exist", costs nothing, and retires an entire class at once. The most
+  productive results in this repository — three alphabets forced, all 26 letters
+  present, IoC versus transposition — are all one-line arguments.

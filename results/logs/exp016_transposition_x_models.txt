@@ -1,0 +1,48 @@
+# EXP-016 complete transposition family x every keystream model
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Models (coefficient matrix fixed, so factored once each)
+   progressive(L=2)       equations 24  chance 1.93e-30
+   progressive(L=3)       equations 24  chance 5.02e-29
+   progressive(L=4)       equations 24  chance 1.30e-27
+   progressive(L=5)       equations 24  chance 3.39e-26
+   progressive(L=6)       equations 24  chance 8.82e-25
+   progressive(L=7)       equations 24  chance 2.29e-23
+   progressive(L=8)       equations 24  chance 5.96e-22
+   progressive(L=9)       equations 24  chance 1.55e-20
+   progressive(L=10)      equations 24  chance 4.03e-19
+   progressive(L=11)      equations 24  chance 1.05e-17
+   progressive(L=12)      equations 24  chance 2.72e-16
+   polynomial(deg=1)      equations 24  chance 7.42e-32
+   polynomial(deg=2)      equations 24  chance 9.65e-31
+   polynomial(deg=3)      equations 24  chance 1.25e-29
+   polynomial(deg=4)      equations 24  chance 1.63e-28
+   polynomial(deg=5)      equations 24  chance 2.12e-27
+   periodic(p=8)          equations 24  chance 2.29e-23
+   periodic(p=9)          equations 24  chance 5.96e-22
+   periodic(p=10)         equations 24  chance 1.55e-20
+   periodic(p=11)         equations 24  chance 4.03e-19
+   periodic(p=12)         equations 24  chance 1.05e-17
+   periodic(p=13)         equations 24  chance 2.72e-16
+   periodic(p=14)         equations 24  chance 2.72e-16
+   periodic(p=15)         equations 24  chance 1.84e-13
+   periodic(p=16)         equations 24  chance 4.79e-12
+
+## Positive control
+   planted progressive(L=5,delta=7) under permutation a=11,b=5
+   recovered by the same checker: YES
+   CONTROL PASSED
+
+## Sweep over 10,160 permutations (9,312 affine mod 97 + 848 rectangular routes)
+   gate evaluations : 4,145,280
+   fits             : 0
+
+## Multiple-testing budget
+   Order B is covered for the periodic models at every permutation (an O(24)
+   residue check). For the progressive and polynomial models the coefficient
+   matrix depends on the permutation and cannot be pre-factored, so order B
+   for those remains untested and is recorded as such, not as a negative.
+
+   The most permissive model here is periodic(p=16): 24 equations, 16
+   unknowns, chance 26^-8 = 4.79e-12. Across 4,145,280 evaluations the
+   sweep expects 1.99e-05 false fits.

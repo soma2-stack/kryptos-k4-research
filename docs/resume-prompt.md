@@ -27,3 +27,22 @@ The repository now contains code. Before proposing anything:
     trials is exactly what chance produces and is not a lead.
 11. If you ever obtain a candidate 97-character plaintext, stop searching and run
     `k4lib.recover.diagnose` on it. See `ideas.md` § 1.
+
+## Addendum — 2026-09-12 (session 2)
+
+Fifteen experiments now exist. Before proposing anything:
+
+12. Read `docs/ideas.md` first. It separates what is **eliminated** from what is
+    **undecidable with 24 crib letters**. Proposing something from the second list is
+    the most common way to waste effort here.
+13. Run the four free checks in `ideas.md` § 5 against your idea before writing code:
+    the bounded-source lemma, alphabet-free period elimination, output-alphabet
+    coverage, and the block-coverage rule. Each costs nothing and several retire whole
+    families.
+14. Compute `modlin.chance_solvable` for your model before searching it. If it is near
+    1, the model has more freedom than the cribs constrain and any fit is meaningless.
+15. The shortest period K4 could possibly have is **8**; at least **three** encryption
+    alphabets are forced; **all 26 letters** occur in the ciphertext.
+16. Do not build on position 63. It was pursued hard in session 2 and demoted.
+17. If your search hits an iteration or node cap, report it as inconclusive. Only a
+    completed search is an elimination.

@@ -1,0 +1,29 @@
+# EXP-015 relative phase between cribs, and the full boundary sweep
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Positive control
+  planted period 9 key with relative phase delta=4
+  recovered: YES (1 solution(s), chance 5.96e-22)
+  CONTROL PASSED
+
+## Search
+  systems solved exactly : 43,836
+    full_boundary_sweep         36864
+    periodic_relphase            6048
+    progressive_relphase          924
+
+  fits with chance < 1e-6 : 0
+
+## Reading
+  The relative-phase parameterisation covers every possible break position
+  between the cribs with p tests instead of 96, and the full 1..96 sweep
+  removes EXP-006's pre-registered window entirely. Nothing survives.
+  A periodic key of period <= 20 is now excluded even if the message was
+  cut, padded, restarted, or carried over from earlier panels.
+
+  Periods 21 and 22 are included but are the honest limit: with 24
+  equations, period 21 leaves 3 spare constraints (chance 26^-3) and
+  period 22 only 2 (chance 26^-2 = 1.5e-3), so across ~500 tests per
+  period the expected false-fit counts are 0.03 and 0.74. Period 22 is
+  therefore MARGINAL and period 23 upward is vacuous: 24 crib letters
+  cannot decide a key as long as the evidence itself.

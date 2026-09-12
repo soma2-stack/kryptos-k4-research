@@ -1,0 +1,44 @@
+# EXP-014 carved tableau as running key
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+tableau: 26x26 KRYPTOS-keyed square, first column = KRYPTOSABCDEFGHIJLMNQUVWXZ
+readings: 8, each 676 letters
+
+## Search
+   alignments evaluated : 259,584
+   exact 24/24 hits     : 0
+   best score           : 7/24
+
+## Top 8 (calibration, not findings)
+    7/24  tableau_rows_rev     keyalpha=KRY dir=+1 offset=78   variant_beaufort/P=STD/C=KRY
+    7/24  tableau_rows_rev     keyalpha=KRY dir=+1 offset=53   variant_beaufort/P=STD/C=KRY
+    7/24  tableau_rows_rev     keyalpha=KRY dir=-1 offset=648  beaufort/P=KRY/C=KRY
+    7/24  tableau_rows_rev     keyalpha=KRY dir=-1 offset=623  beaufort/P=KRY/C=KRY
+    7/24  tableau_rows_rev     keyalpha=KRY dir=-1 offset=598  beaufort/P=KRY/C=KRY
+    7/24  tableau_rows_rev     keyalpha=KRY dir=-1 offset=570  vigenere/P=STD/C=KRY
+    7/24  tableau_rows_rev     keyalpha=KRY dir=-1 offset=545  vigenere/P=STD/C=KRY
+    7/24  tableau_rows         keyalpha=KRY dir=+1 offset=130  vigenere/P=STD/C=KRY
+
+## Null calibration
+   P(single alignment >= 7/24) = 2.414e-05
+   expected count over 259,584 alignments = 6.27
+   observed at >= 7/24 = 28
+
+   CAUTION: these alignments are NOT independent. Row r+1 of the tableau is
+   row r rotated by one, so offsets differing by a multiple of the row
+   length give keystreams differing by a constant, and their match counts
+   are strongly correlated. The observed excess at the top of the
+   distribution is that clustering - note the hits at offsets 53/78 and
+   545/570 and 623/648, each pair 25 apart - not a signal. The binomial
+   expectation above is therefore an underestimate of the null and should
+   not be read as a 4x excess. The conclusion is unaffected: the best
+   alignment matches 7 of 24 crib letters, and nothing approaches 24.
+
+## Score histogram
+    0/24 :   103876
+    1/24 :    93956
+    2/24 :    44450
+    3/24 :    13390
+    4/24 :     3134
+    5/24 :      642
+    6/24 :      108
+    7/24 :       28

@@ -1,0 +1,19 @@
+# EXP-013 trifid at testable periods
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Positive control: plant a cube, encipher, recover it
+   planted cube, 14 usable blocks -> solutions 6 (nodes 2,166)
+   CONTROL PASSED
+
+## K4
+   period 2 align 0: blocks 11 covered 22 nodes       148,842  solutions 0  [exhaustive]
+   period 2 align 1: blocks 11 covered 22 nodes       220,488  solutions 0  [exhaustive]
+   period 3 align 0: blocks 7  covered 21 nodes        26,706  solutions 0  [exhaustive]
+   period 3 align 1: blocks 7  covered 21 nodes        26,706  solutions 0  [exhaustive]
+   period 3 align 2: blocks 6  covered 18 nodes       234,450  solutions 0  [exhaustive]
+
+   total nodes: 657,192 (cap 300,000,000 per run)
+   Every run completed within the cap: each is an exhaustive
+   elimination, not a failed search.
+   Periods 4+ deliberately not searched: EXP-012 shows the cube has more
+   freedom there than the cribs constrain, so a fit would mean nothing.

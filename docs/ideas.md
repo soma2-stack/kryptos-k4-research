@@ -1,229 +1,186 @@
-# New attack ideas
+# Attack ideas
 
-Ranked by expected value. Each entry states the mechanism, why it is not already
-covered by `negative-results.md`, and the cheapest experiment that would kill it.
-Ideas 1–5 have been implemented and run; 6–11 are specified but not yet run.
+Rewritten 2026-09-12 after the second research session. Status keys follow
+`CONTRIBUTING.md`: `negative`, `inconclusive`, `replicated`, `candidate`.
 
-Status keys follow `CONTRIBUTING.md`: `negative`, `inconclusive`, `replicated`, `candidate`.
+Two sessions of work have moved this repository from "many untested ideas" to a
+much narrower position. The honest summary is below, then the ideas worth pursuing.
 
 ---
 
-## 1 — Invert the problem: recover the *method* from a candidate plaintext
+## Where the hypothesis space now stands
+
+**Eliminated exhaustively or by proof** — see `docs/negative-results.md` for scopes:
+
+monoalphabetic · pure transposition of any complexity · Playfair · reflector rotor
+machines · Hill blocks 2–3 · all parameter-linear position keystreams (periodic,
+progressive, polynomial) with resets at any boundary · all single- and two-tap
+autokey, feedback and self-referential keystreams · affine-mod-97 transposition
+with any period ≤ 12 key · two-chart models · periods {1–7, 9, 10, 14, 15, 17} for
+*any* periodic polyalphabetic cipher whatsoever · Quagmire I · every cipher with an
+output alphabet below 26 symbols (bifid, four-square, two-square, ADFGVX, …) ·
+trifid at both decidable periods · running keys from K4 itself, the Kryptos
+alphabet and the carved tableau.
+
+**Ruled undecidable rather than negative** — these cannot be refuted by 24 crib
+letters, so searching them produces fits and never evidence:
+
+Quagmire III and any two-keyed-alphabet scheme · homophonic models with a free
+selector · transposition combined with a free keyed alphabet · trifid at period ≥ 4.
+
+**That leaves a narrow surviving space**, and the ideas below are ordered by what
+can actually be done about it.
+
+---
+
+## 1 — Acquire constraint, not more search
+
+**Status: the single most actionable item in this repository.**
+
+24 crib letters supply 24 × log₂26 = **112.8 bits**. EXP-011 computes, for each
+model class, the number of known plaintext letters that would make it decidable:
+
+| Class | Letters needed | More than we have |
+| --- | --- | --- |
+| Vigenère family, fixed alphabet, period 26 | 27 | 3 |
+| Quagmire I + period 8 | 28 | 4 |
+| Quagmire I + period 12 | 32 | 8 |
+| Affine transposition + Quagmire I period 8 | 31 | 7 |
+| Quagmire III + period 8 | 47 | 23 |
+| Homophonic, 2 charts + free selector | 59 | 35 |
+
+**Between 3 and 35 more known plaintext letters would re-open every family this
+repository currently cannot falsify.** One further released clue of the size of
+NORTHEAST (9 letters) would make Quagmire I fully decidable. That is a better
+return than any conceivable search, and it reframes what "progress" means here.
+
+Concretely: if a candidate 97-character plaintext ever becomes available — from
+the 2025 archive, from a leak, or from an independent solve — stop searching and
+run `k4lib.recover.diagnose` on it. See idea 2.
+
+## 2 — Method recovery from a candidate plaintext
 
 **Status: implemented, `k4lib/recover.py`, validated by EXP-005.**
 
-Reporting around the November 2025 archive sale distinguishes the recovered *text*
-from the *decryption method*: knowing what K4 says would not reveal how it was
-enciphered. That inverts this repository's whole framing. Every experiment here
-searches a mechanism space and scores the plaintext it produces. If a candidate
-plaintext ever becomes available — from the archive, from a leak, or from an
-independent solve — the correct move is the opposite: fix the plaintext, let it
-force the keystream at all 97 positions, and read the structure straight off.
+Reporting around the archive sale distinguishes the recovered *text* from the
+*decryption method*. With all 97 plaintext letters the keystream is forced
+everywhere, and a period, an affine rule, a linear recurrence or a running key
+(keystream IoC near 0.066) is read straight off. A *near*-correct plaintext still
+shows partial structure, so this is worth running on imperfect candidates too.
 
-Twenty-four known letters cannot distinguish mechanisms. Ninety-seven can: a
-period is visible immediately, an affine rule is a two-point fit, a running key
-shows up as a keystream IoC near 0.066, a linear recurrence is a small solve.
+Do not invert it into evidence: a candidate showing no structure is not refuted,
+and one showing structure is not confirmed until the rule extends to all 97
+positions.
 
-`diagnose(plaintext, ciphertext)` does all of this in one call, under all 12
-conventions. It should be the first thing anyone runs on any candidate plaintext,
-including a wrong one — a *near*-correct plaintext will still show partial structure.
+## 3 — Transposition with a pre-fixed alphabet and an aperiodic key
 
-**Do not** invert this into evidence: a candidate plaintext that produces no
-keystream structure is not thereby refuted, and one that does is not thereby
-confirmed until the rule extends to all 97 positions.
+**Status: the largest surviving testable family. Not yet tested.**
 
----
+EXP-011 shows that transposition *plus a free keyed alphabet* is vacuous, but
+transposition plus a **fixed** alphabet is comfortably testable (10¹⁵·³ against a
+10³⁴ budget). EXP-003 tested the complete affine-mod-97 family against periodic
+keys only. What remains is that same complete permutation family against the
+keystream classes that have since been built: progressive, polynomial, feedback,
+relative-phase.
 
-## 2 — The `DIAWINFBN` +5 run marks a segment boundary at position 63
+The cost is the product of two sweeps already written, so this is engineering
+rather than invention. Do it with the alphabet fixed in advance and declare it
+before running.
 
-**Status: new observation, `inconclusive`, highest-value untested lead.**
+## 4 — The `+5` run: state the ceiling and stop
 
-The inherited notes record that `DIAWINFBN` shows five consecutive relations
-`C[i+4] = C[i] + 5 (mod 26)` and that no mechanism explains it. Locating it
-precisely changes its character:
+**Status: `inconclusive`, p ≈ 0.017, and provably unresolvable by crib algebra.**
 
-```
-positions with C[i+4] = C[i] + 5 :  22, 29, 55, 56, 57, 58, 59
-the consecutive run i = 55..59 covers ciphertext positions 55 through 63
-position 63 is the first letter of the BERLINCLOCK crib
-```
+Across 1,248 (alphabet, lag, delta) combinations the `DIAWINFBN` run is the only
+run of length ≥ 4 in the ciphertext; family-wise expectation is 0.017. Real but
+modest, about 2σ.
 
-The run does not merely sit near the crib. It **ends exactly on its first letter**.
+Its termination at position 63 — the first letter of `BERLINCLOCK` — was the lead
+that opened this session. **EXP-010 removed its independent support**: across four
+change-point statistics, two alphabets and a permutation null on the maximum over
+68 boundaries, no boundary is significant, and position 63 ranks 65th, 47th, 31st
+and 39th of 68. It is not special.
 
-Two readings, both testable:
+Worse, the run is *provably* beyond crib algebra. `C[i+4] − C[i] = 5` expands to
+`(P[i+4] − P[i]) + (k[i+4] − k[i]) = 5`, and positions 55–62 lie outside both
+cribs, so both readings — progressive key over flat plaintext, flat key over
+patterned plaintext — fit equally and cannot be separated. Its only crib contact,
+`C[63] = C[59] + 5`, is one equation in two unknowns.
 
-1. **Segmentation.** K4 is not one homogeneous system but a concatenation of
-   segments, with a break at 63. A regime change at 63 would explain both why the
-   run stops there and why every global periodicity test in EXP-001 and EXP-003
-   fails: a key that restarts mid-message is aperiodic when measured globally.
-   *Test:* re-run EXP-001's period probes **per segment**, splitting at 63 (and at
-   21, 34, 74) rather than across the whole text. A period that is invisible
-   globally but consistent within `[34,63)` or `[63,97)` would be decisive. This is
-   cheap and has not been done.
+**Recommendation: demote.** Do not build further experiments on position 63. The
+run can only be explained by a mechanism proposed on independent grounds that
+happens to predict it.
 
-2. **Progressive key.** Under a Vigenère, `C[i+4] − C[i] = 5` with plaintext
-   `P[i+4] − P[i] = d` forces `k[i+4] − k[i] = 5 − d`. A key that advances by a
-   constant every four characters is exactly a progressive-key cipher (idea 6).
-   The run would then be the key's arithmetic showing through a stretch where the
-   plaintext happened to be locally flat. *Test:* under each convention, check
-   whether the crib-forced keys satisfy `k[i+4] − k[i] = c` for any constant `c`
-   across the crib spans.
+## 5 — Reusable tools this work produced
 
-The anomaly's reported significance (~0.00156, post-hoc adjusted) was never the
-interesting part. Its **endpoint** is.
+Four checks that cost nothing and should be run before any new proposal:
 
----
+- **Bounded-source lemma** (EXP-001). The cribs force a key index of 24 or 25 under
+  8 of the 12 conventions, so any key source bounded below 25 — a 24-hour clock, a
+  23-lamp display, a 24-sector ring — is dead for those eight with no search.
+- **Alphabet-free period elimination** (EXP-011). If a crib conflict pair is
+  congruent mod p, period p is impossible for *every* alphabet at once. This
+  retires p ∈ {1–7, 9, 10, 14, 15, 17} for all periodic polyalphabetic ciphers.
+  **The shortest period K4 could possibly have is 8.**
+- **Output-alphabet coverage** (EXP-012). All 26 letters occur in K4, so any cipher
+  with a smaller output alphabet is impossible. One line, whole family gone.
+- **Block-coverage rule** (EXP-012). Crib evidence does not survive block
+  boundaries: a block cipher keeps only blocks lying wholly inside a crib, so 24
+  letters can fall to 9 or 0 usable constraints. Count covered positions *before*
+  searching any block-structured cipher.
 
-## 3 — Mengenlehreuhr lamp count as keystream
+## 6 — Audit before searching: the selector lesson
 
-**Status: `negative` at full scope — EXP-002, 161,740,800 parameter sets.**
+**Status: `replicated`, and it demotes three inherited leads.**
 
-The `BERLINCLOCK` crib names the Berlin-Uhr. The recorded negative for "24-sector
-World Clock geometry" concerns the *Urania Weltzeituhr*, a different clock, and
-"World Clock tape as conventional key" uses a city tape as a Vigenère keyword.
-Neither touches the lamp count, so this needed running. It is now closed for a
-fixed-step readout with a free additive offset.
+EXP-009 reduced the two-chart question to graph colouring. Plaintext `E` occurs at
+positions 21, 30 and 64 and enciphers to `F`, `G` and `Y`; plaintext `T` at 24, 28
+and 33 to `V`, `R` and `S`. **At least three encryption alphabets are forced**, so
+every two-chart model is impossible in that direction.
 
-**Still open:** the 23-lamp *bit vector* as a bitstream (5-bit groups → letters),
-and a non-uniform time step — e.g. one driven by the ciphertext itself.
+In the decryption direction two charts do suffice — but exactly **16,384 of
+16,777,216** selectors separate all ten conflicts, so an arbitrary bit-stream does
+so with probability **1 in 1,024**. The inherited opposite-tableau-parity, K0 Morse
+and Kryptos-rail observations are each worth about ten bits, and the handoff
+records that multiple Morse phases were searched. A selector family with ~1,000
+members is *expected* to contain a winner.
 
----
+**All three leads are explained as a selection effect.** The general rule: before
+reporting that a model "has no contradictions", count how many models would not.
 
-## 4 — Complete transposition families, gated on key structure not language
+## 7 — Machine-readable physical transcript
 
-**Status: `negative` for period ≤ 12 — EXP-003, 9,312 permutations, exhaustive.**
+**Status: still not started; prerequisite for any physical-geometry work.**
 
-97 is prime, so `i → a·i + b (mod 97)` is a bijection for every `a ≠ 0`. The family
-is *complete* at 96 × 97 = 9,312 permutations — every decimation and rotation of the
-text, closed under inversion and composition. No sampling, no route-design taste
-required.
+Nothing here records the sculpture's line breaks, panel boundaries, tableau
+orientation, or the punctuation and misspelling handling that
+`data/mask_sources.json` is currently guessing at. Transcribe it from the NSA
+primary reference in `sources.md`. **Do not reconstruct it from memory** — EXP-004's
+K1–K3 rows are marked `inconclusive` rather than `negative` precisely because they
+rest on unverified transcriptions.
 
-The recorded negatives for 3×31 routes, 4×22 routes and optimised columnar searches
-all gated on **plaintext readability**, which needs a language model and rewards
-overfitting. Gating on **key periodicity at the cribs** needs neither and has a
-false-positive rate of 26⁻ⁿ that can be stated exactly.
+## 8 — Ideas deliberately not pursued, and why
 
-**Still open, and the obvious extension:** the same 9,312 permutations against a
-*running* key (idea 5) or a progressive key (idea 6) instead of a periodic one.
+Recorded so they are not re-invented:
 
----
+- **Bespoke non-classical constructions.** Always available, never falsifiable
+  without more plaintext. They belong after idea 1, not before it.
+- **Anything with a free per-position selector or a free keyed alphabet.** EXP-011
+  shows these are above the evidence budget. A fit would be meaningless.
+- **More route and grid transpositions applied alone.** Killed outright by the IoC
+  argument in EXP-007, without enumeration.
+- **`EASTNORTHEAST` / `BERLINCLOCK` as operational instructions.** Attractive —
+  compass directions do read like a route, and Sanborn has said the plaintext needs
+  field work — but it is a claim about what the message *says*, not about the
+  cipher, and no version of it is testable with the plaintext we have.
 
-## 5 — Running-key "mask" from the sculpture's own text
+## 9 — What would actually settle this
 
-**Status: `negative` for verified sources, `inconclusive` for K1–K3 — EXP-004.**
+1. More known plaintext. Idea 1 quantifies exactly how much, and it is not much.
+2. A mechanism proposed on external grounds — a primary-source fact about
+   construction — narrow enough for 24 letters to confirm. Idea 7 is the route.
+3. A candidate plaintext run through idea 2.
 
-Sanborn has described a masking technique. Every periodicity test here fails, and a
-key as long as the message is precisely the construction that defeats periodicity
-tests while leaving the cipher elementary. The long texts available to the sculptor
-are the sculpture's own. Because both cribs must satisfy one alignment, a mask of
-length *L* offers only *L* alignments — a tiny space for a 24-letter test.
-
-K4's own ciphertext and the KRYPTOS alphabet are closed. K1–K3 plaintexts are
-`inconclusive` only because `data/mask_sources.json` holds working transcriptions
-marked `verified: false`; re-run once a primary transcript is committed.
-
-**Still open and untested:** the **carved tableau itself** as the running key. The
-sculpture's tableau is a large keyed block of letters, readable by row, by column,
-by diagonal. It is the one long text physically present on the object that this
-experiment has not consumed. `k4lib/alphabets.vigenere_tableau` already generates it.
-
----
-
-## 6 — Progressive-key and lagged-generator ciphers (Gromark family)
-
-**Status: specified, not run. Highest-priority unrun idea.**
-
-Every negative in this repository shares a shape: they assume the key either repeats
-(period ≤ 48) or is a fixed external text. The classical family that is neither is the
-**progressive key** — the key advances by a rule each block — and its ACA-era relative
-the **Gromark**, whose keystream comes from a lagged-Fibonacci recurrence over a short
-numeric primer. These were standard in the cryptographic literature Ed Scheidt would
-have drawn on, they defeat Kasiski and period tests by construction, and they are
-*small*: a 5-digit primer is 100,000 keystreams.
-
-This is also the only family that gives idea 2's `+5` run a natural mechanism.
-
-**Experiment.** Enumerate lagged-Fibonacci keystreams over Z₁₀ and Z₂₆ for primer
-lengths 2–6, all lag pairs, both additive and subtractive, × 12 conventions, gated on
-all 24 crib letters. Well under 10⁹ and fully pre-registerable. `k4lib/recover.py`
-already fits linear recurrences of order 1–2; extend to the generator direction.
-
----
-
-## 7 — Audit the two-chart homophonic lead for degrees of freedom
-
-**Status: specified, not run. Cheap, and it either kills or promotes an inherited lead.**
-
-`research-state.md` reports that a two-chart homophonic interpretation had *no
-contradictions* at the crib positions. Absence of contradiction is not evidence — it is
-what a model with enough freedom always produces, and `data-conventions.md` warns about
-exactly this. What was never computed is the **number of consistent selectors**.
-
-**Experiment.** Build the constraint graph over crib positions implied by the 10
-conflicting position-pairs, then count the 2-colourings consistent with them. If the
-count is astronomical, the two-chart model is absorbing the constraints rather than
-explaining them, and the lead should be demoted to `negative` on information-theoretic
-grounds without any further cryptanalysis. If the count is small, the selector is nearly
-determined by the cribs alone and becomes a strong, independently checkable prediction.
-
-Either outcome is worth more than more searching. This should be run before any further
-work on the parity / K0-Morse / rail selector leads, all three of which are the same
-kind of claim.
-
----
-
-## 8 — Per-segment statistics instead of whole-text statistics
-
-**Status: specified, not run.**
-
-K4's index of coincidence is **0.03608** (random ≈ 0.0385, English ≈ 0.0667). It sits
-*below* random, which is itself mildly notable for a 97-character sample and consistent
-with a long or non-repeating key. Every statistic in this repository has been computed
-over the whole 97 characters. If idea 2 is right and the text is segmented, whole-text
-statistics are averaging over regimes and destroying the signal. Recompute IoC, letter
-frequency and lag-autocorrelation **within** `[0,21)`, `[21,34)`, `[34,63)`, `[63,74)`,
-`[74,97)`.
-
----
-
-## 9 — The bounded-source lemma as a standing filter
-
-**Status: implemented as a reusable check — EXP-001.**
-
-Eight of the 12 conventions require a key index of 24 or 25 somewhere in the cribs.
-Any proposed key source whose values are bounded below 25 — a 24-hour clock, a 23-lamp
-display, a 24-sector ring, a 0–23 counter, a 5-bit code with reserved values — is
-therefore **falsified outright for those eight conventions, with no search at all**.
-
-Run this check first on every future proposal. It costs nothing and it retired
-two-thirds of the search space in EXP-002 before a single parameter was enumerated.
-
----
-
-## 10 — Machine-readable physical transcript
-
-**Status: not started; prerequisite for ideas 2, 8 and any physical-geometry work.**
-
-`next-steps.md` item 4 remains correct and remains undone. Nothing in this repository
-records the sculpture's line breaks, panel boundaries, tableau orientation or the
-question-mark/misspelling handling that `data/mask_sources.json` is currently guessing
-at. A segmentation hypothesis (idea 2) cannot be tested against physical structure
-until that structure exists as data. **Do not** invent it — transcribe it from the NSA
-primary reference in `sources.md`.
-
----
-
-## 11 — What would actually settle this
-
-Worth stating plainly, because this repository can drift into search for its own sake.
-None of the searches above can succeed if the mechanism depends on information not
-present in the ciphertext — and Sanborn has said the plaintext still requires field
-work after decryption. The realistic paths to a solve are:
-
-1. A candidate plaintext from the archive, run through idea 1. Cheap, decisive, and the
-   apparatus for it now exists.
-2. A correct guess at the *shape* of the mechanism — segmented, progressive, or
-   running-key — narrow enough that 24 crib letters can confirm it. Ideas 2 and 6.
-3. A primary-source fact about construction that removes a degree of freedom. Idea 10.
-
-Enumerating more route families is none of these.
+Enumerating more cipher families is none of these. The families that remain are
+either eliminated or, more often, unfalsifiable with the evidence in hand — and
+telling those two apart is most of what this repository now offers.

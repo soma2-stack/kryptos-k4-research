@@ -1,0 +1,79 @@
+# EXP-011 testability frontier
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Part 1 - periods impossible for ANY periodic polyalphabetic cipher
+   alphabet-independent conflict pairs: 22
+   ELIMINATED periods: [1, 2, 3, 4, 5, 6, 7, 9, 10, 14, 15, 17, 21, 25, 34, 42, 43, 45]
+      p=1   22 conflicting congruent pairs, e.g. positions (21, 30)
+      p=2   7 conflicting congruent pairs, e.g. positions (21, 71)
+      p=3   9 conflicting congruent pairs, e.g. positions (21, 30)
+      p=4   2 conflicting congruent pairs, e.g. positions (24, 28)
+      p=5   5 conflicting congruent pairs, e.g. positions (21, 71)
+      p=6   2 conflicting congruent pairs, e.g. positions (24, 66)
+      p=7   3 conflicting congruent pairs, e.g. positions (24, 66)
+      p=9   6 conflicting congruent pairs, e.g. positions (21, 30)
+      p=10  1 conflicting congruent pairs, e.g. positions (21, 71)
+      p=14  2 conflicting congruent pairs, e.g. positions (24, 66)
+      p=15  2 conflicting congruent pairs, e.g. positions (26, 71)
+      p=17  2 conflicting congruent pairs, e.g. positions (29, 63)
+   periods not eliminated by this argument: [8, 11, 12, 13, 16, 18, 19, 20, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 35, 36, 37, 38, 39, 40, 41, 44, 46, 47, 48, 49]
+   Note this is a NECESSARY condition only: surviving a period means the
+   period is not impossible, not that it works.
+
+## Part 2 - falsifiability by parameter count
+   evidence available: 24 crib letters = 26^24 = 10^34.0
+                     = 112.8 bits
+
+   model class                                          params    
+   Vigenere family, fixed alphabet, period 4            10^   5.7  expected chance fits 10^ -28.3  TESTABLE
+   Vigenere family, fixed alphabet, period 8            10^  11.3  expected chance fits 10^ -22.6  TESTABLE
+   Vigenere family, fixed alphabet, period 12           10^  17.0  expected chance fits 10^ -17.0  TESTABLE
+   Vigenere family, fixed alphabet, period 16           10^  22.6  expected chance fits 10^ -11.3  TESTABLE
+   Vigenere family, fixed alphabet, period 20           10^  28.3  expected chance fits 10^  -5.7  TESTABLE
+   Vigenere family, fixed alphabet, period 24           10^  34.0  expected chance fits 10^  +0.0  MARGINAL - fits are not evidence
+   Vigenere family, fixed alphabet, period 26           10^  36.8  expected chance fits 10^  +2.8  VACUOUS - cannot be refuted by cribs
+
+   Quagmire I (one keyed alphabet) + period 2           10^  29.4  expected chance fits 10^  -4.5  TESTABLE
+   Quagmire I (one keyed alphabet) + period 4           10^  32.3  expected chance fits 10^  -1.7  MARGINAL - fits are not evidence
+   Quagmire I (one keyed alphabet) + period 5           10^  33.7  expected chance fits 10^  -0.3  MARGINAL - fits are not evidence
+   Quagmire I (one keyed alphabet) + period 6           10^  35.1  expected chance fits 10^  +1.1  VACUOUS - cannot be refuted by cribs
+   Quagmire I (one keyed alphabet) + period 8           10^  37.9  expected chance fits 10^  +4.0  VACUOUS - cannot be refuted by cribs
+   Quagmire I (one keyed alphabet) + period 12          10^  43.6  expected chance fits 10^  +9.6  VACUOUS - cannot be refuted by cribs
+
+   Quagmire III (two keyed alphabets) + period 8        10^  64.5  expected chance fits 10^ +30.6  VACUOUS - cannot be refuted by cribs
+   Homophonic, 2 decryption charts + selector           10^  82.4  expected chance fits 10^ +48.5  VACUOUS - cannot be refuted by cribs
+   Arbitrary per-position substitution (97 alphabets)   10^ 137.3  expected chance fits 10^+103.3  VACUOUS - cannot be refuted by cribs
+   Affine-mod-97 transposition + period-8 key           10^  15.3  expected chance fits 10^ -18.7  TESTABLE
+   Affine-mod-97 transposition + Quagmire I period 8    10^  41.9  expected chance fits 10^  +7.9  VACUOUS - cannot be refuted by cribs
+   Polybius square (bifid/trifid) + period              10^  26.6  expected chance fits 10^  -7.4  TESTABLE
+
+## How much more plaintext would each class need?
+   n crib letters supply n*log10(26) of budget. Requiring a margin of 2
+   decades below the parameter count, the letters needed are:
+
+   Vigenere family, fixed alphabet, period 26    needs 28 letters (4 more)
+   Quagmire I + period 8                         needs 29 letters (5 more)
+   Quagmire I + period 12                        needs 33 letters (9 more)
+   Quagmire III + period 8                       needs 48 letters (24 more)
+   Affine transposition + Quagmire I period 8    needs 32 letters (8 more)
+   Homophonic, 2 charts + free selector          needs 60 letters (36 more)
+
+   This is the most actionable number in the repository. Every class above
+   becomes decidable with between 5 and 25 more known plaintext letters.
+   Acquiring constraint is worth more than any further search: one more
+   released clue would re-open families that are currently unfalsifiable.
+
+## Consequences
+   1. Quagmire I is closed. Periods 1-7 are eliminated outright by Part 1,
+      and from period 6 upward the class is already vacuous by Part 2.
+      There is no period at which it is both possible and testable.
+   2. Quagmire III, any two-keyed-alphabet scheme, and any model with a
+      free per-position selector are unfalsifiable with 24 crib letters.
+      Searching them can only produce fits, never evidence. This is why
+      the inherited two-chart lead could not fail: see EXP-009.
+   3. Bifid and trifid sit near the frontier: a 25-cell Polybius square
+      plus a period is 10^25.2 against a 10^34 budget, so the class is
+      TESTABLE in principle. It is the largest classical family left that
+      the cribs can actually decide, and it has not been tested here.
+   4. Anything combining a free transposition with a free keyed alphabet
+      is vacuous. Transposition work must fix the alphabet in advance.

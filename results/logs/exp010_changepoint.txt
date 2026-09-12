@@ -1,0 +1,40 @@
+# EXP-010 change-point analysis
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+boundaries scanned: 15..82 (68), margin 15, 20,000 permutations
+
+## alphabet STD
+   mean_index  max=4.8441 at b=81  p(max)=0.0602   b=63 value=0.3072 rank 65/68 p=1.0000
+   ioc_gap     max=0.0404 at b=15  p(max)=0.0858   b=63 value=0.0084 rank 47/68 p=0.9988
+   lag1_mean   max=3.2949 at b=18  p(max)=0.4441   b=63 value=1.5628 rank 31/68 p=0.9826
+   doubles     max=0.0882 at b=68  p(max)=0.2915   b=63 value=0.0491 rank 39/68 p=0.7739
+
+## alphabet KRY
+   mean_index  max=1.7146 at b=15  p(max)=0.9719   b=63 value=0.4566 rank 39/68 p=1.0000
+   ioc_gap     max=0.0404 at b=15  p(max)=0.0900   b=63 value=0.0084 rank 47/68 p=0.9992
+   lag1_mean   max=3.2845 at b=71  p(max)=0.4467   b=63 value=0.9957 rank 26/68 p=0.9999
+   doubles     max=0.0882 at b=68  p(max)=0.2884   b=63 value=0.0491 rank 39/68 p=0.7718
+
+## Kasiski / repeated n-grams
+   2-grams repeated: 10 (expected ~6.82 under uniform)
+      DI at [55, 83]  spacings [28]
+      EK at [44, 92]  spacings [48]
+      FB at [17, 61]  spacings [44]
+      GK at [30, 85]  spacings [55]
+      HU at [9, 88]  spacings [79]
+      KZ at [45, 77]  spacings [32]
+      QS at [38, 41]  spacings [3]
+      SO at [13, 33]  spacings [20]
+      SS at [32, 42]  spacings [10]
+      TJ at [50, 80]  spacings [30]
+   3-grams repeated: 0 (expected ~0.26 under uniform)
+   4-grams repeated: 0 (expected ~0.01 under uniform)
+
+## Kappa autocorrelation (coincidence at shift s)
+   top shifts by coincidence count (expected (N-s)/26):
+      shift  7: 9 matches of 90 (expected 3.46)  p=0.0079  p after scanning 48 shifts = 0.378
+      shift  1: 6 matches of 96 (expected 3.69)  p=0.1651  p after scanning 48 shifts = 1.000
+      shift 38: 5 matches of 59 (expected 2.27)  p=0.0763  p after scanning 48 shifts = 1.000
+      shift 10: 5 matches of 87 (expected 3.35)  p=0.2435  p after scanning 48 shifts = 1.000
+      shift  4: 5 matches of 93 (expected 3.58)  p=0.2875  p after scanning 48 shifts = 1.000
+      shift 43: 4 matches of 54 (expected 2.08)  p=0.1536  p after scanning 48 shifts = 1.000
+   No shift survives correction for having scanned 48 of them.

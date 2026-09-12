@@ -23,10 +23,28 @@ Regenerate with `./run_all.sh`.
 - K4's index of coincidence is **0.03608** (random ~0.0385, English ~0.0667).
 - **New.** The `DIAWINFBN` `+5` run at lag 4 occupies positions 55-63 and terminates
   **exactly on position 63, the first letter of the BERLINCLOCK crib**. The full set of
-  lag-4 `+5` positions is {22, 29, 55, 56, 57, 58, 59}. See `ideas.md` § 2 — this is
-  now the highest-value untested lead.
+  lag-4 `+5` positions is {22, 29, 55, 56, 57, 58, 59}. It is the ONLY run of length
+  >= 4 across 1,248 (alphabet, lag, delta) combinations, family-wise p ~ 0.017.
+  **Session 2 demoted this lead**: EXP-010 found no independent statistical support for
+  a boundary at 63, and the run is provably unresolvable by crib algebra. See
+  `ideas.md` § 4.
 - The tooling is self-validating: EXP-005 plants four known constructions and recovers
   all four, so the negatives recorded here are not artefacts of broken code.
+
+### Added 2026-09-12 (session 2)
+
+- **At least THREE encryption alphabets are forced.** Plaintext `E` occurs at positions
+  21, 30, 64 and enciphers to `F`, `G`, `Y`; plaintext `T` at 24, 28, 33 to `V`, `R`, `S`.
+  Every two-chart model is impossible in the encryption direction. EXP-009.
+- **The shortest period K4 could possibly have is 8.** Periods {1-7, 9, 10, 14, 15, 17}
+  are impossible for *any* periodic polyalphabetic cipher, whatever its alphabets,
+  because a crib conflict pair is congruent mod p. EXP-011.
+- **All 26 letters occur in K4** (J at positions 40, 51, 81), so no cipher with a
+  smaller output alphabet can have produced it. EXP-012.
+- **K4 cannot be an anagram of English**: IoC 0.03608 against 0.06558 +- 0.00763 for
+  97 letters of English unigram text, z = -3.87. Pure transposition is dead. EXP-007.
+- **24 crib letters = 112.8 bits.** Model classes with more parameter entropy than that
+  cannot be refuted at all; several inherited leads sit above the line. EXP-011.
 
 ## High-priority inherited program: `TOKIO → 57973`
 
@@ -62,13 +80,25 @@ The 22-length coincidence is interesting, but ordinary transpositions and simple
 
 ### Physical tableau parity / two-chart model
 
-**Inherited result.** On a reconstruction of physically opposed tableau letters, ordinary A=0 parity reportedly separated every one of ten known same-cipher/different-plain crib conflicts. A two-chart **homophonic** interpretation had no contradictions at the crib positions and produced 49 observed `(chart, ciphertext)` symbols of 52 possible.
+**Inherited result — now EXPLAINED as a selection effect, and demoted.** On a
+reconstruction of physically opposed tableau letters, ordinary A=0 parity reportedly
+separated every one of ten known same-cipher/different-plain crib conflicts. A two-chart
+homophonic interpretation had no contradictions at the crib positions.
+
+EXP-009 computes what that is worth. Exactly **16,384 of the 16,777,216** possible binary
+selectors separate all ten conflicts, so an arbitrary bit-stream does so with probability
+**1 in 1,024** — the observation carries about ten bits. A selector family with ~1,000
+members is expected to contain a winner, and this document already records that multiple
+Morse phases were searched. Moreover, in the *encryption* direction two charts are
+impossible outright (at least three alphabets are forced), so the two-chart framing is
+not merely uninformative but unavailable. **Do not spend further effort here.**
 
 This is a selector clue, not a chart construction. Simple Caesar, affine, Atbash, rotated Kryptos-alphabet, and direct numeric-mask versions failed. Do not use unconstrained language optimization to fill the charts.
 
 ### K0 Morse as binary selector
 
-**Inherited result.** A reversed, phase-shifted dot/dash stream from the physically visible “T IS YOUR POSITION” reading reportedly satisfied the same ten A/B selector constraints. Obvious two-transform (Baudot/Vigenère/tableau) follow-ons failed, and multiple phases were searched, so the match is not dispositive.
+**Inherited result — demoted for the same reason as the parity lead above; see EXP-009.**
+A reversed, phase-shifted dot/dash stream from the physically visible “T IS YOUR POSITION” reading reportedly satisfied the same ten A/B selector constraints. Obvious two-transform (Baudot/Vigenère/tableau) follow-ons failed, and multiple phases were searched, so the match is not dispositive.
 
 ### Kryptos alphabet rail alternation
 
@@ -79,10 +109,19 @@ rail 0: K Y T S B D F H J M Q V X
 rail 1: R P O A C E G I L N U W Z
 ```
 
-At known crib positions, repeated plaintext-letter occurrences were reported to map to opposite ciphertext rails in 7/7 transitions. The inherited work found no simple relationship to opposite-tableau parity, position parity, or 7×14/31-column geometry. This is an anomaly to test prospectively, not a cipher key.
+At known crib positions, repeated plaintext-letter occurrences were reported to map to
+opposite ciphertext rails in 7/7 transitions. **Demoted:** this is the same class of claim
+as the parity and Morse selectors, and EXP-009 shows such a claim is worth about ten bits. The inherited work found no simple relationship to opposite-tableau parity, position parity, or 7×14/31-column geometry. This is an anomaly to test prospectively, not a cipher key.
 
 ### `DIAWINFBN` +5 run
 
-**Inherited observation.** The substring `DIAWINFBN` exhibits five consecutive relations `C[i+4] = C[i] + 5 (mod 26)`. Its previously reported post-hoc adjusted significance was approximately 0.00156. A mechanism is now proposed and the run has been localised: it ends on the first letter
-of the BERLINCLOCK crib, which is consistent with either a segment boundary at position 63
-or a progressive key. **Promoted from low-priority to a primary lead.** See `ideas.md` § 2.
+**Inherited observation.** The substring `DIAWINFBN` exhibits five consecutive relations `C[i+4] = C[i] + 5 (mod 26)`. Its previously reported post-hoc adjusted significance was approximately 0.00156. The run was localised (positions 55-63, ending on the first letter of the BERLINCLOCK
+crib) and then tested hard. Its significance is **p ~ 0.017** family-wise across 1,248
+(alphabet, lag, delta) combinations — real but about 2 sigma. **EXP-010 removed its
+independent support**: across four change-point statistics, two alphabets and a permutation
+null on the maximum over 68 boundaries, no boundary is significant and position 63 ranks
+65th, 47th, 31st and 39th of 68. It is not special.
+
+The run is also *provably* beyond crib algebra: positions 55-62 lie outside both cribs, so
+"progressive key over flat plaintext" and "flat key over patterned plaintext" fit equally
+and cannot be separated. **Demoted back to an unexplained anomaly.** See `ideas.md` § 4.
