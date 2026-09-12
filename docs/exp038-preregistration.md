@@ -13,7 +13,12 @@ before the experiment can see its answer.
 
 | input | sha256 |
 |---|---|
-| `data/k4.json` | `e3b18a93c5fda5a8fc7a9249d25b1567c55cc2b5aef2843a65551b96b754ced8` |
+| `data/k4.json` | `d710d758e92abc7c4ac87da189baef936ee97c18ba1636c2ee0021ebe673f4e5` |
+
+*(Correction, committed before execution: the first draft of this file carried the
+pre-Checkpoint-P hash `e3b18a93…`. `data/k4.json` changed when its crib-provenance note
+was updated by the public-verification commit; the ciphertext, crib text and crib indices
+are byte-identical. The hash above is the current file.)*
 
 Ciphertext pinned by `k4lib.data` to
 `eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab`.
