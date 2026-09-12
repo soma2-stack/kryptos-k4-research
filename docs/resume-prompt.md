@@ -223,3 +223,27 @@ State you are resuming into:
   shoot date decides Tier 1. Egress to archive and image hosts is closed here.
 
 Do not date the image by inference to get past this. If it stays unresolved, say so.
+
+## Addendum — 2026-09-12 (Checkpoint H, 1974 correction — session 11)
+
+Read `results/2026-09-12h4-checkpoint-H-1974-correction.md` first. It retracts two claims
+from the session-10 record, which now carries a supersession notice.
+
+- The complete CET face (97 letters) **stands unchanged** as LOCAL VISUAL evidence. Do not
+  re-transcribe it without new image evidence.
+- Its date is **mid-1970s**, not disputed. `nachgraviert 1985` is not a first-addition
+  claim: a 1974 Straube frame already shows KOPENHAGEN and WIEN. The stability gap to
+  1988–89 is **~14 years**.
+- The 46-name arithmetic gap is **an unexplained remainder, not "closed"**. Do not date it
+  to 1985.
+- **Tier 1 NOT met. EXP-024 frozen, unrun, unmodified.** The 97-letter coincidence is not
+  justification — it is OBSERVATION, NOT EVIDENCE, on a frame ~14 years pre-target.
+- Do not argue stability from absence of known change: membership is non-monotonic
+  (NOWOSIBIRSK moved faces), and 1985 demonstrably touched CET-lower lettering.
+- Graph rules to preserve: faces keyed by **(sector, era)**; a complete band reading is
+  authoritative and a partial one corroborates or conflicts, never degrades.
+- **The blocker is an image.** Needed: picture-alliance `16008401` and `16008415`
+  (04.11.1989), max resolution, CET face with both bands legible. Fallbacks: `7728036`
+  (1991, circumstantial), `15638904` (1982, narrows only).
+
+If it is still not supplied, say so and stop. Do not infer the 1988–89 CET face.

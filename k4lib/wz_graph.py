@@ -17,6 +17,16 @@ A band read as `*_band_partial` (some lines legible, band ends not visible) is
 loaded as inscriptions PLUS an explicit incompleteness marker in `unknown`, so a
 partially read face can never count as complete.
 
+Within one era, a PARTIAL reading of a band never degrades a COMPLETE reading of the
+same band: if the partial's names are already in the complete list it is recorded as
+corroboration from a second frame. A complete reading clears any incompleteness marker
+an earlier partial left. Only a partial naming something the complete list lacks is a
+CONFLICT, and that is recorded rather than silently resolved.
+
+Faces are keyed by (sector, era): the same sector photographed in two decades is two
+nodes, because completeness is a per-era property and a later frame must never dilute
+or complete an earlier transcription. Circumference counts DISTINCT SECTORS.
+
 Transcriptions are tagged LOCAL (this agent read the image) or EXTERNAL (text
 handoff only); `stats()` reports the two separately.
 """
@@ -37,12 +47,46 @@ class DrumGraph:
 
     # ---------------------------------------------------------------- building
     def add_face(self, fid, utc=None, upper=None, lower=None, unknown=None, source=None,
-                 local=False):
+                 local=False, complete_bands=(), partial_bands=()):
         f = self.faces.setdefault(fid, {"utc": None, "upper": [], "lower": [],
-                                        "unknown": [], "sources": [], "local": False})
+                                        "unknown": [], "sources": [], "local": False,
+                                        "complete_bands": [], "corroborated": [],
+                                        "conflicts": []})
         if utc:
             f["utc"] = utc
+        for band in complete_bands:
+            val = list({"upper": upper, "lower": lower}[band] or [])
+            # a complete reading is AUTHORITATIVE: it REPLACES whatever partial readings
+            # left behind, so the transcribed order is preserved exactly as read
+            earlier = [n for n in f[band] if n not in val]
+            if earlier:
+                f["conflicts"].append(
+                    f"{source}: complete {band} reading omits names an earlier partial reported: {earlier}")
+            elif f[band]:
+                f["corroborated"].append(
+                    f"earlier partial {band} reading is a subset of {source}'s complete reading")
+            f[band] = val
+            if band not in f["complete_bands"]:
+                f["complete_bands"].append(band)
+            f["unknown"] = [u for u in f["unknown"] if band not in u]
+        for band in partial_bands:
+            if band in f["complete_bands"]:
+                # subset -> corroboration; anything else -> a conflict worth keeping
+                new = [n for n in ({"upper": upper, "lower": lower}[band] or [])
+                       if n not in f[band]]
+                if new:
+                    f["conflicts"].append(f"{source}: {band} names not in the complete reading: {new}")
+                elif source and source not in f["corroborated"]:
+                    f["corroborated"].append(f"{source} corroborates {band}")
+                continue
+            marker = f"{band} band incomplete (band ends not visible)"
+            if marker not in f["unknown"]:
+                f["unknown"].append(marker)
         for key, val in (("upper", upper), ("lower", lower), ("unknown", unknown)):
+            if key in complete_bands:
+                continue          # already set authoritatively above
+            if key in partial_bands and key in f["complete_bands"]:
+                continue
             if val:
                 for n in val:
                     if n not in f[key]:
@@ -93,6 +137,14 @@ class DrumGraph:
 
     PSEUDO = ("lower", "half-hour")
 
+    @staticmethod
+    def sector_of(fid):
+        return fid.split(" @")[0]
+
+    def sectors(self):
+        """Distinct physical sectors identified, across all eras."""
+        return sorted({self.sector_of(f) for f in self.sector_faces()})
+
     def sector_faces(self):
         """Nodes that denote one physical face. Excludes pseudo-nodes that name a
         band or a group rather than a face, so circumference is never overstated."""
@@ -113,7 +165,8 @@ class DrumGraph:
                           and not any("lower" in u for u in self.faces[f]["unknown"])]
         return {
             "faces_total": total_faces,
-            "faces_identified": len(sect),
+            "sectors_identified": len(self.sectors()),
+            "face_era_records": len(sect),
             "pseudo_nodes_excluded": len(self.faces) - len(sect),
             "faces_with_upper_transcribed": len(with_upper),
             "faces_with_lower_transcribed": len(with_lower),
@@ -124,7 +177,7 @@ class DrumGraph:
             "faces_locally_transcribed": sum(1 for f in sect if self.faces[f]["local"]),
             "edges_observed": obs,
             "edges_transitive": len(self.transitive_edges()),
-            "circumference_fraction": len(sect) / total_faces,
+            "circumference_fraction": len(self.sectors()) / total_faces,
             "longest_chain": max((len(c) for c in self.chains()), default=0),
         }
 
@@ -146,33 +199,35 @@ def load_from_photos(path=PHOTOS_PATH):
 
     for ph in doc["photographs"]:
         pid = ph["id"]
+        era = ph.get("era", "unknown")
         is_local = bool(ph.get("self_transcribed"))
         local = {}
         for vf in ph.get("visible_faces", []) + ph.get("local_visual_faces", []):
             utc = vf.get("utc_sector")
             if utc:
                 utc = norm(utc)
-            # sector label IS the node name, so the same face seen in two photographs merges
-            fid = utc if utc and utc != "UNKNOWN" else f"{pid}:{vf['face_ref']}"
+            fid = (f"{utc} @{era}" if utc and utc != "UNKNOWN"
+                   else f"{pid}:{vf['face_ref']}")
             local[vf["face_ref"]] = fid
             up = vf.get("upper_band")
             lo = vf.get("lower_band")
             unknown = list(vf.get("names") or []) if isinstance(vf.get("names"), list) else []
-            if not isinstance(up, list) and isinstance(vf.get("upper_band_partial"), list):
-                up = vf["upper_band_partial"]
-                unknown.append("upper band incomplete (band ends not visible)")
-            if not isinstance(lo, list) and isinstance(vf.get("lower_band_partial"), list):
-                lo = vf["lower_band_partial"]
-                unknown.append("lower band incomplete (band ends not visible)")
-            if not isinstance(up, list):
-                unknown.append("upper band not read")
-            if not isinstance(lo, list):
-                unknown.append("lower band not read")
+            complete, partial = [], []
+            for band, val in (("upper", up), ("lower", lo)):
+                if isinstance(val, list):
+                    complete.append(band)
+                elif isinstance(vf.get(f"{band}_band_partial"), list):
+                    partial.append(band)
+                else:
+                    unknown.append(f"{band} band not read")
+            up = up if isinstance(up, list) else vf.get("upper_band_partial")
+            lo = lo if isinstance(lo, list) else vf.get("lower_band_partial")
             g.add_face(fid, utc=utc,
                        upper=up if isinstance(up, list) else None,
                        lower=lo if isinstance(lo, list) else None,
                        unknown=unknown or None,
-                       source=pid, local=is_local)
+                       source=pid, local=is_local,
+                       complete_bands=complete, partial_bands=partial)
         for ad in ph.get("adjacency_observed", []):
             if "left" in ad and "right" in ad:
                 pairs = [(ad["left"], ad["right"])]
@@ -180,8 +235,8 @@ def load_from_photos(path=PHOTOS_PATH):
                 seq = ad.get("upper_sequence") or ad.get("lower_sequence") or []
                 pairs = list(zip(seq, seq[1:]))
             for l, r in pairs:
-                a = norm(local.get(l, l))
-                b = norm(local.get(r, r))
+                a = local.get(l) or f"{norm(l)} @{era}"
+                b = local.get(r) or f"{norm(r)} @{era}"
                 if a == b:
                     continue
                 g.add_face(a, source=pid, local=is_local)

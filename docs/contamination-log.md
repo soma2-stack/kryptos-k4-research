@@ -160,4 +160,19 @@ A 97-letter coincidence was found on the CET face. It was graded OBSERVATION, NO
 EVIDENCE and explicitly refused as grounds for running EXP-024, precisely because
 acting on it would be the failure mode this protocol exists to prevent.
 
+## Session 11 (Checkpoint H, 1974 correction) — clean, no incidents
+
+Input was `docs/external/checkpoint-H-1974-evidence-correction.md`: a WELT press page, an
+akg/picture-alliance credit, a Tagesspiegel profile, and a Picture Alliance public
+webseries listing. All historical object evidence and archive metadata about a public
+monument. No claimed-solution site used or cited; no purported K4 plaintext sought or seen.
+
+The handoff's own visual claim (KOPENHAGEN and WIEN legible in the 1974 frame) is stored as
+an EXTERNAL-AGENT TRANSCRIPTION, not as my own reading — I have not seen that image. It was
+accepted only for what it refutes, which is an interpretation, not a plaintext.
+
+Worth recording as protocol: this correction cut *against* the programme's preferred
+hypothesis, and was incorporated in full. Two of my own session-10 conclusions were
+retracted rather than defended.
+
 ## Incidents 2+ — none recorded.

@@ -57,7 +57,8 @@
    "notes": "Modern UTC+11 contains exactly Magadan and Sachalin, so this face may be COMPLETE - but 14 of the ~20 1997 additions remain unnamed, so completeness is not proven.",
    "commons_file_page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-1989-0830-028,_Berlin,_Fernsehturm,_Weltzeituhr.jpg",
    "image_sha1": "0c3d0288dc6711e386112dc22df050eac4f3abfc",
-   "image_dims": "567x800, 68001 bytes"
+   "image_dims": "567x800, 68001 bytes",
+   "era": "1988-89"
   },
   {
    "id": "BArch-183-1989-0811-023",
@@ -73,7 +74,8 @@
    "visible_faces": [],
    "adjacency_observed": [],
    "priority": "LOW for content, HIGH as a sequence anchor",
-   "notes": "Catalogued because Bundesarchiv frames come in shoot sequences. Adjacent accession numbers from the same date and photographer may show far better angles. See docs/checkpoint-H-archive-targets.md."
+   "notes": "Catalogued because Bundesarchiv frames come in shoot sequences. Adjacent accession numbers from the same date and photographer may show far better angles. See docs/checkpoint-H-archive-targets.md.",
+   "era": "1988-89"
   },
   {
    "id": "Flickr-vanElk-Alexanderplatz-1988",
@@ -91,7 +93,8 @@
    "visible_faces": [],
    "adjacency_observed": [],
    "priority": "HIGH - reported to show a wide run of eastern sectors with many readable inscriptions",
-   "notes": "Reported to show a WIDE RUN of faces, which is exactly what the adjacency graph needs: one frame spanning several faces fixes several edges at once."
+   "notes": "Reported to show a WIDE RUN of faces, which is exactly what the adjacency graph needs: one frame spanning several faces fixes several edges at once.",
+   "era": "1988-89"
   },
   {
    "id": "BArch-183-1984-1419-014",
@@ -257,7 +260,42 @@
    "local_visual_notes": [
     "Within-band order not established for these faces: only two or three lines are legible per face and I cannot see band ends.",
     "No lower band fully readable in this frame."
-   ]
+   ],
+   "era": "1984"
+  },
+  {
+   "id": "WELT-akg-Straube-1974-CET",
+   "archive": "akg-images / picture-alliance, via WELT",
+   "accession": null,
+   "title": "Erinnerungsfoto 1974 auf dem Berliner Alexanderplatz",
+   "photographer": "credited pa/akg-images/Straube",
+   "date": "1974",
+   "date_confidence": "SOURCE-PUBLISHED EXPLICIT YEAR, HIGH as metadata. WELT article 236437495 (25 Jan 2022) captions the frame '1974' outright, not as a decade range.",
+   "predates_1997": true,
+   "is_1988_1989": false,
+   "source_ref": "WELT article 236437495; image img.welt.de/img/reise/mobile236440269/8267932157-ci3x2l-w1200/...jpg. Supplied in docs/external/checkpoint-H-1974-evidence-correction.md",
+   "self_transcribed": false,
+   "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (1974 correction handoff). I have not seen this image.",
+   "priority": "DECISIVE for the 1985 question; NOT target-era evidence.",
+   "visible_faces": [
+    {
+     "face_ref": "S74-1",
+     "utc_sector": "UTC+1",
+     "sector_basis": "contents",
+     "lower_band_partial": [
+      "KOPENHAGEN",
+      "WIEN"
+     ],
+     "confidence": "EXTERNAL-AGENT HIGH on these two names; nothing else reported as legible",
+     "note": "These two names present in 1974 is what refutes the first-addition reading of the 1985 sentence."
+    }
+   ],
+   "adjacency_observed": [],
+   "notes": [
+    "A DIFFERENT Straube frame from the one I transcribed locally, though credited identically.",
+    "Its value is entirely negative-evidential: it kills an interpretation. It adds no ordering or membership data."
+   ],
+   "era": "1970s"
   },
   {
    "id": "WELT-akg-Straube-mid1970s-UTC+1",
@@ -265,8 +303,8 @@
    "accession": null,
    "title": "Weltzeituhr und 'Interhotel Stadt Berlin' am Alexanderplatz",
    "photographer": "credited pa/akg-images/Straube",
-   "date": "DISPUTED",
-   "date_confidence": "DISPUTED. The WELT caption says mid-1970s and the clothing/vehicles look 1970s. But the face carries KOPENHAGEN, WIEN and ROM, which the Tagesspiegel 2019 John profile says were newly engraved at the 1985 maintenance, and carries LENINGRAD (so pre-1997). Those two datings cannot both be right. ATHEN, also a claimed 1985 addition, is NOT visible where expected, which cuts against the >=1985 reading. Until this is resolved the image cannot be used as 1988-89 evidence.",
+   "date": "mid-1970s (source-captioned; no longer internally contradicted)",
+   "date_confidence": "REVISED. The internal contradiction recorded last session is WITHDRAWN: it rested entirely on reading the Tagesspiegel 'nachgraviert 1985' sentence as a first-addition claim, and the separately published 1974 Straube frame shows KOPENHAGEN and WIEN already on the drum in 1974. So their presence here no longer forces >=1985. The frame now reads consistently as mid-1970s, and ATHEN's absence is CONSISTENT with that rather than evidence against it. This resolution makes the Tier-1 position WORSE, not better: the only reading that would have placed this frame inside [1985,1997) is gone, so the face I transcribed is most likely a mid-1970s face and the gap to the 1988-89 target is about fourteen years of undemonstrated stability. The exact shoot date remains UNKNOWN beyond WELT's caption.",
    "predates_1997": true,
    "is_1988_1989": false,
    "source_ref": "WELT article 217168174 (9 Nov 2021); image img.welt.de/.../1920313707-coriginal-w1200",
@@ -423,7 +461,13 @@
      ],
      "confidence": "LOCAL VISUAL LOW-MEDIUM - frame edge"
     }
-   ]
+   ],
+   "stale_reading_withdrawn": {
+    "what_i_said_last_session": "Date DISPUTED between mid-1970s and [1985,1997); KOPENHAGEN/WIEN/ROM forced >=1985.",
+    "why_it_was_wrong": "I treated 'nachgraviert' as 'first engraved'. It also means re-engraved/renewed, and the 1974 frame settles which reading is right for KOPENHAGEN and WIEN.",
+    "what_replaces_it": "Date is mid-1970s per caption, internally consistent, and OUTSIDE the target window."
+   },
+   "era": "1970s"
   },
   {
    "id": "MODERN-upload-asia-pacific",
@@ -517,7 +561,8 @@
    "local_visual_notes": [
     "NOWOSIBIRSK is NOT on the KRASNOJARSK face here; in UPLOAD-2 (1984) it is. See findings.face_membership_moved.",
     "The modern list's PJOENGJANG vs the 1984 PHOENGJANG is an orthography change, not a membership change."
-   ]
+   ],
+   "era": "modern"
   }
  ],
  "stability_question": {
@@ -525,7 +570,8 @@
   "answer": "NO - not across 1984-to-modern, and untested across 1984-to-1989.",
   "evidence": "NOWOSIBIRSK changed faces between 1984 and the modern frame (findings.face_membership_moved).",
   "gap": "I have no two frames of the SAME face in different target-era years. The 1988 and 1989 frames do not share a fully legible face with the 1984 frame. So 1984-vs-1989 stability is UNTESTED, not established.",
-  "grade": "HEURISTIC NEGATIVE on global stability; UNTESTED within the target window."
+  "grade": "HEURISTIC NEGATIVE on global stability; UNTESTED within the target window.",
+  "target_window_gap": "Sharpened: the complete face is now dated to about 1974, so the required stability span is ~14 years, not the ~4 years implied when the frame was thought to be possibly post-1985."
  },
  "half_hour_placement_question": {
   "statement": "Marquesas (-9:30), Teheran (+3:30), Kabul (+4:30), Neu-Delhi and Colombo (+5:30), Rangun (+6:30) cannot each own one of the 24 whole-hour faces.",
@@ -596,7 +642,53 @@
    "Category:Urania-Weltzeituhr (and its 'Details' subcategory)",
    "Category:Photographs by Peter Heinz Junge",
    "Commons:Bundesarchiv (the 80,000+ file donation these come from)"
-  ]
+  ],
+  "picture_alliance_targets": {
+   "note": "Dated pre-1997 Weltzeituhr frames exposed by the Picture Alliance public webseries weltzeituhr-in-berlin-w194131, supplied in the 1974 correction handoff. These are ACQUISITION TARGETS: archive-dated, which is exactly what the Straube frame lacks.",
+   "ranked_for_tier_1": [
+    {
+     "rank": 1,
+     "ids": [
+      "16008401",
+      "16008415"
+     ],
+     "date": "1989-11-04",
+     "why": "The only listed frames inside the target window. 4 Nov 1989 is five days before the Wall opened and squarely in the K4 composition period. Either one, IF it shows the CET/UTC+1 face with both bands legible, settles Tier 1 outright.",
+     "success_criterion": "CET face identifiable by contents (BERLIN, PARIS, MADRID, WARSCHAU...), upper AND lower band lines readable",
+     "failure_mode": "If both frames show the drum from the Asian side, or the CET face is too oblique, they do not settle it and rank 2 applies."
+    },
+    {
+     "rank": 2,
+     "ids": [
+      "7728036"
+     ],
+     "date": "1991-08-05",
+     "why": "Post-target and pre-1997. With the 1974 frame it BRACKETS the target window. Circumstantial only: the interpolation needs monotonic growth, which NOWOSIBIRSK refutes.",
+     "success_criterion": "CET face both bands legible, compared name-for-name against my 1974-era transcription"
+    },
+    {
+     "rank": 3,
+     "ids": [
+      "15638904"
+     ],
+     "date": "1982-01-01",
+     "why": "Pre-target but post-1974: would show whether the CET face changed between 1974 and 1982, i.e. whether this face changes at all. Narrows the stability question without answering it.",
+     "success_criterion": "CET face both bands legible"
+    },
+    {
+     "rank": 4,
+     "ids": [
+      "102505875",
+      "102505844",
+      "102506000"
+     ],
+     "date": "1973-05-22",
+     "why": "A second early-1970s data point. LOW value: it would corroborate a state I already have and says nothing about 1988-89.",
+     "success_criterion": "n/a - deprioritised"
+    }
+   ],
+   "source": "https://www.picture-alliance.com/webseries/weltzeituhr-in-berlin-w194131"
+  }
  },
  "external_agent_rule": "Sources added from docs/external/checkpoint-H-web-photo-handoff.md are EXTERNAL-AGENT TRANSCRIPTIONS made from web-rendered images. They are NOT this agent's own visual verification and were NOT re-transcribed locally (all image hosts return HTTP 000). They may not be promoted to historical ground truth without a second source or a locally viewable image.",
  "ordering_analysis": {
@@ -616,31 +708,21 @@
   "local_visual_update": "Superseded in part. The upper band's alphabetical rule is now LOCAL VISUAL confirmed on the CET face. The lower band is confirmed NOT alphabetical, which the earlier analysis had left open."
  },
  "date_problem": {
-  "status": "REVISED. The arithmetic gap that generated this problem is CLOSED; a sharper problem replaces it.",
-  "closed_part": {
-   "old_gap": "146 modern - 80 original (1969) - 20 added (1997) = 46 names unexplained.",
-   "resolution": "The 1985 first major maintenance (Tagesspiegel, 14 Apr 2019, Erich John profile) is a third change boundary. 146 - 80 - 20 = 46 is exactly the quantity the 1985 event has to account for.",
-   "grade": "The arithmetic closes exactly, which is suggestive but is not itself proof that 1985 added 46 names; the source names only four (Athen, Kopenhagen, Wien, Rom).",
-   "consequence": "If the change boundaries are 1969, 1985 and 1997, then any frame datable to [1985, 1997) shows the 1988-89 target state. Dating becomes a yes/no question instead of an open-ended growth curve."
+  "status": "REVISED AGAIN. Last session's 'CLOSED' claim is RETRACTED.",
+  "retraction": {
+   "what_i_claimed": "146 - 80 - 20 = 46 is 'exactly the quantity the 1985 event has to account for', so with boundaries at 1969/1985/1997 any frame in [1985,1997) shows the target state and dating becomes a yes/no question.",
+   "why_it_was_wrong": "The arithmetic identifies an unexplained REMAINDER; it says nothing about WHEN those names entered. Attributing all ~46 to 1985 was my inference, not the source's claim - the source names four places. The 1974 evidence now positively argues for multiple entry times, since at least two of the four named places were already present eleven years before the maintenance.",
+   "what_is_actually_established": "146 modern places; ~80 at installation in 1969; ~20 added at the 1997 restoration; therefore ~46 entered at one or more unknown times between. The growth curve is OPEN.",
+   "consequence": "Dating is NOT a yes/no question over a single interval. A frame's date does not by itself certify the target state; stability across the intervening period has to be shown."
   },
-  "open_part": {
-   "crux": "UPLOAD-1 (the only frame with a fully transcribed face) is internally contradictory on date.",
-   "for_1985_or_later": [
-    "KOPENHAGEN present",
-    "WIEN present",
-    "ROM present - all three named as 1985 additions"
+  "current_crux": {
+   "statement": "I hold one complete face (CET, 97 letters) attested at about 1974, and the target period is 1988-89.",
+   "gap": "~14 years, across at least one known maintenance (1985) that demonstrably touched lettering, on a drum whose per-face membership is known to be non-monotonic.",
+   "resolution_paths": [
+    "direct attestation of the CET face in 1988-89 (decisive)",
+    "bracketing with a post-target pre-1997 frame (circumstantial only - see findings.bracketing_argument)"
    ],
-   "for_before_1985": [
-    "WELT caption says mid-1970s",
-    "clothing and vehicles read as 1970s",
-    "ATHEN, the fourth named 1985 addition, is NOT visible"
-   ],
-   "for_before_1997": [
-    "LENINGRAD present",
-    "MOSKAU present - LOCAL VISUAL, independent of any caption"
-   ],
-   "logic": "Either the Tagesspiegel 1985 change set is wrong (or is a re-engraving of names already present, which would reconcile everything), or the WELT caption is wrong. A re-engraving reading is the cheapest reconciliation and would put the frame in the 1970s with those names already on the drum - in which case the frame still is not target-era evidence, only evidence of stability.",
-   "consequence": "Tier 1 hinges entirely on dating this one image. No amount of further analysis of the pixels I have can settle it."
+   "not_a_resolution": "Assuming stability because no change is known. Absence of evidence of change is not evidence of stability, and NOWOSIBIRSK shows changes do occur."
   }
  },
  "new_blocker_soviet_zones": {
@@ -722,7 +804,21 @@
     "The face's date is DISPUTED, so this may not even be the target-era face."
    ],
    "non_free_element": "The one thing not chosen after the fact is WHICH face: it is the Berlin/CET face named by the BERLINCLOCK crib, and the face this programme was already targeting before the count was taken.",
-   "grade": "OBSERVATION, NOT EVIDENCE. It does not raise the Weltzeituhr hypothesis above PROMISING HYPOTHESIS and must not be used to motivate running EXP-024."
+   "grade": "OBSERVATION, NOT EVIDENCE. It does not raise the Weltzeituhr hypothesis above PROMISING HYPOTHESIS and must not be used to motivate running EXP-024.",
+   "date_note": "Revised: the face now reads as mid-1970s rather than date-disputed. The 97 is therefore a count on a frame about fourteen years before the target period. This weakens, not strengthens, any inference from it. Grade unchanged: OBSERVATION, NOT EVIDENCE."
+  },
+  "nineteen_eighty_five_reinterpretation": {
+   "question": "What did the 1985 first major maintenance actually do?",
+   "corrected_answer": "UNRESOLVED, and it must no longer be read as a list of first additions. KOPENHAGEN and WIEN were already on the drum in 1974 (external visual, 1974 Straube frame), so for those two 'nachgraviert 1985' can only mean re-engraved or renewed.",
+   "what_survives": "The sentence may still be a FIRST addition for ATHEN specifically: nothing contradicts that, the 'aus gegebenem Anlass' phrasing fits a political occasion peculiar to Athens, and ATHEN is absent from the mid-1970s frame's UTC+2 lower block where it would sit. That absence was recorded last session as evidence AGAINST the 1985 account; under the corrected reading it is evidence FOR the Athens-only part of it. Same observation, opposite sign - worth flagging as a lesson.",
+   "structural_note": "Athen aside, the named places - KOPENHAGEN, WIEN, ROM - are exactly three of the six names I read in the CET LOWER band. If 1985 was a re-engraving of worn lettering, the CET lower band is where it happened. Re-engraving preserves text, which would be a weak argument for that band's stability across 1985. HYPOTHESIS ONLY: the coincidence is with three of six names on one face out of twenty-four, and I am the one who noticed it after the fact.",
+   "grade": "First-addition reading CONTRADICTED for KOPENHAGEN and WIEN; UNTESTED for ROM; PLAUSIBLE but unproven for ATHEN."
+  },
+  "bracketing_argument": {
+   "idea": "If the CET face matches my transcription in a pre-target frame AND in a post-target pre-1997 frame, the target-window state is interpolated rather than assumed.",
+   "status": "Valid only under MONOTONIC growth - names added, never moved or removed.",
+   "why_it_is_not_safe": "Monotonicity is REFUTED as a general rule: NOWOSIBIRSK changed faces between 1984 and the modern drum (findings.face_membership_moved). A face could therefore gain and lose a name between two matching frames. Bracketing is strong circumstantial evidence, not attestation.",
+   "consequence": "A direct 1988-89 frame of the CET face is strictly better than any pair of brackets, and is what Tier 1 requires."
   }
  },
  "face_aliases": {
@@ -738,5 +834,6 @@
   "CASABLANCA/CONAKRY/DAKAR-face": "UTC+0-W",
   "ANKARA/DAMASKUS/KAIRO-face": "UTC+2",
   "BAGDAD/TEHERAN+/ADDIS-ABEBA-face": "UTC+3"
- }
+ },
+ "era_rule": "Faces are keyed by (sector, era). A face is never merged across eras, because completeness and membership are per-era properties: a second photograph from a different decade must not dilute or complete a face transcribed in another. Circumference is counted over DISTINCT SECTORS so that the same sector seen in two eras is not double-counted."
 }

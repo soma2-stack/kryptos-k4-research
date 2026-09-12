@@ -24,7 +24,43 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint H, local visual (session 10)
+## 0 — Status after Checkpoint H, 1974 correction (session 11)
+
+Metric: **15 of 24 sectors identified (62.5%)**, 20 face-era records, a **7-face contiguous
+chain**, **14 observed adjacency edges**, **1 complete face** (CET @1970s, local visual,
+97 letters — transcription unchanged).
+
+**Tier 1 is NOT met, and moved further away.** Two retractions:
+
+1. **The CET frame's date is no longer disputed — it reads mid-1970s.** A Straube frame
+   explicitly dated **1974** already shows KOPENHAGEN and WIEN, so `nachgraviert 1985`
+   cannot mean first addition and their presence never forced ≥ 1985. The reading that
+   would have put my complete face in the target window is gone; the stability gap is
+   **~14 years**, not ~4. ATHEN's absence flips sign — it now *supports* the Athens-only
+   part of the 1985 account (Athens is UTC+2, not CET).
+2. **The 46-name gap is NOT closed.** `146 − 80 − ~20 = ~46` is an unexplained remainder,
+   not a dating. Attributing it all to 1985 was my inference. The growth curve is **open**,
+   and a frame's date alone does not certify the target state.
+
+Unchanged and still load-bearing: upper = northern / lower = southern (kills the 2^k layout
+entropy); half-hour faces inscribed `+30`; upper bands alphabetical, lower bands not;
+**membership is non-monotonic** (NOWOSIBIRSK moved faces), so no bracketing or
+absence-of-known-change argument substitutes for attestation.
+
+**THE BLOCKER IS AN IMAGE, NOT TEXT METADATA.** The akg catalogue-record request from
+session 10 is **withdrawn** — it would only confirm a mid-1970s date already accepted.
+
+> **Exact request: picture-alliance image `16008401` and image `16008415`, dated
+> 04.11.1989, at maximum available resolution.** Both, because which one faces CET cannot
+> be known in advance. Success criterion: the CET face identifiable by contents (BERLIN,
+> PARIS, MADRID, WARSCHAU …) with **both bands legible line by line**. That either confirms
+> the 97-letter transcription for 1989 or refutes it.
+
+Fallbacks in order: `7728036` (05.08.1991, brackets the window — circumstantial only, since
+interpolation needs monotonicity); `15638904` (01.01.1982, narrows whether this face changes
+at all); the 22.05.1973 IDs (low value).
+
+## 0a — Earlier status after Checkpoint H, local visual (session 10)
 
 First session with actual pixels: four photographs pasted into the conversation and
 read by this agent directly. Metric now **15 of 24 faces identified (62.5%), a 7-face

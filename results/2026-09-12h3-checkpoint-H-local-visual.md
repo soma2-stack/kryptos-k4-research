@@ -1,5 +1,14 @@
 # Checkpoint H (session 10) — first locally-read pixels, and a date that decides everything
 
+> **SUPERSEDED IN PART — see [Checkpoint H, 1974 correction](2026-09-12h4-checkpoint-H-1974-correction.md).**
+> Two claims in this record are withdrawn. (1) The CET face's date is **not** disputed
+> between mid-1970s and [1985, 1997): a separately published Straube frame explicitly
+> dated **1974** already shows KOPENHAGEN and WIEN, so `nachgraviert 1985` cannot be read
+> as first addition, and this frame reads consistently as **mid-1970s**. (2) The 46-name
+> arithmetic gap is **not** "closed": the remainder is unexplained, not dated to 1985.
+> The CET transcription itself stands unchanged; only the era it attests has changed —
+> and the change makes the Tier-1 gap ~14 years instead of ~4.
+
 This is the first session in which this agent has actually *seen* a photograph of the
 Weltzeituhr. Four images were pasted into the conversation. Every reading below is my
 own visual reading, marked LOCAL VISUAL EVIDENCE in `data/weltzeituhr_photos.json`,

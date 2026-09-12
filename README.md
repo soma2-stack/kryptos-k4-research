@@ -6,6 +6,20 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint H, 1974 correction (2026-09-12).** New external evidence — a Straube
+> photograph explicitly dated **1974** already showing KOPENHAGEN and WIEN — forces two
+> retractions of the previous checkpoint. The Tagesspiegel `nachgraviert 1985` wording may
+> **not** be read as first addition, so the complete CET face's date is no longer disputed
+> between the 1970s and [1985, 1997): it reads consistently as **mid-1970s**, which puts it
+> **outside** the target window and makes the stability gap ~14 years instead of ~4. And the
+> 46-name arithmetic gap is **not** "closed" — `146 − 80 − ~20 = ~46` is an unexplained
+> remainder, not a dating. The CET transcription stands unchanged (97 letters, local visual);
+> only the era it attests has changed. **Tier 1 NOT met; EXP-024 frozen, unrun, unmodified**,
+> and the 97-letter coincidence is explicitly refused as justification. The blocker is now an
+> **image, not text metadata**: picture-alliance **16008401** and **16008415**, dated
+> **04.11.1989**, at maximum resolution. See
+> [Checkpoint H 1974 correction](results/2026-09-12h4-checkpoint-H-1974-correction.md).
+
 > **Checkpoint H, local visual (2026-09-12).** First session with actual photographs:
 > four images read directly, lifting the reconstruction to **15 of 24 faces (62.5%)**,
 > a **7-face contiguous chain**, **11 observed adjacency edges**, and the **first
