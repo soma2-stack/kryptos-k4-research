@@ -14,7 +14,7 @@ constrained position BEFORE any verdict is formed. Cases with <= 3 constraints a
 UNDECIDED and excluded from the elimination. Adversarial controls are only counted when
 they are capable of changing the verdict.
 """
-import sys, os, json, hashlib, collections, random
+import sys, os, json, gzip, hashlib, collections, random
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from k4lib.data import load, REPO_ROOT
@@ -372,5 +372,8 @@ with open(os.path.join(out, "summary.json"), "w") as fh:
                "stats": dict(stats), "deduplicated": dupes,
                "constraint_distribution": dict(cdist),
                "feasible": feasible, "controls": dict(ctrl),
-               "rows": rows_out}, fh, indent=1)
+               "rows_file": "rows.jsonl.gz", "rows_count": len(rows_out)}, fh, indent=1)
+with gzip.open(os.path.join(out, "rows.jsonl.gz"), "wt", compresslevel=9) as fh:
+    for _r in rows_out:
+        fh.write(json.dumps(_r, sort_keys=True, separators=(",", ":")) + "\n")
 print(f"\n   wrote results/exp035/summary.json ({len(rows_out):,} case records)")

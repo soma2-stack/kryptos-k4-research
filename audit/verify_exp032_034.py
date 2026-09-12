@@ -120,6 +120,14 @@ check("verifier recovers replanted column keys", replant == 12, f"{replant}/12")
 
 # ---------------------------------------------------------------- EXP-034
 s34 = json.load(open(os.path.join(ROOT, "results", "exp034", "summary.json")))
+# The run's single summary.json was split losslessly into summary.json + rows.jsonl.gz so a
+# clean checkout can run this verifier. Load the rows back from the gz, and check the split
+# is self-consistent rather than trusting it.
+if "rows" not in s34:
+    import gzip as _gz
+    with _gz.open(os.path.join(ROOT, "results", "exp034", s34["rows_file"]), "rt") as _fh:
+        s34["rows"] = [json.loads(_l) for _l in _fh if _l.strip()]
+    assert len(s34["rows"]) == s34["rows_count"], "rows.jsonl.gz row count disagrees with summary.json"
 SRC = {"ct_fwd": [CT[j] for j in range(N)], "ct_rev": [CT[N - 1 - j] for j in range(N)]}
 for m in (2, 3, 5, 7, 11):
     SRC[f"ct_dec_{m}"] = [CT[(m * j) % N] for j in range(N)]

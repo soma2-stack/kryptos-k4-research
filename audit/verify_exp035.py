@@ -26,6 +26,14 @@ rowfile = os.path.join(ROOT, "data", "cipher_side_rows.json")
 ROWS = {int(k): v for k, v in json.load(open(rowfile))["rows"].items()}
 RLEN = {r: len(v) for r, v in ROWS.items()}
 S = json.load(open(os.path.join(ROOT, "results", "exp035", "summary.json")))
+# The run's single summary.json was split losslessly into summary.json + rows.jsonl.gz so a
+# clean checkout can run this verifier. Load the rows back from the gz, and check the split
+# is self-consistent rather than trusting it.
+if "rows" not in S:
+    import gzip as _gz
+    with _gz.open(os.path.join(ROOT, "results", "exp035", S["rows_file"]), "rt") as _fh:
+        S["rows"] = [json.loads(_l) for _l in _fh if _l.strip()]
+    assert len(S["rows"]) == S["rows_count"], "rows.jsonl.gz row count disagrees with summary.json"
 
 checks, fails = [], []
 

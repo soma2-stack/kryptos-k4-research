@@ -1,0 +1,55 @@
+{
+ "experiment": "EXP-034",
+ "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+ "model": "k[i] = f(S[i-L]), f any A-Z -> Z26, decided exactly",
+ "prereg": "docs/exp034-preregistration.md",
+ "min_constraints": 4,
+ "sources": [
+  "ct_dec_11",
+  "ct_dec_2",
+  "ct_dec_3",
+  "ct_dec_5",
+  "ct_dec_7",
+  "ct_fwd",
+  "ct_rev",
+  "pt"
+ ],
+ "lags": [
+  1,
+  96
+ ],
+ "conventions": 12,
+ "cases": 9216,
+ "decided": 2676,
+ "undecided": 6540,
+ "contradiction": 2676,
+ "feasible": [],
+ "constraint_distribution": {
+  "10": 504,
+  "9": 540,
+  "11": 228,
+  "7": 228,
+  "8": 432,
+  "6": 228,
+  "5": 168,
+  "4": 276,
+  "3": 744,
+  "2": 1176,
+  "1": 1296,
+  "0": 3324,
+  "12": 72
+ },
+ "controls": {
+  "planted_total": 120,
+  "planted_pass": 120,
+  "adv_total": 114,
+  "adv_pass": 114
+ },
+ "rows_file": "rows.jsonl.gz",
+ "rows_count": 9216,
+ "repackaging": {
+  "why": "The original single summary.json from the run was too large to version sensibly (1.28 MB / 8.98 MB). It was split LOSSLESSLY into this file plus rows.jsonl.gz so the verifier can run from a clean checkout. Nothing was recomputed or reconstructed from prose; the round trip was checked to reproduce the original object exactly.",
+  "original_summary_sha256": "d727a17db96b43714f89c1a54927e80436840a95f3744333f383056457ce9dc5",
+  "round_trip_verified": true
+ }
+}

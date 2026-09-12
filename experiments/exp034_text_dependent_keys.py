@@ -11,7 +11,7 @@ drift variants). This generalises it the way EXP-030 generalised EXP-029.
 Cases whose usable constraint count is <= 3 are reported UNDECIDED and are excluded from
 the elimination, per the preregistration; that threshold was fixed before any result.
 """
-import sys, os, json, collections, random
+import sys, os, json, gzip, collections, random
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from k4lib.data import load, REPO_ROOT
@@ -205,5 +205,8 @@ with open(os.path.join(out, "summary.json"), "w") as fh:
                "cases": total, "decided": decided, "undecided": len(undecided),
                "contradiction": contra, "feasible": feasible,
                "constraint_distribution": dict(cdist), "controls": dict(ctrl),
-               "rows": rows}, fh, indent=1)
+               "rows_file": "rows.jsonl.gz", "rows_count": len(rows)}, fh, indent=1)
+with gzip.open(os.path.join(out, "rows.jsonl.gz"), "wt", compresslevel=9) as fh:
+    for _r in rows:
+        fh.write(json.dumps(_r, sort_keys=True, separators=(",", ":")) + "\n")
 print(f"\n   wrote results/exp034/summary.json")

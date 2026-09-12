@@ -1,0 +1,233 @@
+{
+ "experiment": "EXP-032",
+ "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+ "model": "k[i] = f(col(i)), f any function {1..31}->Z26",
+ "geometry": "NSA DOCID 4145037, verified against ciphertext",
+ "crib_positions": [
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73
+ ],
+ "column_collisions": {
+  "29": [
+   32,
+   63
+  ],
+  "30": [
+   33,
+   64
+  ]
+ },
+ "constraints_per_case": 2,
+ "cases": 12,
+ "feasible": [],
+ "controls": {
+  "planted_pass": 12,
+  "planted_total": 12,
+  "adversarial_pass": 12,
+  "adversarial_total": 12
+ },
+ "results": [
+  {
+   "convention": "vigenere/P=STD/C=STD",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     0,
+     12
+    ]
+   }
+  },
+  {
+   "convention": "vigenere/P=STD/C=KRY",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     14,
+     18
+    ]
+   }
+  },
+  {
+   "convention": "vigenere/P=KRY/C=STD",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     12,
+     5
+    ]
+   }
+  },
+  {
+   "convention": "vigenere/P=KRY/C=KRY",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     0,
+     11
+    ]
+   }
+  },
+  {
+   "convention": "beaufort/P=STD/C=STD",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     10,
+     14
+    ]
+   }
+  },
+  {
+   "convention": "beaufort/P=STD/C=KRY",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     24,
+     20
+    ]
+   }
+  },
+  {
+   "convention": "beaufort/P=KRY/C=STD",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     24,
+     21
+    ]
+   }
+  },
+  {
+   "convention": "beaufort/P=KRY/C=KRY",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     12,
+     1
+    ]
+   }
+  },
+  {
+   "convention": "variant_beaufort/P=STD/C=STD",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     0,
+     14
+    ]
+   }
+  },
+  {
+   "convention": "variant_beaufort/P=STD/C=KRY",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     12,
+     8
+    ]
+   }
+  },
+  {
+   "convention": "variant_beaufort/P=KRY/C=STD",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     14,
+     21
+    ]
+   }
+  },
+  {
+   "convention": "variant_beaufort/P=KRY/C=KRY",
+   "feasible": false,
+   "witness": {
+    "column": 29,
+    "positions": [
+     32,
+     63
+    ],
+    "key_values": [
+     0,
+     15
+    ]
+   }
+  }
+ ]
+}
