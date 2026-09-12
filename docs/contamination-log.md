@@ -214,6 +214,24 @@ Two protocol points:
 - Preregistrations for EXP-032/033/034 were committed before implementation, and each
   names its prohibited post-hoc expansions. No result was tuned around.
 
+## Session 14 (Checkpoint L, branch claude/k4-post-j) — clean, no incidents
+
+Input was the fulfilled evidence request: the CIA Panel 1 cipher-side text version with NSA
+corroboration, supplied in `docs/external/checkpoint-K-nsa-cipher-rows-1-24.md`. This is
+public *ciphertext* and public institutional transcription. No claimed-solution site was
+used or cited; no alleged K4 plaintext, solution dump, or private K5 material was sought,
+accessed or inferred. Cribs used: EASTNORTHEAST and BERLINCLOCK only.
+
+Protocol points:
+
+- The supplied transcription was verified before use rather than accepted, and three
+  independent corroborations are recorded in `data/cipher_side_rows.json` alongside one
+  discrepancy left explicitly UNRESOLVED.
+- The physical alignment model was **parked** rather than rescued with an invented lattice,
+  and the reasoning is recorded in the EXP-035 preregistration so it can be checked.
+- `k12` (rows 1–14) is flagged in the data and in every verdict that touches it, because of
+  the unresolved 432-vs-435 letter count.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident

@@ -18,6 +18,31 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint L (2026-09-12, `claude/k4-post-j`).** Checkpoint K's evidence request was
+> fulfilled — the authoritative CIA/NSA cipher-side rows 1–24 — and it **corrected the
+> geometry**: rows 1–24 hold **29–33** characters, not a uniform 31, so `32 + 27×31 = 869`
+> gives the right total but is a false description and is retracted. Verified here, with
+> three independent corroborations (336 K3 letters, `OBKR` + K4 = 97, canonical K1/K3
+> openings) and one new unresolved discrepancy of my own finding (rows 1–14 give 432
+> letters against the commonly cited 435).
+> **No earlier result changes:** `audit/verify_geometry_correction.py` tests this per
+> experiment, 25/25 — EXP-032 uses rows 25–28 only, EXP-033's F3 was checked cell by cell
+> and never assumed a uniform panel, EXP-034 is purely textual. EXP-032's own printed
+> assertion of the false arithmetic is corrected in place.
+> **The physical "same column above" model is PARKED, not tested with a manufactured
+> lattice:** with a monospaced punch and a common row width every row would hold the same
+> count, so 29–33 means the pitch varies by up to 13.8% between rows and no common lattice
+> exists. Checkpoint K's "parameter-free" description of it is withdrawn.
+> Instead **EXP-035** used what the source *is* authoritative for — row content and order —
+> and tested a running key drawn from the 745 characters engraved directly above K4, with
+> an arbitrary letter-to-key function decided exactly: **43,824 cases, 41,412
+> contradictions, zero feasible, zero undecided**, constraint counts 4–16, all controls
+> capable of flipping the verdict, independently verified 14/14. That is a real loss for
+> the architecture Checkpoint K ranked first. It also exposed a frontier: every experiment
+> here assumes **shift** combiners over just two indexing alphabets, so the next step is to
+> re-test under a precommitted set of keyword-derived mixed alphabets. See
+> [Checkpoint L](results/2026-09-12-claude-checkpoint-L.md).
+
 > **Checkpoint K (2026-09-12, `claude/k4-post-j`).** Continued from Codex Checkpoint J.
 > The decisive audit finding is that **every experiment through EXP-031 assumes the key is
 > a function of message position**, and the argument for that (EXP-021's K4/K5

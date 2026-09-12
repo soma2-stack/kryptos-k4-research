@@ -32,7 +32,49 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint K (session 13, `claude/k4-post-j`)
+## 0 — Status after Checkpoint L (session 14, `claude/k4-post-j`)
+
+The rows-1–24 evidence request was fulfilled and **corrected the geometry**: rows 1–24 hold
+29–33 characters, so `32 + 27×31` is retracted as a description. Verified, with three
+independent corroborations. **No earlier result changed** (25/25 audit checks); EXP-033's F3
+in particular was checked cell by cell and never assumed a uniform panel.
+
+**The physical "characters above K4" model is PARKED and now disfavoured**, not tested with
+a manufactured lattice: a monospaced punch at a common row width would give every row the
+same count, so 29–33 implies the pitch varies by up to 13.8% and no common lattice exists.
+Unblocking it needs **Request 4** — one straight-on image showing whether the right edge is
+ragged or flush.
+
+**EXP-035** instead used what the source is authoritative for (row content and order):
+a running key from the 745 characters engraved directly above K4, arbitrary `f` decided
+exactly. **43,824 cases, zero feasible, zero undecided, constraint counts 4–16**,
+independently verified 14/14. The best identified key source in existence fails.
+
+**The reframing that matters more than the result.** Four experiments now kill the same
+shape — `k[i] = f(one symbol of a named source at a fixed index)` — against every source
+this repository can name (EXP-030 clock tape, EXP-031 clock arc, EXP-034 K4 itself,
+EXP-035 the panel). And every experiment here uses the same 12 conventions, which are
+**shift** families over just **two** indexing alphabets. The arbitrary-`f` trick absorbs the
+key alphabet but *not* the plaintext/ciphertext alphabets, so the whole negative corpus is
+conditional on STD/KRY indexing — while K1 and K2 demonstrably use **keyed mixed
+alphabets**.
+
+**Next, in order:**
+
+1. **Re-test the exact-consistency families under a precommitted set of keyword-derived
+   mixed alphabets.** Alphabets from published K1/K2/K3 keywords and the Kryptos alphabet
+   only; the list is fixed before running and nothing may be added after seeing a result.
+   A negative shows the negative corpus is robust to the indexing assumption; a positive
+   identifies that assumption as the flaw in four sessions of work. Note the frontier:
+   *arbitrary* mixed alphabets plus arbitrary `f` is an arbitrary 26×26 table and therefore
+   unfalsifiable, so the precommitted list is what keeps this testable at all.
+2. Substitution ∘ keyed transposition at width ≥ 12 with a key family from the same
+   published keyword corpus (EXP-033 covered widths ≤ 11 exhaustively).
+3. A specific named full-26 fractionating construction — identify it before searching.
+
+Do not extend to two-symbol keys without computing constraint density first.
+
+## 0a — Earlier status — Status after Checkpoint K (session 13, `claude/k4-post-j`)
 
 **Position preservation is no longer an assumption.** `docs/codex-audit.md` finding 7
 withdraws the K4/K5 argument for it, which reopened transposition-composed architectures.
