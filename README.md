@@ -18,6 +18,29 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint K (2026-09-12, `claude/k4-post-j`).** Continued from Codex Checkpoint J.
+> The decisive audit finding is that **every experiment through EXP-031 assumes the key is
+> a function of message position**, and the argument for that (EXP-021's K4/K5
+> correspondence) is withdrawn by `docs/codex-audit.md` finding 7 — so architectures that
+> *move* the plaintext were reopened. Three preregistered exact experiments, all negative,
+> all independently verified:
+> **EXP-032** key as an arbitrary function of engraving column — 12/12 contradictions;
+> **EXP-033** arbitrary monoalphabetic substitution composed with a declared transposition
+> family (keyed columnar widths 2–11 with **all** column orders, rectangle routes at every
+> width, and routes on K4's real ragged engraving grid) — **175,820,784 cases, zero
+> feasible**, against a computed chance-survival of 6.6×10⁻¹⁷ per permutation;
+> **EXP-034** text-dependent keys as arbitrary functions of one source letter at one lag —
+> 2,676 decided, zero feasible, 6,540 honestly reported UNDECIDED for lack of constraint.
+> In none of these was the substitution or lookup enumerated: it is decided exactly by
+> consistency, which is what keeps the families falsifiable.
+> Also recorded: the corrected `OBKR` geometry **cannot** change any crib-constrained
+> position- or column-indexed result, because no crib lies at K4 positions 0–3 and the
+> corrected and old column maps agree for every i ≥ 4. The highest-information next step is
+> an **evidence request**, not a search — the NSA cipher-side transcription of rows 1–24,
+> which would make a key drawn from the characters physically above K4 testable. See
+> [Checkpoint K](results/2026-09-12-claude-checkpoint-K.md) and
+> [external evidence requests](docs/external-evidence-requests.md).
+
 > **Checkpoint H, Tier 1 met (2026-09-12).** A 4 Nov 1989 press photograph — dated from its
 > own `NEUES FORUM` / `SDP` banners, not from caption metadata — shows the **complete CET /
 > UTC+1 face**, both bands and order: upper 9 names/62 letters (alphabetical), lower 9

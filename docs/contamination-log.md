@@ -194,6 +194,26 @@ Protocol points worth recording:
   OBSERVATION, NOT EVIDENCE and refused as grounds to run the test, which is the only reason
   nothing downstream was built on it.
 
+## Session 13 (Checkpoint K, branch claude/k4-post-j) — clean, no incidents
+
+Inputs were repository state at the Codex Checkpoint J head and five external Perplexity
+research documents. All of it is documentary research about published sources: NSA
+declassified PDFs, two 2005 WIRED interviews, a 2009 WIRED feature, and a picture-agency
+collection page. No claimed-solution site was used or cited; no alleged K4 plaintext,
+solution dump, or private K5 material was sought, accessed or inferred. Cribs used:
+EASTNORTHEAST and BERLINCLOCK only.
+
+Two protocol points:
+
+- Two attempts to fetch primary sources (`www.nsa.gov`, `media.defense.gov`) were refused
+  by the proxy with 403. The missing material was written up as an exact external evidence
+  request in `docs/external-evidence-requests.md` rather than reconstructed from memory —
+  specifically the K1–K3 cipher-side transcription, which I do know approximately and
+  deliberately did not write down, because an approximate transcription is what produced
+  the retracted LONDON misreading at Checkpoint H.
+- Preregistrations for EXP-032/033/034 were committed before implementation, and each
+  names its prohibited post-hoc expansions. No result was tuned around.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident

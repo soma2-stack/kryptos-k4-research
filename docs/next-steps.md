@@ -32,7 +32,45 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint H, Tier 1 met (session 12)
+## 0 — Status after Checkpoint K (session 13, `claude/k4-post-j`)
+
+**Position preservation is no longer an assumption.** `docs/codex-audit.md` finding 7
+withdraws the K4/K5 argument for it, which reopened transposition-composed architectures.
+Three preregistered exact experiments closed the reachable parts of that space:
+
+- **EXP-032** `k[i] = f(col(i))`, any `f`: 12/12 contradictions. Also verified that the
+  corrected OBKR geometry cannot change any crib-constrained position- or column-indexed
+  result (no crib at positions 0–3; column maps agree for i ≥ 4). `f(row, col)` is
+  **vacuous** on the crib set and is not claimed eliminated.
+- **EXP-033** `C[i] = S(P[σ(i)])`, `S` any function decided exactly: **175,820,784 cases,
+  zero feasible**, chance survival 6.6×10⁻¹⁷ per permutation. Covers keyed columnar
+  widths 2–11 with all column orders, rectangle routes at all widths, and K4's ragged
+  engraving-grid routes (the formalised scratch result).
+- **EXP-034** `k[i] = f(S[i−L])`, any `f`: 2,676 decided, zero feasible, 6,540 UNDECIDED.
+
+**Where the probability mass actually sits, and why search cannot reach it:** a
+polyalphabetic key from a long, unidentified, low-entropy-but-external source. Unicity
+caps recoverable key entropy at roughly 66–76 letters against 97 characters, so this
+family only moves on *evidence about the source*.
+
+**Next, in order:**
+
+1. **Evidence: the NSA cipher-side transcription of rows 1–24** (Request 1 in
+   `docs/external-evidence-requests.md`). Unblocks a parameter-free, ~1,200-case,
+   crib-falsifiable model — a key drawn from the characters physically above each K4
+   character — that no local work can reach. Blocked only by a 403.
+2. **Analysis: substitution ∘ keyed transposition where the key comes from the published
+   Kryptos keyword corpus** (PALIMPSEST, ABSCISSA, KRYPTOS and the K3 route parameters if
+   they can be verified), at widths ≥ 12. Small, motivated, exactly decidable by the same
+   consistency test — the natural extension of EXP-033 beyond exhaustive width.
+3. **Analysis: a declared narrow fractionating variant whose output alphabet is the full
+   26** — fractionate on one grid, recombine on another. EXP-012's coverage argument does
+   not reach it. Must be narrowed and its decidability checked *before* implementation.
+
+Do not extend EXP-034 to two taps without first computing the constraint counts: they
+will fall fast, and an under-constrained family teaches nothing.
+
+## 0a — Earlier status — Status after Checkpoint H, Tier 1 met (session 12)
 
 **Tier 1 is MET and the test has been run. It came back negative.**
 
