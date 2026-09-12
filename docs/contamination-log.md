@@ -204,3 +204,13 @@ archive searches for the three supplied photo targets yielded no usable image.
 One archive snippet and unrelated numeric-ID search matches were returned; no
 claimed-solution source was accessed and no new historical transcription was added.
 No external verifier submission. See codex-image-request.md for the paused evidence task.
+
+## Codex Checkpoint J — clean historical image evidence
+
+Three supplied images inspected. Publisher previews and a larger bpb source were
+retrieved only via the exact historical archive links already in the repository.
+No modern list, claimed K4 solution, leaked text or extra plaintext assumption was
+used. ATHEN absence retracted from direct pixels. Reconstruction and EXP-031
+preregistration published before execution; checksum repair of two transferred
+JPEGs completed before scoring. 384 synthetic X-filler controls, public cribs only.
+No external verifier contacted.

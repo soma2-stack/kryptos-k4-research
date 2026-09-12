@@ -1,0 +1,25 @@
+PASS: exact three-face order, all lines, era, ends, unchanged CET, image hashes and retained UTC+3 conflict
+PASS planted controls 384
+{
+  "experiment": "EXP-031",
+  "evidence_sha256": "a4d6b2dd701c0f88810c40d2e23a1735a80908a82311557cf92cfe6aa2fe4c24",
+  "labelled_windows": 1216,
+  "unique_windows": 1216,
+  "cases": 29184,
+  "positive_controls": 384,
+  "histogram": {
+    "0": 11487,
+    "1": 10640,
+    "2": 5075,
+    "3": 1588,
+    "4": 339,
+    "5": 48,
+    "6": 5,
+    "7": 2
+  },
+  "exact_hits": [],
+  "score_order": "window insertion order, key alphabet STD/KRY, all_conventions() order",
+  "windows_sha256": "572c22fee99b1a28bf75e2fad36bfd076cba203264885c76f3aefcd59684b01a",
+  "scores_sha256": "67cf4ed7ee7ce33cb46fde97ac2186cbcb73910ab87035bb4a978d63935d37cb",
+  "limitations": "Only specified 3-face per-sector band concatenations; no full-drum wrap, whole-band-first or non-running-key architecture."
+}

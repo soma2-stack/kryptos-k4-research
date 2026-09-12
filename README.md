@@ -1,3 +1,9 @@
+> **Checkpoint J:** [image audit](docs/checkpoint-J-image-audit.md) and
+> [results](results/2026-09-12-codex-checkpoint-J.md). Three target-era faces
+> (UTC+0/+1/+2), 272 letters frozen. ATHEN absence retracted. EXP-031: 29,184
+> new multi-face cases, zero exact hits; 384 controls pass; independently verified.
+> K4 remains unsolved. Older statuses below are historical.
+
 > **Current audit (Checkpoint I):** see [Codex audit](docs/codex-audit.md) and
 > [verified continuation](results/2026-09-12-codex-checkpoint-I.md). Historical
 > entries below include superseded interpretations; the audit takes precedence.

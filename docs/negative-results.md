@@ -1,3 +1,7 @@
+> **EXP-031:** 1,216 cross-face 97-letter windows x 2 key alphabets x 12 conventions
+> = 29,184 cases, zero exact hits; 384 controls pass. See
+> [Checkpoint J](../results/2026-09-12-codex-checkpoint-J.md) for exact scope.
+
 > **Checkpoint I supersedes stale interpretations below.** Read
 > [the audit](codex-audit.md) and [current result](../results/2026-09-12-codex-checkpoint-I.md)
 > first. Preserve the frozen 120-letter tape. Do not rerun historical large searches.

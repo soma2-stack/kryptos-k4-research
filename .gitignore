@@ -16,3 +16,7 @@ results/logs/*
 !results/exp030/summary.json
 !results/exp030/cases.jsonl.gz
 scratch/
+
+# Checkpoint J complete, bounded experiment results.
+!results/exp031/
+!results/exp031/*.json

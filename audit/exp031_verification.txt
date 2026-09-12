@@ -1,0 +1,1 @@
+PASS: all 1216 windows/aliases reconstructed independently; all 29184 scores agree; file hashes, complete coverage and exact-hit count verified. Control count recorded as 384 (controls run by experiment).

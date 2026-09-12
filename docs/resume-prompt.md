@@ -1,3 +1,7 @@
+> **Current: Checkpoint J.** Read [the report](../results/2026-09-12-codex-checkpoint-J.md).
+> Use the separate frozen checkpoint_J dataset for the three-face arc; preserve old
+> snapshots. ATHEN is present. EXP-029/030/031 are scoped negatives; do not repeat them.
+
 > **Checkpoint I supersedes stale interpretations below.** Read
 > [the audit](codex-audit.md) and [current result](../results/2026-09-12-codex-checkpoint-I.md)
 > first. Preserve the frozen 120-letter tape. Do not rerun historical large searches.
