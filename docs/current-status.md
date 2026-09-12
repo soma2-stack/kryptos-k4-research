@@ -2,7 +2,7 @@
 
 This file is a navigation aid for future research sessions. It does **not** replace or rewrite historical checkpoints. Older files such as `docs/next-steps.md` and the opening banners in `README.md` / `docs/research-state.md` contain historical snapshots and can be stale at the top.
 
-**Current research checkpoint:** Checkpoint P (`results/2026-09-12-claude-checkpoint-P.md`).
+**Current research checkpoint:** Checkpoint Q (`results/2026-09-12-claude-checkpoint-Q.md`).
 
 **Parent branch state when this handoff was created:** `claude/k4-post-j` at `81d928dce9569d5afc8b1fc061f2e279856e8063`.
 
@@ -33,7 +33,8 @@ See `docs/external/checkpoint-O-public-crib-primary-verification.md` and Checkpo
 - EXP-037 eliminates the declared standard Porta family at its exact scope.
 - Quagmire I–III and Gronsfeld reduce to already-covered families; Quagmire IV requires an unsupported second alphabet.
 - Standard CM Bifid reduces to EXP-012; standard Fractionated Morse is closed as above; named classical fractionation is substantially narrowed, not globally eliminated.
-- Direct Gromark was rejected structurally before primer search because legal key digits 0–9 cannot realise enough public crib pairs under the evidenced component-alphabet treatments. No EXP-038 exists.
+- Direct Gromark was rejected structurally before primer search because legal key digits 0–9 cannot realise enough public crib pairs under the evidenced component-alphabet treatments.
+- **EXP-038 (Checkpoint Q) closed the full-Z26 second-order affine recursive-key family**: 210,912 exact linear solves, zero feasible, verified exhaustively and independently over all 26⁴ + 26⁵ tuples. Read it narrowly — it is *not* an elimination of recursive or stateful keys in general, and higher-order, nonlinear, reset and externally seeded state machines remain open.
 - Direct World Clock city-letter models have multiple bounded negatives; do not rescue them by adding post-hoc parameters.
 - The physical same-column-above-K4 model is parked because a common horizontal lattice is not established.
 
@@ -55,22 +56,21 @@ In particular, do not restart old claims that were retracted:
 
 ## One recommended next cryptanalytic direction
 
-**Stateful recursive key schedules**, with state evolving from prior key values, over a **small precommitted recurrence family**.
+**Monoalphabetic substitution composed with DOUBLE transposition, both keys drawn from a
+precommitted list of published Kryptos keywords** (`KRYPTOS`, `PALIMPSEST`, `ABSCISSA`).
 
-Before assigning a new EXP number:
+Motivated rather than speculative: K3 is a transposition Sanborn implemented himself and those
+keywords are demonstrably his. Not duplicate: EXP-033 and EXP-036 each composed their
+substitution with a **single** transposition from a declared family, and a product of two
+columnar transpositions lies outside both. Decidable: EXP-033's exact test has a
+chance-feasibility of 6.6e-17 per permutation, so the family stays falsifiable up to about
+1e14 permutations — but full double columnar at widths ≤ 11 is ≈1.9e15, which is precisely why
+the key list must stay **precommitted and small**. Compute the family size and null from the
+keyword list before implementing, and if the list needs padding with unevidenced words to make
+the search interesting, do not run it.
 
-1. Define each recurrence algebraically.
-2. Prove it is not already covered by EXP-006, EXP-008, EXP-034, or EXP-036.
-3. Exclude any recurrence whose relevant orbit is eventually periodic with period ≤ 23 if that makes it a subset of EXP-036.
-4. Compute the seed-space size and the number of distinct projections onto the 24 verified crib positions **before implementation**.
-5. Derive the expected chance-survivor count from the declared family itself.
-6. If the crib constraints do not beat the seed space, do not run the family.
-7. Prefer existential consistency over brute-force key enumeration where possible.
-8. Require planted-positive and adversarial controls that actually intersect active constraints.
-9. Require an independent verifier that reimplements the recurrence rather than importing production code.
-10. Keep the conclusion model-limited.
-
-This direction is **STRUCTURALLY-MOTIVATED, not documentary**. There is no Sanborn/Scheidt statement naming such a system.
+Do **not** extend EXP-038 from order 2 to order 3 without independent motivation — that is the
+rescue pattern this programme rejects. See Checkpoint Q §9 for the full setup.
 
 ## External evidence
 

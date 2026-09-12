@@ -18,6 +18,19 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint Q (2026-09-12, `claude/k4-post-j`).** **EXP-038** closed the stateful
+> recursive-key gap at its second-order affine scope: `k[n] = a·k[n-1] + b·k[n-2] (+ c) mod 26`
+> over the **full Z26**, message-aligned, all 12 committed conventions. The state was decided
+> **existentially** — the closed form makes each `(a,b,c)` a 24×2 exact linear system, so
+> 210,912 solves replaced 143 million trials. **Zero feasible**, and *neither crib block is
+> satisfiable on its own*, so it is not a near-miss. The null was computed from the family's
+> own realised image (4,481,750 distinct crib projections of 26²⁴ → 5.9×10⁻²⁷ expected
+> survivors), and the duplicate audit is quantitative: 11.9M tuples collapse to 7,585,006
+> streams, of which 1,701,518 have a 97-prefix periodic with `p ≤ 23` and are tagged ALREADY
+> COVERED. Verified **exhaustively and independently** — both 26⁴ and 26⁵ re-decided by direct
+> iteration without importing `k4lib`, 16/16. Read narrowly: this is **not** "recursive keys
+> are eliminated". See [Checkpoint Q](results/2026-09-12-claude-checkpoint-Q.md).
+
 > **Checkpoint P (2026-09-12, `claude/k4-post-j`).** The public crib positions are now
 > **externally verified** rather than inherited convention: contemporaneous NYT reporting
 > fixes `BERLIN` at one-based 64–69, `CLOCK` at 70–74 and `NORTHEAST` at 26–34, and `EAST` is

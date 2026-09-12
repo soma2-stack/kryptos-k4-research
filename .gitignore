@@ -41,3 +41,7 @@ scratch/
 # Checkpoint N.
 !results/exp037/
 !results/exp037/summary.json
+
+# Checkpoint Q.
+!results/exp038/
+!results/exp038/summary.json

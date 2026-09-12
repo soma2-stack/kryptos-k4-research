@@ -287,6 +287,23 @@ Protocol points:
   generalised, and the lifted Playfair/reflector contingency was checked against the directly
   numbered spans rather than assumed.
 
+## Session 18 (Checkpoint Q, branch claude/k4-post-j) — clean, no incidents
+
+Pure computation on repository data: the public ciphertext, the public-verified crib
+positions, and an ordinary classical-cipher construction. No claimed-solution site used or
+cited; no alleged K4 plaintext, purported solution, or private K5 material sought, accessed or
+inferred.
+
+Protocol points:
+
+- The family-structure and null figures were computed **without touching the real target
+  vectors**, so the information-gain gate was decided before the experiment could see its
+  answer; the preregistration was committed before implementation.
+- A stale input hash in the first draft of the preregistration was corrected **before
+  execution**, with the substitution recorded in the file rather than silently swapped.
+- F1 and F2 were admitted together in advance specifically so that a negative on F1 could not
+  be followed by adding the affine term as a rescue.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident
