@@ -24,6 +24,20 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
+## 0 — Status after Checkpoint F
+
+Blockers 2–4 are partially closed from contemporary December 1997 reporting: five of
+~20 additions (Jerusalem, Tel Aviv, Cape Town, Oslo, Seoul), four renames (adding
+Aschchabad→Aschgabat), one zone move (Kiew). The first genuine pre-1997 panel
+fragment is established: the UTC+1 panel carried **… Bern, Bratislava, Belgrad …**
+— adjacency sourced, band unknown.
+
+A **seventh blocker** was found: the clock was also restored in **2015**, so
+reversing 1997 alone is insufficient.
+
+`k4lib/wz_panels.build_clock()` now **refuses** to build a historical clock while any
+sector is UNKNOWN. Do not defeat that guard.
+
 ## 1 — Retrieve the modern Weltzeituhr city list, then run EXP-024
 
 Priority: **highest**, and it is now a *minutes-long task for a human with a
@@ -32,7 +46,11 @@ session could not retrieve it: `WebFetch` is blocked by the network egress proxy
 for every external domain, and search summaries decline to enumerate lists. That is
 an environment limit, not a gap in the historical record.
 
-With that list in hand, `EXP-024` runs unchanged — 22 preregistered reading
+Ingest it with `k4lib.wz_panels.ingest_modern_list`, which stores the published
+order as `modern_names_unsplit` and does NOT infer physical band placement from
+table order. Then reverse 2015, then 1997.
+
+With the historical list in hand, `EXP-024` runs unchanged — 22 preregistered reading
 procedures, 2 alphabets, 2 directions, every offset, 12 conventions, ~480,000
 alignments, validated end-to-end on a synthetic clock with a planted keystream.
 Fill the six blocking items in `data/weltzeituhr.json`.
@@ -57,6 +75,12 @@ for the full trail. Where to look next:
   Museum, Bundesarchiv);
 - Erich John's design documentation or interviews;
 - Berlin municipal / Stadtmuseum archives;
+- **The Senatsbauverwaltung ↔ Auswärtiges Amt Sprachendienst correspondence (1997)** —
+  the Senate building administration stated publicly in December 1997 that the
+  spellings were coordinated with the Foreign Office language service in Bonn and the
+  Senatskanzlei. One correspondence file would enumerate every 1997 name and spelling,
+  closing blockers 2, 3 and 4 at once. **Highest-value single document.**
+- **The 2015 restoration record** — blocker 7, entirely unknown.
 - **The 1997 restoration records under Hans-Joachim Kunsch** — he executed the 1969
   construction on site *and* led the restoration, so his records would specify every
   change at once. Three renames (Leningrad→Sankt Petersburg, Alma Ata→Almaty,

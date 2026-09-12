@@ -10,12 +10,13 @@ ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ce
    1997 restoration under Hans-Joachim Kunsch, who also built it in 1969
 
 ## What is UNKNOWN, and therefore blocks the test
-   1. the modern per-sector list (published, but not retrievable here)
-   2. the full list of the 20 names added in 1997 (only 4 named in sources reached)
-   3. the full list of 1997 zone reassignments (only Kyiv named)
-   4. any removals in 1997 (undocumented in sources reached)
-   5. upper-versus-lower band assignment for every name (undocumented)
-   6. the cylinder's orientation relative to north (undocumented)
+   1. 1. modern per-sector list - PUBLISHED at weltzeituhr-berlin.de/en/places-worldtimeclock but NOT RETRIEVABLE HERE. Verified at three levels: WebFetch returns EGRESS_BLOCKED for every external domain; curl reports 'connect_rejected (organization policy)' while pypi.org returns HTTP 200, proving domain policy rather than network failure; search summaries decline to enumerate. This is an environment limit, not a gap in the record.
+   2. 2. full list of ~20 names added in 1997 - PARTIALLY CLOSED: Jerusalem, Tel Aviv, Kapstadt/Cape Town, Oslo, Seoul documented (5 of 20). 15 still unnamed.
+   3. 3. full list of 1997 zone reassignments - PARTIALLY CLOSED: only Kiew/Kyiv named, and its from/to sectors are UNKNOWN.
+   4. 4. removals/replacements in 1997 - UNKNOWN. No source reached documents any removal.
+   5. 5. upper-versus-lower band assignment - UNKNOWN for every sector. One adjacency is known (Bern-Bratislava-Belgrad in UTC+1) but WITHOUT its band.
+   6. 6. cylinder orientation relative to north - UNKNOWN.
+   7. 7. NEW: the 2015 restoration change set - UNKNOWN. Checkpoint E assumed a single 1997 subtraction would suffice; the clock was also restored in 2015, and Apia's own offset changed in 2011, so 2015 must be reversed too.
 
 ## Preregistered reading procedures (defined before any data exists)
    cw/start0/ul

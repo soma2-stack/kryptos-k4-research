@@ -1,0 +1,478 @@
+{
+  "schema_version": 1,
+  "purpose": "Panel evidence matrix for the Weltzeituhr, one entry per displayed sector. This layer exists so the clock is NOT collapsed into a running text before the per-sector reconstruction is real. UNKNOWN means unknown; it is never filled from modern data.",
+  "contamination_note": "No claimed-K4-solution site used. See docs/contamination-log.md.",
+  "displayed_range": {
+    "value": "INFERRED as UTC-10 .. UTC+13 (24 sectors)",
+    "basis": "Reported that the published list spans Honolulu through Apia. Honolulu is UTC-10; Apia is UTC+13 since 2011 (it was UTC-11 before). -10..+13 inclusive is exactly 24 sectors, which is consistent.",
+    "confidence": "INFERRED",
+    "caution": "An alternative reading is UTC-11..+12 with the list wrapping. Both give 24 sectors. This must be settled from the published list itself, not assumed."
+  },
+  "post_1997_changes_warning": {
+    "value": "The clock was ALSO restored in 2015, and Apia's own UTC offset changed in 2011 (-11 to +13).",
+    "implication": "Reconstructing 1988-89 from the MODERN list requires reversing the 2015 changes as well as the 1997 ones. Checkpoint E framed this as a single 1997 subtraction; that is now known to be insufficient.",
+    "confidence": "MULTIPLE INDEPENDENT SOURCES for the 2015 restoration; the 2015 change set is UNKNOWN"
+  },
+  "change_set_1997": {
+    "additions_documented": [
+      {
+        "name": "Jerusalem",
+        "confidence": "MULTIPLE INDEPENDENT SOURCES"
+      },
+      {
+        "name": "Tel Aviv",
+        "confidence": "MULTIPLE INDEPENDENT SOURCES"
+      },
+      {
+        "name": "Kapstadt / Cape Town",
+        "confidence": "MULTIPLE INDEPENDENT SOURCES"
+      },
+      {
+        "name": "Oslo",
+        "confidence": "SINGLE RELIABLE SOURCE"
+      },
+      {
+        "name": "Seoul",
+        "confidence": "SINGLE RELIABLE SOURCE"
+      }
+    ],
+    "additions_total_reported": 20,
+    "additions_still_unnamed": 15,
+    "renames_documented": [
+      {
+        "from": "Leningrad",
+        "to": "Sankt Petersburg"
+      },
+      {
+        "from": "Alma-Ata",
+        "to": "Almaty"
+      },
+      {
+        "from": "Aschchabad",
+        "to": "Aschgabat"
+      },
+      {
+        "from": "Bratislava",
+        "to": "Preszburg"
+      }
+    ],
+    "zone_moves_documented": [
+      {
+        "name": "Kiew / Kyiv",
+        "confidence": "SINGLE RELIABLE SOURCE",
+        "from": "UNKNOWN",
+        "to": "UNKNOWN"
+      }
+    ],
+    "removals": "UNKNOWN - no source reached documents any removal",
+    "spelling_authority": {
+      "value": "The Senatsbauverwaltung stated the spellings were coordinated with the LANGUAGE SERVICE OF THE AUSWAERTIGES AMT in Bonn and the Senatskanzlei.",
+      "confidence": "SINGLE RELIABLE SOURCE (Berliner Zeitung, Dec 1997)",
+      "why_it_matters": "This identifies a SPECIFIC ARCHIVAL HOLDER of the complete 1997 name list. A correspondence file between the Berlin Senatsbauverwaltung and the Auswaertiges Amt Sprachendienst would enumerate every name and spelling decided in 1997 - the single document that would close blockers 2, 3 and 4 at once."
+    }
+  },
+  "sectors": {
+    "-10": {
+      "utc_offset": -10,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-9": {
+      "utc_offset": -9,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-8": {
+      "utc_offset": -8,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-7": {
+      "utc_offset": -7,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-6": {
+      "utc_offset": -6,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-5": {
+      "utc_offset": -5,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-4": {
+      "utc_offset": -4,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-3": {
+      "utc_offset": -3,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-2": {
+      "utc_offset": -2,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "-1": {
+      "utc_offset": -1,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "0": {
+      "utc_offset": 0,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "1": {
+      "utc_offset": 1,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "PARTIAL: contains ... Bern, Preszburg, Belgrad ... in that adjacency",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [
+        {
+          "name": "Oslo",
+          "confidence": "SINGLE RELIABLE SOURCE"
+        }
+      ],
+      "renamed_1997": [
+        {
+          "from": "Bratislava",
+          "to": "Preszburg (Pressburg)",
+          "confidence": "MULTIPLE INDEPENDENT SOURCES"
+        }
+      ],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [
+        "Berliner Zeitung, Dec 1997, 'Preszburg oder Bratislava?'",
+        "taz.de coverage",
+        "de.wikipedia summary"
+      ],
+      "confidence": "ADJACENCY: MULTIPLE INDEPENDENT SOURCES. BAND: UNKNOWN. REST OF SECTOR: UNKNOWN.",
+      "pre1997_fragment": [
+        "Bern",
+        "Bratislava",
+        "Belgrad"
+      ],
+      "pre1997_fragment_note": "Contemporary reporting (Berliner Zeitung, Dec 1997) states that after the restoration the name 'Preszburg' stands on an aluminium panel BETWEEN BERN AND BELGRAD. Since a rename presupposes the prior entry, the pre-1997 panel carried Bratislava in that slot. The ADJACENCY is reported; the BAND (upper vs lower) and the rest of the sector are not."
+    },
+    "2": {
+      "utc_offset": 2,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "3": {
+      "utc_offset": 3,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [
+        {
+          "from": "Leningrad",
+          "to": "Sankt Petersburg",
+          "confidence": "MULTIPLE INDEPENDENT SOURCES",
+          "note": "Sector assignment INFERRED from geography, not from a source. Leningrad/St Petersburg is UTC+3."
+        }
+      ],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "rename documented; sector placement INFERRED"
+    },
+    "4": {
+      "utc_offset": 4,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "5": {
+      "utc_offset": 5,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [
+        {
+          "from": "Aschchabad",
+          "to": "Aschgabat",
+          "confidence": "SINGLE RELIABLE SOURCE",
+          "note": "Ashgabat is UTC+5. Sector placement INFERRED from geography, not from a source."
+        }
+      ],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "6": {
+      "utc_offset": 6,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [
+        {
+          "from": "Alma-Ata",
+          "to": "Almaty",
+          "confidence": "MULTIPLE INDEPENDENT SOURCES",
+          "note": "Almaty is UTC+6. Sector placement INFERRED from geography, not from a source."
+        }
+      ],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "7": {
+      "utc_offset": 7,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "8": {
+      "utc_offset": 8,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "9": {
+      "utc_offset": 9,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "10": {
+      "utc_offset": 10,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "11": {
+      "utc_offset": 11,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "12": {
+      "utc_offset": 12,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    },
+    "13": {
+      "utc_offset": 13,
+      "modern_upper": "UNKNOWN",
+      "modern_lower": "UNKNOWN",
+      "modern_names_unsplit": "UNKNOWN",
+      "pre1997_upper": "UNKNOWN",
+      "pre1997_lower": "UNKNOWN",
+      "added_1997": [],
+      "renamed_1997": [],
+      "moved_1997": [],
+      "removed_1997": "UNKNOWN",
+      "unresolved": [],
+      "sources": [],
+      "confidence": "UNKNOWN"
+    }
+  }
+}

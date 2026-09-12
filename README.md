@@ -6,6 +6,22 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint F (2026-09-12).** The modern city list is published but **denied by
+> this environment's egress policy** — proven at three levels (`curl` returns
+> `connect_rejected (organization policy)` while `pypi.org` returns HTTP 200).
+> Contemporary December 1997 reporting closed part of the gap instead: five of ~20
+> additions, four renames, one zone move, and the **first genuine pre-1997 panel
+> fragment** — the UTC+1 panel carried *… Bern, Bratislava, Belgrad …*
+>
+> A seventh blocker surfaced: the clock was **also restored in 2015**, so reversing
+> 1997 alone is not enough. And substituting the modern list is now measurably wrong:
+> only **8–19%** of its 97-letter windows are free of post-1997 names.
+>
+> `wz_panels.build_clock()` refuses to fabricate a historical clock from incomplete
+> data. EXP-024 remains **unaltered and unrun**. See
+> [Checkpoint F](results/2026-09-12f-checkpoint-F.md).
+
+
 > **Checkpoint E (2026-09-12).** The 1988–89 Weltzeituhr could **not** be
 > reconstructed, and the hypothesis was not rescued. What changed: the object model
 > is now correct — the city-name cylinder is **static**, with a rotating hour ring
@@ -145,7 +161,7 @@ Earned the hard way; read before adding an experiment.
 ## Status
 
 Prepared from the referenced ChatGPT conversation on 2026-09-11 and published by the
-user. Extended 2026-09-12 with an executable toolchain, twenty-four experiments, an exact
+user. Extended 2026-09-12 with an executable toolchain, twenty-five experiments, an exact
 Z₂₆ solver, the testability frontier, robustness and evidence-grade audits, the
 Weltzeituhr and compass-bearing tests, the unicity bound, the verified carved line
 geometry, and the K4/K5 memory-depth diagnostic. **K4 remains unsolved, and no candidate

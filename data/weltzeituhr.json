@@ -2,7 +2,6 @@
   "schema_version": 1,
   "purpose": "Structured representation of the Urania-Weltzeituhr, Alexanderplatz, as a physical object rather than a text string. Built so that later experiments can read it in physically meaningful ways. Fields carry confidence grades: PRIMARY VERIFIED / MULTIPLE INDEPENDENT SOURCES / SINGLE RELIABLE SOURCE / INFERRED / UNKNOWN. UNKNOWN fields are NOT filled with modern data.",
   "contamination_note": "No claimed-K4-solution site was used as a source. See docs/contamination-log.md.",
-
   "identity": {
     "name": "Urania-Weltzeituhr",
     "location": "Alexanderplatz, Berlin",
@@ -10,7 +9,6 @@
     "opened": "1969-09-30",
     "confidence": "MULTIPLE INDEPENDENT SOURCES"
   },
-
   "construction": {
     "on_site_execution": "Hans-Joachim Kunsch, metalsmith and metal sculptor",
     "team": "about 120 specialists across trades, including the Coswig gear factory; built with volunteer after-work brigades",
@@ -19,7 +17,6 @@
     "confidence": "MULTIPLE INDEPENDENT SOURCES",
     "note": "Stamped lettering implies physical letter punches/templates existed. Whether any survive is UNKNOWN."
   },
-
   "geometry": {
     "form": "three-part cylinder with 24 corners and 24 sides, on a column",
     "column_height_m": 2.7,
@@ -54,14 +51,20 @@
       "why_it_matters": "Any reading that starts from a compass bearing - which EASTNORTHEAST would supply - requires knowing which sector faces which direction. Without it, a bearing cannot be converted into a sector. Note also that with 24 faces every 15 degrees, ANY bearing lies within 7.5 degrees of a face centre, so proximity alone carries no information."
     }
   },
-
   "contents": {
     "total_places_modern": {
       "value": "CONFLICTING: 146, 148 reported; plus one entry for the international date line",
       "confidence": "MULTIPLE INDEPENDENT SOURCES BUT MUTUALLY INCONSISTENT"
     },
-    "total_places_1969": {"value": "80 reported by one source; cannot be reconciled with the modern counts", "confidence": "SINGLE RELIABLE SOURCE"},
-    "international_date_line": {"present": true, "position": "UNKNOWN", "confidence": "MULTIPLE INDEPENDENT SOURCES for presence"},
+    "total_places_1969": {
+      "value": "80 reported by one source; cannot be reconciled with the modern counts",
+      "confidence": "SINGLE RELIABLE SOURCE"
+    },
+    "international_date_line": {
+      "present": true,
+      "position": "UNKNOWN",
+      "confidence": "MULTIPLE INDEPENDENT SOURCES for presence"
+    },
     "per_sector_names_1989": {
       "value": "UNKNOWN",
       "confidence": "UNKNOWN",
@@ -72,40 +75,81 @@
       "confidence": "UNKNOWN",
       "status": "The modern list IS published (weltzeituhr-berlin.de publishes a places-by-time-zone page). It could not be retrieved here: this session's network policy blocks WebFetch to all external domains, and search summaries decline to enumerate. This is an ENVIRONMENT limitation, not a claim that the data is unavailable to a human researcher."
     },
-    "berlin_position": {"value": "UNKNOWN", "confidence": "UNKNOWN"},
-    "moscow_position": {"value": "UNKNOWN", "confidence": "UNKNOWN"}
+    "berlin_position": {
+      "value": "UNKNOWN",
+      "confidence": "UNKNOWN"
+    },
+    "moscow_position": {
+      "value": "UNKNOWN",
+      "confidence": "UNKNOWN"
+    }
   },
-
   "changes_1997": {
     "restoration": "October to December 1997, cost 350,000 DM, metal restoration under Hans-Joachim Kunsch",
     "confidence": "MULTIPLE INDEPENDENT SOURCES",
     "renames_documented": [
-      {"from": "Leningrad", "to": "Sankt Petersburg", "confidence": "MULTIPLE INDEPENDENT SOURCES"},
-      {"from": "Alma Ata", "to": "Almaty", "confidence": "MULTIPLE INDEPENDENT SOURCES"},
-      {"from": "Bratislava", "to": "Pressburg", "confidence": "SINGLE RELIABLE SOURCE", "note": "reported to have drawn diplomatic protest from Slovakia"}
+      {
+        "from": "Leningrad",
+        "to": "Sankt Petersburg",
+        "confidence": "MULTIPLE INDEPENDENT SOURCES"
+      },
+      {
+        "from": "Alma Ata",
+        "to": "Almaty",
+        "confidence": "MULTIPLE INDEPENDENT SOURCES"
+      },
+      {
+        "from": "Bratislava",
+        "to": "Pressburg",
+        "confidence": "SINGLE RELIABLE SOURCE",
+        "note": "reported to have drawn diplomatic protest from Slovakia"
+      }
     ],
     "additions_documented": {
       "count_reported": 20,
-      "named_so_far": ["Tel Aviv", "Cape Town", "Seoul", "Jerusalem"],
+      "named_so_far": [
+        "Tel Aviv",
+        "Cape Town",
+        "Seoul",
+        "Jerusalem"
+      ],
       "confidence": "SINGLE/MULTIPLE for the count; only four of the twenty are named in sources reached",
       "reason": "cities the GDR had omitted for political reasons"
     },
-    "zone_reassignments": {"example": "Kyiv", "full_list": "UNKNOWN", "confidence": "SINGLE RELIABLE SOURCE for the fact, UNKNOWN for the list"},
-    "removals": {"value": "UNKNOWN", "confidence": "UNKNOWN"}
+    "zone_reassignments": {
+      "example": "Kyiv",
+      "full_list": "UNKNOWN",
+      "confidence": "SINGLE RELIABLE SOURCE for the fact, UNKNOWN for the list"
+    },
+    "removals": {
+      "value": "UNKNOWN",
+      "confidence": "UNKNOWN"
+    }
   },
-
   "reconstruction_status": {
-    "verdict": "INCOMPLETE - the 1988-89 configuration cannot be reconstructed from sources reachable in this environment.",
-    "method_that_would_work": "Take the published modern per-sector list, subtract the 20 names added in 1997, reverse the documented renames, and revert the documented zone reassignments.",
+    "verdict": "STILL INCOMPLETE. Blockers 2-4 partially closed in session 6; blocker 1 could not be closed in this environment despite the data being published.",
+    "method_that_would_work": "Take the published modern per-sector list, reverse the 2015 change set, subtract the 20 names added in 1997, reverse the documented renames, and revert the documented zone reassignments.",
     "blocking_items": [
-      "the modern per-sector list (published, but not retrievable here)",
-      "the full list of the 20 names added in 1997 (only 4 named in sources reached)",
-      "the full list of 1997 zone reassignments (only Kyiv named)",
-      "any removals in 1997 (undocumented in sources reached)",
-      "upper-versus-lower band assignment for every name (undocumented)",
-      "the cylinder's orientation relative to north (undocumented)"
-    ]
+      "1. modern per-sector list - PUBLISHED at weltzeituhr-berlin.de/en/places-worldtimeclock but NOT RETRIEVABLE HERE. Verified at three levels: WebFetch returns EGRESS_BLOCKED for every external domain; curl reports 'connect_rejected (organization policy)' while pypi.org returns HTTP 200, proving domain policy rather than network failure; search summaries decline to enumerate. This is an environment limit, not a gap in the record.",
+      "2. full list of ~20 names added in 1997 - PARTIALLY CLOSED: Jerusalem, Tel Aviv, Kapstadt/Cape Town, Oslo, Seoul documented (5 of 20). 15 still unnamed.",
+      "3. full list of 1997 zone reassignments - PARTIALLY CLOSED: only Kiew/Kyiv named, and its from/to sectors are UNKNOWN.",
+      "4. removals/replacements in 1997 - UNKNOWN. No source reached documents any removal.",
+      "5. upper-versus-lower band assignment - UNKNOWN for every sector. One adjacency is known (Bern-Bratislava-Belgrad in UTC+1) but WITHOUT its band.",
+      "6. cylinder orientation relative to north - UNKNOWN.",
+      "7. NEW: the 2015 restoration change set - UNKNOWN. Checkpoint E assumed a single 1997 subtraction would suffice; the clock was also restored in 2015, and Apia's own offset changed in 2011, so 2015 must be reversed too."
+    ],
+    "renames_recovered_1997": [
+      "Leningrad -> Sankt Petersburg",
+      "Alma-Ata -> Almaty",
+      "Aschchabad -> Aschgabat",
+      "Bratislava -> Preszburg"
+    ],
+    "highest_value_archival_target": {
+      "value": "Correspondence between the Berlin Senatsbauverwaltung and the LANGUAGE SERVICE OF THE AUSWAERTIGES AMT in Bonn, plus the Senatskanzlei, concerning the 1997 Weltzeituhr spellings.",
+      "basis": "The Senatsbauverwaltung publicly stated in December 1997 that the spellings were coordinated with those bodies (Berliner Zeitung, 'Preszburg oder Bratislava?').",
+      "why": "A single correspondence file would enumerate every name and spelling decided in 1997, closing blockers 2, 3 and 4 at once.",
+      "confidence": "SINGLE RELIABLE SOURCE for the coordination claim"
+    }
   },
-
   "history": "Opposition demonstrators gathered at the clock on 7 October 1989 during the GDR's 40th-anniversary celebrations; the Wall fell 33 days later."
 }

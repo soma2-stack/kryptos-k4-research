@@ -106,3 +106,27 @@ Fifteen experiments now exist. Before proposing anything:
     below chance). Its non-tape uses are untested.
 35. Both keystream-statistics probes (English prose, place names) fail correction.
     Do not rescue the city-tape hypothesis with arbitrary transformations.
+
+## Addendum — 2026-09-12 (Checkpoint F)
+
+36. `data/weltzeituhr_panels.json` is the panel evidence matrix — one entry per
+    displayed sector. Do NOT collapse the clock into a running text before this
+    layer is real. Published table order is stored as `modern_names_unsplit` and is
+    **not** evidence of physical upper/lower band placement.
+37. `k4lib/wz_panels.build_clock()` REFUSES to build a historical clock while any
+    sector is UNKNOWN. Do not defeat the guard. `allow_incomplete=True` stamps the
+    output NOT historical and must never be used for a reported result.
+38. Substituting the modern list is measurably wrong: only **8–19%** of its
+    97-letter windows are free of post-1997 names (EXP-025).
+39. There are now **seven** blockers, not six — the **2015 restoration** change set
+    was missed by Checkpoint E.
+40. Recovered pre-1997 fragment: the UTC+1 panel carried *… Bern, Bratislava,
+    Belgrad …* — adjacency sourced from Dec 1997 reporting, **band unknown**.
+41. Highest-value single document: the **Senatsbauverwaltung ↔ Auswärtiges Amt
+    Sprachendienst** 1997 correspondence on the spellings. It would close blockers
+    2, 3 and 4 together.
+42. In this environment only package registries are reachable. `curl https://pypi.org/`
+    returns 200; everything else is `connect_rejected (organization policy)`.
+    Retrieving the city list is a browser task, not a research task.
+43. EXP-024 is unaltered and unrun. Do not tune its 22 preregistered procedures
+    after the data arrives.

@@ -76,4 +76,18 @@ transcriptions of publicly visible copper plates, not plaintext of any K section
 They are admissible. They are nonetheless graded below primary and EXP-023's result
 is graded HEURISTIC NEGATIVE partly because of that.
 
+## Session 6 (Checkpoint F) — clean, no incidents
+
+Historical reconstruction of the Weltzeituhr. `solvekryptos.com` excluded on every
+query. No claimed-solution site used. No purported K4 plaintext sought or seen.
+
+Sources used: Berliner Zeitung (Dec 1997) and taz.de contemporary reporting on the
+restoration and the Preszburg dispute; German and English encyclopaedia summaries;
+Kunsch Metallbau's reference page; DDR-Bildarchiv, picture-alliance and Getty photo
+archive listings. All admissible object/historical sources.
+
+Noted for transparency: search summaries were asked repeatedly to enumerate the
+146-name list and consistently DECLINED rather than inventing one. That is the
+correct behaviour and no fabricated list entered the dataset.
+
 ## Incidents 2+ — none recorded.

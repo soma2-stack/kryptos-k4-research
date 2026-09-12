@@ -1,0 +1,73 @@
+# EXP-025 reconstruction readiness gate
+ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab
+
+## Per-sector readiness, PRE-1997 reconstruction
+   {'UNKNOWN': 23, 'FRAGMENT': 1}
+   UTC+1  FRAGMENT  ADJACENCY: MULTIPLE INDEPENDENT SOURCES. BAND: UNKNOWN. REST OF SECTOR: UNKNOWN.
+
+## The guard
+   build_clock REFUSED, as it must:
+     24 of 24 sectors lack a pre1997 band assignment: ['-10', '-9', '-8', '-7', '-6', '-5', '-4', '-3', '-2', '-1',...
+   A historical clock cannot be produced by accident. Filling UNKNOWN
+   sectors from modern names requires deliberately passing
+   allow_incomplete=True, which stamps the result NOT historical.
+
+## 1997 change set recovered so far
+   additions documented : 5 of 20 reported (15 still unnamed)
+     + Jerusalem  [MULTIPLE INDEPENDENT SOURCES]
+     + Tel Aviv  [MULTIPLE INDEPENDENT SOURCES]
+     + Kapstadt / Cape Town  [MULTIPLE INDEPENDENT SOURCES]
+     + Oslo  [SINGLE RELIABLE SOURCE]
+     + Seoul  [SINGLE RELIABLE SOURCE]
+   renames documented   : 4
+     ~ Leningrad -> Sankt Petersburg
+     ~ Alma-Ata -> Almaty
+     ~ Aschchabad -> Aschgabat
+     ~ Bratislava -> Preszburg
+   zone moves documented: 1 (Kiew / Kyiv; from/to UNKNOWN)
+   removals             : UNKNOWN - no source reached documents any removal
+
+## Why the modern list cannot be substituted - measured, not asserted
+   20 of 146 modern names were added in 1997, so 126 are pre-1997.
+   A 97-letter keystream window covers roughly 97/L names for mean name
+   length L. Probability that such a window contains NO post-1997 addition,
+   under a hypergeometric draw without replacement:
+
+   mean name length L   names per window   P(window free of 1997 additions)
+        6                   16                    0.082
+        7                   14                    0.114
+        8                   12                    0.158
+        9                   11                    0.186
+
+   So roughly 85-90% of windows of the MODERN tape are contaminated by at
+   least one name that did not exist when Sanborn was working. Testing the
+   modern list as a proxy would be wrong most of the time, and a negative
+   from it would carry almost no information about the historical clock.
+   This is the quantitative justification for not taking the shortcut.
+
+## A complication Checkpoint E did not account for
+   The clock was ALSO restored in 2015, and Apia's own UTC offset changed in 2011 (-11 to +13).
+   Reconstructing 1988-89 from the MODERN list requires reversing the 2015 changes as well as the 1997 ones. Checkpoint E framed this as a single 1997 subtraction; that is now known to be insufficient.
+   Reversing 1997 alone is therefore NOT sufficient; the 2015 change set is
+   also UNKNOWN and must be reversed too.
+
+## Power of the preregistered test, fixed in advance
+   tape length, approx        : 1022 letters (146 names x 7)
+   alignments EXP-024 will try : ~1,079,232
+   expected false 24/24 hits   : 1.19e-28
+   So a single exact hit, when the data exists, would be decisive. The
+   weakness is not power - it is that circular readings share substrings,
+   so the alignments are NOT independent and a naive correction misstates
+   the null. EXP-024's control recovered one planted key under THREE
+   procedure labels; that dependency must be reported, not corrected away.
+
+## Grade
+   Blocker 1 (modern per-sector list): NOT CLOSED IN THIS ENVIRONMENT.
+   Verified at three levels - WebFetch returns EGRESS_BLOCKED for every
+   external domain; curl reports 'connect_rejected (organization policy)'
+   while pypi.org returns HTTP 200, so it is a domain policy and not a
+   general network failure; and search summaries decline to enumerate,
+   correctly refusing rather than inventing a list.
+   Blockers 2-4: PARTIALLY CLOSED - 5 of 20 additions, 4 renames, 1 zone
+   move, 0 removals.
+   Blockers 5-6 (band assignment, orientation): UNCHANGED, UNKNOWN.
