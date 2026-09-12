@@ -320,6 +320,25 @@ Protocol points:
 - The next action recommended is an **evidence** request rather than another family, because
   every nameable public-evidence architecture has now been tested.
 
+## Session 20 (Checkpoint S, branch claude/k4-post-j) — clean, no incidents
+
+Documentary synthesis only; no cryptanalytic experiment was run. Inputs were the repository's
+own archive audit notes for Box 6 Folder 9, Series 9 Box 16 Folder 2, and the existing Scheidt
+material. No claimed-solution site used or cited; no alleged K4 plaintext, purported solution, or
+private K5 material sought, accessed or inferred.
+
+**A protocol point of unusual importance.** Box 6 Folder 9 is a first-person Sanborn manuscript
+that **explicitly states it contains embedded K4 clues**. Only explicit factual statements about
+fabrication, collaboration, custody and design intent were admitted. No acrostic, first/last
+letter, numeric, capitalisation, chapter-title, word-count, place-name or repeated-phrase mining
+was performed. An intentionally clue-bearing text must not be used as an answer oracle, and
+unlocking it would require a deliberate, separately recorded protocol change — which is not
+recommended and was not made.
+
+Also recorded: the Webster partial-plaintext/partial-key custody item (Folder 9 pp.20–21) was
+noted as provenance only and deliberately **not** pursued this session, since partial plaintext
+would engage the contamination protocol directly.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident

@@ -18,6 +18,22 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint S (2026-09-12, `claude/k4-post-j`).** Documentary synthesis, **no experiment run
+> and no EXP-040 created** — the reported result. A newly audited first-person Sanborn manuscript
+> supersedes the waterjet fabrication story: the automated route was **rejected on cost** and the
+> letters were hand-cut from **metal stencils traced on scribed horizontal row lines**. So row
+> order is meaningful but pitch, a common x-grid and 31 physical columns are **unestablished** —
+> the physical models stay parked and **Request 4 is demoted**. The record also strengthens one
+> interpretation to SUPPORTED: the harder process was **custom-built and then modified by
+> Sanborn**, which makes searching for an unchanged textbook cipher materially less justified —
+> a coherent explanation for thirty-nine negatives rather than a reason to pick a fortieth
+> family. One new filter falls out: Sanborn intended K4 to be solved *later*, not never, so any
+> proposal's key entropy must sit inside EXP-019's ~66–76 letter unicity bound. The closest
+> EXP-040 candidate (`k[i] = f(row(i))`, 21 constraints against 3 free values) was worked and
+> **rejected on the gate** — a three-valued key contradicts the masking evidence. The manuscript
+> announces embedded K4 clues and is therefore **locked, not mined**. See
+> [Checkpoint S](results/2026-09-12-claude-checkpoint-S.md).
+
 > **Checkpoint R (2026-09-12, `claude/k4-post-j`).** **EXP-039** closed the last
 > structurally-motivated composition: a fixed monoalphabetic substitution after **double**
 > columnar transposition, both keys from the precommitted list `{KRYPTOS, PALIMPSEST,

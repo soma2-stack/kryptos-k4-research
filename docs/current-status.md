@@ -123,40 +123,56 @@ See `docs/external/checkpoint-R-folder9-book-audit.md`.
 
 ## Physical geometry status
 
-The strongest current fabrication evidence is now Sanborn's first-person Folder 9 account:
+**Superseded prospectively at Checkpoint S by first-person fabrication evidence (Box 6 Folder 9).**
+History is not rewritten; earlier waterjet-based reasoning stands as a record and is no longer
+the current model.
 
-- letters were manually laid out along scribed **horizontal row guides**;
-- individual metal stencils were traced;
-- letters were hand-cut / hand-filed;
-- the contemplated automated waterjet route was rejected.
+Sanborn's own draft says the robotic / high-pressure-waterjet route was **considered and rejected
+on cost**, after which the copper was painted black, **straight horizontal row lines were
+scribed**, and individual **metal character stencils** were placed on those lines, traced,
+drilled, jigsaw-cut and hand-filed.
 
-This establishes row baselines but still does **not** establish:
+Therefore:
 
-- exact cipher-panel character x-coordinates;
-- fixed character pitch;
-- a common horizontal x-lattice across rows;
-- identical row starts;
-- 31 physical columns.
+- **horizontal row order remains meaningful** — rows are the one physically established structure;
+- **same-column vertical relations are weaker** than previously assumed: a scribed baseline fixes
+  the line, not the pitch;
+- fixed pitch, a common vertical x-grid, 31 physical columns, identical row starts and uniform
+  spacing are **all unestablished**;
+- exact x-coordinate hypotheses remain **parked**;
+- **do not use apparent vertical alignment in photographs as a primary key source** — Sanborn
+  also states he deliberately obscured encoded text in photographs, so publicity images are not
+  neutral documentation of the cipher surface.
 
-The earlier computer-guided-waterjet inference should no longer be used to argue that a digital fixed-coordinate source layout probably existed. The common-column-above-K4 model remains parked and is now **less supported**, not more.
+**Request 4 is demoted.** It existed to settle whether a common lattice exists; the first-person
+account indicates it very likely does not, so a measured survey would refine spacing rather than
+unlock an architecture.
 
 ## One recommended next action
 
-**Do not start another speculative cipher family and do not mine the Folder 9 manuscript for hidden clues under the current contamination rules.**
+**Pursue Request 2: the unedited 2005 Zetter/Scheidt interview material** — raw audio or full
+transcript, interviewer notes, cut questions, drafts, fact-check correspondence.
 
-The strongest accessible archive lanes have now been inspected:
+Checkpoint S locates the bottleneck: the blocker is no longer *testing* architectures but
+*identifying* one. Every architecture nameable from public evidence has been tested and failed,
+and the documentary record now explains why — the harder process was **custom-built for the
+project and then modified by Sanborn**, so its prior coincidence with any nameable family is low.
+Scheidt is the only living source who has publicly described the fourth process, and the
+published article is self-described as a partial transcript edited for length.
 
-- Folder 10: negative for method / geometry;
-- Box 16 Folder 2: useful contemporaneous context, no exact method;
-- Folder 11: broad later code research, no K4 mechanism;
-- Folder 8: no geometry and contains a quarantined proposed-K4-solution packet;
-- Folder 9: strong first-person fabrication / design-intent evidence, but explicitly warns that the proposed manuscript would embed K4 clues.
+Do **not** fill the gap with order-3 recursion, generic double transposition, arbitrary grid
+routes, random alphabets, arbitrary long keys, generic modern stream ciphers, or another
+historical-cipher catalogue. **No EXP-040 exists**, and Checkpoint S §7 records exactly which gate
+conditions the closest candidate failed.
 
-At this point the accessible archive evidence base is **substantially exhausted for evidence-driven selection of a new cipher family**.
+**Filter for any future proposal** (Checkpoint S §5): key entropy must lie within the EXP-019
+unicity bound of roughly 66–76 letters. Sanborn intended K4 to be solved *later*, not never, so a
+key exceeding the message's capacity contradicts the stated design intent.
 
-The next research session should first synthesize the new first-person Folder 9 evidence against the existing Scheidt documentary record and decide whether it changes the rank of any *already-defined, falsifiable* architecture. If it does not, record that no evidence-backed EXP-040 is currently justified rather than manufacturing one.
-
-Do **not** use Box 6 Folders 13–19 (`Attempts at Deciphering Codes`, `Cracked Codes and Charts`) for cryptanalytic idea generation under the current protocol.
+**Contamination lock on Box 6 Folder 9:** the manuscript states it contains embedded K4 clues.
+Only explicit factual statements are admitted. Do not mine it for acrostics, numbers,
+capitalisation, chapter titles, place names, word counts or repeated phrases without a deliberate
+and separately recorded change to the protocol.
 
 ## Contamination protocol
 
