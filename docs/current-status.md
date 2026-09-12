@@ -4,7 +4,7 @@ This is the compact handoff for future sessions. It does **not** replace histori
 
 **Current cryptanalytic checkpoint:** Checkpoint R (`results/2026-09-12-claude-checkpoint-R.md`).
 
-**Documentary work completed after R:** Box 6 Folder 10, Series 9 Box 16 Folder 2, and Box 6 Folder 11 have all been inspected.
+**Documentary work completed after R:** Box 6 Folders 8, 10 and 11, plus Series 9 Box 16 Folder 2, have all been inspected.
 
 **K4 remains unsolved.**
 
@@ -51,17 +51,9 @@ Retracted claims that must **not** be revived:
 
 Inspected completely from the user-supplied image batch.
 
-**Negative** for:
+**Negative** for cipher-panel x-coordinate / common-lattice evidence, punch/type layout, K4 key source, exact K4 algorithm, or a note naming the fourth process.
 
-- cipher-panel x-coordinate / common-lattice evidence
-- punch/type layout
-- K4 key source
-- exact K4 algorithm
-- a note naming the fourth process
-
-Do not re-audit it.
-
-See `docs/external/checkpoint-R-folder10-content-audit.md`.
+Do not re-audit it. See `docs/external/checkpoint-R-folder10-content-audit.md`.
 
 ### Series 9 Box 16 Folder 2 — `Kryptos Sculpture, circa 1975-1993`
 
@@ -69,8 +61,8 @@ Inspected completely from a 106-image user-supplied ZIP.
 
 Useful findings:
 
-- 1990–1991 reporting repeatedly describes progression from Morse / Vigenere material to a harder **custom / modern process developed with a former or retired CIA cryptographer**.
-- a March/April 1991 profile says Sanborn used “three or four” systems progressing in complexity.
+- 1990–1991 reporting repeatedly describes progression from Morse / Vigenere material to a harder **custom / modern process developed with a former or retired CIA cryptographer**;
+- a March/April 1991 profile says Sanborn used “three or four” systems progressing in complexity;
 - a 1992 Washington Post profile says the plate lettering was cut with a **computer-guided high-pressure water jet**.
 
 These strengthen the custom-process / digital-fabrication history but still do **not** establish K4's exact method or a common physical column lattice.
@@ -85,20 +77,27 @@ Inspected completely from a 37-image user-supplied ZIP under staged contaminatio
 
 **No complete alleged K4 plaintext or purported K4 solution was found in the supplied batch.**
 
-The folder is broad and largely concerns Sanborn's wider code / intelligence / multilingual research rather than the original K4 construction. It includes:
+The folder is broad and largely concerns Sanborn's wider code / intelligence / multilingual research rather than the original K4 construction. It includes a 1994 `FUMEE` layout, a Cyrillic tableau-style sheet, a later KRYPTOS-keyed alphabet proof, explicitly dated 2002 `Russian Decoding Chart` Morse/binary material, multilingual intelligence-text material, and Soviet/Russian archival documents.
 
-- a 1994 repeated-letter `FUMEE` production layout;
-- a Cyrillic cyclic-alphabet / tableau-style sheet;
-- a later production proof using the familiar KRYPTOS keyed alphabet;
-- explicitly dated **2002** `Russian Decoding Chart` sheets using Morse-like dot/dash fields and binary `0/1` fields;
-- 2002-era multilingual intelligence-text / translation material;
-- historical Soviet / Russian intelligence, censorship and literary-policy documents and translations.
-
-These show Sanborn's continuing interest in coded visual systems and intelligence archives, but they are chronologically/evidentially insufficient to infer K4's 1989–1990 custom mechanism.
-
-Do **not** launch K4 experiments from the 1994/2002 Morse, binary, Cyrillic, translation or Soviet-document material alone.
+These later practices are chronologically/evidentially insufficient to infer K4's 1989–1990 custom mechanism. Do **not** launch K4 experiments from them alone.
 
 See `docs/external/checkpoint-R-folder11-codes-research-audit.md`.
+
+### Box 6 Folder 8 — `Sculpture, 1993-2009`
+
+Inspected from a 49-image user-supplied ZIP under contamination-safe triage.
+
+The folder is dominated by later public Kryptos web printouts, 1999 newspaper coverage, public K1–K3 solver history, and solver correspondence / worksheets. It contains **no usable orthographic or restoration geometry** for the ciphertext face and no new K4 key source or exact mechanism.
+
+Important contamination boundary:
+
+- archive page `29-AAA-AAA_sanbojim_4128992.jpg` explicitly begins a proposed **message four / K4 solution** packet;
+- pages 29–49 are therefore treated conservatively as **solution-adjacent / quarantined** for cryptanalytic use;
+- no claimed K4 plaintext, key or method from that packet is admitted into this research programme.
+
+Safe historical material in the earlier part includes the June 1999 New York Times coverage, July 1999 Washington Post coverage, and Gillogly K1–K3 public-solution correspondence / workings. Those add historical context, not a new K4 architecture.
+
+See `docs/external/checkpoint-R-folder8-sculpture-audit.md`.
 
 ## Physical geometry status
 
@@ -114,20 +113,22 @@ The computer-guided water-jet evidence makes a digital source layout plausible b
 
 **Do not start another speculative cipher family.**
 
-If the user wants to continue archival work, the safest remaining narrow target is:
+The four strongest accessible documentary lanes above have now been inspected without yielding the exact custom K4 process or a physical-coordinate source.
 
-**Box 6 Folder 8 — `Sculpture, 1993-2009`**
+If the user wants to continue archive work, the safest remaining Kryptos-specific item in the same Box 6 cluster is:
 
-Purpose: restoration / conservation / close-up photographic evidence that might settle physical geometry. Treat it as a **geometry-only** search.
+**Box 6 Folder 9 — `Book, undated`**
 
-If Folder 8 also yields no orthographic / production geometry, record that the currently accessible public/archive evidence base is exhausted for evidence-driven architecture selection rather than manufacturing new cipher families simply because compute is available.
+It is preferable to the later `Attempts at Deciphering Codes` and `Cracked Codes and Charts` folders because those titles indicate heavy solver-submission / contamination risk. Folder 9 should still be triaged before any content is admitted.
 
-Avoid solution-heavy material such as `Cracked Codes and Charts` unless the contamination protocol is intentionally changed.
+If Folder 9 also yields no evidence-driven architecture clue, record that the accessible archive evidence base is substantially exhausted for choosing a new cipher family rather than manufacturing one merely because compute is available.
 
 ## Contamination protocol
 
 Do not access or use alleged complete K4 plaintext, purported solution dumps, leaked solution material, private K5 plaintext, or private K5 ciphertext.
 
 Public construction photographs, public documentary sources, production records, historical-cipher references and process provenance are safe. Clearly solution-looking pages must be quarantined before they influence cryptanalysis.
+
+Do **not** mine Box 6 Folders 13–19 (`Attempts at Deciphering Codes`, `Cracked Codes and Charts`) for cryptanalytic ideas under the current protocol.
 
 Do not claim K4 solved unless there is one fixed deterministic 97-character decryption procedure that reproduces independently and satisfies all published constraints.
