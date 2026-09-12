@@ -56,7 +56,9 @@ plus a fixed alphabet is comfortably testable (10⁻¹⁸·⁷).
 
 ## 3 — Machine-readable physical transcript
 
-Priority: **high**, and it is the only route to genuinely new evidence that does not
+Priority: **high**, and EXP-017 raised it: the Playfair and reflector-machine
+eliminations are contingent on the crib positions being exactly right, so verifying
+them against a primary transcript now has a concrete payoff rather than being tidiness., and it is the only route to genuinely new evidence that does not
 depend on someone else releasing it. See `ideas.md` § 7.
 
 Nothing here records the sculpture's line breaks, panel boundaries, tableau

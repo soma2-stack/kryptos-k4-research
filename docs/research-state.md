@@ -45,6 +45,12 @@ Regenerate with `./run_all.sh`.
   97 letters of English unigram text, z = -3.87. Pure transposition is dead. EXP-007.
 - **24 crib letters = 112.8 bits.** Model classes with more parameter entropy than that
   cannot be refuted at all; several inherited leads sit above the line. EXP-011.
+- **Robustness to a crib off-by-one (EXP-017).** Sliding each crib independently by
+  -3..+3 (49 alignments): the three-alphabet lower bound holds at *every* alignment,
+  as does the impossibility of periods {1-7, 9}. The IoC and output-alphabet arguments
+  use no crib positions at all. But the **Playfair and reflector-machine eliminations
+  are contingent on the exact alignment** and would need rechecking if the crib
+  positions moved. Verify `data/k4.json` against a primary transcript.
 
 ## High-priority inherited program: `TOKIO → 57973`
 

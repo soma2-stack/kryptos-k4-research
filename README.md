@@ -27,6 +27,11 @@ Three one-line arguments did more than any search:
   of English: every route, columnar, spiral and grid transposition applied alone is dead
   without enumerating any of them.
 
+These results were stress-tested: sliding each crib independently by −3..+3
+(EXP-017), the three-alphabet bound and the impossibility of periods {1–7, 9} hold at
+every one of 49 alignments, while the Playfair and reflector eliminations turn out to
+be **contingent on the exact crib alignment** and are flagged as such.
+
 The `DIAWINFBN` `+5` lead that opened the second session was **demoted**: it is the only
 run of its kind in the ciphertext (family-wise p ≈ 0.017), but position 63 shows no
 independent statistical support, and the run is provably unresolvable by crib algebra.
@@ -80,6 +85,6 @@ Earned the hard way; read before adding an experiment.
 ## Status
 
 Prepared from the referenced ChatGPT conversation on 2026-09-11 and published by the
-user. Extended 2026-09-12 with an executable toolchain, fifteen experiments, an exact
-Z₂₆ solver, and the testability frontier. **K4 remains unsolved, and no candidate
+user. Extended 2026-09-12 with an executable toolchain, seventeen experiments, an exact
+Z₂₆ solver, the testability frontier, and a crib-alignment robustness audit. **K4 remains unsolved, and no candidate
 mechanism is claimed.**
