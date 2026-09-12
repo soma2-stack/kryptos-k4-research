@@ -251,6 +251,23 @@ Protocol points:
 - Candidate A (alphabets built from PALIMPSEST/ABSCISSA) was **rejected for lack of
   documentary support**, not tested speculatively — the same gate that admitted EXP-036.
 
+## Session 16 (Checkpoint O, branch claude/k4-post-j) — clean, no incidents
+
+Symbolic audit session. Inputs were the repository's own data and published descriptions of
+classical ciphers. No claimed-solution site used or cited; no alleged K4 plaintext, solution
+dump, or private K5 material sought, accessed or inferred. Cribs used: EASTNORTHEAST and
+BERLINCLOCK only.
+
+Protocol points:
+
+- Two cipher families were closed by exact structural arguments and **no search was run** on
+  either, in line with the session's conservative budget rule.
+- Where I lacked an authoritative offline definition — Digrafid's block ratio, the ACA
+  columnar Gromark alphabet — I said so and routed around it rather than reconstructing a
+  "standard" from memory.
+- A near-miss was recorded and deliberately not pursued: EASTNORTHEAST fits Fractionated
+  Morse exactly at 39 = 13x3, while BERLINCLOCK in the same message fails by 11.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident

@@ -18,6 +18,23 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint O (2026-09-12, `claude/k4-post-j`).** Conservative session: symbolic audit
+> only, **no new experiment run** — both candidate families were closed by exact structural
+> observations costing seconds. **CM Bifid** reduces to EXP-012 (two 5×5 squares cannot emit
+> the `J` K4 carries). **Digrafid** is closed by the primality of 97: a block system emitting
+> `c > 1` per block gives length `c·m`, and no `c` in 2…96 divides 97. **Fractionated Morse**
+> got real work, because EXP-023 left Morse-as-structure open: `n` ciphertext letters supply
+> `3n` ternary symbols, and `BERLIN` needs 21 vs 18, `BERLINCLOCK` 44 vs 33, `NORTHEAST` 28
+> vs 27 — while a 97-letter plaintext would need a mean of 2.01 Morse marks against an
+> alphabet mean of 3.15. (`EASTNORTHEAST` fits *exactly* at 39 = 13×3; recorded, not
+> pursued.) **Gromark** was rejected before any primer search — its key values are digits
+> 0–9 and 11–16 of the 24 crib pairs demand a shift outside that set under every evidenced
+> alphabet pair, so **EXP-038 was not assigned**. Named classical fractionators are now
+> substantially exhausted; this is *not* "K4 is not fractionated". Next action: **verify the
+> primary wording of the public clues** and pin the 24 crib constraints to a cited source —
+> every experiment here consumes them as given. See
+> [Checkpoint O](results/2026-09-12-claude-checkpoint-O.md).
+
 > **Checkpoint M (2026-09-12, `claude/k4-post-j`).** Two of my own Checkpoint-L claims are
 > **retracted**. (1) The "432 vs 435" discrepancy was my unit error: K1 = 63 characters,
 > K2 = 372 *physical* characters = 369 letters + 3 `?`, so rows 1–14 = 435 characters = 432
