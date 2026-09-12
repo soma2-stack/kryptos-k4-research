@@ -1,0 +1,9 @@
+# Python and notebook by-products
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# Generated search outputs: store only documented, versioned results intentionally.
+results/
+scratch/
