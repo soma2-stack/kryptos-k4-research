@@ -1,0 +1,644 @@
+{
+  "checkpoint": "J",
+  "base": "7cbaf2209f42a308248811b1485b9abed0ff99d4",
+  "images": [
+    {
+      "id": "J01",
+      "path": "data/evidence/checkpoint-J/16008401.jpg",
+      "sha256": "d51a93328700d8e5a87511fb89dd41dc2ef6c6e19b99052ff20f0b30d2fb0b68",
+      "dimensions": [
+        884,
+        1280
+      ],
+      "date": "1989-11-04",
+      "date_basis": "publisher caption plus visual match to fetched publisher image",
+      "date_confidence": "HIGH",
+      "embedded_exif": false,
+      "embedded_iptc": false,
+      "independence": "J03 and J03-source are derivatives of one exposure; independence of J01/J02 exposures not established",
+      "accession": "16008401",
+      "publisher": "Picture Alliance",
+      "identity": "HIGH: visual match to separately fetched 414x600 archive preview; hotel, crowd, clock and framing match",
+      "source_url": "https://img.picturealliance.sodatech.com/KARE/public/16008401.jpg",
+      "source_sha256": "bbec97a60f5c025761f67d93e6478d3d3b6a6f2c2a2589100b477c5aab184e57",
+      "role": "context; insufficient letter resolution for independent full transcription"
+    },
+    {
+      "id": "J02",
+      "path": "data/evidence/checkpoint-J/16008415.jpg",
+      "sha256": "02fc3d09db768985504adcc228ef80283225ec13feae4c1117ad08a9c6d0745b",
+      "dimensions": [
+        1280,
+        830
+      ],
+      "date": "1989-11-04",
+      "date_basis": "publisher caption plus visual match to fetched publisher image",
+      "date_confidence": "HIGH",
+      "embedded_exif": false,
+      "embedded_iptc": false,
+      "independence": "J03 and J03-source are derivatives of one exposure; independence of J01/J02 exposures not established",
+      "accession": "16008415",
+      "publisher": "Picture Alliance",
+      "identity": "HIGH: visual match to separately fetched 600x389 archive preview, including clock and banners",
+      "source_url": "https://img.picturealliance.sodatech.com/KARE/public/16008415.jpg",
+      "source_sha256": "3b1e7354588fbb9b985616f4a29cd30474318770d7bc79c0edf8bdd72a626173",
+      "role": "transcription of priority faces"
+    },
+    {
+      "id": "J03",
+      "path": "data/evidence/checkpoint-J/153695-upload.jpg",
+      "sha256": "38e44e5518564bfa6c8f865466d04f7a230cd67a7daa3d64ca74caf894a946f3",
+      "dimensions": [
+        2047,
+        1297
+      ],
+      "date": "1989-11-04",
+      "date_basis": "publisher caption plus visual match to fetched publisher image",
+      "date_confidence": "HIGH",
+      "embedded_exif": false,
+      "embedded_iptc": false,
+      "independence": "J03 and J03-source are derivatives of one exposure; independence of J01/J02 exposures not established",
+      "accession": "UNKNOWN",
+      "publisher_asset": "153695.jpg",
+      "publisher": "HanisauLand / bpb",
+      "credit": "picture alliance / akg",
+      "identity": "HIGH: identical scene composition and banners to publisher asset; no numeric Picture Alliance accession established",
+      "source_url": "https://www.hanisauland.de/system/files/153695.jpg",
+      "role": "transcription of priority faces"
+    },
+    {
+      "id": "J03-source",
+      "path": "data/evidence/checkpoint-J/153695-source.jpg",
+      "sha256": "f191d08a071274c37f819c362bb7a6b639181ab174dca8fca77504077e3e6f7f",
+      "dimensions": [
+        4065,
+        2575
+      ],
+      "date": "1989-11-04",
+      "date_basis": "publisher caption plus visual match to fetched publisher image",
+      "date_confidence": "HIGH",
+      "embedded_exif": false,
+      "embedded_iptc": false,
+      "independence": "J03 and J03-source are derivatives of one exposure; independence of J01/J02 exposures not established",
+      "accession": "UNKNOWN",
+      "publisher_asset": "153695.jpg",
+      "publisher": "HanisauLand / bpb",
+      "credit": "picture alliance / akg",
+      "identity": "HIGH: identical scene composition and banners to publisher asset; no numeric Picture Alliance accession established",
+      "source_url": "https://www.hanisauland.de/system/files/153695.jpg",
+      "role": "transcription of priority faces"
+    }
+  ],
+  "publisher_records": [
+    {
+      "url": "https://www.picture-alliance.com/webseries/weltzeituhr-in-berlin-w194131",
+      "facts": "16008401 and 16008415 are listed as 04.11.1989; corresponding linked previews visually matched to uploads."
+    },
+    {
+      "url": "https://www.hanisauland.de/wissen/spezial/geschichte/deutsche-einheit/mauerfall-2009-kapitel-4.html",
+      "facts": "Image 153695.jpg is captioned 4 November 1989 and credited picture alliance / akg."
+    }
+  ],
+  "observations": [
+    {
+      "image": "J02",
+      "priority_faces": [
+        {
+          "sector": "UTC+0",
+          "upper": [
+            "REYKJAVIK",
+            "DUBLIN",
+            "LONDON",
+            "LISSABON",
+            "ALGIER",
+            "MADEIRA",
+            "BISSAU"
+          ],
+          "lower": [
+            "CASABLANCA",
+            "CONAKRY",
+            "DAKAR",
+            "BAMAKO",
+            "ACCRA"
+          ],
+          "era": "1988-89",
+          "date": "1989-11-04",
+          "complete_bands": [
+            "upper",
+            "lower"
+          ],
+          "band_ends_visible": true,
+          "unknown": [],
+          "conflicts": [],
+          "sources": [
+            "J02",
+            "J03-source"
+          ],
+          "confidence": {
+            "upper": "HIGH",
+            "lower": "MEDIUM-HIGH"
+          },
+          "order": "top-to-bottom exactly as printed; no sorting",
+          "letter_counts": {
+            "upper": 48,
+            "lower": 33
+          }
+        },
+        {
+          "sector": "UTC+1",
+          "upper": [
+            "AMSTERDAM",
+            "BERLIN",
+            "BRUSSEL",
+            "BUDAPEST",
+            "MADRID",
+            "PARIS",
+            "PRAG",
+            "STOCKHOLM",
+            "WARSCHAU"
+          ],
+          "lower": [
+            "KOPENHAGEN",
+            "WIEN",
+            "BERN",
+            "BELGRAD",
+            "ROM",
+            "TUNIS",
+            "BRAZZAVILLE",
+            "KINSHASA",
+            "LUANDA"
+          ],
+          "era": "1988-89",
+          "date": "1989-11-04",
+          "complete_bands": [
+            "upper",
+            "lower"
+          ],
+          "band_ends_visible": true,
+          "unknown": [],
+          "conflicts": [],
+          "sources": [
+            "J02",
+            "J03-source"
+          ],
+          "confidence": {
+            "upper": "HIGH",
+            "lower": "MEDIUM-HIGH"
+          },
+          "order": "top-to-bottom exactly as printed; no sorting",
+          "letter_counts": {
+            "upper": 62,
+            "lower": 58
+          }
+        },
+        {
+          "sector": "UTC+2",
+          "upper": [
+            "BUKAREST",
+            "HELSINKI",
+            "SOFIA",
+            "ATHEN",
+            "NIKOSIA"
+          ],
+          "lower": [
+            "BEIRUT",
+            "DAMASKUS",
+            "KAIRO",
+            "KHARTUM",
+            "LUSAKA",
+            "MAPUTO"
+          ],
+          "era": "1988-89",
+          "date": "1989-11-04",
+          "complete_bands": [
+            "upper",
+            "lower"
+          ],
+          "band_ends_visible": true,
+          "unknown": [],
+          "conflicts": [],
+          "sources": [
+            "J02",
+            "J03-source"
+          ],
+          "confidence": {
+            "upper": "MEDIUM-HIGH",
+            "lower": "MEDIUM-HIGH"
+          },
+          "order": "top-to-bottom exactly as printed; no sorting",
+          "letter_counts": {
+            "upper": 33,
+            "lower": 38
+          },
+          "spacing_note": "Visible blank space separates KAIRO and KHARTUM; no unknown line in that gap. Spaces and blank lines are not letters."
+        }
+      ],
+      "UTC+3": {
+        "upper": [
+          "MURMANSK",
+          "LENINGRAD",
+          "MOSKAU",
+          "KIEW"
+        ],
+        "lower": [
+          "ANTALYA",
+          "UNKNOWN",
+          "BAGDAD",
+          "ADEN",
+          "SANA",
+          "ADDIS ABEBA",
+          "MOGADISCHU",
+          "DARESSALAM",
+          "UNKNOWN"
+        ],
+        "confidence": {
+          "upper": "MEDIUM-HIGH",
+          "lower": "LOW-MEDIUM"
+        },
+        "complete": false,
+        "note": "Second and last lower entries not accepted at exact-spelling confidence. First lower line appears ANTALYA, conflicts with inherited ANKARA. No completion from geographical membership."
+      }
+    },
+    {
+      "image": "J03-source",
+      "priority_faces": [
+        {
+          "sector": "UTC+0",
+          "upper": [
+            "REYKJAVIK",
+            "DUBLIN",
+            "LONDON",
+            "LISSABON",
+            "ALGIER",
+            "MADEIRA",
+            "BISSAU"
+          ],
+          "lower": [
+            "CASABLANCA",
+            "CONAKRY",
+            "DAKAR",
+            "BAMAKO",
+            "ACCRA"
+          ],
+          "era": "1988-89",
+          "date": "1989-11-04",
+          "complete_bands": [
+            "upper",
+            "lower"
+          ],
+          "band_ends_visible": true,
+          "unknown": [],
+          "conflicts": [],
+          "sources": [
+            "J02",
+            "J03-source"
+          ],
+          "confidence": {
+            "upper": "HIGH",
+            "lower": "MEDIUM-HIGH"
+          },
+          "order": "top-to-bottom exactly as printed; no sorting",
+          "letter_counts": {
+            "upper": 48,
+            "lower": 33
+          }
+        },
+        {
+          "sector": "UTC+1",
+          "upper": [
+            "AMSTERDAM",
+            "BERLIN",
+            "BRUSSEL",
+            "BUDAPEST",
+            "MADRID",
+            "PARIS",
+            "PRAG",
+            "STOCKHOLM",
+            "WARSCHAU"
+          ],
+          "lower": [
+            "KOPENHAGEN",
+            "WIEN",
+            "BERN",
+            "BELGRAD",
+            "ROM",
+            "TUNIS",
+            "BRAZZAVILLE",
+            "KINSHASA",
+            "LUANDA"
+          ],
+          "era": "1988-89",
+          "date": "1989-11-04",
+          "complete_bands": [
+            "upper",
+            "lower"
+          ],
+          "band_ends_visible": true,
+          "unknown": [],
+          "conflicts": [],
+          "sources": [
+            "J02",
+            "J03-source"
+          ],
+          "confidence": {
+            "upper": "HIGH",
+            "lower": "MEDIUM-HIGH"
+          },
+          "order": "top-to-bottom exactly as printed; no sorting",
+          "letter_counts": {
+            "upper": 62,
+            "lower": 58
+          }
+        },
+        {
+          "sector": "UTC+2",
+          "upper": [
+            "BUKAREST",
+            "HELSINKI",
+            "SOFIA",
+            "ATHEN",
+            "NIKOSIA"
+          ],
+          "lower": [
+            "BEIRUT",
+            "DAMASKUS",
+            "KAIRO",
+            "KHARTUM",
+            "LUSAKA",
+            "MAPUTO"
+          ],
+          "era": "1988-89",
+          "date": "1989-11-04",
+          "complete_bands": [
+            "upper",
+            "lower"
+          ],
+          "band_ends_visible": true,
+          "unknown": [],
+          "conflicts": [],
+          "sources": [
+            "J02",
+            "J03-source"
+          ],
+          "confidence": {
+            "upper": "MEDIUM-HIGH",
+            "lower": "MEDIUM-HIGH"
+          },
+          "order": "top-to-bottom exactly as printed; no sorting",
+          "letter_counts": {
+            "upper": 33,
+            "lower": 38
+          },
+          "spacing_note": "Visible blank space separates KAIRO and KHARTUM; no unknown line in that gap. Spaces and blank lines are not letters."
+        }
+      ],
+      "UTC+3": {
+        "upper": [
+          "MURMANSK",
+          "LENINGRAD",
+          "MOSKAU",
+          "KIEW"
+        ],
+        "lower": [
+          "ANTALYA",
+          "UNKNOWN",
+          "BAGDAD",
+          "ADEN",
+          "SANA",
+          "ADDIS ABEBA",
+          "MOGADISCHU",
+          "DARESSALAM",
+          "UNKNOWN"
+        ],
+        "confidence": {
+          "upper": "MEDIUM-HIGH",
+          "lower": "LOW-MEDIUM"
+        },
+        "complete": false,
+        "note": "Second and last lower entries not accepted at exact-spelling confidence. First lower line appears ANTALYA, conflicts with inherited ANKARA. No completion from geographical membership."
+      }
+    }
+  ],
+  "context_observations": [
+    {
+      "image": "J01",
+      "transcription": "UNKNOWN at reliable line-by-line precision; same sectors visible, no independent completion used"
+    },
+    {
+      "images": [
+        "J02",
+        "J03-source"
+      ],
+      "other_visible_text": [
+        {
+          "face": "immediately left of UTC+0",
+          "upper": [
+            "AZOREN"
+          ],
+          "lower": [],
+          "note": "blank lower face visible; outside frozen experiment arc"
+        },
+        {
+          "face": "second face left of UTC+0",
+          "upper": [
+            "UNKNOWN"
+          ],
+          "visible_fragment": "OSTGR...NLAND",
+          "lower": []
+        },
+        {
+          "face": "third face left of UTC+0",
+          "upper": [
+            "UNKNOWN"
+          ],
+          "visible_fragment": "WESTGR...NLAND",
+          "lower": [
+            "RIO DE JANEIRO",
+            "SAO PAULO",
+            "MONTEVIDEO",
+            "BUENOS AIRES"
+          ]
+        },
+        {
+          "face": "right of UTC+3",
+          "upper": [
+            "UNKNOWN"
+          ],
+          "lower": [
+            "UNKNOWN"
+          ],
+          "note": "oblique; no complete ordered transcription accepted"
+        }
+      ]
+    }
+  ],
+  "conflict_ledger": [
+    {
+      "claim": "ATHEN absent in November 1989",
+      "status": "RETRACTED",
+      "evidence": "J02 and J03-source show ATHEN between SOFIA and NIKOSIA",
+      "effect": "resolves a previous UNKNOWN, does not alter frozen CET tape or date the original addition"
+    },
+    {
+      "claim": "UTC+3 lower starts ANKARA, TEHERAN in inherited reading",
+      "status": "UNRESOLVED CONFLICT",
+      "new_reading": [
+        "ANTALYA",
+        "UNKNOWN"
+      ],
+      "effect": "UTC+3 excluded from frozen arc; old reading preserved in original dataset"
+    }
+  ],
+  "frozen_arc": {
+    "declared": "2026-09-12 before EXP-031 search; no crib scoring performed on these observations",
+    "face_order_visual_left_to_right": [
+      "UTC+0",
+      "UTC+1",
+      "UTC+2"
+    ],
+    "adjacency_sources": [
+      "J02",
+      "J03-source"
+    ],
+    "faces": [
+      {
+        "sector": "UTC+0",
+        "upper": [
+          "REYKJAVIK",
+          "DUBLIN",
+          "LONDON",
+          "LISSABON",
+          "ALGIER",
+          "MADEIRA",
+          "BISSAU"
+        ],
+        "lower": [
+          "CASABLANCA",
+          "CONAKRY",
+          "DAKAR",
+          "BAMAKO",
+          "ACCRA"
+        ],
+        "era": "1988-89",
+        "date": "1989-11-04",
+        "complete_bands": [
+          "upper",
+          "lower"
+        ],
+        "band_ends_visible": true,
+        "unknown": [],
+        "conflicts": [],
+        "sources": [
+          "J02",
+          "J03-source"
+        ],
+        "confidence": {
+          "upper": "HIGH",
+          "lower": "MEDIUM-HIGH"
+        },
+        "order": "top-to-bottom exactly as printed; no sorting",
+        "letter_counts": {
+          "upper": 48,
+          "lower": 33
+        }
+      },
+      {
+        "sector": "UTC+1",
+        "upper": [
+          "AMSTERDAM",
+          "BERLIN",
+          "BRUSSEL",
+          "BUDAPEST",
+          "MADRID",
+          "PARIS",
+          "PRAG",
+          "STOCKHOLM",
+          "WARSCHAU"
+        ],
+        "lower": [
+          "KOPENHAGEN",
+          "WIEN",
+          "BERN",
+          "BELGRAD",
+          "ROM",
+          "TUNIS",
+          "BRAZZAVILLE",
+          "KINSHASA",
+          "LUANDA"
+        ],
+        "era": "1988-89",
+        "date": "1989-11-04",
+        "complete_bands": [
+          "upper",
+          "lower"
+        ],
+        "band_ends_visible": true,
+        "unknown": [],
+        "conflicts": [],
+        "sources": [
+          "J02",
+          "J03-source"
+        ],
+        "confidence": {
+          "upper": "HIGH",
+          "lower": "MEDIUM-HIGH"
+        },
+        "order": "top-to-bottom exactly as printed; no sorting",
+        "letter_counts": {
+          "upper": 62,
+          "lower": 58
+        }
+      },
+      {
+        "sector": "UTC+2",
+        "upper": [
+          "BUKAREST",
+          "HELSINKI",
+          "SOFIA",
+          "ATHEN",
+          "NIKOSIA"
+        ],
+        "lower": [
+          "BEIRUT",
+          "DAMASKUS",
+          "KAIRO",
+          "KHARTUM",
+          "LUSAKA",
+          "MAPUTO"
+        ],
+        "era": "1988-89",
+        "date": "1989-11-04",
+        "complete_bands": [
+          "upper",
+          "lower"
+        ],
+        "band_ends_visible": true,
+        "unknown": [],
+        "conflicts": [],
+        "sources": [
+          "J02",
+          "J03-source"
+        ],
+        "confidence": {
+          "upper": "MEDIUM-HIGH",
+          "lower": "MEDIUM-HIGH"
+        },
+        "order": "top-to-bottom exactly as printed; no sorting",
+        "letter_counts": {
+          "upper": 33,
+          "lower": 38
+        },
+        "spacing_note": "Visible blank space separates KAIRO and KHARTUM; no unknown line in that gap. Spaces and blank lines are not letters."
+      }
+    ],
+    "normalization": "uppercase A-Z only; omit spaces/blank lines; no historical spellings changed",
+    "total_letters": 272,
+    "freeze_rule": "immutable for EXP-031; any evidence correction requires new version and separate experiment"
+  },
+  "limitations": [
+    "Not a new 45-90 degree view: all three supplied photographs show broadly the CET side.",
+    "J03 likely corresponds to the previously described UPLOAD-6 by composition, but old bytes are missing so identity is not asserted.",
+    "UTC+3 is not complete; no unknown entry enters a key tape.",
+    "Observations reflect one analyst, two close views, not independent human transcriptions."
+  ]
+}
