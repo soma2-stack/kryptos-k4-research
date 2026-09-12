@@ -4,7 +4,7 @@ This is the compact handoff for future sessions. It does **not** replace histori
 
 **Current cryptanalytic checkpoint:** Checkpoint R (`results/2026-09-12-claude-checkpoint-R.md`).
 
-**Documentary work completed after R:** Box 6 Folders 8, 10 and 11, plus Series 9 Box 16 Folder 2, have all been inspected.
+**Documentary work completed after R:** Box 6 Folders 8, 9, 10 and 11, plus Series 9 Box 16 Folder 2, have all been inspected.
 
 **K4 remains unsolved.**
 
@@ -63,13 +63,13 @@ Useful findings:
 
 - 1990–1991 reporting repeatedly describes progression from Morse / Vigenere material to a harder **custom / modern process developed with a former or retired CIA cryptographer**;
 - a March/April 1991 profile says Sanborn used “three or four” systems progressing in complexity;
-- a 1992 Washington Post profile says the plate lettering was cut with a **computer-guided high-pressure water jet**.
+- a 1992 Washington Post profile reports computer-guided high-pressure-waterjet letter cutting.
 
-These strengthen the custom-process / digital-fabrication history but still do **not** establish K4's exact method or a common physical column lattice.
+The waterjet fabrication claim is now **superseded as the current working account** by the stronger first-person Sanborn manuscript in Box 6 Folder 9: Sanborn says waterjet automation was considered but rejected on cost and the actual letters were hand-cut from traced metal stencils. Keep the 1992 statement only as conflicting secondary reporting.
 
 A 1992 clipping calling the message a “complex anagram” is **low-confidence only** and is not experiment-grade evidence.
 
-See `docs/external/checkpoint-R-box16-folder2-audit.md`.
+See `docs/external/checkpoint-R-box16-folder2-audit.md` and the Folder 9 supersession below.
 
 ### Box 6 Folder 11 — `Codes Research, circa 1980s-circa 2002`
 
@@ -95,40 +95,75 @@ Important contamination boundary:
 - pages 29–49 are therefore treated conservatively as **solution-adjacent / quarantined** for cryptanalytic use;
 - no claimed K4 plaintext, key or method from that packet is admitted into this research programme.
 
-Safe historical material in the earlier part includes the June 1999 New York Times coverage, July 1999 Washington Post coverage, and Gillogly K1–K3 public-solution correspondence / workings. Those add historical context, not a new K4 architecture.
-
 See `docs/external/checkpoint-R-folder8-sculpture-audit.md`.
+
+### Box 6 Folder 9 — `Book, undated`
+
+Inspected completely from a 30-image user-supplied ZIP.
+
+This is an unpublished / draft first-person manuscript / proposal headed **`KRYPTOS: From The Source`**. Page 2 says the text would be written by Jim Sanborn.
+
+This is the strongest archive source so far for **fabrication and design-intent history**, while still not disclosing K4's exact algorithm or plaintext.
+
+High-value explicit statements:
+
+- Sanborn considered automated high-pressure-waterjet cutting but says the estimated cost was prohibitive;
+- the actual letters were then **cut by hand with jigsaws**;
+- copper sheets were painted black and **horizontal straight lines were scribed for rows of letters**;
+- each character was individually located, a **metal stencil** was placed on the long row line, and the letter was traced, drilled, cut and hand-filed;
+- K3 and K4 were ultimately cut by one remaining assistant over roughly two months, according to Sanborn, with virtually no errors;
+- Sanborn says he recruited **Edward Scheidt** because historical systems such as Vigenere were not enough for his goal of challenging contemporary and future code-breakers;
+- Sanborn says he expected the first three Kryptos sections to be solved in weeks or months while **K4 was intended to take much longer**;
+- Sanborn says some plaintext and a partial code key were given to DCI William Webster for custody at the private dedication;
+- Sanborn says official photography deliberately obscured some encoded text to delay decryption.
+
+Important contamination boundary: page 2 says the proposed book would contain **significant K4 clues embedded in its text**. Under the current protocol, do **not** mine prose, anecdotes, numbers, place names, chapter titles or wording for hidden clues. Only explicit factual construction / history statements are admitted.
+
+See `docs/external/checkpoint-R-folder9-book-audit.md`.
 
 ## Physical geometry status
 
-Still unresolved:
+The strongest current fabrication evidence is now Sanborn's first-person Folder 9 account:
 
-- exact cipher-panel character x-coordinates
-- a proved common horizontal lattice across rows
-- an orthographic / shop-layout source for the ciphertext face
+- letters were manually laid out along scribed **horizontal row guides**;
+- individual metal stencils were traced;
+- letters were hand-cut / hand-filed;
+- the contemplated automated waterjet route was rejected.
 
-The computer-guided water-jet evidence makes a digital source layout plausible but does **not** prove fixed pitch or vertical alignment.
+This establishes row baselines but still does **not** establish:
+
+- exact cipher-panel character x-coordinates;
+- fixed character pitch;
+- a common horizontal x-lattice across rows;
+- identical row starts;
+- 31 physical columns.
+
+The earlier computer-guided-waterjet inference should no longer be used to argue that a digital fixed-coordinate source layout probably existed. The common-column-above-K4 model remains parked and is now **less supported**, not more.
 
 ## One recommended next action
 
-**Do not start another speculative cipher family.**
+**Do not start another speculative cipher family and do not mine the Folder 9 manuscript for hidden clues under the current contamination rules.**
 
-The four strongest accessible documentary lanes above have now been inspected without yielding the exact custom K4 process or a physical-coordinate source.
+The strongest accessible archive lanes have now been inspected:
 
-If the user wants to continue archive work, the safest remaining Kryptos-specific item in the same Box 6 cluster is:
+- Folder 10: negative for method / geometry;
+- Box 16 Folder 2: useful contemporaneous context, no exact method;
+- Folder 11: broad later code research, no K4 mechanism;
+- Folder 8: no geometry and contains a quarantined proposed-K4-solution packet;
+- Folder 9: strong first-person fabrication / design-intent evidence, but explicitly warns that the proposed manuscript would embed K4 clues.
 
-**Box 6 Folder 9 — `Book, undated`**
+At this point the accessible archive evidence base is **substantially exhausted for evidence-driven selection of a new cipher family**.
 
-It is preferable to the later `Attempts at Deciphering Codes` and `Cracked Codes and Charts` folders because those titles indicate heavy solver-submission / contamination risk. Folder 9 should still be triaged before any content is admitted.
+The next research session should first synthesize the new first-person Folder 9 evidence against the existing Scheidt documentary record and decide whether it changes the rank of any *already-defined, falsifiable* architecture. If it does not, record that no evidence-backed EXP-040 is currently justified rather than manufacturing one.
 
-If Folder 9 also yields no evidence-driven architecture clue, record that the accessible archive evidence base is substantially exhausted for choosing a new cipher family rather than manufacturing one merely because compute is available.
+Do **not** use Box 6 Folders 13–19 (`Attempts at Deciphering Codes`, `Cracked Codes and Charts`) for cryptanalytic idea generation under the current protocol.
 
 ## Contamination protocol
 
 Do not access or use alleged complete K4 plaintext, purported solution dumps, leaked solution material, private K5 plaintext, or private K5 ciphertext.
 
-Public construction photographs, public documentary sources, production records, historical-cipher references and process provenance are safe. Clearly solution-looking pages must be quarantined before they influence cryptanalysis.
+Public construction photographs, public documentary sources, production records, historical-cipher references and explicit process provenance are safe. Clearly solution-looking pages must be quarantined before they influence cryptanalysis.
 
-Do **not** mine Box 6 Folders 13–19 (`Attempts at Deciphering Codes`, `Cracked Codes and Charts`) for cryptanalytic ideas under the current protocol.
+For Folder 9 specifically, explicit first-person factual statements may be used, but the announced **embedded K4 clues** must not be mined unless the user intentionally changes the contamination protocol.
 
 Do not claim K4 solved unless there is one fixed deterministic 97-character decryption procedure that reproduces independently and satisfies all published constraints.
