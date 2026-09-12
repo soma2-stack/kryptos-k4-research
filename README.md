@@ -18,6 +18,21 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint R (2026-09-12, `claude/k4-post-j`).** **EXP-039** closed the last
+> structurally-motivated composition: a fixed monoalphabetic substitution after **double**
+> columnar transposition, both keys from the precommitted list `{KRYPTOS, PALIMPSEST,
+> ABSCISSA}`. All 9 ordered pairs give **distinct** composed permutations, none is the
+> identity or a single pass, all three pairs fail to commute, and all 9 were shown
+> **structurally** to lie outside EXP-033's corpus — by a run-decomposition test self-checked
+> against the single passes it correctly finds. Exact null recomputed for this family
+> (9.81×10⁻¹⁷ function, 5.52×10⁻¹⁸ bijection → 8.83×10⁻¹⁶ expected survivors). Result:
+> **0 FEASIBLE-FUNCTION, 0 FEASIBLE-BIJECTION** — contradiction at the strongest level, no
+> fixed map of any kind. Controls 9/9 planted, 9/9 adversarial (each mutating a repeated-letter
+> group), plus a non-bijective plant correctly separating the two criteria; verified
+> independently 35/35 with a selection sort and explicit grid simulation. Read narrowly: this
+> is **not** "double transposition is eliminated". See
+> [Checkpoint R](results/2026-09-12-claude-checkpoint-R.md).
+
 > **Checkpoint Q (2026-09-12, `claude/k4-post-j`).** **EXP-038** closed the stateful
 > recursive-key gap at its second-order affine scope: `k[n] = a·k[n-1] + b·k[n-2] (+ c) mod 26`
 > over the **full Z26**, message-aligned, all 12 committed conventions. The state was decided

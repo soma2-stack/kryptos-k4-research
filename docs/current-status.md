@@ -2,7 +2,7 @@
 
 This file is a navigation aid for future research sessions. It does **not** replace or rewrite historical checkpoints. Older files such as `docs/next-steps.md` and the opening banners in `README.md` / `docs/research-state.md` contain historical snapshots and can be stale at the top.
 
-**Current research checkpoint:** Checkpoint Q (`results/2026-09-12-claude-checkpoint-Q.md`).
+**Current research checkpoint:** Checkpoint R (`results/2026-09-12-claude-checkpoint-R.md`).
 
 **Current branch state when this handoff was refreshed:** `claude/k4-post-j` at `d69102d828f79599a8ade42a997396539d33760b`.
 
@@ -35,12 +35,13 @@ See `docs/external/checkpoint-O-public-crib-primary-verification.md` and Checkpo
 - Standard CM Bifid reduces to EXP-012; standard Fractionated Morse is closed as above; named classical fractionation is substantially narrowed, not globally eliminated.
 - Direct Gromark was rejected structurally before primer search because legal key digits 0–9 cannot realise enough public crib pairs under the evidenced component-alphabet treatments.
 - **EXP-038 (Checkpoint Q) closed the full-Z26 second-order affine recursive-key family**: F1 and F2 were preregistered together; 11,881,376 raw F2 tuples collapse to 7,585,006 unique 97-key streams and 4,481,750 distinct crib projections; 1,701,518 streams are already covered by period ≤23; 5,883,488 streams are genuinely new. The preregistered null expected about `5.91e-27` survivors across the 12 convention targets. Result: **zero feasible**, with neither crib block satisfiable on its own. Independent direct-iteration verification was exhaustive. Read this narrowly — it is *not* an elimination of recursive or stateful keys in general.
+- **EXP-039 (Checkpoint R) closed the keyword double-transposition family**: all 9 ordered pairs from {KRYPTOS, PALIMPSEST, ABSCISSA}, composed as `π = T2 ∘ T1` under a frozen no-padding columnar convention, then any fixed monoalphabetic substitution decided exactly. All 9 composed permutations are distinct and were shown **structurally** to lie outside the EXP-033 corpus. Exact null for this family: `9.81e-17` function / `5.52e-18` bijection, so `8.83e-16` expected accidental survivors. Result: **0 FEASIBLE-FUNCTION and 0 FEASIBLE-BIJECTION** — contradiction at the strongest level. Read narrowly: this is *not* an elimination of double transposition, of transposition generally, or of these words in another role.
 - Direct World Clock city-letter models have multiple bounded negatives; do not rescue them by adding post-hoc parameters.
 - The physical same-column-above-K4 model is parked because a common horizontal lattice is not established.
 
 ## Do not rerun
 
-Do not rerun EXP-029 through EXP-038 merely for reassurance. Their exact scope, controls, and verifier status are already recorded.
+Do not rerun EXP-029 through EXP-039 merely for reassurance. Their exact scope, controls, and verifier status are already recorded.
 
 In particular, do not restart old claims that were retracted:
 
@@ -56,15 +57,27 @@ In particular, do not restart old claims that were retracted:
 
 ## One recommended next cryptanalytic direction
 
-**Monoalphabetic substitution composed with DOUBLE transposition, both keys drawn from a precommitted list of published Kryptos keywords** (`KRYPTOS`, `PALIMPSEST`, `ABSCISSA`).
+**Stop searching; pursue Request 4** — Jim Sanborn papers, Archives of American Art, Series 3,
+Box 6, Folder 10, `Pre-Production and Notes, 1990–1999`.
 
-Motivated rather than speculative: K3 is a transposition Sanborn implemented himself and those keywords are demonstrably his. Not duplicate: EXP-033 and EXP-036 each composed their substitution with a **single** transposition from a declared family, and a product of two columnar transpositions can lie outside both. Decidable: use EXP-033's exact consistency test for an arbitrary fixed monoalphabetic substitution after composing the two permutations. Keep the family small and precommitted; do not pad it with unevidenced words merely to enlarge the search.
+Every architecture this repository can *name* from public evidence has now been tested and
+failed. What remains is either documentary-but-unfalsifiable (a long key from an unidentified
+source, which moves only when a source is named) or speculative with no motivation beyond
+logical possibility. Picking among the speculative options would be choosing a family because
+compute is available, which this programme has repeatedly refused to do.
 
-Important algebraic simplification: a fixed monoalphabetic substitution commutes with a pure transposition, so `S ∘ T2 ∘ T1` and `T2 ∘ T1 ∘ S` are the same model up to writing the same permutation in the opposite convention. Do not count substitution/transposition order as a separate free parameter.
+Request 4 has never been attempted — access was blocked whenever it was raised, and it was
+correctly kept non-blocking while falsifiable analysis remained. That analysis has run out.
+Pre-production notes could name a key source, keyword, device or layout, and a punch layout or
+fabrication drawing would also settle the parked physical-lattice question.
 
-Before assigning a new experiment number, freeze the exact columnar-transposition convention, repeated-letter tie rule, padding/no-padding rule, orientation, and whether each pass is encryption-direction or inverse-direction. Deduplicate identical composed permutations. Then compute the exact family size and chance survival before running.
+If the folder turns out to hold no cryptographic material, record that the public evidence base
+is exhausted for architecture selection rather than manufacturing families to keep searching.
+Contamination protocol applies: take provenance, layout and keying information; do **not**
+ingest anything amounting to K4 plaintext.
 
-Do **not** extend EXP-038 from order 2 to order 3 without independent motivation — that is the rescue pattern this programme rejects. See Checkpoint Q §9 for the full setup.
+Do **not** extend EXP-038 to order 3, and do **not** enlarge the EXP-039 keyword list. Both are
+the rescue pattern this programme rejects. See Checkpoint R §9.
 
 ## External evidence
 

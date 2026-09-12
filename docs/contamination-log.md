@@ -304,6 +304,22 @@ Protocol points:
 - F1 and F2 were admitted together in advance specifically so that a negative on F1 could not
   be followed by adding the affine term as a rescue.
 
+## Session 19 (Checkpoint R, branch claude/k4-post-j) — clean, no incidents
+
+Pure computation on repository data: the public ciphertext, the public-verified crib positions,
+and three keywords already documented in the repository. No claimed-solution site used or
+cited; no alleged K4 plaintext, purported solution, or private K5 material sought, accessed or
+inferred.
+
+Protocol points:
+
+- The permutation audit and the exact null were computed **before** any crib verdict, and the
+  preregistration was committed before the verdicts were evaluated.
+- The keyword list stayed closed after the result: nothing was added, no tie rule was varied,
+  no width was extended, and nothing was optimised.
+- The next action recommended is an **evidence** request rather than another family, because
+  every nameable public-evidence architecture has now been tested.
+
 ## Incidents 2+ — none recorded.
 
 ## Codex Checkpoint I — no plaintext contamination incident
