@@ -6,6 +6,16 @@ human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
 
+> **Checkpoint H continued (2026-09-12).** External photographic evidence lifted the
+> reconstruction to **7 of 24 faces (29.2%)** with a **6-face contiguous chain** —
+> but **0 complete faces and 0 lower bands**, so Tier-1 is still NOT met and EXP-024
+> stays frozen. Two findings matter most: within-band order may be **rule-determined**
+> (upper bands alphabetical, lower bands north-to-south), and **the name arithmetic
+> does not close** — 80 (1969) + 20 (1997) ≠ 146, leaving ~46 names unexplained, so a
+> mid-1970s photograph is not evidence for 1989 without proven stability. See
+> [Checkpoint H continued](results/2026-09-12h2-checkpoint-H-continued.md).
+
+
 > **Checkpoint H (2026-09-12).** The reconstruction bar is now **one face**, not the
 > whole drum: a 97-letter window fits inside a single large sector
 > (UTC+1 = 137 letters, UTC+3 = 126, UTC+2 = 108). A legible pre-1997 photograph of

@@ -24,7 +24,37 @@ compute, or cipher families — it is one specific piece of missing public data.
 
 ---
 
-## 0 — Status after Checkpoint H: the bar is ONE FACE
+## 0 — Status after Checkpoint H continued (session 9)
+
+Reconstruction advanced: **7 of 24 faces identified (29.2%), a 6-face contiguous
+chain, 5 observed adjacency edges**. But **0 faces are COMPLETE and 0 lower bands
+are transcribed**, so Tier-1 is NOT met.
+
+Three findings changed the picture:
+
+1. **Within-band order may be rule-determined.** Upper bands read alphabetical
+   (UTC+1 1970s upper is strictly alphabetical, P=2.8e-6; all five multi-name groups
+   in 1984/1989 are too). Lower bands read geographic, north-to-south. If order is
+   rule-determined, order follows from MEMBERSHIP — a much weaker acquisition
+   requirement. **SUPPORTED, NOT PROVEN.**
+2. **The arithmetic does not close: 80 (1969) + 20 (1997) ≠ 146.** ~46 names entered
+   at some other time. If any entered before 1997, the clock was still growing during
+   the target period, and **a mid-1970s photograph is not evidence for 1989**.
+   Stability is now the pivotal question.
+3. **New blocker — Soviet-era zone membership.** The 1984 frame groups ALMA-ATA with
+   TASCHKENT, correct for Soviet time zones but split in modern ones. Reversal must
+   undo post-Soviet time-zone reorganisation too.
+
+**Next acquisition target (narrowed):** a legible **1988–89** photograph of the
+**UTC+1 lower band** — enough to identify which names are present. Secondarily, any
+single face fully transcribed in **both** an early-1980s and a 1988–89 frame, which
+would test stability directly (UTC+10 is the best candidate — CHABAROWSK is already
+attested in both years).
+
+**Cheapest unblock:** upload any candidate image as a **session file**. This agent
+cannot fetch images but can read and transcribe uploaded ones directly.
+
+## 0b — Earlier status after Checkpoint H: the bar is ONE FACE
 
 EXP-027 establishes the operational threshold, and it is far lower than Checkpoint G
 implied. A running-key test needs one contiguous 97-letter window, and single faces

@@ -173,3 +173,27 @@ Fifteen experiments now exist. Before proposing anything:
 57. Stability 1969-1997 is UNTESTED. Proving it would unlock the whole 1970s-80s
     photo pool. Never assume it.
 58. EXP-024 remains frozen, unmodified and unrun.
+
+## Addendum — 2026-09-12 (Checkpoint H continued)
+
+59. External evidence is in `docs/external/checkpoint-H-web-photo-handoff.md`. Every
+    reading from it is an EXTERNAL-AGENT TRANSCRIPTION, never this agent's own visual
+    verification. Do not promote any of it to ground truth without a second source or
+    a locally readable image.
+60. Layout now: **7 of 24 faces, 29.2%, 6-face chain, 5 observed edges — but 0
+    COMPLETE faces and 0 lower bands.** Tier-1 NOT met.
+61. **Ordering may be rule-determined**: upper bands read alphabetical (UTC+1 1970s
+    upper, P=2.8e-6; all five 1984/1989 multi-name groups too), lower bands read
+    north-to-south by latitude. The discriminator against transcriber bias is that
+    the same agent rendered the modern lower band NON-alphabetically. SUPPORTED, NOT
+    PROVEN. If true, ORDER follows from MEMBERSHIP.
+62. **The arithmetic does not close: 80 + 20 != 146**, ~46 names unexplained. So the
+    clock may still have been growing before 1997, and a mid-1970s photo is NOT
+    evidence for 1989. STABILITY is now the pivotal question.
+63. **New blocker**: Soviet-era zone membership differs from modern (ALMA-ATA with
+    TASCHKENT on one face in 1984). Reversal must undo post-Soviet time-zone changes.
+64. Do NOT report the "9 letters short" figure as near-completion. Tier-1 needs a
+    COMPLETE face; a partly-read band gives a tape with unknown gaps and is unusable.
+65. Best stability test available: fully transcribe the UTC+10 face in both a 1984
+    and a 1988-89 frame. CHABAROWSK is already attested in both.
+66. EXP-024 remains frozen, unmodified and unrun.

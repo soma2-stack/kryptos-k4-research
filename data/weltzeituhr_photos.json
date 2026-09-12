@@ -19,7 +19,7 @@
       "source_ref": "Bundesarchiv via Wikimedia Commons; accession number as given",
       "priority": "HIGHEST - within weeks of the target state",
       "self_transcribed": false,
-      "transcription_status": "USER-ASSERTED, NOT INDEPENDENTLY VERIFIED HERE",
+      "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (handoff Source 1); not locally re-transcribed",
       "visible_faces": [
         {
           "face_ref": "F1",
@@ -54,7 +54,10 @@
         }
       ],
       "visible_hour_ring_values": "UNKNOWN - and must not be used to assign sectors",
-      "notes": "Modern UTC+11 contains exactly Magadan and Sachalin, so this face may be COMPLETE - but 14 of the ~20 1997 additions remain unnamed, so completeness is not proven."
+      "notes": "Modern UTC+11 contains exactly Magadan and Sachalin, so this face may be COMPLETE - but 14 of the ~20 1997 additions remain unnamed, so completeness is not proven.",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-1989-0830-028,_Berlin,_Fernsehturm,_Weltzeituhr.jpg",
+      "image_sha1": "0c3d0288dc6711e386112dc22df050eac4f3abfc",
+      "image_dims": "567x800, 68001 bytes"
     },
     {
       "id": "BArch-183-1989-0811-023",
@@ -100,11 +103,143 @@
       "predates_1997": true,
       "is_1988_1989": false,
       "self_transcribed": false,
-      "transcription_status": "NOT TRANSCRIBED - image not viewable in this environment",
-      "visible_faces": [],
-      "adjacency_observed": [],
-      "priority": "MEDIUM - pre-1997 layout evidence, and a STABILITY control against the 1989 frames",
-      "notes": "Its main value may be stability testing: if a face reads identically in 1984 and 1989, older well-photographed years become usable for the 1989 reconstruction."
+      "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (handoff Source 2); face grouping graded MEDIUM by the source itself",
+      "visible_faces": [
+        {
+          "face_ref": "E1",
+          "utc_sector": "HISTORICAL SOVIET BAND (modern UTC+5/+6 split)",
+          "sector_basis": "contents ALMA-ATA + TASCHKENT. These sit in DIFFERENT modern zones, but Tashkent moved from the Soviet UTC+6 band to UTC+5 after 1991, so a 1984 grouping is historically correct.",
+          "band": "UNKNOWN",
+          "names": [
+            "ALMA-ATA",
+            "TASCHKENT"
+          ],
+          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping"
+        },
+        {
+          "face_ref": "E2",
+          "utc_sector": "UTC+7",
+          "sector_basis": "contents",
+          "band": "UNKNOWN",
+          "names": [
+            "KRASNOJARSK",
+            "NOWOSIBIRSK"
+          ],
+          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
+          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
+        },
+        {
+          "face_ref": "E3",
+          "utc_sector": "UTC+8",
+          "sector_basis": "contents",
+          "band": "UNKNOWN",
+          "names": [
+            "IRKUTSK",
+            "ULAN-BATOR"
+          ],
+          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
+          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
+        },
+        {
+          "face_ref": "E4",
+          "utc_sector": "UTC+9",
+          "sector_basis": "contents",
+          "band": "UNKNOWN",
+          "names": [
+            "JAKUTSK"
+          ],
+          "transcription_confidence": "EXTERNAL-AGENT, MEDIUM grouping",
+          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
+        },
+        {
+          "face_ref": "E5",
+          "utc_sector": "UTC+10",
+          "sector_basis": "contents",
+          "band": "UNKNOWN",
+          "names": [
+            "CHABAROWSK",
+            "WLADIWOSTOK"
+          ],
+          "partial": true,
+          "transcription_confidence": "EXTERNAL-AGENT, described as a PARTIAL region",
+          "sector_label_note": "sector named by MODERN zone of its contents; historical zone membership may differ (see new_blocker_soviet_zones)"
+        }
+      ],
+      "adjacency_observed": [
+        {
+          "left": "E1",
+          "right": "E2",
+          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+          "confidence": "EXTERNAL-AGENT, MEDIUM"
+        },
+        {
+          "left": "E2",
+          "right": "E3",
+          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+          "confidence": "EXTERNAL-AGENT, MEDIUM"
+        },
+        {
+          "left": "E3",
+          "right": "E4",
+          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+          "confidence": "EXTERNAL-AGENT, MEDIUM"
+        },
+        {
+          "left": "E4",
+          "right": "E5",
+          "basis": "source reports multiple CONSECUTIVE eastern faces in one frame",
+          "confidence": "EXTERNAL-AGENT, MEDIUM"
+        }
+      ],
+      "priority": "HIGH - five consecutive eastern faces, and a stability control against Aug 1989",
+      "notes": "Its main value may be stability testing: if a face reads identically in 1984 and 1989, older well-photographed years become usable for the 1989 reconstruction.",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-1984-1419-014,_Berlin,_Weltzeituhr_am_Alexanderplatz.jpg",
+      "image_sha1": "3d84b3dd285ffaaee40d78f58ccf0b4ec5ac680b"
+    },
+    {
+      "id": "WELT-akg-Straube-mid1970s-UTC+1",
+      "archive": "akg-images / picture-alliance, via WELT",
+      "accession": null,
+      "title": "Weltzeituhr und 'Interhotel Stadt Berlin' am Alexanderplatz",
+      "photographer": "credited pa/akg-images/Straube",
+      "date": "mid-1970s",
+      "date_confidence": "SOURCE-CAPTIONED MID-1970s - NOT an exact year, and NOT the 1988-89 target",
+      "predates_1997": true,
+      "is_1988_1989": false,
+      "source_ref": "WELT article 217168174 (9 Nov 2021); image img.welt.de/.../1920313707-coriginal-w1200",
+      "self_transcribed": false,
+      "transcription_status": "EXTERNAL-AGENT TRANSCRIPTION (handoff Source 3)",
+      "priority": "HIGHEST for the UTC+1 Tier-1 goal, but SEE THE DATE PROBLEM",
+      "visible_faces": [
+        {
+          "face_ref": "W1",
+          "utc_sector": "UTC+1",
+          "sector_basis": "contents (Berlin, Paris, Madrid, Warschau ... all CET)",
+          "upper_band": [
+            "AMSTERDAM",
+            "BERLIN",
+            "BRUSSEL",
+            "BUDAPEST",
+            "MADRID",
+            "PARIS",
+            "PRAG",
+            "STOCKHOLM",
+            "WARSCHAU"
+          ],
+          "upper_band_confidence": "EXTERNAL-AGENT HIGH for the nine names; ORDER graded SUPPORTED - see ordering_analysis",
+          "upper_band_letters": 62,
+          "lower_band": "INCOMPLETE - NOT KNOWN",
+          "lower_band_readable_subset": [
+            "KOPENHAGEN",
+            "WIEN",
+            "BELGRAD",
+            "TUNIS"
+          ],
+          "lower_band_confidence": "the source states the lower band is NOT sharp enough for a responsible full transcription; remaining lines are UNKNOWN",
+          "lower_band_membership_count": "UNKNOWN"
+        }
+      ],
+      "adjacency_observed": []
     }
   ],
   "stability_question": {
@@ -183,5 +318,45 @@
       "Category:Photographs by Peter Heinz Junge",
       "Commons:Bundesarchiv (the 80,000+ file donation these come from)"
     ]
+  },
+  "external_agent_rule": "Sources added from docs/external/checkpoint-H-web-photo-handoff.md are EXTERNAL-AGENT TRANSCRIPTIONS made from web-rendered images. They are NOT this agent's own visual verification and were NOT re-transcribed locally (all image hosts return HTTP 000). They may not be promoted to historical ground truth without a second source or a locally viewable image.",
+  "ordering_analysis": {
+    "question": "Is within-band order alphabetical, geographic, or neither?",
+    "evidence_for_alphabetical": {
+      "utc+1_upper_1970s": "AMSTERDAM BERLIN BRUSSEL BUDAPEST MADRID PARIS PRAG STOCKHOLM WARSCHAU is in STRICT alphabetical order. P(random)=1/9!=2.76e-6.",
+      "multi_name_groups": "All five reported multi-name groups across the 1984 and 1989 frames are alphabetical (ALMA-ATA/TASCHKENT, KRASNOJARSK/NOWOSIBIRSK, IRKUTSK/ULAN-BATOR, CHABAROWSK/WLADIWOSTOK, MAGADAN/SACHALIN). P(random)=2^-5=0.031.",
+      "discriminator": "The SAME external agent transcribed the modern lower band (Source 7) as OSLO KOPENHAGEN WIEN BERN PRESSBURG BELGRAD ROM TUNIS KINSHASA, which is NOT alphabetical. So the agent does not alphabetise by habit, which argues the alphabetical readings are genuine physical order."
+    },
+    "evidence_against_a_universal_rule": {
+      "historical_lower_subset": "KOPENHAGEN WIEN BELGRAD TUNIS is NOT alphabetical but IS strictly decreasing in latitude (55.7, 48.2, 44.8, 36.8).",
+      "modern_lower_band": "OSLO KOPENHAGEN WIEN BERN PRESSBURG BELGRAD ROM TUNIS KINSHASA is latitude-ordered north-to-south with a single inversion (Bern before Pressburg), 1 of 8 adjacent comparisons against 18 expected at random."
+    },
+    "current_reading": "UPPER bands look ALPHABETICAL; LOWER bands look GEOGRAPHIC (north to south). Two different rules on one face is odd but is what the data shows.",
+    "why_it_matters": "If a band's order is rule-determined, ORDER follows from MEMBERSHIP. That turns the acquisition requirement from 'a fully legible ordered transcription' into 'enough legibility to identify WHICH names are present' - a much weaker requirement.",
+    "grade": "SUPPORTED, NOT PROVEN. Rests on one external agent and cannot be verified locally."
+  },
+  "date_problem": {
+    "statement": "The arithmetic of the name counts does not close, and it undermines the reversal premise.",
+    "numbers": {
+      "1969_original": 80,
+      "added_1997": 20,
+      "implied_total": 100,
+      "actual_modern": 146,
+      "unexplained": 46
+    },
+    "implications": [
+      "~46 names entered the clock at some time OTHER than the 1997 restoration.",
+      "If any entered between 1969 and 1997, the clock was still growing during the target period.",
+      "Therefore a MID-1970s photograph is NOT evidence for the 1989 state without demonstrated stability.",
+      "Source 3's nine-name UTC+1 upper band may be an earlier, smaller state of that face."
+    ],
+    "supporting_note": "Casablanca is the one modern-upper UTC+1 name absent from the 1970s band, and under an alphabetical rule it would sit exactly between BUDAPEST and MADRID, where the 1970s transcription shows no entry. Consistent with a later addition - but an INFERENCE, since the name could simply be obscured.",
+    "grade": "The 80-name figure is a RELIABLE GOVERNMENT PUBLICATION (Source 6); the gap is arithmetic and therefore solid unless that figure counts something else."
+  },
+  "new_blocker_soviet_zones": {
+    "statement": "Historical ZONE MEMBERSHIP differs from modern, beyond the single documented Kiew move.",
+    "evidence": "The 1984 frame groups ALMA-ATA with TASCHKENT on one face. They sit in different modern zones (UTC+6 and UTC+5), but Tashkent moved out of the Soviet UTC+6 band after 1991, so the 1984 grouping is historically correct.",
+    "consequence": "Reversing the clock requires reversing post-Soviet time-zone reorganisation as well as the 1997 name changes. This was not in any previous blocker list.",
+    "side_effect": "It also RAISES confidence in Source 2: a careless transcription would be unlikely to reproduce a correct Soviet-era grouping."
   }
 }

@@ -109,13 +109,18 @@ def load_from_photos(path=PHOTOS_PATH):
         local = {}
         for vf in ph.get("visible_faces", []):
             utc = vf.get("utc_sector")
-            fid = utc if utc and utc != "UNKNOWN" else f"{pid}:{vf['face_ref']}"
+            fid = f"{utc} [{pid[:12]}]" if utc and utc != "UNKNOWN" else f"{pid}:{vf['face_ref']}"
+            # a face seen in more than one photograph merges under its sector label
+            if utc and utc != "UNKNOWN" and any(utc == f.get("utc") for f in g.faces.values()):
+                fid = next(k for k, f in g.faces.items() if f.get("utc") == utc)
             local[vf["face_ref"]] = fid
             up = vf.get("upper_band")
             lo = vf.get("lower_band")
+            names = vf.get("names")
             g.add_face(fid, utc=utc,
                        upper=up if isinstance(up, list) else None,
                        lower=lo if isinstance(lo, list) else None,
+                       unknown=names if isinstance(names, list) else None,
                        source=pid)
         for ad in ph.get("adjacency_observed", []):
             a, b = local.get(ad["left"]), local.get(ad["right"])

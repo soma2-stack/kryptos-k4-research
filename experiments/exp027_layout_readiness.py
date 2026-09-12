@@ -53,8 +53,19 @@ print(f"   adjacency edges OBSERVED             : {s['edges_observed']}")
 print(f"   adjacency edges TRANSITIVE           : {s['edges_transitive']}")
 print(f"   circumference fraction identified    : {s['circumference_fraction']*100:.1f}%")
 print(f"   longest contiguous chain             : {s['longest_chain']} faces")
-print(f"   faces verified by 1988-89 evidence   : {s['faces_identified']} (both from the Aug 1989 frame)")
-print(f"   faces from older photos + stability  : 0 (stability UNTESTED)")
+by_era = {"1988-89": 0, "1984": 0, "mid-1970s": 0}
+for fid, f in g.faces.items():
+    srcs = " ".join(f["sources"])
+    if "1989" in srcs:
+        by_era["1988-89"] += 1
+    elif "1984" in srcs:
+        by_era["1984"] += 1
+    elif "1970" in srcs:
+        by_era["mid-1970s"] += 1
+print(f"   faces from 1988-89 evidence          : {by_era['1988-89']}")
+print(f"   faces from 1984 evidence only        : {by_era['1984']}")
+print(f"   faces from mid-1970s evidence only   : {by_era['mid-1970s']}")
+print(f"   faces usable for 1989 via stability  : 0 (stability UNPROVEN - see below)")
 print()
 
 print("## Letters per face, and what a 97-letter window needs")
@@ -105,6 +116,44 @@ print("     all 24 faces complete, plus the 1997 reversal applied. Currently: NO
 print()
 print("   Neither tier is met. EXP-024 remains frozen and unrun.\n")
 
+# ---------------------------------------------------------------- UTC+1 status
+UP70 = ["AMSTERDAM","BERLIN","BRUSSEL","BUDAPEST","MADRID","PARIS","PRAG","STOCKHOLM","WARSCHAU"]
+LOWSUB = ["KOPENHAGEN","WIEN","BELGRAD","TUNIS"]
+u = sum(len(w) for w in UP70); l = sum(len(w) for w in LOWSUB)
+print("## Tier-1 status of the UTC+1 face, in detail")
+print(f"   UPPER band  : {len(UP70)} names, ORDERED, {u} letters   [EXTERNAL-AGENT, mid-1970s]")
+print(f"   LOWER band  : INCOMPLETE. {len(LOWSUB)} readable names ({l} letters), full")
+print( "                 membership and order UNKNOWN; the source states the lower")
+print( "                 band is not sharp enough for a responsible transcription.")
+print(f"   attested letters so far : {u+l}")
+print(f"   Tier-1 requirement      : 97 letters IN A COMPLETE FACE")
+print(f"   naive shortfall         : {97-(u+l)} letters")
+print()
+print("   BUT THE NAIVE SHORTFALL IS MISLEADING, and this matters:")
+print("   Tier-1 requires a COMPLETE face, not 97 attested letters. A partially read")
+print("   band yields a tape with UNKNOWN GAPS at unknown positions, which cannot be")
+print("   used as a keystream at all. The modern lower band holds 9 names; the")
+print("   historical one holds an unknown number of which 4 are legible. Until the")
+print("   full membership AND order of the historical lower band are known, the face")
+print("   is not complete and Tier-1 is NOT met - however close the letter count gets.")
+print()
+print("## The date problem - the most serious issue in the new evidence")
+print("   1969 original: 80 names. Added in 1997: ~20. Implied total: ~100.")
+print(f"   Actual modern total: 146. UNEXPLAINED: 46 names.")
+print("   So ~46 names entered at some time OTHER than 1997. If any entered between")
+print("   1969 and 1997, the clock was still growing during the target period, and a")
+print("   MID-1970s photograph is not evidence for 1989 without demonstrated")
+print("   stability. Source 3's nine-name UTC+1 upper band may be an earlier, smaller")
+print("   state of that face. Casablanca - the one modern-upper name absent from it -")
+print("   is consistent with a later addition, though it could simply be obscured.")
+print()
+print("## Stability, first data point")
+print("   The UTC+10 face carries CHABAROWSK in BOTH the April 1984 and the August")
+print("   1989 frames. No contradiction - but a single name shows only that this name")
+print("   did not move, not that the face is unchanged. Stability remains UNPROVEN,")
+print("   and it is now the pivotal question, because it decides whether pre-1989")
+print("   photographs may be used for the 1989 state at all.")
+print()
 print("## Where further photographs are worth most")
 ent = []
 for z, names in byzone.items():

@@ -122,4 +122,19 @@ live.staticflickr.com all return HTTP 000), so it could NOT be re-transcribed. I
 stored as USER-ASSERTED, NOT INDEPENDENTLY VERIFIED, and every downstream statement
 derived from it carries that grade.
 
+## Session 9 (Checkpoint H continued) — clean, no incidents
+
+Input was `docs/external/checkpoint-H-web-photo-handoff.md`, added to the branch by
+the user because this environment cannot reach the image hosts. All of it is
+historical object evidence — Bundesarchiv frames, a WELT/akg press photograph, a
+Berlin government publication, and one explicitly-modern comparison image.
+
+Handled under the handoff's own rule: every transcription is recorded as an
+EXTERNAL-AGENT TRANSCRIPTION, not this agent's visual verification. All image hosts
+(commons.wikimedia.org, upload.wikimedia.org, www.bundesarchiv.de,
+live.staticflickr.com, img.welt.de) remain unreachable, so nothing was
+re-transcribed locally and no external reading was promoted to ground truth.
+
+No claimed-solution site used. No purported K4 plaintext sought or seen.
+
 ## Incidents 2+ — none recorded.

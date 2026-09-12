@@ -10,21 +10,25 @@ ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ce
       date confidence: PHOTOGRAPHER-ASSERTED 1988 - NOT ARCHIVE-DATE VERIFIED
    BArch-183-1984-1419-014                1984-04-19  NOT self-transcribed
       date confidence: ARCHIVE-DATE VERIFIED (original caption)
+   WELT-akg-Straube-mid1970s-UTC+1        mid-1970s   NOT self-transcribed
+      date confidence: SOURCE-CAPTIONED MID-1970s - NOT an exact year, and NOT the 1988-89 target
 
    This agent cannot fetch or view any of these images: commons.wikimedia.org, up...
 
 ## Layout reconstruction metric
    faces total                          : 24
-   faces identified                     : 2
-   faces with UPPER band transcribed    : 2
+   faces identified                     : 7
+   faces with UPPER band transcribed    : 3
    faces with LOWER band transcribed    : 0
    faces COMPLETE (both bands, ordered) : 0
-   adjacency edges OBSERVED             : 1
-   adjacency edges TRANSITIVE           : 0
-   circumference fraction identified    : 8.3%
-   longest contiguous chain             : 2 faces
-   faces verified by 1988-89 evidence   : 2 (both from the Aug 1989 frame)
-   faces from older photos + stability  : 0 (stability UNTESTED)
+   adjacency edges OBSERVED             : 5
+   adjacency edges TRANSITIVE           : 10
+   circumference fraction identified    : 29.2%
+   longest contiguous chain             : 6 faces
+   faces from 1988-89 evidence          : 2
+   faces from 1984 evidence only        : 4
+   faces from mid-1970s evidence only   : 1
+   faces usable for 1989 via stability  : 0 (stability UNPROVEN - see below)
 
 ## Letters per face, and what a 97-letter window needs
    total letters across 24 faces: 1106
@@ -59,6 +63,40 @@ ciphertext sha256 eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ce
      all 24 faces complete, plus the 1997 reversal applied. Currently: NOT MET.
 
    Neither tier is met. EXP-024 remains frozen and unrun.
+
+## Tier-1 status of the UTC+1 face, in detail
+   UPPER band  : 9 names, ORDERED, 62 letters   [EXTERNAL-AGENT, mid-1970s]
+   LOWER band  : INCOMPLETE. 4 readable names (26 letters), full
+                 membership and order UNKNOWN; the source states the lower
+                 band is not sharp enough for a responsible transcription.
+   attested letters so far : 88
+   Tier-1 requirement      : 97 letters IN A COMPLETE FACE
+   naive shortfall         : 9 letters
+
+   BUT THE NAIVE SHORTFALL IS MISLEADING, and this matters:
+   Tier-1 requires a COMPLETE face, not 97 attested letters. A partially read
+   band yields a tape with UNKNOWN GAPS at unknown positions, which cannot be
+   used as a keystream at all. The modern lower band holds 9 names; the
+   historical one holds an unknown number of which 4 are legible. Until the
+   full membership AND order of the historical lower band are known, the face
+   is not complete and Tier-1 is NOT met - however close the letter count gets.
+
+## The date problem - the most serious issue in the new evidence
+   1969 original: 80 names. Added in 1997: ~20. Implied total: ~100.
+   Actual modern total: 146. UNEXPLAINED: 46 names.
+   So ~46 names entered at some time OTHER than 1997. If any entered between
+   1969 and 1997, the clock was still growing during the target period, and a
+   MID-1970s photograph is not evidence for 1989 without demonstrated
+   stability. Source 3's nine-name UTC+1 upper band may be an earlier, smaller
+   state of that face. Casablanca - the one modern-upper name absent from it -
+   is consistent with a later addition, though it could simply be obscured.
+
+## Stability, first data point
+   The UTC+10 face carries CHABAROWSK in BOTH the April 1984 and the August
+   1989 frames. No contradiction - but a single name shows only that this name
+   did not move, not that the face is unchanged. Stability remains UNPROVEN,
+   and it is now the pivotal question, because it decides whether pre-1989
+   photographs may be used for the 1989 state at all.
 
 ## Where further photographs are worth most
    face      names   share of remaining layout entropy
