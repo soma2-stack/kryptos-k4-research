@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "ciphertext": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+  "length": 97,
+  "indexing": "zero-based, inclusive start and exclusive end",
+  "confirmed_cribs": [
+    {
+      "plaintext": "EASTNORTHEAST",
+      "start": 21,
+      "end": 34,
+      "ciphertext_segment": "FLRVQQPRNGKSS"
+    },
+    {
+      "plaintext": "BERLINCLOCK",
+      "start": 63,
+      "end": 74,
+      "ciphertext_segment": "NYPVTTMZFPK"
+    }
+  ],
+  "kryptos_alphabet": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
+  "notes": [
+    "The crib positions are the canonical working positions used in the inherited research. Verify against a primary transcript before relying on them for publication.",
+    "No unverified full plaintext is included here."
+  ]
+}
