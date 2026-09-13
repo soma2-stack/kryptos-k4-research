@@ -227,3 +227,35 @@ spans only (see `docs/evidence-grades.md`).
 
 **Request 4 (fabrication geometry, AAA Series 3 Box 6 Folder 10) remains the only open
 request that matters, and nothing is blocked on it.**
+
+---
+
+## REQUEST 7 — OPEN, HIGHEST PRIORITY (added Checkpoint T): additional verified K4 plaintext
+
+**What is wanted:** any publicly attributable, position-specific statement fixing one or more
+K4 plaintext letters **outside** the two known cribs — that is, in zero-based positions
+`0–20`, `34–62` or `74–96`. Acceptable forms: a Sanborn public statement or interview, a
+contemporaneous report quoting one, or a museum/press release with the same standing as the
+`BERLIN`/`CLOCK`/`NORTHEAST`/`EAST` releases already admitted under Request 6.
+
+**Explicitly excluded:** alleged full plaintexts, claimed solutions, solution dumps, leaked
+material, private K5 material and the quarantined Folder 8 pages. A candidate letter is
+admissible only with public, citable provenance, graded like every other source.
+
+**Why this now outranks further cryptanalysis.** Checkpoint T established that the binding
+resource is constraint density, not compute:
+
+- The two cribs are contiguous runs of 13 and 11 characters. Within-crib position
+  differences never exceed 12; cross-crib differences lie in `[30, 52]`.
+- Consequently **periods 27, 28 and 29 receive exactly zero equality constraints**, and
+  periods 24–26 receive only 5, 3 and 1. Any model in that window is unfalsifiable with
+  current data, and any "fit" reported there is vacuous.
+- Per-row independent keys, and long-period or reset-at-boundary recurrences, lose their
+  power for the same reason.
+
+A single additional verified letter placed in the gap `34–62` or the tail `74–96` would
+create new position differences, several of which are divisible by 27, 28 or 29, and would
+restore falsifiability to a family of models that is currently untestable rather than
+untested.
+
+See `docs/analysis/checkpoint-T-constraint-first-architecture-search.md` §7.2.

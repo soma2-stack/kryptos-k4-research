@@ -367,3 +367,13 @@ No experiment was designed or run, no plaintext candidate was ingested, no claim
 source was consulted, and no external verifier was contacted. The muffled interview fragment
 was quarantined rather than mined; no words from it were promoted to key material, and the
 Box 6 Folder 9 contamination lock remains in force.
+
+## Claude Checkpoint T — no contamination incident
+
+Constraint-first architecture pass using only the pinned 97-character ciphertext, the two
+public-source-verified cribs, the authoritative cipher-side row transcription, and
+documentary evidence already admitted under protocol. No alleged plaintext, claimed
+solution, solution dump, leaked material, private K5 material or quarantined Folder 8 page
+was accessed, and no latent-clue mining of the Folder 9 manuscript was performed. No
+external verifier was contacted. No new experiment was created; no plaintext beyond the 24
+verified crib letters was assumed at any point.

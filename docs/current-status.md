@@ -2,7 +2,8 @@
 
 This is the compact handoff for future sessions. It does **not** replace historical checkpoints.
 
-**Current cryptanalytic checkpoint:** Checkpoint R (`results/2026-09-12-claude-checkpoint-R.md`).
+**Current cryptanalytic checkpoint:** Checkpoint T (`results/2026-09-12-claude-checkpoint-T.md`).
+Checkpoint T was a constraint-first architecture-discovery pass: **`NO EXP-040 JUSTIFIED`**.
 
 **Documentary work completed after R:** Box 6 Folders 8, 9, 10 and 11, plus Series 9 Box 16 Folder 2, have all been inspected. Checkpoint S2 (`results/2026-09-12-claude-checkpoint-S2.md`) re-evaluated the 1991 ABC Scheidt interview: "custom / adapted" is now STRONGLY SUPPORTED, but no architecture is named and **no EXP-040 is justified**.
 
@@ -23,6 +24,18 @@ Do **not** rerun EXP-029 through EXP-039 merely for reassurance.
 
 Important current scoped negatives include:
 
+- **Pure transposition of K4 is PROVED IMPOSSIBLE** (Checkpoint T). The cribs require at
+  least three `E`s in the plaintext; the ciphertext has exactly two, and a permutation
+  preserves the letter multiset. This upgrades EXP-007's statistical argument. It does
+  **not** reach substitution-then-transposition, nor a transposition spanning K1-K4.
+- **The cribs impose ZERO constraints on message-aligned periods 27, 28 and 29**, and only
+  5 / 3 / 1 on periods 24 / 25 / 26 (Checkpoint T). A "consistent period" reported in that
+  window is **vacuous and must never be counted as a survivor**. This is an
+  information-theoretic ceiling, not a gap in effort.
+- Physical row-boundary key resets are negative: EXP-020 on the correct geometry, replicated
+  and extended at Checkpoint T across eleven row-structured models (every-row reset, single
+  resets at 35 and 66, boustrophedon traversal, row-number offsets) x 12 conventions x
+  periods 2-40. Do not reopen the row-reset family without new plaintext.
 - EXP-033: declared single-transposition families composed with **any fixed A-Z→A-Z function** — zero feasible at its exact scope.
 - EXP-036: declared periodic shift-family, periods 2–23, composed with the declared transposition families — zero feasible at its exact scope.
 - EXP-037: preregistered standard Porta family — zero feasible.
@@ -149,6 +162,16 @@ account indicates it very likely does not, so a measured survey would refine spa
 unlock an architecture.
 
 ## One recommended next action
+
+**Pursue Request 7 (new, Checkpoint T): additional verified K4 plaintext** — any publicly
+attributable, position-specific statement fixing a plaintext letter outside the two known
+cribs, especially in zero-based `34-62` or `74-96`. Checkpoint T showed the binding
+constraint is no longer compute but **constraint density**: survivors appear only where the
+crib geometry goes blind. One extra verified letter would restore falsifiability to
+long-period, per-row and reset-at-boundary models that are currently *untestable* rather
+than untested. This now **outranks further cryptanalysis**.
+
+Documentary work continues in parallel, unchanged in priority order:
 
 **Pursue Request 2: the unedited 2005 Zetter/Scheidt interview material** — raw audio or full
 transcript, interviewer notes, cut questions, drafts, fact-check correspondence.

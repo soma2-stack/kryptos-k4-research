@@ -72,7 +72,19 @@ Previously stated far too broadly. Split:
   printed) ≈ 0.026), and **EXHAUSTIVELY ELIMINATED WITHIN MODEL** at periods 2–3
   (EXP-013). Periods ≥ 4: **UNTESTABLE WITH CURRENT DATA.**
 
-### Low IoC → pure transposition dead (EXP-007)
+### Pure transposition of K4 → PROVED IMPOSSIBLE (Checkpoint T, upgrading EXP-007)
+**PROVED IMPOSSIBLE given the verified crib positions.** A transposition permutes
+characters and so preserves the letter multiset exactly. The two verified cribs place `E`
+at message positions 21, 30 and 64, so the plaintext contains **at least three** `E`s; the
+K4 ciphertext contains **exactly two**. That is a deterministic contradiction — no search,
+no null model, no assumption about language. Verified by `audit/verify_checkpoint_T.py`.
+**Does not constrain:** substitution *followed by* transposition (EXP-033/036/039), nor a
+transposition spanning K1–K4 jointly, where the multiset argument has no purchase.
+
+The earlier statistical argument is retained below for its independent reasoning, but it is
+no longer the binding result.
+
+### Low IoC → pure transposition dead (EXP-007) — superseded by the above
 **STRONGLY DISFAVORED, not proved.** Correctly stated it is conditional on the
 plaintext being ordinary English. But the audit makes it *stronger* than I credited:
 a transposition preserves IoC exactly, so the plaintext would need IoC ≈ 0.036 —
