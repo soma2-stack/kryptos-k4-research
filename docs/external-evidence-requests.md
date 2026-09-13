@@ -259,3 +259,36 @@ restore falsifiability to a family of models that is currently untestable rather
 untested.
 
 See `docs/analysis/checkpoint-T-constraint-first-architecture-search.md` §7.2.
+
+---
+
+## REQUEST 2 — status refinement (Checkpoint AF, 2026-09-13)
+
+Request 2 is now tracked as **two separate states**:
+
+| item | status |
+|---|---|
+| `ScheidtNova.doc` (PBS B-roll transcript, Ed Scheidt, filmed 2005) | **LOCATED in the public index, CONTENT NOT RETRIEVED** |
+| Unedited 2005 Kim Zetter / WIRED Scheidt interview material | **NOT LOCATED** |
+
+A recovery attempt at Checkpoint AF failed for environmental reasons only: every external host
+was refused at the CONNECT stage by the session's egress policy (gateway HTTP 403), including
+`elonka.com`, `web.archive.org`, `archive.org`, `www.pbs.org`, `openvault.wgbh.org` and
+`americanarchive.org`. No route is recorded as "confirmed no payload". See
+`docs/external/checkpoint-AF-scheidtnova-retrieval-attempt.md` for the full ledger.
+
+**Retrieval should be retried from an environment with ordinary web access.** The direct link
+returned HTTP 401 to the supervisor, so archival captures and independent custodians matter:
+
+- GBH Open Vault catalog record `V_3AC501960CC4454A8FD950703CBED5A9` (gives the pending GBH
+  request a precise handle);
+- **UGA Brown Media Archives / Peabody Awards Collection**, physical object
+  `Nova scienceNOW [No. 3411, 2007-07-24]` — an **independent custodian**, and therefore the
+  strongest route that does not duplicate the GBH request already pending from the user.
+
+**Do not send duplicate outreach to GBH.**
+
+What would actually unblock Checkpoint AE is narrow: a statement naming **a structured stage
+whose parameters are shared across positions**, or **a period / key-length / inheritance rule**.
+Generic wording — masked, custom, complex, modern, adapted, different — selects nothing and must
+not be used to launch an experiment.

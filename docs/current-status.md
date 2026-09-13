@@ -22,6 +22,46 @@ deal; only a **contiguous run** can rescue the polygraphic ones.
 *raises* the constraint count, not lowers it, so `24 - (p+q-1)` is a **lower** bound. No
 conclusion changes.
 
+## Evidence-acquisition status (Checkpoint AF, `docs/external/checkpoint-AF-scheidtnova-retrieval-attempt.md`)
+
+**The current cryptanalytic checkpoint remains AE. No EXP-040 is justified.**
+
+Request 2 is split into two distinct states, and both must be reported separately:
+
+1. **`ScheidtNova.doc` - LOCATED in the public archive index, CONTENT NOT YET RETRIEVED.** The
+   filename, 2005 filming date, PBS B-roll description, ~140K size and 2009-02-13 posting date
+   are established from the public index. **The payload has not been obtained**, so no wording
+   may be quoted, paraphrased or inferred from it - not from the filename, not from index
+   metadata, and not from search-engine snippets.
+2. **Unedited 2005 Zetter / WIRED Scheidt material - still NOT LOCATED.** The published WIRED
+   interview states it was edited for length and organization; the unedited version has not been
+   found and is **not** claimed to be publicly available.
+
+Checkpoint AF attempted recovery and failed for **environmental** reasons: this session's egress
+policy refuses every external host at the CONNECT stage with a gateway 403, including
+`elonka.com`, `web.archive.org`, `archive.org`, `www.pbs.org`, `openvault.wgbh.org` and
+`americanarchive.org`. Only a search tool returning summaries was available, and summaries are
+not payloads. **Retrieval failure is not evidence about the cipher**, and no ledger entry is
+"confirmed no payload" - each is *blocked from that environment* or *not surfaced by one search*.
+
+Two new institutional leads are recorded, catalog-level only: the **GBH Open Vault** record
+`V_3AC501960CC4454A8FD950703CBED5A9`, and a **UGA Brown Media Archives / Peabody** physical-object
+record for `Nova scienceNOW [No. 3411, 2007-07-24]` - the latter an independent custodian, hence
+the strongest route that does **not** duplicate the GBH request already pending from the user.
+Do not send duplicate outreach to GBH.
+
+## Scope clarification (Checkpoint AF) - do not over-read the periodic negative
+
+Checkpoint AE writes class B as `C[i] = F(P[i], k[i mod p])`. That notation is generic, but the
+**ALREADY CLOSED** verdict at `p <= 23` covers only the **declared shift/combiner families** - the
+12 committed conventions swept by EXP-001 and EXP-036, plus the Quagmire/Gronsfeld reductions and
+EXP-037 for standard Porta. It is **not** a theorem eliminating every arbitrary periodic combiner.
+
+An arbitrary fixed 26x26 table is **class L**, and under the present cribs it is *vacuous* at key
+periods 8, 10, 13 and 26, receiving **zero** constraints because no `(plaintext, key)` input pair
+repeats there. A short period therefore does not by itself close an arbitrary combiner: class L is
+blocked by lack of constraint, not by prior search.
+
 **Previous cryptanalytic checkpoint:** Checkpoint AC
 (`results/2026-09-13-checkpoint-AC.md`) — independent audit of Codex Checkpoint AB plus exact
 CSP closure of its Trifid residual: **`NO EXP-040 JUSTIFIED`**. Codex's 175-of-194 rejection

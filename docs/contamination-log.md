@@ -427,3 +427,14 @@ were used; the 2025 archival plaintext discovery was not treated as licensing an
 contents, and no alleged, leaked or reconstructed K4 plaintext, solution site, private K5
 material or auction-secret material was searched for, fetched, quoted or inferred. The 15
 conditionally-SAT Trifid configurations were not chased, optimised, scored or relabelled.
+
+## Claude Checkpoint AF — no contamination incident
+
+Documentary retrieval attempt only; no cipher experiment, no keyspace search, no language
+scoring, and the 15 conditionally-SAT Trifid configurations were not touched. The
+`ScheidtNova.doc` payload was not retrieved and no transcript content was quoted, paraphrased or
+inferred from the filename, index metadata or search snippets. Search results surfaced at least
+one site advertising a B-roll transcript said to disclose techniques and concepts about K4, plus
+other solution-adjacent pages; none was accessed, cited, or allowed into the analysis. No alleged
+full K4 plaintext, leaked or reconstructed solution, auction-secret material or private K5
+material was searched for, fetched, quoted or inferred. No duplicate outreach was sent to GBH.
