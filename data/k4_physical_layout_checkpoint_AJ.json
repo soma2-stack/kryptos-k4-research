@@ -1,0 +1,229 @@
+{
+  "checkpoint": "AJ",
+  "date": "2026-09-13",
+  "scope": "physical-layout audit only; no cipher search",
+  "canonical_linear_k4": {
+    "text": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+    "length": 97,
+    "sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab"
+  },
+  "published_textual_layout": {
+    "authority": "CIA legacy page, 'Kryptos' Sculpture, Panel 1 - Encoded Text (Text Version), https://www.cia.gov/legacy/headquarters/kryptos-sculpture",
+    "segments": [
+      {
+        "k4_start": 0,
+        "k4_end": 4,
+        "panel_row": 25,
+        "panel_col_start": 27,
+        "text": "OBKR"
+      },
+      {
+        "k4_start": 4,
+        "k4_end": 35,
+        "panel_row": 26,
+        "panel_col_start": 0,
+        "text": "UOXOGHULBSOLIFBBWFLRVQQPRNGKSSO"
+      },
+      {
+        "k4_start": 35,
+        "k4_end": 66,
+        "panel_row": 27,
+        "panel_col_start": 0,
+        "text": "TWTQSJQSSEKZZWATJKLUDIAWINFBNYP"
+      },
+      {
+        "k4_start": 66,
+        "k4_end": 97,
+        "panel_row": 28,
+        "panel_col_start": 0,
+        "text": "VTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR"
+      }
+    ],
+    "segment_lengths": [
+      4,
+      31,
+      31,
+      31
+    ],
+    "status": "verified textual mapping; not a metric survey"
+  },
+  "physical_engraving": {
+    "exact_k4_row_count": null,
+    "minimum_directly_identified_contiguous_rows": 3,
+    "directly_identified_row_starts": [
+      "UOX",
+      "TWT",
+      "VTT"
+    ],
+    "row_25_start_ECDM_visible": true,
+    "row_25_terminal_OBKR_visible": false,
+    "obkr_separate_row": false,
+    "obkr_separate_row_basis": "institutional text places it after ? on row 25; photograph shows no extra row between ECDM and UOX",
+    "exact_row_lengths": null,
+    "fixed_column_lattice": "NOT ESTABLISHED",
+    "quantitative_coordinates": null,
+    "reason": "no admitted orthographic image shows both ends of the K4-bearing rows; curvature invalidates one global planar homography",
+    "verified_features": [
+      "horizontal baselines",
+      "curved cut-through copper screen",
+      "three consecutive physical rows beginning UOX, TWT, VTT",
+      "preceding physical row begins ECDM"
+    ],
+    "unknown_features": [
+      "physical visibility and placement of row-25 terminal OBKR",
+      "physical character counts of rows 25-28",
+      "row left/right x coordinates and widths",
+      "character centers, pitch, gap distribution and kerning outliers",
+      "shared vertical columns or systematic stagger"
+    ]
+  },
+  "crib_spans": [
+    {
+      "plaintext": "EASTNORTHEAST",
+      "k4_interval": [
+        21,
+        34
+      ],
+      "ciphertext": "FLRVQQPRNGKSS",
+      "published_row_groups": [
+        {
+          "panel_row": 26,
+          "column_start": 17,
+          "column_end_inclusive": 29,
+          "k4_start": 21,
+          "k4_end_exclusive": 34
+        }
+      ],
+      "physical_spacing_relation": "UNKNOWN"
+    },
+    {
+      "plaintext": "BERLINCLOCK",
+      "k4_interval": [
+        63,
+        74
+      ],
+      "ciphertext": "NYPVTTMZFPK",
+      "published_row_groups": [
+        {
+          "panel_row": 27,
+          "column_start": 28,
+          "column_end_inclusive": 30,
+          "k4_start": 63,
+          "k4_end_exclusive": 66
+        },
+        {
+          "panel_row": 28,
+          "column_start": 0,
+          "column_end_inclusive": 7,
+          "k4_start": 66,
+          "k4_end_exclusive": 74
+        }
+      ],
+      "physical_spacing_relation": "UNKNOWN"
+    }
+  ],
+  "images": [
+    {
+      "id": "LOC_HIGHSM_13337",
+      "authority": "Library of Congress, Carol M. Highsmith Archive",
+      "identifier": "LC-DIG-highsm-13337 / LC-HS503-2081",
+      "photographer": "Carol M. Highsmith",
+      "date": "between 1980 and 2006",
+      "native_resolution": [
+        3384,
+        4283
+      ],
+      "master_available": true,
+      "master_sha256": "302fb88dee8db7f484a85d9d7f9bbd39f69de37cbf7bb25ae5a2e35bf8b8cf52",
+      "camera_angle": "oblique interior/back view across curved screen",
+      "visible_k4_rows": [
+        "row 25 starts ECDM",
+        "row 26 starts UOX",
+        "row 27 starts TWT",
+        "row 28 starts VTT"
+      ],
+      "full_row_starts_visible": true,
+      "full_row_ends_visible": false,
+      "measurement_suitability": "row identity HIGH; exact count/pitch/terminal geometry UNSUITABLE"
+    },
+    {
+      "id": "CIA_UPWARD_980",
+      "authority": "Central Intelligence Agency",
+      "identifier": "kryptos_sculpture_lg.jpg",
+      "photographer": null,
+      "date": null,
+      "native_resolution": [
+        980,
+        1305
+      ],
+      "master_available": false,
+      "sha256": "31013cb7c25557174afb228879c654c81b192867661b7c0f477cb31d9c02420a",
+      "camera_angle": "extreme upward oblique detail",
+      "visible_k4_rows": [],
+      "full_row_starts_visible": false,
+      "full_row_ends_visible": false,
+      "measurement_suitability": "unsuitable for K4 row geometry"
+    },
+    {
+      "id": "GSA_36111",
+      "authority": "U.S. General Services Administration Fine Arts Collection",
+      "identifier": "media 36111; artwork 23717",
+      "photographer": "Jim Sanborn (page credit)",
+      "date": null,
+      "native_resolution": [
+        500,
+        330
+      ],
+      "master_available": "UNKNOWN",
+      "sha256": "59b6367a8fa3fd1fdc71c2e965a5afda1da73f0e9632ef0887e9451a9cee3913",
+      "camera_angle": "front/context view of full screen",
+      "visible_k4_rows": [
+        "present but below cell-reading resolution"
+      ],
+      "full_row_starts_visible": "geometrically yes; not textually legible",
+      "full_row_ends_visible": "geometrically yes; not textually legible",
+      "measurement_suitability": "context only; unsuitable for character centers or counts"
+    },
+    {
+      "id": "GSA_36112",
+      "authority": "U.S. General Services Administration Fine Arts Collection",
+      "identifier": "media 36112; artwork 23717",
+      "photographer": "Jim Sanborn (page credit)",
+      "date": null,
+      "native_resolution": [
+        500,
+        336
+      ],
+      "master_available": "UNKNOWN",
+      "sha256": "70d76617f3bb696a470af40cb63c2ff0a4706ef35ac0727ec16372893a04b7db",
+      "camera_angle": "wide courtyard context",
+      "visible_k4_rows": [],
+      "full_row_starts_visible": false,
+      "full_row_ends_visible": false,
+      "measurement_suitability": "unsuitable"
+    }
+  ],
+  "spacing_anomalies": {
+    "verified": [],
+    "status": "NONE ESTABLISHED; not equivalent to proof of uniform spacing",
+    "multiplicity_note": "no 96-gap scan was performed because defensible coordinates are unavailable"
+  },
+  "glyph_features": {
+    "cut_through": "VERIFIED",
+    "stencil_bridges": "visible and structurally expected for cut-through metal",
+    "intentional_marks": [],
+    "damage_or_restoration_at_k4": "UNKNOWN"
+  },
+  "cipher_gate": {
+    "new_finite_parameter": false,
+    "row_break_selects_reset": false,
+    "prior_coverage": [
+      "EXP-020",
+      "EXP-032",
+      "Checkpoint T",
+      "Checkpoint AH"
+    ],
+    "exp040_justified": false,
+    "k4_status": "UNSOLVED"
+  }
+}
