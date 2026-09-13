@@ -1,0 +1,27 @@
+{
+  "classes": 46,
+  "detail": {
+    "free_axis": 0,
+    "letters": [
+      "F",
+      "I",
+      "S",
+      "V"
+    ],
+    "shared_axes": [
+      1,
+      2
+    ],
+    "shared_classes": [
+      8,
+      36
+    ],
+    "values_available": 3
+  },
+  "nodes": 0,
+  "period": 11,
+  "reason": "pigeonhole_ternary_axis",
+  "row_reset": true,
+  "seconds": 0.0,
+  "status": "UNSAT"
+}

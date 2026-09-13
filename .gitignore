@@ -49,3 +49,6 @@ scratch/
 # Checkpoint R.
 !results/exp039/
 !results/exp039/summary.json
+!results/checkpoint_AC/
+!results/checkpoint_AC/*.json
+!results/checkpoint_AC/*.trace.jsonl.gz

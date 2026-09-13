@@ -2,7 +2,27 @@
 
 This is the compact handoff for future sessions. It does **not** replace historical checkpoints.
 
-**Current cryptanalytic checkpoint:** Checkpoint AA
+**Current cryptanalytic checkpoint:** Checkpoint AC
+(`results/2026-09-13-checkpoint-AC.md`) — independent audit of Codex Checkpoint AB plus exact
+CSP closure of its Trifid residual: **`NO EXP-040 JUSTIFIED`**. Codex's 175-of-194 rejection
+count and both 19-configuration remainder lists reproduced exactly. Of the 19, **15 SAT,
+4 UNSAT, 0 incomplete**; the conditional fixed-bijection Trifid residual is **narrowed, not
+closed**, and a SAT result is **not evidence for Trifid** — it is what the falsifiability
+budget predicts from 45-48 free ternary classes against 24 crib letters.
+
+**AC-Result 1 — refines the AA corollary.** Bounding the outer stage is **necessary but not
+sufficient**. With the outer map pinned to the identity, a free inner map on digraphs still
+imposes zero constraints, because the 11 crib digraphs and their 11 ciphertext images are each
+all distinct. Constraints return only when the outer stage is bounded **and** the inner stage
+is structured — one parameter set shared across many positions. **Parameter sharing, not stage
+bounding, is what generates constraints.**
+
+**AC-Result 2 (T-determinacy).** Under a fixed injective readout, inverting a coordinate-row
+fractionation makes the entire plaintext coordinate array a function of the readout alone: the
+unknown plaintext letters contribute no independent freedom. This is the reduction that makes
+such families finite and small.
+
+**Previous cryptanalytic checkpoint:** Checkpoint AA
 (`results/2026-09-13-checkpoint-AA.md`), the residual multi-stage architecture elimination:
 **`NO EXP-040 JUSTIFIED`**. It builds on Checkpoint T's constraint-first pass
 (`results/2026-09-12-claude-checkpoint-T.md`) and Checkpoint W's residual map.

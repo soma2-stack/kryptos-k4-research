@@ -396,3 +396,16 @@ solution, solution dump, private K5 material, auction-secret material or post-so
 engineering was accessed. Only the pinned ciphertext and the two public-source-verified cribs
 were used; no additional plaintext was assumed or inferred at any point. No experiment code and
 no EXP-040 preregistration were created.
+
+## Claude Checkpoint AC — no contamination incident
+
+Independent audit of Codex Checkpoint AB and exact CSP closure of its Trifid residual. No web
+search. Only the pinned ciphertext and the two public-source-verified cribs were used. No
+alleged, leaked, discovered or reconstructed K4 plaintext, no proposed solution, no private K5
+material, no auction-secret material and no post-solution reverse engineering was accessed.
+Unknown plaintext positions were kept as variables throughout and never filled with guessed
+English; no language scoring of any kind was used. SAT certificates deliberately record cube
+cells only and omit any letter labelling of the 73 unknown positions, since every bijection
+from unused cells to unused letters completes the model equally and a labelling would amount to
+manufacturing a plaintext candidate. Codex files were read from their commit but never copied
+or modified, and no branch was merged.

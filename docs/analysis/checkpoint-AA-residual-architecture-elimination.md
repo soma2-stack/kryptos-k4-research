@@ -50,6 +50,21 @@ is never "rescue a rejected cipher as an inner stage"; it is "bound the outer st
 
 ## 2. Residual A resolved: the polygraphic inner stage is vacuous
 
+> **Scope correction added 2026-09-13 at Checkpoint AC (prospective; nothing below is
+> rewritten).** This heading is broader than the result it reports. The theorem, the body of
+> this section and the ranked-table row all correctly say a **free** inner map on blocks behind
+> a **free** outer mask, and that result stands unchanged. Read without those qualifiers the
+> heading is false: Codex Checkpoint AB exhibits a **structured** polygraphic inner stage
+> (Trifid coordinates on one shared cube) under a **bounded** outer map — a single fixed
+> injective readout — for which 175 of 194 configurations are refutable, confirmed
+> independently at Checkpoint AC, which closed 4 more of the remaining 19 by exact CSP.
+> Checkpoint AC also sharpens this section's corollary: bounding the outer stage is
+> **necessary but not sufficient**. With the outer map pinned all the way to the identity, a
+> free inner map on digraphs still imposes zero constraints, because the 11 crib digraphs and
+> their 11 ciphertext images are each all distinct. Constraints return only when the outer
+> stage is bounded **and** the inner stage shares one parameter set across many positions.
+> See `docs/analysis/checkpoint-AC-aa-ab-reconciliation-trifid-closure.md`.
+
 The theorem's hypothesis — *no two observed plaintext blocks are equal* — is checkable. It is
 the whole ball game, and it had never been checked.
 
