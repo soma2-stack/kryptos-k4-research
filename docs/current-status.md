@@ -22,33 +22,32 @@ deal; only a **contiguous run** can rescue the polygraphic ones.
 *raises* the constraint count, not lowers it, so `24 - (p+q-1)` is a **lower** bound. No
 conclusion changes.
 
-## Evidence-acquisition status (Checkpoint AF, `docs/external/checkpoint-AF-scheidtnova-retrieval-attempt.md`)
+## Evidence-acquisition status (prospectively reconciled at Checkpoint AG)
 
 **The current cryptanalytic checkpoint remains AE. No EXP-040 is justified.**
 
 Request 2 is split into two distinct states, and both must be reported separately:
 
-1. **`ScheidtNova.doc` - LOCATED in the public archive index, CONTENT NOT YET RETRIEVED.** The
+1. **`ScheidtNova.doc` - LOCATED via public index metadata; actual payload NOT RECOVERED.** The
    filename, 2005 filming date, PBS B-roll description, ~140K size and 2009-02-13 posting date
-   are established from the public index. **The payload has not been obtained**, so no wording
+   are established from the public index. The live payload is inaccessible and its underlying
+   server-side status is unknown. **Do not canonize any one HTTP failure mechanism.** No wording
    may be quoted, paraphrased or inferred from it - not from the filename, not from index
    metadata, and not from search-engine snippets.
-2. **Unedited 2005 Zetter / WIRED Scheidt material - still NOT LOCATED.** The published WIRED
+2. **Unedited 2005 Kim Zetter / WIRED Scheidt material - NOT LOCATED.** The published WIRED
    interview states it was edited for length and organization; the unedited version has not been
    found and is **not** claimed to be publicly available.
 
-Checkpoint AF attempted recovery and failed for **environmental** reasons: this session's egress
-policy refuses every external host at the CONNECT stage with a gateway 403, including
-`elonka.com`, `web.archive.org`, `archive.org`, `www.pbs.org`, `openvault.wgbh.org` and
-`americanarchive.org`. Only a search tool returning summaries was available, and summaries are
-not payloads. **Retrieval failure is not evidence about the cipher**, and no ledger entry is
-"confirmed no payload" - each is *blocked from that environment* or *not surfaced by one search*.
+The GBH Open Vault identifier `V_3AC501960CC4454A8FD950703CBED5A9` resolves to AAPB record
+`cpb-aacip-15-1615gc34`: the 56:46 Digital Betacam **Green Label Master** of NOVA ScienceNow
+episode 3411. This is the broadcast master, not evidence of a complete Scheidt interview,
+B-roll transcript, logging transcript, outtakes or production notes. The proposed UGA / Peabody
+`Nova scienceNOW [No. 3411, 2007-07-24]` object is **not independently verified** and remains a
+search-result lead only, not a confirmed catalog holding.
 
-Two new institutional leads are recorded, catalog-level only: the **GBH Open Vault** record
-`V_3AC501960CC4454A8FD950703CBED5A9`, and a **UGA Brown Media Archives / Peabody** physical-object
-record for `Nova scienceNOW [No. 3411, 2007-07-24]` - the latter an independent custodian, hence
-the strongest route that does **not** duplicate the GBH request already pending from the user.
-Do not send duplicate outreach to GBH.
+The PBS explanation that concealment can occur before enciphering is narrator/editorial language,
+not a Scheidt statement fixing K4 stage order. Requests are already pending with **GBH, Kim
+Zetter, TecSec / Ed Scheidt, and Elonka Dunin**. Do not send duplicate outreach.
 
 ## Scope clarification (Checkpoint AF) - do not over-read the periodic negative
 
@@ -61,6 +60,15 @@ An arbitrary fixed 26x26 table is **class L**, and under the present cribs it is
 periods 8, 10, 13 and 26, receiving **zero** constraints because no `(plaintext, key)` input pair
 repeats there. A short period therefore does not by itself close an arbitrary combiner: class L is
 blocked by lack of constraint, not by prior search.
+
+## Documentary reconciliation (Checkpoint AG)
+
+Checkpoint AG (`docs/analysis/checkpoint-AG-evidence-to-census-reconciliation.md`) audited 18
+relevant documentary statements against every affected AE census class. **No overlooked
+operational parameter was found.** Multi-stage, masking, historic basis, custom/adapted design,
+and possible Sanborn changes remain class-level filters; none supplies a transform, stage order,
+period/key length, reset/alignment rule, tableau, recurrence, or parameter-sharing rule.
+**No previous cryptanalytic conclusion changed and no EXP-040 is justified.**
 
 **Previous cryptanalytic checkpoint:** Checkpoint AC
 (`results/2026-09-13-checkpoint-AC.md`) — independent audit of Codex Checkpoint AB plus exact
