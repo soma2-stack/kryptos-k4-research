@@ -10,6 +10,14 @@ count and both 19-configuration remainder lists reproduced exactly. Of the 19, *
 closed**, and a SAT result is **not evidence for Trifid** — it is what the falsifiability
 budget predicts from 45-48 free ternary classes against 24 crib letters.
 
+**Verification status (Checkpoint AD, `results/2026-09-13-checkpoint-AD.md`).** AC's four UNSAT
+results now carry **independent exhaustive verification**. The three search-based cases are
+re-decided by the verifier's own DFS over independently rebuilt classes and constraints
+(16 / 44,677 / 403 nodes), not by replaying the solver's trace; `p=11`
+row-reset keeps its directly re-derived pigeonhole. The refutation traces are retained as a
+supplementary record only. 142 checks pass, including from a clean checkout. No cryptanalytic
+conclusion changed.
+
 **AC-Result 1 — refines the AA corollary.** Bounding the outer stage is **necessary but not
 sufficient**. With the outer map pinned to the identity, a free inner map on digraphs still
 imposes zero constraints, because the 11 crib digraphs and their 11 ciphertext images are each

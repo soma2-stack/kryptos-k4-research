@@ -409,3 +409,12 @@ cells only and omit any letter labelling of the 73 unknown positions, since ever
 from unused cells to unused letters completes the model equally and a labelling would amount to
 manufacturing a plaintext candidate. Codex files were read from their commit but never copied
 or modified, and no branch was merged.
+
+## Claude Checkpoint AD — no contamination incident
+
+Verification strengthening only. No web search, no new cryptanalytic family, no plaintext
+beyond the two public-source-verified cribs. The 15 SAT configurations were not chased,
+optimised, language-scored or relabelled, and no keywords were added; unknown plaintext
+positions remained variables throughout. No alleged, leaked or reconstructed K4 plaintext, no
+solution dump, no private K5 material and no auction-secret material was accessed. Codex files
+were not read, copied or modified in this checkpoint and no branch was merged.

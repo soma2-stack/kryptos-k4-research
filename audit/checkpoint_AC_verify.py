@@ -186,9 +186,12 @@ for cfg in summary["configurations"]:
             print(f"         outer map needs them pairwise distinct in axis {free[0]},")
             print(f"         which holds only 3 values. {len(letters)} > 3 -> UNSAT.")
         else:
-            # Replay the solver's refutation trace. This is stronger than re-running
-            # a search: the trace is checked in linear time and every conflict it
-            # claims is re-derived here from constraints this file builds itself.
+            # SUPPLEMENTARY reproducibility record, not the proof of exhaustion.
+            # The independent DFS above is the primary UNSAT verification. Replaying
+            # the trace additionally confirms that every conflict the solver recorded
+            # is real under this file's own constraints, which is a useful cross-check
+            # on the solver's internals but is NOT by itself a proof that the solver's
+            # tree was complete.
             check(f"{tag}: UNSAT reason is exhaustive search",
                   cert["reason"] == "exhaustive_backtracking")
             order, mark = [], set()
@@ -215,6 +218,86 @@ for cfg in summary["configurations"]:
             for l in alphabet:
                 for k in range(3):
                     weight[k][tri[l][k]] += 1
+
+            # ---------------------------------------------------------------
+            # PRIMARY UNSAT VERIFICATION: an independent exhaustive DFS.
+            #
+            # Everything it searches over -- the classes, the seven constraint
+            # families, the axis weights -- was rebuilt above in this file from
+            # data/k4.json. It neither imports nor calls audit/checkpoint_AC.py, and
+            # it does not read the solver's verdict or its conflict trace. The only
+            # thing taken from the certificate is the VARIABLE ORDER, used purely as
+            # a heuristic; variable order cannot change a SAT/UNSAT answer, only how
+            # long the search takes. If this DFS finds a solution it reports SAT and
+            # the check below fails, which is the outcome that would falsify
+            # Checkpoint AC.
+            # ---------------------------------------------------------------
+            dfs_val = [-1] * len(order)
+            dfs_axis = [[0, 0, 0] for _ in range(3)]
+            dfs_cells, dfs_crib, dfs_plain = set(), set(), {}
+            dfs_nodes = [0]
+
+            def independent_dfs(d):
+                dfs_nodes[0] += 1
+                if d == len(order):
+                    return True                      # a full assignment: SAT
+                c = order[d]
+                for v in (0, 1, 2):
+                    # (7) axis multiplicity: an injection onto 26 of the 27 cells
+                    # uses each value of each axis at most nine times
+                    if any(dfs_axis[k][v] + weight[k][c] > 9 for k in range(3)):
+                        continue
+                    for k in range(3):
+                        dfs_axis[k][v] += weight[k][c]
+                    dfs_val[c] = v
+                    got_l, got_c, got_p, ok = [], [], [], True
+                    # (4) the outer readout is injective on ciphertext letters
+                    for l, t in done_letter.get(d, ()):
+                        cell = tuple(dfs_val[x] for x in t)
+                        if cell in dfs_cells:
+                            ok = False
+                            break
+                        dfs_cells.add(cell)
+                        got_l.append(cell)
+                    # (5) distinct known plaintext letters occupy distinct cells
+                    if ok:
+                        for ch, t in done_crib.get(d, ()):
+                            cell = tuple(dfs_val[x] for x in t)
+                            if cell in dfs_crib:
+                                ok = False
+                                break
+                            dfs_crib.add(cell)
+                            got_c.append(cell)
+                    # (6) the plaintext alphabet must fit in the cube
+                    if ok:
+                        for t in done_plain.get(d, ()):
+                            cell = tuple(dfs_val[x] for x in t)
+                            dfs_plain[cell] = dfs_plain.get(cell, 0) + 1
+                            got_p.append(cell)
+                        if len(dfs_plain) > 26:
+                            ok = False
+                    if ok and independent_dfs(d + 1):
+                        return True
+                    for cell in got_l:
+                        dfs_cells.discard(cell)
+                    for cell in got_c:
+                        dfs_crib.discard(cell)
+                    for cell in got_p:
+                        dfs_plain[cell] -= 1
+                        if not dfs_plain[cell]:
+                            del dfs_plain[cell]
+                    dfs_val[c] = -1
+                    for k in range(3):
+                        dfs_axis[k][v] -= weight[k][c]
+                return False
+
+            found = independent_dfs(0)
+            check(f"{tag}: INDEPENDENT exhaustive DFS confirms UNSAT", not found)
+            print(f"      -> independent DFS exhausted the whole tree in "
+                  f"{dfs_nodes[0]:,} nodes (solver reported {cert['nodes']:,})")
+            if found:
+                print("      *** the independent search found a solution: "
+                      "Checkpoint AC requires correction ***")
 
             val = [-1] * len(order)
             axis_used = [[0, 0, 0] for _ in range(3)]
@@ -300,17 +383,26 @@ for cfg in summary["configurations"]:
                   not bad_trace)
             if bad_trace:
                 print(f"      first discrepancy: {bad_trace[0]}")
-            # completeness: at every depth reached, all three values must be accounted
-            seen_dv = {}
+            # Per-prefix completeness. The earlier form of this check only asked
+            # whether values 0, 1 and 2 each appeared SOMEWHERE at each depth, which
+            # does not establish tree exhaustion: a trace could omit one child under
+            # one prefix and still satisfy it. This version walks the trace as a tree
+            # and requires that every internal node accounts for all three branches
+            # under its own prefix.
+            prefix, branches, malformed = [], {}, []
             for d, v, outcome in trace:
-                seen_dv.setdefault(d, set()).add(v)
-            incomplete = [d for d, vs in seen_dv.items() if len(vs) != 3]
-            check(f"{tag}: every explored node tries all three coordinate values",
-                  not incomplete)
-            check(f"{tag}: the refutation reaches depth 0 and exhausts it",
-                  0 in seen_dv and len(seen_dv[0]) == 3)
-            print(f"      -> refutation trace replayed: {len(trace):,} steps, "
-                  f"{len(seen_dv)} depths, root exhausted")
+                del prefix[d:]
+                key = tuple(prefix)
+                branches.setdefault(key, set()).add(v)
+                if outcome == "descend":
+                    prefix.append(v)
+            bad_prefix = [k for k, vs in branches.items() if vs != {0, 1, 2}]
+            check(f"{tag}: every prefix in the trace accounts for all three branches",
+                  not bad_prefix)
+            check(f"{tag}: the trace's root prefix is exhausted",
+                  branches.get((), set()) == {0, 1, 2})
+            print(f"      -> supplementary trace replay: {len(trace):,} steps, "
+                  f"{len(branches):,} distinct prefixes, all branches accounted for")
 
     else:
         fails.append(f"{tag}: unexpected status {status}")

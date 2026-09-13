@@ -164,6 +164,18 @@ outer map — and demanding the result equal K4 character for character. All 15 
 
 **UNSAT** certificates are deterministic and auditable, never "the solver said so":
 
+> **Addendum, 2026-09-13, Checkpoint AD (prospective; nothing above is rewritten).** The
+> trace-replay completeness test described below was weaker than this section claimed. It
+> checked only that values 0, 1 and 2 each appeared *somewhere* at each depth, which does not
+> establish tree exhaustion: a trace could omit one child under one prefix and still pass. The
+> verdicts were never in question, but the independent verifier did not by itself prove
+> exhaustion. Repaired at Checkpoint AD: `audit/checkpoint_AC_verify.py` now runs its **own
+> exhaustive DFS** over independently rebuilt classes and constraints as the **primary** UNSAT
+> verification, taking only the variable order from the certificate. All three search-based
+> configurations independently reach complete UNSAT (16, 44,677 and 403 nodes). The traces are
+> retained as a supplementary reproducibility record and their replay now enforces per-prefix
+> branch completeness. See `results/2026-09-13-checkpoint-AD.md`.
+
 - `p=11` row-reset carries the pigeonhole, re-derived by the verifier through breadth-first
   closure over an explicit adjacency list rather than the solver's union-find.
 - The other three carry a **replayable refutation trace** (48, 1,209 and 134,031 steps, gzipped
