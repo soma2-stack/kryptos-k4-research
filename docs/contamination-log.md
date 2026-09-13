@@ -418,3 +418,12 @@ optimised, language-scored or relabelled, and no keywords were added; unknown pl
 positions remained variables throughout. No alleged, leaked or reconstructed K4 plaintext, no
 solution dump, no private K5 material and no auction-secret material was accessed. Codex files
 were not read, copied or modified in this checkpoint and no branch was merged.
+
+## Claude Checkpoint AE — no contamination incident
+
+Decidability census: algebra and constraint counting only. No cipher sweep, no new family, no
+keyspace search, no language scoring. No web search. Only the two public-source-verified cribs
+were used; the 2025 archival plaintext discovery was not treated as licensing any use of its
+contents, and no alleged, leaked or reconstructed K4 plaintext, solution site, private K5
+material or auction-secret material was searched for, fetched, quoted or inferred. The 15
+conditionally-SAT Trifid configurations were not chased, optimised, scored or relabelled.

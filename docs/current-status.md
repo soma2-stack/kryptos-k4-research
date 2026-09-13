@@ -2,7 +2,27 @@
 
 This is the compact handoff for future sessions. It does **not** replace historical checkpoints.
 
-**Current cryptanalytic checkpoint:** Checkpoint AC
+**Current cryptanalytic checkpoint:** Checkpoint AE
+(`results/2026-09-13-checkpoint-AE.md`), the **K4 decidability census**
+(`docs/analysis/k4-decidability-census.md`): a per-class account of what the 24 verified crib
+letters can actually falsify. **No architecture is eligible for EXP-040.** Read the census
+before proposing any family - it exists to prevent another post-hoc selection, and it carries
+the reduction rules that reject duplicate "new" families before any code is written.
+
+Headline findings: the crib letters are two contiguous runs, so a shared periodic schedule gets
+**zero** constraints at periods 27-29 and only 5/3/1 at 24-26; **no plaintext block repeats** at
+size 2, 4 or 5 at any alignment, which is why free polygraphic inner stages are vacuous even
+behind a bounded outer map; an arbitrary 26x26 table receives **zero** constraints at key
+periods 8, 10, 13 and 26. Request 7 is now targeted: **48 of 73 unknown positions unlock all
+three blind periods**, the best single positions being **1, 3, 91, 93, 95, 96**, while exactly
+**20, 47 and 74** unlock none. One scattered letter helps the periodic and mask classes a great
+deal; only a **contiguous run** can rescue the polygraphic ones.
+
+**Correction to AA and AC recorded at AE:** disconnection of the two-mask bipartite graph
+*raises* the constraint count, not lowers it, so `24 - (p+q-1)` is a **lower** bound. No
+conclusion changes.
+
+**Previous cryptanalytic checkpoint:** Checkpoint AC
 (`results/2026-09-13-checkpoint-AC.md`) — independent audit of Codex Checkpoint AB plus exact
 CSP closure of its Trifid residual: **`NO EXP-040 JUSTIFIED`**. Codex's 175-of-194 rejection
 count and both 19-configuration remainder lists reproduced exactly. Of the 19, **15 SAT,
