@@ -111,23 +111,6 @@ IMPOSSIBLE** by Checkpoint T's letter-multiset argument. Do not rerun.
 
 ### B. Periodic schedule — `C[i] = F(P[i], k[i mod p])`
 
-> **Scope clarification added 2026-09-13 at Checkpoint AF (prospective; nothing below is
-> rewritten).** The notation `F(P[i], k[i mod p])` is generic, but the **ALREADY CLOSED** verdict
-> for `p ≤ 23` is **not** a theorem about every arbitrary periodic combiner. It applies to the
-> **declared shift/combiner families actually tested** — the 12 committed conventions (Vigenère,
-> Beaufort, variant Beaufort × plaintext alphabet ∈ {STD, KRY} × ciphertext alphabet ∈ {STD, KRY}),
-> as swept by EXP-001 directly and by EXP-036 composed with the declared transposition families,
-> plus the combiner-coverage reductions (Quagmire I–III, Gronsfeld) and EXP-037 for standard Porta.
->
-> An **arbitrary fixed 26×26 table** used as `F` is a different object and is censused separately
-> as **class L**, where it is *vacuous* under the present cribs at key periods 8, 10, 13 and 26 —
-> it receives **zero** constraints there, because no `(plaintext, key)` input pair repeats.
->
-> So: a short period does **not** by itself close an arbitrary combiner. Read the `p ≤ 23` row as
-> "the evidenced shift families are exhausted at those periods", never as "no periodic combiner of
-> period ≤ 23 can exist". Class L governs the arbitrary-table case, and it is blocked by lack of
-> constraint rather than by prior search.
-
 Shared: `p` key values. Exercised: the occupied residue classes. Constraints: the table in §1.
 
 This class must be split honestly:
@@ -332,7 +315,7 @@ Ranked by expected information gain if tested next, not by interest.
 | I free polygraphic behind bounded outer | free | **0** | all blocks distinct | **VACUOUS** — provably | **yes — the direct lever** | not sufficient alone | UNSUPPORTED |
 | K free inner behind free mask | free | **0** | AA-Theorem 1 | **VACUOUS** — provably | no | not sufficient alone | UNSUPPORTED |
 | A fixed monographic (±`π`) | ≤26 | 13–24 | repeated letters | **ALREADY CLOSED** | n/a | n/a | CONTRADICTED |
-| B/G periodic **declared shift families**, p ≤ 23 | `p` | 7–22 | residue collisions | **ALREADY CLOSED** (12 committed conventions; *not* arbitrary tables — see class L) | n/a | n/a | STRUCTURALLY CONSISTENT |
+| B/G periodic, p ≤ 23 | `p` | 7–22 | residue collisions | **ALREADY CLOSED** | n/a | n/a | STRUCTURALLY CONSISTENT |
 | C bounded `f(i)`; E bounded `R`; F declared families | small | high | various | **ALREADY CLOSED** | n/a | n/a | mixed |
 
 Documentary grades follow Checkpoints S, U, V, X, Y and Z. Scheidt/Sanborn evidence supports a

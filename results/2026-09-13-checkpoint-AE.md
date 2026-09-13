@@ -30,9 +30,7 @@ exceed 12; cross-crib distances lie in 30–52.
 ## The eight questions
 
 1. **Already closed:** fixed monographic maps (± a declared permutation); periodic schedules for
-   p ≤ 23 **in the declared shift/combiner families** (the 12 committed conventions — *not*
-   arbitrary 26×26 tables, which are class L and are vacuous under the present cribs; clarified
-   prospectively at Checkpoint AF); bounded position-functions and bounded recurrences; source lookups at every declared
+   p ≤ 23; bounded position-functions and bounded recurrences; source lookups at every declared
    scope; declared single and precommitted double transpositions; pure transposition (proved
    impossible); Porta, Quagmire I–III, Gronsfeld, standard Fractionated Morse, Digrafid, Gromark.
 2. **Decidable now:** only regimes already exhausted. Nothing both open and decisive remains.
