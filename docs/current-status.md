@@ -2,8 +2,47 @@
 
 This is the compact handoff for future sessions. It does **not** replace historical checkpoints.
 
-**Current cryptanalytic checkpoint:** Checkpoint T (`results/2026-09-12-claude-checkpoint-T.md`).
-Checkpoint T was a constraint-first architecture-discovery pass: **`NO EXP-040 JUSTIFIED`**.
+**Current cryptanalytic checkpoint:** Checkpoint AA
+(`results/2026-09-13-checkpoint-AA.md`), the residual multi-stage architecture elimination:
+**`NO EXP-040 JUSTIFIED`**. It builds on Checkpoint T's constraint-first pass
+(`results/2026-09-12-claude-checkpoint-T.md`) and Checkpoint W's residual map.
+
+## The falsifiability budget (Checkpoint AA) — apply this before proposing any architecture
+
+**AA-Theorem 1 (erasure).** If the chain ends in a position-varying monographic mask whose
+parameters over the cribs are free, and the inner stage is a free map on blocks, the
+architecture fits the cribs for *every* mask, provided no two observed plaintext blocks are
+equal. Invert the mask to get the intermediate text, then assign the inner map on distinct
+arguments.
+
+**Corollary.** An architecture is testable only if
+`(free mask parameters over the cribs) + (free inner parameters exercised) < 24`.
+Every stage added to a chain spends from a fixed budget of 24. This is the countable form of
+Checkpoint T's finding that constraint density, not compute, is the binding resource.
+
+**Consequence for scope.** Every crib-based proof in this repository *necessarily* describes
+the observable end-to-end map. Internal-stage proofs are impossible in principle while the
+outer stage is free. Do **not** propose rescuing a rejected cipher as a hidden inner stage;
+bound the outer stage first.
+
+**Closed at Checkpoint AA as VACUOUS (zero constraints, not merely untested):**
+
+- a free digraphic, 4-graphic or 5-graphic inner stage behind a free mask - every block lying
+  wholly inside a crib is distinct at every alignment, so *no* result could falsify it. This
+  covers Playfair, Bifid at period 2 and Hill 2x2 as hidden inner stages.
+- transposition composed with a feedback/autokey mask - with unknown `pi` the lagged source is
+  an unknown intermediate symbol at every crib position; with known `pi` it reparameterises
+  EXP-034/EXP-038 over the EXP-036 permutation corpus.
+
+**Exactly REFUTED at Checkpoint AA:** a free trigraphic inner stage under a periodic additive
+mask of period 1, 3 or 9. The repeated trigrams `EAS` (21/30) and `AST` (22/31) sit at distance
+9, so such a mask would force a ciphertext repeat that is absent. Three periods is the complete
+extent of what the current cribs can say about any hidden polygraphic stage.
+
+**Strongest surviving architecture:** the sandwich `M2 . pi . M1`, the only class that survives
+purely because a non-commuting permutation separates two masks. Its bipartite constraint system
+yields `24 - (p + q - 1)` independent constraints - only **7** at the K1/K2 pair (8, 10). It
+fails EXP-040 gate condition 5: no source states any period, key, or inheritance from K1/K2.
 
 **Current documentary checkpoint:** Checkpoint U (`results/2026-09-12-claude-checkpoint-U.md`),
 the 2025 Sanborn public-clue audit: also **`NO EXP-040 JUSTIFIED`**.

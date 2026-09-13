@@ -387,3 +387,12 @@ auction-secret material, no private K5 material, no quarantined Folder 8 page an
 alleged plaintext was accessed, and no plaintext word was inferred from a thematic clue.
 No primary source was reachable from this environment, so every 2025 statement is graded
 C+/B- and recorded as requiring primary verification before use. No experiment was created.
+
+## Claude Checkpoint AA — no contamination incident
+
+Repo- and mathematics-driven residual architecture elimination. No web search was performed.
+No alleged full K4 plaintext, 2025 discovered or leaked plaintext, reconstruction, proposed
+solution, solution dump, private K5 material, auction-secret material or post-solution reverse
+engineering was accessed. Only the pinned ciphertext and the two public-source-verified cribs
+were used; no additional plaintext was assumed or inferred at any point. No experiment code and
+no EXP-040 preregistration were created.

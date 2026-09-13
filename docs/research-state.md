@@ -8,6 +8,15 @@
 
 # Research state
 
+## Checkpoint AA — the falsifiability budget (read with `docs/current-status.md`)
+
+Architectures are now screened by parameter accounting before anything is implemented. A model
+is testable only when its free parameters touching the 24 crib positions number fewer than 24.
+Free polygraphic inner stages behind free masks score **zero** constraints and are closed as
+vacuous; the `M2 . pi . M1` sandwich is the strongest survivor and fails on evidence, not on
+mathematics. See `docs/analysis/checkpoint-AA-residual-architecture-elimination.md` and
+`audit/verify_checkpoint_AA.py`.
+
 ## Provenance and confidence
 
 This is an editorial reconstruction of the referenced ChatGPT conversation, not a laboratory notebook or an independent replication. Each statement is marked by its status:
