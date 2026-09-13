@@ -5,6 +5,39 @@ This is the compact handoff for future sessions. It does **not** replace histori
 **Current cryptanalytic checkpoint:** Checkpoint T (`results/2026-09-12-claude-checkpoint-T.md`).
 Checkpoint T was a constraint-first architecture-discovery pass: **`NO EXP-040 JUSTIFIED`**.
 
+**Current documentary checkpoint:** Checkpoint U (`results/2026-09-12-claude-checkpoint-U.md`),
+the 2025 Sanborn public-clue audit: also **`NO EXP-040 JUSTIFIED`**.
+
+## The two-layer model (Checkpoint U) — apply this before proposing anything
+
+- **Layer A** is the map from 97 plaintext letters to the 97 K4 ciphertext letters. It is the
+  only layer this repository can test, and the only one whose failure keeps K4 unsolved
+  cryptographically.
+- **Layer B** is whatever the recovered plaintext then instructs the solver to do.
+
+Sanborn documents the split himself: the 2005 Zetter interview is sequential — decipher the
+piece *and then* go and find the place — and the 2025 statement that K4 "has been discovered
+and it points in the direction of K5" makes the same division. Layer A is unsolved while
+Layer B is already in three people's hands.
+
+**`BERLINCLOCK` is a plaintext word.** The November 2025 clarification that it means the
+Weltzeituhr rather than the Mengenlehreuhr is Layer B semantics. It is **not** a statement
+that clock geometry is a keystream source, and it never was.
+
+**Therefore:** Weltzeituhr, Mengenlehreuhr, Morse material, compass/bearing language, Egypt
+and the Berlin Wall are **Layer B referents**. Their use as Layer A keystream, mask or route
+sources is demoted from DOCUMENTARY-MOTIVATED to **SPECULATIVE**. The negatives of EXP-002,
+EXP-018, EXP-023, EXP-024, EXP-029, EXP-031 and EXP-035 all stand unchanged; what changes is
+that this class must **not be revived** — it now fails gate condition 1 outright.
+
+"riddle within a riddle" most naturally describes **Layer B nesting**, not nested cipher
+stages, and should no longer be cited as support for multi-stage composition. Scheidt's
+1991/1999 Layer A statements and Checkpoint S's four-process reading of K1-K4 are untouched.
+
+**Provenance caution:** every 2025 clue is graded no higher than **C+/B-**, because no
+primary source was reachable from this environment. Do not make any 2025 clue load-bearing
+until it is verified against the original letters and reporting.
+
 **Documentary work completed after R:** Box 6 Folders 8, 9, 10 and 11, plus Series 9 Box 16 Folder 2, have all been inspected. Checkpoint S2 (`results/2026-09-12-claude-checkpoint-S2.md`) re-evaluated the 1991 ABC Scheidt interview: "custom / adapted" is now STRONGLY SUPPORTED, but no architecture is named and **no EXP-040 is justified**.
 
 **K4 remains unsolved.**
@@ -45,6 +78,11 @@ Important current scoped negatives include:
 - Direct Gromark was rejected structurally before primer search because legal digits 0–9 cannot realise enough crib pairs under evidenced alphabet treatments.
 - Quagmire I–III and Gronsfeld reduce to already-covered families; Quagmire IV needs an unsupported second alphabet.
 - Direct World Clock letter-source models have multiple bounded negatives. Do not rescue them post hoc.
+
+Also **prohibited**: treating 1986, 1988 or 1989 - or any arithmetic on them - as a key
+length, offset, period, seed or index. The 2025 clue's "writing the plaintext in 1988"
+against a Wall that fell in 1989 is an unresolved dating problem, most probably loose dating,
+and is **not** a cryptographic clue (Checkpoint U).
 
 Retracted claims that must **not** be revived:
 

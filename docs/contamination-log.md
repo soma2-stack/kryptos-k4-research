@@ -377,3 +377,13 @@ solution, solution dump, leaked material, private K5 material or quarantined Fol
 was accessed, and no latent-clue mining of the Folder 9 manuscript was performed. No
 external verifier was contacted. No new experiment was created; no plaintext beyond the 24
 verified crib letters was assumed at any point.
+
+## Claude Checkpoint U — no contamination incident
+
+Public-clue audit of 2025 Sanborn statements. Web search repeatedly surfaced pages
+purporting to carry the 2025-discovered K4 plaintext, reconstructions and solution
+write-ups; none was opened, and later queries blocked those domains explicitly. No
+auction-secret material, no private K5 material, no quarantined Folder 8 page and no
+alleged plaintext was accessed, and no plaintext word was inferred from a thematic clue.
+No primary source was reachable from this environment, so every 2025 statement is graded
+C+/B- and recorded as requiring primary verification before use. No experiment was created.
