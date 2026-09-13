@@ -2,8 +2,135 @@
 
 This is the compact handoff for future sessions. It does **not** replace historical checkpoints.
 
-**Current cryptanalytic checkpoint:** Checkpoint T (`results/2026-09-12-claude-checkpoint-T.md`).
-Checkpoint T was a constraint-first architecture-discovery pass: **`NO EXP-040 JUSTIFIED`**.
+**Current cryptanalytic checkpoint:** Checkpoint AE
+(`results/2026-09-13-checkpoint-AE.md`), the **K4 decidability census**
+(`docs/analysis/k4-decidability-census.md`): a per-class account of what the 24 verified crib
+letters can actually falsify. **No architecture is eligible for EXP-040.** Read the census
+before proposing any family - it exists to prevent another post-hoc selection, and it carries
+the reduction rules that reject duplicate "new" families before any code is written.
+
+Headline findings: the crib letters are two contiguous runs, so a shared periodic schedule gets
+**zero** constraints at periods 27-29 and only 5/3/1 at 24-26; **no plaintext block repeats** at
+size 2, 4 or 5 at any alignment, which is why free polygraphic inner stages are vacuous even
+behind a bounded outer map; an arbitrary 26x26 table receives **zero** constraints at key
+periods 8, 10, 13 and 26. Request 7 is now targeted: **48 of 73 unknown positions unlock all
+three blind periods**, the best single positions being **1, 3, 91, 93, 95, 96**, while exactly
+**20, 47 and 74** unlock none. One scattered letter helps the periodic and mask classes a great
+deal; only a **contiguous run** can rescue the polygraphic ones.
+
+**Correction to AA and AC recorded at AE:** disconnection of the two-mask bipartite graph
+*raises* the constraint count, not lowers it, so `24 - (p+q-1)` is a **lower** bound. No
+conclusion changes.
+
+## Evidence-acquisition status (Checkpoint AF, `docs/external/checkpoint-AF-scheidtnova-retrieval-attempt.md`)
+
+**The current cryptanalytic checkpoint remains AE. No EXP-040 is justified.**
+
+Request 2 is split into two distinct states, and both must be reported separately:
+
+1. **`ScheidtNova.doc` - LOCATED in the public archive index, CONTENT NOT YET RETRIEVED.** The
+   filename, 2005 filming date, PBS B-roll description, ~140K size and 2009-02-13 posting date
+   are established from the public index. **The payload has not been obtained**, so no wording
+   may be quoted, paraphrased or inferred from it - not from the filename, not from index
+   metadata, and not from search-engine snippets.
+2. **Unedited 2005 Zetter / WIRED Scheidt material - still NOT LOCATED.** The published WIRED
+   interview states it was edited for length and organization; the unedited version has not been
+   found and is **not** claimed to be publicly available.
+
+Checkpoint AF attempted recovery and failed for **environmental** reasons: this session's egress
+policy refuses every external host at the CONNECT stage with a gateway 403, including
+`elonka.com`, `web.archive.org`, `archive.org`, `www.pbs.org`, `openvault.wgbh.org` and
+`americanarchive.org`. Only a search tool returning summaries was available, and summaries are
+not payloads. **Retrieval failure is not evidence about the cipher**, and no ledger entry is
+"confirmed no payload" - each is *blocked from that environment* or *not surfaced by one search*.
+
+Two new institutional leads are recorded, catalog-level only: the **GBH Open Vault** record
+`V_3AC501960CC4454A8FD950703CBED5A9`, and a **UGA Brown Media Archives / Peabody** physical-object
+record for `Nova scienceNOW [No. 3411, 2007-07-24]` - the latter an independent custodian, hence
+the strongest route that does **not** duplicate the GBH request already pending from the user.
+Do not send duplicate outreach to GBH.
+
+## Scope clarification (Checkpoint AF) - do not over-read the periodic negative
+
+Checkpoint AE writes class B as `C[i] = F(P[i], k[i mod p])`. That notation is generic, but the
+**ALREADY CLOSED** verdict at `p <= 23` covers only the **declared shift/combiner families** - the
+12 committed conventions swept by EXP-001 and EXP-036, plus the Quagmire/Gronsfeld reductions and
+EXP-037 for standard Porta. It is **not** a theorem eliminating every arbitrary periodic combiner.
+
+An arbitrary fixed 26x26 table is **class L**, and under the present cribs it is *vacuous* at key
+periods 8, 10, 13 and 26, receiving **zero** constraints because no `(plaintext, key)` input pair
+repeats there. A short period therefore does not by itself close an arbitrary combiner: class L is
+blocked by lack of constraint, not by prior search.
+
+**Previous cryptanalytic checkpoint:** Checkpoint AC
+(`results/2026-09-13-checkpoint-AC.md`) — independent audit of Codex Checkpoint AB plus exact
+CSP closure of its Trifid residual: **`NO EXP-040 JUSTIFIED`**. Codex's 175-of-194 rejection
+count and both 19-configuration remainder lists reproduced exactly. Of the 19, **15 SAT,
+4 UNSAT, 0 incomplete**; the conditional fixed-bijection Trifid residual is **narrowed, not
+closed**, and a SAT result is **not evidence for Trifid** — it is what the falsifiability
+budget predicts from 45-48 free ternary classes against 24 crib letters.
+
+**Verification status (Checkpoint AD, `results/2026-09-13-checkpoint-AD.md`).** AC's four UNSAT
+results now carry **independent exhaustive verification**. The three search-based cases are
+re-decided by the verifier's own DFS over independently rebuilt classes and constraints
+(16 / 44,677 / 403 nodes), not by replaying the solver's trace; `p=11`
+row-reset keeps its directly re-derived pigeonhole. The refutation traces are retained as a
+supplementary record only. 142 checks pass, including from a clean checkout. No cryptanalytic
+conclusion changed.
+
+**AC-Result 1 — refines the AA corollary.** Bounding the outer stage is **necessary but not
+sufficient**. With the outer map pinned to the identity, a free inner map on digraphs still
+imposes zero constraints, because the 11 crib digraphs and their 11 ciphertext images are each
+all distinct. Constraints return only when the outer stage is bounded **and** the inner stage
+is structured — one parameter set shared across many positions. **Parameter sharing, not stage
+bounding, is what generates constraints.**
+
+**AC-Result 2 (T-determinacy).** Under a fixed injective readout, inverting a coordinate-row
+fractionation makes the entire plaintext coordinate array a function of the readout alone: the
+unknown plaintext letters contribute no independent freedom. This is the reduction that makes
+such families finite and small.
+
+**Previous cryptanalytic checkpoint:** Checkpoint AA
+(`results/2026-09-13-checkpoint-AA.md`), the residual multi-stage architecture elimination:
+**`NO EXP-040 JUSTIFIED`**. It builds on Checkpoint T's constraint-first pass
+(`results/2026-09-12-claude-checkpoint-T.md`) and Checkpoint W's residual map.
+
+## The falsifiability budget (Checkpoint AA) — apply this before proposing any architecture
+
+**AA-Theorem 1 (erasure).** If the chain ends in a position-varying monographic mask whose
+parameters over the cribs are free, and the inner stage is a free map on blocks, the
+architecture fits the cribs for *every* mask, provided no two observed plaintext blocks are
+equal. Invert the mask to get the intermediate text, then assign the inner map on distinct
+arguments.
+
+**Corollary.** An architecture is testable only if
+`(free mask parameters over the cribs) + (free inner parameters exercised) < 24`.
+Every stage added to a chain spends from a fixed budget of 24. This is the countable form of
+Checkpoint T's finding that constraint density, not compute, is the binding resource.
+
+**Consequence for scope.** Every crib-based proof in this repository *necessarily* describes
+the observable end-to-end map. Internal-stage proofs are impossible in principle while the
+outer stage is free. Do **not** propose rescuing a rejected cipher as a hidden inner stage;
+bound the outer stage first.
+
+**Closed at Checkpoint AA as VACUOUS (zero constraints, not merely untested):**
+
+- a free digraphic, 4-graphic or 5-graphic inner stage behind a free mask - every block lying
+  wholly inside a crib is distinct at every alignment, so *no* result could falsify it. This
+  covers Playfair, Bifid at period 2 and Hill 2x2 as hidden inner stages.
+- transposition composed with a feedback/autokey mask - with unknown `pi` the lagged source is
+  an unknown intermediate symbol at every crib position; with known `pi` it reparameterises
+  EXP-034/EXP-038 over the EXP-036 permutation corpus.
+
+**Exactly REFUTED at Checkpoint AA:** a free trigraphic inner stage under a periodic additive
+mask of period 1, 3 or 9. The repeated trigrams `EAS` (21/30) and `AST` (22/31) sit at distance
+9, so such a mask would force a ciphertext repeat that is absent. Three periods is the complete
+extent of what the current cribs can say about any hidden polygraphic stage.
+
+**Strongest surviving architecture:** the sandwich `M2 . pi . M1`, the only class that survives
+purely because a non-commuting permutation separates two masks. Its bipartite constraint system
+yields `24 - (p + q - 1)` independent constraints - only **7** at the K1/K2 pair (8, 10). It
+fails EXP-040 gate condition 5: no source states any period, key, or inheritance from K1/K2.
 
 **Current documentary checkpoint:** Checkpoint U (`results/2026-09-12-claude-checkpoint-U.md`),
 the 2025 Sanborn public-clue audit: also **`NO EXP-040 JUSTIFIED`**.

@@ -387,3 +387,54 @@ auction-secret material, no private K5 material, no quarantined Folder 8 page an
 alleged plaintext was accessed, and no plaintext word was inferred from a thematic clue.
 No primary source was reachable from this environment, so every 2025 statement is graded
 C+/B- and recorded as requiring primary verification before use. No experiment was created.
+
+## Claude Checkpoint AA — no contamination incident
+
+Repo- and mathematics-driven residual architecture elimination. No web search was performed.
+No alleged full K4 plaintext, 2025 discovered or leaked plaintext, reconstruction, proposed
+solution, solution dump, private K5 material, auction-secret material or post-solution reverse
+engineering was accessed. Only the pinned ciphertext and the two public-source-verified cribs
+were used; no additional plaintext was assumed or inferred at any point. No experiment code and
+no EXP-040 preregistration were created.
+
+## Claude Checkpoint AC — no contamination incident
+
+Independent audit of Codex Checkpoint AB and exact CSP closure of its Trifid residual. No web
+search. Only the pinned ciphertext and the two public-source-verified cribs were used. No
+alleged, leaked, discovered or reconstructed K4 plaintext, no proposed solution, no private K5
+material, no auction-secret material and no post-solution reverse engineering was accessed.
+Unknown plaintext positions were kept as variables throughout and never filled with guessed
+English; no language scoring of any kind was used. SAT certificates deliberately record cube
+cells only and omit any letter labelling of the 73 unknown positions, since every bijection
+from unused cells to unused letters completes the model equally and a labelling would amount to
+manufacturing a plaintext candidate. Codex files were read from their commit but never copied
+or modified, and no branch was merged.
+
+## Claude Checkpoint AD — no contamination incident
+
+Verification strengthening only. No web search, no new cryptanalytic family, no plaintext
+beyond the two public-source-verified cribs. The 15 SAT configurations were not chased,
+optimised, language-scored or relabelled, and no keywords were added; unknown plaintext
+positions remained variables throughout. No alleged, leaked or reconstructed K4 plaintext, no
+solution dump, no private K5 material and no auction-secret material was accessed. Codex files
+were not read, copied or modified in this checkpoint and no branch was merged.
+
+## Claude Checkpoint AE — no contamination incident
+
+Decidability census: algebra and constraint counting only. No cipher sweep, no new family, no
+keyspace search, no language scoring. No web search. Only the two public-source-verified cribs
+were used; the 2025 archival plaintext discovery was not treated as licensing any use of its
+contents, and no alleged, leaked or reconstructed K4 plaintext, solution site, private K5
+material or auction-secret material was searched for, fetched, quoted or inferred. The 15
+conditionally-SAT Trifid configurations were not chased, optimised, scored or relabelled.
+
+## Claude Checkpoint AF — no contamination incident
+
+Documentary retrieval attempt only; no cipher experiment, no keyspace search, no language
+scoring, and the 15 conditionally-SAT Trifid configurations were not touched. The
+`ScheidtNova.doc` payload was not retrieved and no transcript content was quoted, paraphrased or
+inferred from the filename, index metadata or search snippets. Search results surfaced at least
+one site advertising a B-roll transcript said to disclose techniques and concepts about K4, plus
+other solution-adjacent pages; none was accessed, cited, or allowed into the analysis. No alleged
+full K4 plaintext, leaked or reconstructed solution, auction-secret material or private K5
+material was searched for, fetched, quoted or inferred. No duplicate outreach was sent to GBH.
