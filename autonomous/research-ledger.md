@@ -44,3 +44,12 @@ No finding changes the canonical frontier, supplies a new plaintext letter, or j
 - 2015 Scheidt workshop provenance: a contemporaneous event report, stable public-video identifier, transcript timestamps, and later scholarly citation support retaining the transcript as a direct-event source at bounded B/B+ confidence. The recording was not audibly rechecked, so the unclear phrase and stage-order exchange remain unresolved. Classification: CONFIRMATION (medium). Sol review: NOVELTY VALID; EVIDENCE MEDIUM; IMPACT MINOR; ACTION RECORD.
 
 No Round-2 finding supplies a K4-specific operational parameter, new plaintext, or EXP-040 justification. K4 remains unsolved.
+
+### Round 3 final supervised Luna batch — 2026-09-14
+
+- Pure-transposition theorem audit: exact crib positions require three plaintext E symbols while canonical K4 contains only two; a K4-only position permutation therefore cannot fit. Assumptions and exclusions were explicitly checked. Classification: ALREADY_KNOWN (strong). Sol review: NOVELTY ALREADY_KNOWN; EVIDENCE STRONG; IMPACT NONE; ACTION REJECT.
+- EXP-033 adversarial scope audit: preregistration, implementation, summary, and verifier support both orientations and arbitrary-function as well as bijective feasibility across only the registered F1–F3 single-permutation families; 15/15 verifier checks passed. Classification: CONFIRMATION (strong). Sol review: NOVELTY VALID; EVIDENCE STRONG; IMPACT MINOR; ACTION RECORD.
+- Unedited 2005 Zetter/Scheidt archive search: stable published WIRED pages and reposts contain only the edited material; no public raw recording, full transcript, notes, revision filename, URL, or accession was found. Classification: ALREADY_KNOWN (weak). Sol review: NOVELTY ALREADY_KNOWN; EVIDENCE WEAK; IMPACT NONE; ACTION REJECT.
+- LOC Highsmith tableau-terminal audit: the official derivative ladder is multiple scales/formats of the same oblique view, not an alternate angle. Curvature, foreshortening, incomplete terminal visibility, and source metadata prevent a physical judgment on the extra N-row `L`. Classification: CONFIRMATION (medium). Sol review: NOVELTY VALID; EVIDENCE MEDIUM; IMPACT MINOR; ACTION RECORD.
+
+Final supervised conclusion: no new operational parameter, authenticated plaintext letter, contradiction, or deterministic 97-character method was found. EXP-040 remains unjustified and K4 remains unsolved.
