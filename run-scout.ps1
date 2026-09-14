@@ -15,6 +15,7 @@ $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Autonomous = Join-Path $Root 'autonomous'
 $RemoteBranch = 'luna/k4-autonomous-scout'
+$LauncherRoot = 'C:\Users\coler\Documents\Codex\2026-09-11\referenced-chatgpt-conversation-this-is-an'
 $CodexFallback = 'C:\Users\coler\.codex\.sandbox-bin\codex.exe'
 $LunaModel = 'gpt-5.6-luna'
 $LunaEffort = 'xhigh'
@@ -110,16 +111,15 @@ function Invoke-CodexWorker {
         '-c', ('model_reasoning_effort="' + $Effort + '"'),
         '-c', 'mcp_servers.blender.enabled=false',
         '-c', 'mcp_servers.codex-imagen.enabled=false',
-        '-c', 'mcp_servers.codex_app.enabled=false',
         '-c', 'mcp_servers.node_repl.enabled=false',
         '-c', 'mcp_servers.unityMCP.enabled=false',
         '-c', 'mcp_servers.cua_repl={command="C:\\\\Users\\\\coler\\\\AppData\\\\Local\\\\OpenAI\\\\Codex\\\\runtimes\\\\cua_node\\\\a708e72b10c27b59\\\\bin\\\\node.exe",args=["C:\\\\Users\\\\coler\\\\AppData\\\\Local\\\\OpenAI\\\\Codex\\\\runtimes\\\\cua_node\\\\a708e72b10c27b59\\\\bin\\\\node_modules\\\\@oai\\\\cua-repl\\\\bin\\\\cua-repl.mjs"],enabled=false}',
         '--model', $Model, '--sandbox', 'workspace-write', '--add-dir', $Root,
-        '-C', $Root, '-o', $FinalPath, '-'
+        '--cd', $LauncherRoot, '--skip-git-repo-check', '-o', $FinalPath, '-'
     )
     $psi = New-Object System.Diagnostics.ProcessStartInfo
     $psi.FileName = $Codex
-    $psi.WorkingDirectory = $Root
+    $psi.WorkingDirectory = $LauncherRoot
     $psi.UseShellExecute = $false
     $psi.CreateNoWindow = $true
     $psi.RedirectStandardInput = $true
@@ -212,6 +212,8 @@ if ($branch -ne $RemoteBranch -or $branch -eq 'main' -or $branch -eq 'codex/k4-c
 $script:Codex = $Codex
 
 $keepAwakeEnabled = $false
+$ES_CONTINUOUS = [uint32]2147483648
+$ES_SYSTEM_REQUIRED = [uint32]1
 try {
     Add-Type @'
 using System;
@@ -220,7 +222,7 @@ public static class K4KeepAwake {
     [DllImport("kernel32.dll")] public static extern uint SetThreadExecutionState(uint flags);
 }
 '@ -ErrorAction Stop
-    [void][K4KeepAwake]::SetThreadExecutionState(0x80000001)
+    [void][K4KeepAwake]::SetThreadExecutionState($ES_CONTINUOUS -bor $ES_SYSTEM_REQUIRED)
     $keepAwakeEnabled = $true
     Write-Log 'KEEP_AWAKE enabled (thread-scoped).'
 } catch { Write-Log "KEEP_AWAKE unavailable: $($_.Exception.Message)" }
@@ -350,7 +352,7 @@ SHORT_REASON: one concise reason
     }
     Write-Log "END runs=$run failures=$failures"
 } finally {
-    try { if ($keepAwakeEnabled) { [void][K4KeepAwake]::SetThreadExecutionState(0x80000000) } } catch {}
+    try { if ($keepAwakeEnabled) { [void][K4KeepAwake]::SetThreadExecutionState($ES_CONTINUOUS) } } catch {}
     if (Test-Path -LiteralPath $PidPath) { Remove-Item -LiteralPath $PidPath -Force -ErrorAction SilentlyContinue }
     Write-Log 'KEEP_AWAKE restored; supervisor exited.'
 }
