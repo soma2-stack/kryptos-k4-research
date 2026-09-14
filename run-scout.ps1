@@ -15,7 +15,6 @@ $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Autonomous = Join-Path $Root 'autonomous'
 $RemoteBranch = 'luna/k4-autonomous-scout'
-$LauncherRoot = 'C:\Users\coler\Documents\Codex\2026-09-11\referenced-chatgpt-conversation-this-is-an'
 $CodexFallback = 'C:\Users\coler\.codex\.sandbox-bin\codex.exe'
 $LunaModel = 'gpt-5.6-luna'
 $LunaEffort = 'xhigh'
@@ -114,12 +113,12 @@ function Invoke-CodexWorker {
         '-c', 'mcp_servers.node_repl.enabled=false',
         '-c', 'mcp_servers.unityMCP.enabled=false',
         '-c', 'mcp_servers.cua_repl={command="C:\\\\Users\\\\coler\\\\AppData\\\\Local\\\\OpenAI\\\\Codex\\\\runtimes\\\\cua_node\\\\a708e72b10c27b59\\\\bin\\\\node.exe",args=["C:\\\\Users\\\\coler\\\\AppData\\\\Local\\\\OpenAI\\\\Codex\\\\runtimes\\\\cua_node\\\\a708e72b10c27b59\\\\bin\\\\node_modules\\\\@oai\\\\cua-repl\\\\bin\\\\cua-repl.mjs"],enabled=false}',
-        '--model', $Model, '--sandbox', 'workspace-write', '--add-dir', $Root,
-        '--cd', $LauncherRoot, '--skip-git-repo-check', '-o', $FinalPath, '-'
+        '--model', $Model, '--sandbox', 'workspace-write',
+        '--cd', $Root, '-o', $FinalPath, '-'
     )
     $psi = New-Object System.Diagnostics.ProcessStartInfo
     $psi.FileName = $Codex
-    $psi.WorkingDirectory = $LauncherRoot
+    $psi.WorkingDirectory = $Root
     $psi.UseShellExecute = $false
     $psi.CreateNoWindow = $true
     $psi.RedirectStandardInput = $true
