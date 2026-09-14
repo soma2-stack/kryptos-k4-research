@@ -63,7 +63,7 @@ create ESCALATE_TO_SOL.md and autonomous/STOP_FOR_SOL, then stop. Save a compact
     try {
         $prompt = Get-Content -LiteralPath (Join-Path $ScoutRoot 'AUTONOMOUS_SCOUT.md') -Raw
         $prompt = $prompt + "`r`n`r`n" + $continuation
-        $prompt | & $Codex exec --model gpt-5.6-luna --sandbox workspace-write --ask-for-approval never --search -C $ScoutRoot -o $finalPath - 2>&1 | Tee-Object -FilePath $outputPath
+        $prompt | & $Codex --ask-for-approval never --search exec --model gpt-5.6-luna --sandbox workspace-write -C $ScoutRoot -o $finalPath - 2>&1 | Tee-Object -FilePath $outputPath
         $exitCode = $LASTEXITCODE
         if ($exitCode -ne 0) { throw "Codex exited with status $exitCode" }
         $failures = 0
