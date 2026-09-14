@@ -108,6 +108,8 @@ function Invoke-CodexWorker {
         '-c', 'sandbox_workspace_write.network_access=true',
         '-c', 'sandbox_mode="workspace-write"',
         '-c', ('model_reasoning_effort="' + $Effort + '"'),
+        '-c', 'features.code_mode_host=false',
+        '-c', 'code_mode.disable_in_process_fallback=false',
         '-c', 'mcp_servers.blender.enabled=false',
         '-c', 'mcp_servers.codex-imagen.enabled=false',
         '-c', 'mcp_servers.node_repl.enabled=false',
