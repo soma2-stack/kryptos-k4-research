@@ -1,10 +1,15 @@
 {
-  "iteration": 1,
-  "last_lane": "A",
-  "last_task": "Targeted post-AL contradiction audit of textual row-26–28 lengths versus unverified physical endpoints",
-  "last_result": "ALREADY KNOWN",
-  "recent_tasks": ["A: textual row lengths versus physical endpoint verification"],
-  "consecutive_no_new_findings": 1,
+  "iteration": 5,
+  "last_lane": "D",
+  "last_task": "Round-1 canonical-state consistency check across KNOWN_STATE, AE/AL, and data/k4.json",
+  "last_result": "CONFIRMATION",
+  "recent_tasks": [
+    "C: UGA/Peabody episode-3411 catalog identity",
+    "C: ScheidtNova.doc live/archive status",
+    "C: WIRED companion frames for physical rows 26-28",
+    "D: canonical ciphertext/crib/constraint/index consistency"
+  ],
+  "consecutive_no_new_findings": 5,
   "last_commit": "71d11d5d50141fce7b20f4d974cb319b372f150f",
-  "last_updated": "2026-09-14T00:52:04-04:00"
+  "last_updated": "2026-09-14T09:20:52-04:00"
 }
