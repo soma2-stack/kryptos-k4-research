@@ -19,3 +19,5 @@ To https://github.com/soma2-stack/kryptos-k4-research.git
  * [new branch]      luna/k4-autonomous-scout -> luna/k4-autonomous-scout
 2026-09-14T00:52:04 RUN 1 push success
 2026-09-14T00:52:04 END runs=1 failures=0
+2026-09-14T00:59:29 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=12
+2026-09-14T00:59:29 RUN 1 begin
