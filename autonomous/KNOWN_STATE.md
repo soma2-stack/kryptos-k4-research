@@ -36,8 +36,9 @@ finite domains are required; compatibility is not evidence.
   transpositions are zero at the registered scope; not a theorem about arbitrary 26x26 tables.
 - EXP-037: preregistered standard Porta is negative. Quagmire I–III and Gronsfeld reduce to
   covered families; Quagmire IV needs an unsupported second alphabet.
-- EXP-038: full-Z26 second-order affine self-evolving keystreams, message-aligned, 12 committed
-  shift conventions, are exhaustively negative; generic recurrence is not eliminated.
+- EXP-038: full-Z26 second-order affine self-evolving keystreams, message-aligned with no
+  primer/warm-up, reset, reversed recurrence, plaintext/ciphertext feedback, or transposition, across
+  12 committed shift conventions, are exhaustively negative; generic recurrence is not eliminated.
 - EXP-039: ordered pairs from `{KRYPTOS, PALIMPSEST, ABSCISSA}` in standard no-padding double
   columnar transposition followed by a fixed monoalphabetic map are zero; double transposition
   generally is not eliminated.
@@ -95,3 +96,4 @@ Every worker performs exactly one bounded, repository-novel investigation, recor
 NEW / CONFIRMATION / CONTRADICTION / ALREADY KNOWN / LOW VALUE / IDEA CANDIDATE / BLOCKED, and
 does not promote a cryptanalytic claim without reviewer support. Historical files are immutable;
 prospective corrections go in this memory and the ledgers.
+

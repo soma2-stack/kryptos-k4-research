@@ -35,3 +35,12 @@ No Luna iteration has run yet.
 
 No finding changes the canonical frontier, supplies a new plaintext letter, or justifies EXP-040. `autonomous/KNOWN_STATE.md` remains unchanged.
 
+
+### Round 2 supervised Luna batch — 2026-09-14
+
+- EXP-038 scope audit: preregistration, implementation, results, and independent verifier support the existing negative, while showing that the shorthand should explicitly preserve exclusions for primer/warm-up, resets, reversed recurrence, plaintext/ciphertext feedback, and transposition. Classification: CONFIRMATION (strong). Sol review: NOVELTY VALID; EVIDENCE STRONG; IMPACT MINOR; ACTION RECORD.
+- Ed Scheidt patent/professional-method search: public patent records contain generic nested additive/permutation, prime-step scheduling, seeded splitting, and feedback examples, but none is tied to Kryptos or selects a fixed AL parameter. Classification: LOW_VALUE (weak). Sol review: NOVELTY VALID; EVIDENCE WEAK; IMPACT NONE; ACTION RECORD in ledger only.
+- NSA DOCID 4145036/4145037 provenance: official records confirm sibling slide/summary PDFs in the same 2014 FOIA release, but this relationship was already ledgered and page-level access did not establish original photographic plates. Classification: BLOCKED (medium). Sol review: NOVELTY ALREADY_KNOWN; EVIDENCE MEDIUM; IMPACT NONE; ACTION REJECT.
+- 2015 Scheidt workshop provenance: a contemporaneous event report, stable public-video identifier, transcript timestamps, and later scholarly citation support retaining the transcript as a direct-event source at bounded B/B+ confidence. The recording was not audibly rechecked, so the unclear phrase and stage-order exchange remain unresolved. Classification: CONFIRMATION (medium). Sol review: NOVELTY VALID; EVIDENCE MEDIUM; IMPACT MINOR; ACTION RECORD.
+
+No Round-2 finding supplies a K4-specific operational parameter, new plaintext, or EXP-040 justification. K4 remains unsolved.

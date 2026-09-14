@@ -1,15 +1,15 @@
 {
-  "iteration": 5,
-  "last_lane": "D",
-  "last_task": "Round-1 canonical-state consistency check across KNOWN_STATE, AE/AL, and data/k4.json",
+  "iteration": 9,
+  "last_lane": "C",
+  "last_task": "Round-2 provenance audit of the 2015 Ed Scheidt workshop transcript",
   "last_result": "CONFIRMATION",
   "recent_tasks": [
-    "C: UGA/Peabody episode-3411 catalog identity",
-    "C: ScheidtNova.doc live/archive status",
-    "C: WIRED companion frames for physical rows 26-28",
-    "D: canonical ciphertext/crib/constraint/index consistency"
+    "A: EXP-038 exact scope audit",
+    "C: Scheidt patents and professional publications for AL selectors",
+    "C: NSA DOCID 4145036/4145037 official provenance",
+    "C: 2015 Scheidt workshop recording/transcript provenance"
   ],
-  "consecutive_no_new_findings": 5,
-  "last_commit": "71d11d5d50141fce7b20f4d974cb319b372f150f",
-  "last_updated": "2026-09-14T09:20:52-04:00"
+  "consecutive_no_new_findings": 9,
+  "last_commit": "d9dee5e",
+  "last_updated": "2026-09-14T09:32:59-04:00"
 }
