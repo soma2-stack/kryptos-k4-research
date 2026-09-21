@@ -11,5 +11,13 @@
   ],
   "consecutive_no_new_findings": 13,
   "last_commit": "eae5ffd",
-  "last_updated": "2026-09-14T09:46:06-04:00"
+  "last_updated": "2026-09-14T09:46:06-04:00",
+  "status": "HISTORICAL_SNAPSHOT",
+  "scope": "luna/k4-autonomous-scout pre-EXP-040 campaign",
+  "superseded_by": [
+    "docs/current-status.md",
+    "autonomous/KNOWN_STATE.md",
+    "docs/repo-audit-2026-09-21.md"
+  ],
+  "note": "Do not use iteration/frontier fields in this snapshot to select current Claude-branch research."
 }
