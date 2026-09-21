@@ -173,21 +173,23 @@ Authenticated 2015 workshop content remains only what Checkpoint X established:
 K4 is **more than one stage**, and masking is part of Layer A. No period, period
 value, reset rule or schedule is licensed by this recording.
 
-## Scheidt steganography-related component (Checkpoint AN)
+## Scheidt “Stego” lead (Checkpoint AN, corrected prospectively by AO)
 
-**NEW documentary constraint; medium-high confidence.** A surviving public research page preserves
-an Ed Scheidt clarification: he said that in K4 “there was a piece relating to Stego,” while
-explicitly saying he did not state “how or in what context.”
+**PROVENANCE-LIMITED LEAD; grade C.** A surviving John B. Wilson page attributes to Ed Scheidt
+the statement that K4 had “a piece relating to Stego,” while reportedly adding that he did not
+state “how or in what context.”
 
-Admit only the narrow structural constraint: **K4 contains a steganography-related component.**
-Do NOT infer a particular carrier, null cipher, acrostic, grille, binary scheme, insertion/deletion
-rule, physical-layout mechanism, stage order, period, key length, alphabet, recurrence, reset or
-alignment. The original Scheidt correspondence is not recovered, so provenance is medium-high
-rather than highest-grade primary-document evidence.
+Checkpoint AO found that the original Scheidt communication, metadata, underlying talk record,
+and any independent contemporary copy have **not** been recovered. Therefore this phrase does
+**not** meet the project's A / strong-B threshold and must **not** be treated as an authenticated
+K4 structural constraint.
 
-This sharpens the established masking evidence but still supplies no finite operational parameter,
-so by itself it does **not** justify EXP-044. See
-`docs/external/checkpoint-AN-scheidt-stego-constraint.md`.
+Canonical treatment: preserve it only as a provenance target. Do NOT infer any carrier, null
+cipher, acrostic, grille, binary scheme, insertion/deletion rule, physical-layout mechanism,
+stage order, period, key length, alphabet, recurrence, reset or alignment. It does not justify
+EXP-044.
+
+See `docs/external/checkpoint-AO-scheidt-stego-provenance-correction.md`.
 
 ## Contamination boundary
 
