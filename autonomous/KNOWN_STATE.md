@@ -147,6 +147,31 @@ interview. The exact UGA/Peabody object remains a search-result lead only. PBS n
 concealment before enciphering is editorial, not a Scheidt stage-order statement. Pending
 outreach: GBH, Kim Zetter, TecSec/Ed Scheidt, and Elonka Dunin. Do not duplicate requests.
 
+## Disputed 2015 workshop "periodic" exchange (Checkpoint AM)
+
+**K4 periodicity is NOT authenticated evidence and must not enter the constraint set.**
+
+A machine transcript places "Would you consider it periodic?" / "Yeah." inside the
+47:35-48:16 gap of the human Bean/Cipherbrain transcript of YouTube `25YFYKKKkDo`.
+It carries no authenticated speaker labels. Checkpoint AM attempted primary-audio
+authentication and returned `UNRESOLVED` for an environmental reason: `youtube.com`,
+`scienceblogs.de`, `web.archive.org` and `huggingface.co` are all denied by the
+network egress policy (proxy logs a 403 CONNECT), so no audio was obtained and none
+was assessed. A second, structural blocker also stands: speaker attribution by
+timbre/cadence/mic position needs a human ear, which no ASR substitute supplies.
+
+All four points remain open: wording, referent of "it", speaker identity, polarity.
+Note the live confusion risk - the same conversation uses "period" in the
+*punctuation* sense at ~46:23-46:40.
+
+**Do not re-run this audio pass on this environment.** It unblocks only on a network
+that permits the recording *plus a human listener*, or a speaker-labelled human
+transcript covering 47:35-48:16, or a participant's direct statement.
+
+Authenticated 2015 workshop content remains only what Checkpoint X established:
+K4 is **more than one stage**, and masking is part of Layer A. No period, period
+value, reset rule or schedule is licensed by this recording.
+
 ## Contamination boundary
 
 Reject alleged full K4 plaintexts, leaked or claimed solutions, auction-secret material, private

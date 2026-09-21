@@ -147,3 +147,12 @@ Final supervised conclusion: no new operational parameter, authenticated plainte
   cycle certificates (4,000/4,000) and 435,955,104 forward simulations.
 - Consequence: Class A is materially weakened. K1-K3 are now EXHAUSTED as a source of pi.
 - Classification: NEW (strong). K4 remains unsolved.
+
+## Checkpoint AM — 2015 workshop "periodic" exchange, primary-audio authentication attempt
+**Status:** BLOCKED (external). **Verdict:** `UNRESOLVED`.
+Primary recording `25YFYKKKkDo` is denied by the network egress policy (403 CONNECT at the
+proxy); the Cipherbrain transcript host, archive.org and huggingface.co are likewise denied.
+No audio obtained, therefore none assessed. Second structural blocker: speaker attribution
+requires a human ear, not an ASR substitute. Periodicity NOT promoted. Do not repeat this
+pass on this environment — see `docs/external/checkpoint-AM-2015-workshop-periodicity-audio-authentication.md`
+for the exact conditions that would unblock it.
