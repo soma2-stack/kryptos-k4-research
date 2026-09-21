@@ -37,12 +37,11 @@ Layer A. No period, period value, reset rule, or schedule is licensed.
 Generic modern K4 clue searches now risk surfacing solution-dump contamination. Prefer named
 primary-source domains and preserve the existing contamination firewall.
 
-**Checkpoint AN:** a repository-new public Scheidt clarification adds one narrow structural fact:
-K4 contains **“a piece relating to Stego.”** Provenance is medium-high because the surviving page
-attributes the clarification directly to Scheidt but the original correspondence is not recovered.
-Admit only **steganography-related component present; context unknown**. This does not select a
-carrier, method, stage order, period, key length, alphabet, reset, recurrence, or alignment, and
-therefore does not by itself justify EXP-044.
+**Checkpoint AN / AO:** the Wilson-attributed Scheidt phrase “a piece relating to Stego” is now a
+**C-grade provenance-limited lead, not an authenticated K4 constraint**. The original communication,
+metadata, underlying 2004 talk record, and independent contemporary corroboration were not recovered.
+It may guide provenance work, but it selects no carrier, method, stage order, period, key length,
+alphabet, reset, recurrence, or alignment and does not justify EXP-044.
 
 **Historical cryptanalytic baseline:** Checkpoint AE
 (`results/2026-09-13-checkpoint-AE.md`), the **K4 decidability census**
