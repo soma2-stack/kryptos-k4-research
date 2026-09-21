@@ -1,3 +1,5 @@
+> **CURRENT-STATE NOTICE — 2026-09-21.** The prescriptions below are historical. In particular, the EXP-021 position-preservation/external-object-keystream convergence was later withdrawn, and EXP-040 through EXP-043 have since run. For current work, use [current-status.md](current-status.md), [../autonomous/KNOWN_STATE.md](../autonomous/KNOWN_STATE.md), and [repo-audit-2026-09-21.md](repo-audit-2026-09-21.md). Do not execute an old "Next" item unless the current state explicitly reopens it.
+
 > **Current: Checkpoint J.** Read [the report](../results/2026-09-12-codex-checkpoint-J.md).
 > Use the separate frozen checkpoint_J dataset for the three-face arc; preserve old
 > snapshots. ATHEN is present. EXP-029/030/031 are scoped negatives; do not repeat them.
