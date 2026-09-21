@@ -173,6 +173,22 @@ Authenticated 2015 workshop content remains only what Checkpoint X established:
 K4 is **more than one stage**, and masking is part of Layer A. No period, period
 value, reset rule or schedule is licensed by this recording.
 
+## Scheidt steganography-related component (Checkpoint AN)
+
+**NEW documentary constraint; medium-high confidence.** A surviving public research page preserves
+an Ed Scheidt clarification: he said that in K4 “there was a piece relating to Stego,” while
+explicitly saying he did not state “how or in what context.”
+
+Admit only the narrow structural constraint: **K4 contains a steganography-related component.**
+Do NOT infer a particular carrier, null cipher, acrostic, grille, binary scheme, insertion/deletion
+rule, physical-layout mechanism, stage order, period, key length, alphabet, recurrence, reset or
+alignment. The original Scheidt correspondence is not recovered, so provenance is medium-high
+rather than highest-grade primary-document evidence.
+
+This sharpens the established masking evidence but still supplies no finite operational parameter,
+so by itself it does **not** justify EXP-044. See
+`docs/external/checkpoint-AN-scheidt-stego-constraint.md`.
+
 ## Contamination boundary
 
 Reject alleged full K4 plaintexts, leaked or claimed solutions, auction-secret material, private
