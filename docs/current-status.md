@@ -1,3 +1,5 @@
+> **EXP-029 reproducibility correction — 2026-09-21.** Treat EXP-029 as a historical scoped negative repaired by later audit, not as equivalent in artifact status to EXP-030+. Its original raw log/summary/verifier are absent and its wrapping/significance presentation was defective. See `docs/exp029-reproducibility-status-2026-09-21.md` and `docs/codex-audit.md`.
+
 > **Repository-audit correction — 2026-09-21.** EXP-043's affine-family result is a scoped negative. Its K3 motivation is now reproducible via `audit/verify_exp043_k3_derivation.py`, but K3 plaintext provenance remains separately un-frozen (`verified:false`). Do not state that every possible K3-derived permutation is eliminated; only the registered affine-mod-97 surrogate family is.
 
 # Canonical current status — read this first
