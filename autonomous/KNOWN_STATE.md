@@ -53,6 +53,14 @@ finite domains are required; compatibility is not evidence.
   keyword primers are subsumed (every primer value per chain was enumerated). This does NOT
   eliminate two-tap/mixed feedback, feedback through a non-identity function, feedback composed
   with a transposition, or primers longer than 24.
+- EXP-041 (2026-09-21): additive two-tap propagating PLAINTEXT feedback is exhaustively negative
+  — 1 <= a < b <= 19, coefficients in {+-1}^2, gamma zero or free, 3 combiners, STD/KRY on both
+  sides, forward and reverse; 32,832 enumerated, 21,883 distinct tests, 0 feasible. All 32,832
+  carry a verified left-null-space certificate of infeasibility (full coverage). Outside EXP-038
+  because substituting P = C - k yields a key recurrence WITH a ciphertext driving term; outside
+  EXP-040 because a < b. Ciphertext two-tap is a DUPLICATE of EXP-008 and was excluded. Does NOT
+  eliminate nonlinear or table feedback, >=3 taps, mixed plaintext/ciphertext taps, feedback with
+  transposition, irregular schedules, or position-dependent functions.
 - Hidden trigraphic stages behind additive masks are refuted only for periods 1, 3, and 9 by
   the repeated crib trigrams; this is not a universal fractionation negative.
 
@@ -66,11 +74,14 @@ deterministic non-position-preserving alignment remain open only as templates. P
 receive zero current crib constraints. None has a puzzle-selected finite parameter set, so no
 EXP-040 is justified.
 
-**Autokey blind region (EXP-040, new).** In a propagating feedback model a ciphertext change
+**Crib-span law (EXP-040, reconfirmed independently by EXP-041).** In a propagating feedback model a ciphertext change
 downstream of every crib position in its own chain is absorbed by the primer and is undetectable.
 So a feedback family's power is bounded by crib **span**, not crib count: the tail beyond each
 chain's last crib carries zero constraint. This is the feedback analogue of the period 27–29 blind
-spot and should be quoted whenever a feedback model is proposed.
+spot and should be quoted whenever a feedback model is proposed. Use it as a cheap pre-test:
+compute the dependency components, count how many cribs share one, and reject the family before
+coding if the answer is at most one. Confirmed in two independent families (EXP-040 one-tap,
+EXP-041 two-tap).
 
 Useful authenticated missing-plaintext targets are indices 1, 3, 91, 93, 95, and 96. One
 legitimate letter there would constrain the blind periods and materially increase information.

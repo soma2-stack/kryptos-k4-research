@@ -1,0 +1,13 @@
+{
+  "confirmed": [],
+  "controls": {
+    "adversarial": true,
+    "blind_region": true,
+    "positive": true
+  },
+  "distinct": 21883,
+  "enumerated": 32832,
+  "experiment": "EXP-041",
+  "feasible": [],
+  "prereg": "docs/exp041-preregistration.md"
+}

@@ -77,3 +77,27 @@ Final supervised conclusion: no new operational parameter, authenticated plainte
 - New structural fact: the autokey blind region — a ciphertext change downstream of every crib in
   its chain is absorbed by the primer, so feedback power is bounded by crib span, not crib count.
 - Classification: NEW (strong). K4 remains unsolved.
+
+
+### Claude continuation — 2026-09-21 — EXP-041 executed, frontier updated
+
+- Phase 1 theory before proposing: the recursion is linear, so every P[i] is affine in the
+  unknowns and the parameter count is set by the larger lag b alone. No (a,b) with b <= 19 is
+  vacuous; chance ~ 26^(b-24).
+- Phase 2 reductions: outside EXP-038 (ciphertext driving term vs autonomous recurrence);
+  ciphertext two-tap is a DUPLICATE of EXP-008 and excluded; a < b excludes EXP-040;
+  canonicalisation collapsed 10,949 of 32,832 configurations (33.3%), confirmed by the concrete
+  pair (vigenere, alpha=beta=+1) == (variant beaufort, alpha=beta=-1).
+- Preregistered at 181760d before implementation, with the null computed in advance
+  (worst 2.188e-6, expected accidental survivors 2.200e-3).
+- Result: 21,883 distinct tests, 0 FEASIBLE. Three controls pass, including a blind-region
+  control that independently reconfirms the EXP-040 crib-span law.
+- Verified by audit/verify_exp041.py with from-scratch linear algebra: full-coverage
+  left-null-space certificates of infeasibility for all 32,832 configurations, plus a
+  no-linear-algebra brute force in the encrypt direction for b = 2.
+- Two defects in the verifier were found and fixed before acceptance: a check that could not
+  fail, and dead placeholder code.
+- Frontier update written (results/2026-09-21-frontier-update-post-exp041.md): nothing remaining
+  in the feedback corridor clears the gate; shared-table variants fail non-vacuity on parameter
+  count alone. Next action recorded as mixed plaintext/ciphertext two-tap feedback.
+- Classification: NEW (strong). K4 remains unsolved.

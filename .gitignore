@@ -57,3 +57,5 @@ scratch/
 autonomous/session-*-output.log
 !results/exp040/
 !results/exp040/summary.json
+!results/exp041/
+!results/exp041/summary.json
