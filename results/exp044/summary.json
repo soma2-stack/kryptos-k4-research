@@ -1,0 +1,36 @@
+{
+  "id": "EXP-044",
+  "preregistration": "docs/exp044-preregistration.md",
+  "routes_distinct": 12,
+  "route_labels": [
+    "eng_cols_boustro/A",
+    "eng_cols_boustro/B",
+    "eng_cols_down/A",
+    "eng_cols_down/B",
+    "eng_cols_rl_down/A",
+    "eng_cols_rl_down/B",
+    "eng_cols_up/A",
+    "eng_cols_up/B",
+    "eng_rows_bottom_up/A",
+    "eng_rows_bottom_up/B",
+    "eng_rows_boustro/A",
+    "eng_rows_rl/A"
+  ],
+  "period_pairs": 100,
+  "conventions": 12,
+  "configurations_decided": 14400,
+  "feasible": 0,
+  "feasible_detail": [],
+  "worst_d_eff": 19,
+  "log26_N": 2.9388,
+  "budget": 21.9388,
+  "expected_accidental_survivors": 0.001212,
+  "disjoint_from_exp043": true,
+  "controls": {
+    "positive": true,
+    "out_of_family": true,
+    "adversarial": true,
+    "blind_region": true
+  },
+  "seconds": 0.19
+}
