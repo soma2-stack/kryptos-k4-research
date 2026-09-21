@@ -1,3 +1,5 @@
+> **CURRENT-STATE NOTICE — 2026-09-21.** This file is a historical research-state ledger, not the current instruction set. EXP-040 through EXP-043 now exist. Read [current-status.md](current-status.md), [../autonomous/KNOWN_STATE.md](../autonomous/KNOWN_STATE.md), and [repo-audit-2026-09-21.md](repo-audit-2026-09-21.md) first. Older "Current: Checkpoint J" and AE/AL-era statements below are preserved for provenance and are superseded where later checkpoints say so. Do **not** use `run_all.sh` as an onboarding smoke test.
+
 > **Current: Checkpoint J.** Read [the report](../results/2026-09-12-codex-checkpoint-J.md).
 > Use the separate frozen checkpoint_J dataset for the three-face arc; preserve old
 > snapshots. ATHEN is present. EXP-029/030/031 are scoped negatives; do not repeat them.
