@@ -1,3 +1,5 @@
+> **HISTORICAL QUEUE.** These questions belong to the pre-EXP-040 Luna campaign and are retained for provenance. Do not use them as the current queue. See `docs/current-status.md`, `autonomous/KNOWN_STATE.md`, and `docs/repo-audit-2026-09-21.md`.
+
 # Bounded open questions
 
 Work on one question at a time and mark its result in `research-ledger.md`.
