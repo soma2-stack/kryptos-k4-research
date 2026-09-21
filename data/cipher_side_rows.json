@@ -1,124 +1,128 @@
 {
- "schema_version": 1,
- "purpose": "Authoritative cipher-side row transcription of the Kryptos sculpture, rows 1-28, as supplied in docs/external/checkpoint-K-nsa-cipher-rows-1-24.md and verified here.",
- "provenance": {
-  "primary": "CIA legacy page, 'Kryptos' Sculpture, Panel 1 - Encoded Text (Text Version), https://www.cia.gov/legacy/headquarters/kryptos-sculpture",
-  "corroborating": "NSA DOCID 4145036 cipher-side slide; NSA DOCID 4145037 summary",
-  "handoff_file": "docs/external/checkpoint-K-nsa-cipher-rows-1-24.md",
-  "handoff_sha256": "35974155613005d6e2fdcd4527ec43e22cdf83bbda8ac11daec0a210dfe03357",
-  "grade": "A for row text and row order. NOT a measured fabrication survey: it establishes no horizontal coordinate, no inter-character spacing and no vertical character-centre alignment."
- },
- "rows": {
-  "1": "EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJ",
-  "2": "YQTQUXQBQVYUVLLTREVJYQTMKYRDMFD",
-  "3": "VFPJUDEEHZWETZYVGWHKKQETGFQJNCE",
-  "4": "GGWHKK?DQMCPFQZDQMMIAGPFXHQRLG",
-  "5": "TIMVMZJANQLVKQEDAGDVFRPJUNGEUNA",
-  "6": "QZGZLECGYUXUEENJTBJLBQCRTBJDFHRR",
-  "7": "YIZETKZEMVDUFKSJHKFWHKUWQLSZFTI",
-  "8": "HHDDDUVH?DWKBFUFPWNTDFIYCUQZERE",
-  "9": "EVLDKFEZMOQQJLTTUGSYQPFEUNLAVIDX",
-  "10": "FLGGTEZ?FKZBSFDQVGOGIPUFXHHDRKF",
-  "11": "FHQNTGPUAECNUVPDJMQCLQUMUNEDFQ",
-  "12": "ELZZVRRGKFFVOEEXBDMVPNFQXEZLGRE",
-  "13": "DNQFMPNZGLFLPMRJQYALMGNUVPDXVKP",
-  "14": "DQUMEBEDMHDAFMJGZNUPLGEWJLLAETG",
-  "15": "ENDYAHROHNLSRHEOCPTEOIBIDYSHNAIA",
-  "16": "CHTNREYULDSLLSLLNOHSNOSMRWXMNE",
-  "17": "TPRNGATIHNRARPESLNNELEBLPIIACAE",
-  "18": "WMTWNDITEENRAHCTENEUDRETNHAEOE",
-  "19": "TFOLSEDTIWENHAEIOYTEYQHEENCTAYCR",
-  "20": "EIFTBRSPAMHHEWENATAMATEGYEERLB",
-  "21": "TEEFOASFIOTUETUAEOTOARMAEERTNRTI",
-  "22": "BSEDDNIAAHTTMSTEWPIEROAGRIEWFEB",
-  "23": "AECTDDHILCEIHSITEGOEAOSDDRYDLORIT",
-  "24": "RKLMLEHAGTDHARDPNEOHMGFMFEUHE",
-  "25": "ECDMRIPFEIMEHNLSSTTRTVDOHW?OBKR",
-  "26": "UOXOGHULBSOLIFBBWFLRVQQPRNGKSSO",
-  "27": "TWTQSJQSSEKZZWATJKLUDIAWINFBNYP",
-  "28": "VTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR"
- },
- "row_lengths": {
-  "1": 32,
-  "2": 31,
-  "3": 31,
-  "4": 30,
-  "5": 31,
-  "6": 32,
-  "7": 31,
-  "8": 31,
-  "9": 32,
-  "10": 31,
-  "11": 30,
-  "12": 31,
-  "13": 31,
-  "14": 31,
-  "15": 32,
-  "16": 30,
-  "17": 31,
-  "18": 30,
-  "19": 32,
-  "20": 30,
-  "21": 32,
-  "22": 31,
-  "23": 33,
-  "24": 29,
-  "25": 31,
-  "26": 31,
-  "27": 31,
-  "28": 31
- },
- "verification": {
-  "strings_match_the_handoff_length_table": true,
-  "rows_1_24_characters": 745,
-  "rows_25_28_characters": 124,
-  "total_characters": 869,
-  "distinct_row_lengths_rows_1_24": [
-   29,
-   30,
-   31,
-   32,
-   33
-  ],
-  "question_marks": [
-   [
-    4,
-    6
-   ],
-   [
-    8,
-    8
-   ],
-   [
-    10,
-    7
-   ],
-   [
-    25,
-    26
-   ]
-  ],
-  "uniform_31_arithmetic": "32 + 27*31 = 869 gives the right TOTAL but is a FALSE description of the row structure: rows 1-24 range from 29 to 33 characters. Superseded.",
-  "independent_corroborations": [
-   "rows 15-25 up to and including the terminal '?' contain 337 characters, i.e. exactly 336 letters, matching the standard K3 ciphertext length",
-   "row 25 after its '?' is exactly OBKR, and rows 26-28 equal K4[4:35], K4[35:66], K4[66:97] from data/k4.json, so K4 = 4 + 93 = 97",
-   "row 1 is the canonical K1 ciphertext opening EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJ and row 15 the canonical K3 ciphertext opening ENDYAHROHNLSRHEO..."
-  ],
-  "open_discrepancy": {
-   "statement": "Rows 1-14 hold 435 characters, of which 3 are question marks, so 432 LETTERS. The commonly cited section lengths K1=63 and K2=372 sum to 435 letters, three more than this transcription supplies for the same span.",
-   "candidate_explanations": [
-    "the commonly cited 63/372 counts include the section-separator question marks or count differently",
-    "the CIA text version omits three characters somewhere in rows 1-14",
-    "K2 does not end exactly at the row-14/15 boundary (disfavoured: row 15 begins the canonical K3 ciphertext)"
-   ],
-   "status": "UNRESOLVED. Not resolved by assumption. It does not affect any model that uses only rows 15-28 or K4 itself. It DOES affect any model keyed to rows 1-14 content or to horizontal position within them, so experiments touching rows 1-14 must report it.",
-   "evidence_that_would_settle_it": "a character-by-character count of K1 and K2 ciphertext from the same CIA/NSA primary source, or the NSA DOCID 4145036 slide at legible resolution"
-  }
- },
- "alignment": {
-  "horizontal_offsets": "UNKNOWN",
-  "note": "No horizontal coordinate is established by this source. Row-local character index MUST NOT be treated as a physical column. See docs/exp035-preregistration.md for the finite family of alignment conventions that is preregistered instead, and docs/external-evidence-requests.md Request 4 for the evidence that would settle it."
- },
- "linear_stream_sha256": "dde19b74d57e0d2b169466cdec2641eb8c87e30ce35b74f4c60c4a74ba413177",
- "linear_stream_length": 869
+  "schema_version": 1,
+  "purpose": "Authoritative cipher-side row transcription of the Kryptos sculpture, rows 1-28, as supplied in docs/external/checkpoint-K-nsa-cipher-rows-1-24.md and verified here.",
+  "provenance": {
+    "primary": "CIA legacy page, 'Kryptos' Sculpture, Panel 1 - Encoded Text (Text Version), https://www.cia.gov/legacy/headquarters/kryptos-sculpture",
+    "corroborating": "NSA DOCID 4145036 cipher-side slide; NSA DOCID 4145037 summary",
+    "handoff_file": "docs/external/checkpoint-K-nsa-cipher-rows-1-24.md",
+    "handoff_sha256": "35974155613005d6e2fdcd4527ec43e22cdf83bbda8ac11daec0a210dfe03357",
+    "grade": "A for row text and row order. NOT a measured fabrication survey: it establishes no horizontal coordinate, no inter-character spacing and no vertical character-centre alignment."
+  },
+  "rows": {
+    "1": "EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJ",
+    "2": "YQTQUXQBQVYUVLLTREVJYQTMKYRDMFD",
+    "3": "VFPJUDEEHZWETZYVGWHKKQETGFQJNCE",
+    "4": "GGWHKK?DQMCPFQZDQMMIAGPFXHQRLG",
+    "5": "TIMVMZJANQLVKQEDAGDVFRPJUNGEUNA",
+    "6": "QZGZLECGYUXUEENJTBJLBQCRTBJDFHRR",
+    "7": "YIZETKZEMVDUFKSJHKFWHKUWQLSZFTI",
+    "8": "HHDDDUVH?DWKBFUFPWNTDFIYCUQZERE",
+    "9": "EVLDKFEZMOQQJLTTUGSYQPFEUNLAVIDX",
+    "10": "FLGGTEZ?FKZBSFDQVGOGIPUFXHHDRKF",
+    "11": "FHQNTGPUAECNUVPDJMQCLQUMUNEDFQ",
+    "12": "ELZZVRRGKFFVOEEXBDMVPNFQXEZLGRE",
+    "13": "DNQFMPNZGLFLPMRJQYALMGNUVPDXVKP",
+    "14": "DQUMEBEDMHDAFMJGZNUPLGEWJLLAETG",
+    "15": "ENDYAHROHNLSRHEOCPTEOIBIDYSHNAIA",
+    "16": "CHTNREYULDSLLSLLNOHSNOSMRWXMNE",
+    "17": "TPRNGATIHNRARPESLNNELEBLPIIACAE",
+    "18": "WMTWNDITEENRAHCTENEUDRETNHAEOE",
+    "19": "TFOLSEDTIWENHAEIOYTEYQHEENCTAYCR",
+    "20": "EIFTBRSPAMHHEWENATAMATEGYEERLB",
+    "21": "TEEFOASFIOTUETUAEOTOARMAEERTNRTI",
+    "22": "BSEDDNIAAHTTMSTEWPIEROAGRIEWFEB",
+    "23": "AECTDDHILCEIHSITEGOEAOSDDRYDLORIT",
+    "24": "RKLMLEHAGTDHARDPNEOHMGFMFEUHE",
+    "25": "ECDMRIPFEIMEHNLSSTTRTVDOHW?OBKR",
+    "26": "UOXOGHULBSOLIFBBWFLRVQQPRNGKSSO",
+    "27": "TWTQSJQSSEKZZWATJKLUDIAWINFBNYP",
+    "28": "VTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR"
+  },
+  "row_lengths": {
+    "1": 32,
+    "2": 31,
+    "3": 31,
+    "4": 30,
+    "5": 31,
+    "6": 32,
+    "7": 31,
+    "8": 31,
+    "9": 32,
+    "10": 31,
+    "11": 30,
+    "12": 31,
+    "13": 31,
+    "14": 31,
+    "15": 32,
+    "16": 30,
+    "17": 31,
+    "18": 30,
+    "19": 32,
+    "20": 30,
+    "21": 32,
+    "22": 31,
+    "23": 33,
+    "24": 29,
+    "25": 31,
+    "26": 31,
+    "27": 31,
+    "28": 31
+  },
+  "verification": {
+    "strings_match_the_handoff_length_table": true,
+    "rows_1_24_characters": 745,
+    "rows_25_28_characters": 124,
+    "total_characters": 869,
+    "distinct_row_lengths_rows_1_24": [
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "question_marks": [
+      [
+        4,
+        6
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        25,
+        26
+      ]
+    ],
+    "uniform_31_arithmetic": "32 + 27*31 = 869 gives the right TOTAL but is a FALSE description of the row structure: rows 1-24 range from 29 to 33 characters. Superseded.",
+    "independent_corroborations": [
+      "rows 15-25 up to and including the terminal '?' contain 337 characters, i.e. exactly 336 letters, matching the standard K3 ciphertext length",
+      "row 25 after its '?' is exactly OBKR, and rows 26-28 equal K4[4:35], K4[35:66], K4[66:97] from data/k4.json, so K4 = 4 + 93 = 97",
+      "row 1 is the canonical K1 ciphertext opening EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJ and row 15 the canonical K3 ciphertext opening ENDYAHROHNLSRHEO..."
+    ],
+    "resolved_correction": {
+      "issue": "Rows 1-14 were once described as a 432-vs-435 discrepancy.",
+      "resolution": "RESOLVED: 435 counts physical ciphertext characters; 432 are letters and 3 are '?' separators. The earlier comparison mixed units.",
+      "physical_characters": 435,
+      "letters": 432,
+      "question_marks": 3,
+      "status": "RESOLVED",
+      "references": [
+        "docs/external/checkpoint-L-web-audit-requests-4-5.md",
+        "docs/external-evidence-requests.md Request 5",
+        "results/2026-09-12-claude-checkpoint-M.md"
+      ],
+      "caution": "This resolution does not settle separate questions about intended pre-aesthetic K2 text, omitted X handling, or physical horizontal geometry."
+    }
+  },
+  "alignment": {
+    "horizontal_offsets": "UNKNOWN",
+    "note": "No horizontal coordinate is established by this source. Row-local character index MUST NOT be treated as a physical column. See docs/exp035-preregistration.md for the finite family of alignment conventions that is preregistered instead, and docs/external-evidence-requests.md Request 4 for the evidence that would settle it."
+  },
+  "linear_stream_sha256": "dde19b74d57e0d2b169466cdec2641eb8c87e30ce35b74f4c60c4a74ba413177",
+  "linear_stream_length": 869
 }
