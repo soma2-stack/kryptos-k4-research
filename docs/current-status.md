@@ -1,3 +1,5 @@
+> **Repository-audit correction — 2026-09-21.** EXP-043's affine-family result is a scoped negative. Its K3 motivation is now reproducible via `audit/verify_exp043_k3_derivation.py`, but K3 plaintext provenance remains separately un-frozen (`verified:false`). Do not state that every possible K3-derived permutation is eliminated; only the registered affine-mod-97 surrogate family is.
+
 # Canonical current status — read this first
 
 This is the compact handoff for future sessions. It does **not** replace historical checkpoints.
