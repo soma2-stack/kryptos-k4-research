@@ -1,3 +1,5 @@
+> **EXP-029 reproducibility correction — 2026-09-21.** Treat EXP-029 as a historical scoped negative repaired by later audit, not as equivalent in artifact status to EXP-030+. Its original raw log/summary/verifier are absent and its wrapping/significance presentation was defective. See `docs/exp029-reproducibility-status-2026-09-21.md` and `docs/codex-audit.md`.
+
 > **EXP-031:** 1,216 cross-face 97-letter windows x 2 key alphabets x 12 conventions
 > = 29,184 cases, zero exact hits; 384 controls pass. See
 > [Checkpoint J](../results/2026-09-12-codex-checkpoint-J.md) for exact scope.
