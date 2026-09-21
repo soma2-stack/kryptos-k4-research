@@ -1,3 +1,5 @@
+> **CURRENT SOURCE NAVIGATION — 2026-09-21:** this legacy list is not exhaustive. Use [source-index-current.md](source-index-current.md) for the current evidence map, provenance corrections, archive audits and contamination boundaries. The entries below are retained as the original handoff source list.
+
 # Sources and source quality
 
 ## Primary / institutional sources
