@@ -1,3 +1,17 @@
+> **CURRENT REQUEST STATUS — 2026-09-21.** This file is an append-only historical request ledger; later sections supersede earlier "blocked/highest-value" wording. Current navigation:
+>
+> | Request | Current status |
+> |---|---|
+> | 1 — official cipher-side rows | **FULFILLED**; preserved in `data/cipher_side_rows.json` |
+> | 2 — unedited 2005 Zetter/Scheidt material / ScheidtNova payload | **OPEN / NOT PUBLICLY LOCATED**; outreach pending, do not duplicate |
+> | 3 — target-era Weltzeituhr alternate bearing | **OPEN BUT DEPRIORITIZED**; direct clock-as-Layer-A motivation later demoted |
+> | 4 — physical horizontal geometry | **DEMOTED / NOT A CRYPTANALYSIS BLOCKER** after fabrication/archive audits; exact geometry remains unmeasured |
+> | 5 — 432 vs 435 | **FULFILLED / RESOLVED AS UNITS ERROR** |
+> | 6 — public crib positions | **FULFILLED** |
+> | 7 — additional authenticated positional K4 plaintext | **OPEN / highest-information external constraint**, but do not seek solution material |
+>
+> See `docs/current-status.md`, `docs/source-index-current.md`, and the later status-refinement sections below before acting on any request.
+
 # External evidence requests (web-blocked in this environment)
 
 This environment's egress refuses the hosts below; re-tested this session:
