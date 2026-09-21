@@ -369,3 +369,45 @@ Do **not** currently use `docs/resume-prompt.md`, `docs/next-steps.md`,
 
 None of these repairs supplies a K4 solution. They improve the reliability of the research
 program and prevent future agents from reintroducing already-corrected premises.
+
+
+---
+
+## Repair pass completed — 2026-09-21
+
+The user authorized a prospective repair pass after this audit. The following audit findings were
+addressed on `claude/dreamy-archimedes-79k6u0` without rewriting historical checkpoint records:
+
+- **A1:** current-state guards added to README, research-state, next-steps, resume-prompt and ideas.
+- **A2:** Luna scout contract, state snapshot and AL-era open-question queue explicitly frozen as
+  historical on the Claude branch; KNOWN_STATE advanced prospectively through EXP-043.
+- **A3:** `data/cipher_side_rows.json` now records the 432-vs-435 issue as RESOLVED and removes
+  the stale `open_discrepancy` object.
+- **A4:** added `audit/verify_exp043_k3_derivation.py`, which independently reconstructs K3 from
+  an explicit 8x42 -> 24x14 double-rotation route and verifies the 191/192 differences, 168+168
+  cycle type, order 168 and a frozen permutation hash. The historical uncommitted “12 route
+  descriptions” count is no longer load-bearing.
+- **A5:** provenance was **not falsely upgraded**. The new verifier deliberately preserves and
+  reports `K3_plaintext verified=false`; current EXP-043 wording now separates reproducible
+  derivation from primary-source provenance.
+- **A6:** EXP-043 current wording now points to the corrected verification scope. The exact
+  rank-distribution/null calculation remains a documentation improvement rather than a blocking
+  validity issue.
+- **A7:** EXP-029 now has a dedicated prospective reproducibility-status note and is explicitly
+  classified as a historical scoped negative repaired by later audit, not equivalent to EXP-030+.
+- **A8:** `run_all.sh` is explicit opt-in only; `smoke.py` and `run_smoke.sh` are the safe
+  onboarding commands.
+- **A9:** added `requirements.txt` and `.github/workflows/smoke.yml`.
+- **A10:** added `docs/source-index-current.md`; legacy `docs/sources.md` points to it.
+- **A11:** added a current OPEN/FULFILLED/DEMOTED status table to
+  `docs/external-evidence-requests.md`.
+- **A12:** residual stale present-tense frontier statements in current-status were narrowed or
+  explicitly marked historical.
+- **A13:** CONTRIBUTING now codifies preregistration, discrimination accounting, controls,
+  independent verification, contamination discipline and prospective corrections.
+- **A14:** the duplicate EXP-005 baseline artifact was left in place because it is harmless and
+  may serve historical auditability; no research conclusion depends on deduplicating it.
+
+A CI run was not observable through the available GitHub status interface at repair time, so this
+appendix does not claim that GitHub Actions executed successfully. The smoke workflow and scripts
+are committed for execution in a normal clone/Actions environment.
