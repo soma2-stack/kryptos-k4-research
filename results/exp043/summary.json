@@ -1,0 +1,11 @@
+{
+  "controls": {
+    "adversarial": true,
+    "permutation_out_of_family": true,
+    "positive": true
+  },
+  "experiment": "EXP-043",
+  "feasible": [],
+  "prereg": "docs/exp043-preregistration.md",
+  "tested": 15197184
+}

@@ -71,6 +71,18 @@ finite domains are required; compatibility is not evidence.
 - **The simple feedback corridor is PROVISIONALLY EXHAUSTED** (EXP-040/041/042). Do NOT escalate
   to three taps, nonlinear f, 26x26 feedback tables or arbitrary state machines: those add
   flexibility without evidence and fail the discrimination budget below.
+- EXP-043 (2026-09-21): `M2 . pi . M1` with pi derived from K3 is exhaustively negative —
+  15,197,184 configurations, 0 feasible, verified by cycle certificates and 4.36e8 forward
+  simulations. DERIVED FACTS (no K4 crib score used): K1 = Vigenere KRY/KRY + PALIMPSEST (exact);
+  K2 = KRY/KRY + ABSCISSA (first 361 chars, tail diverges at the documented omitted character);
+  K3 = PURE transposition (identical letter multisets) with a UNIQUE recovered permutation of 336
+  positions, first differences only 191/192, cycle type 168+168. K3's rectangular route principle
+  needs r*c=n with 1<r,c<n: 336 admits 18 such rectangles, **97 is PRIME and admits 0**, so the
+  exact principle has NO K4 instance. Its faithful prime-length surrogate is the affine-mod-97
+  family (9,312), now tested and negative.
+- **No period rule exists across K1-K3** — any extrapolation from PALIMPSEST(10)/ABSCISSA(8)
+  requires K3 to have a key length, and K3 has none. The (8,10) pair is NOT independently
+  warranted; treat it only as an ordinary member of a declared sweep.
 - Hidden trigraphic stages behind additive masks are refuted only for periods 1, 3, and 9 by
   the repeated crib trigrams; this is not a universal fractionation negative.
 

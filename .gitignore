@@ -61,3 +61,5 @@ autonomous/session-*-output.log
 !results/exp041/summary.json
 !results/exp042/
 !results/exp042/summary.json
+!results/exp043/
+!results/exp043/summary.json

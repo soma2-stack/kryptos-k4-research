@@ -127,3 +127,23 @@ Final supervised conclusion: no new operational parameter, authenticated plainte
 - Assessment: evidence points substantially toward the 24 letters being insufficient to
   discriminate the surviving classes. The productive bucket (decisive AND motivated) is empty.
 - Classification: NEW (strong). K4 remains unsolved.
+
+
+### Claude continuation — 2026-09-21 — EXP-043; K1-K3 exhausted as a source of pi
+
+- Phase 1: K1/K2/K3 re-derived from repository data. K1 exact. K2 exact to the documented
+  omission at char 361. K3 proven a pure transposition; its permutation recovered uniquely from
+  12 agreeing route descriptions.
+- Phase 2 decisive arithmetic: K3's rectangular route principle has ZERO instances at prime
+  length 97 (336 has 18 nontrivial rectangles). The faithful surrogate is the affine-mod-97
+  family, derived with no reference to K4 crib scores.
+- Secondary question answered NEGATIVELY and falsified: no K1-K3 period rule can exist because
+  K3 has no key length.
+- Phase 3: inversion closure verified; the b-absorption hypothesis was TESTED AND REFUTED
+  (witness a=1,p=3,q=9 -> d_eff in {9,10,11}); conservative full corpus retained.
+- Phase 5 budget before implementation: N=15,197,184, log26(N)=5.08, worst d_eff=18, budget
+  23.08 < 24, expected survivors 2.3e-3. Preregistered at 2d5a2a4.
+- Result: 0 feasible. Controls incl. an out-of-family permutation control all pass. Verified by
+  cycle certificates (4,000/4,000) and 435,955,104 forward simulations.
+- Consequence: Class A is materially weakened. K1-K3 are now EXHAUSTED as a source of pi.
+- Classification: NEW (strong). K4 remains unsolved.
