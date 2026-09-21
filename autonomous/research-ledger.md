@@ -156,3 +156,14 @@ No audio obtained, therefore none assessed. Second structural blocker: speaker a
 requires a human ear, not an ASR substitute. Periodicity NOT promoted. Do not repeat this
 pass on this environment — see `docs/external/checkpoint-AM-2015-workshop-periodicity-audio-authentication.md`
 for the exact conditions that would unblock it.
+
+
+## Checkpoint AN — Scheidt steganography-related component
+**Status:** NEW documentary constraint (medium-high confidence).
+- Repository search found no prior `stego` / “piece relating to Stego” entry.
+- Public SciRealm page preserves a direct Scheidt clarification that K4 contained “a piece relating to Stego” while withholding how or in what context.
+- Admitted narrowly: K4 contains a steganography-related component.
+- Not admitted: any specific carrier, null cipher, acrostic, grille, binary encoding, insertion/deletion rule, physical-layout use, stage order, period, key length, alphabet, recurrence, reset or alignment.
+- Original correspondence/header not recovered, so provenance is not promoted to highest-grade primary evidence.
+- No new plaintext letter at indices 1, 3, 91, 93, 95 or 96.
+- Consequence: sharpens the masking evidence but still does not select a finite experiment; EXP-044 remains unjustified on this fact alone.
