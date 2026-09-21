@@ -37,7 +37,7 @@ check("432-vs-435 issue is prospectively resolved",
 check("stale open_discrepancy key absent", "open_discrepancy" not in rows["verification"])
 
 # Modern result artifacts must exist and parse.
-for n in range(30, 44):
+for n in range(30, 45):
     p = os.path.join(ROOT, "results", f"exp{n:03d}", "summary.json")
     check(f"EXP-{n:03d} summary exists", os.path.isfile(p))
     if os.path.isfile(p):
