@@ -1,3 +1,5 @@
+> **CURRENT STATE — 2026-09-21.** K4 remains UNSOLVED. This branch includes EXP-040 through EXP-043 and later provenance corrections. Read [docs/current-status.md](docs/current-status.md), [autonomous/KNOWN_STATE.md](autonomous/KNOWN_STATE.md), and [docs/repo-audit-2026-09-21.md](docs/repo-audit-2026-09-21.md) before using any historical status below. Statements below naming Checkpoint J/S/AE/AL as "current", saying no EXP-040 exists, or prescribing older next steps are preserved historical records and are superseded prospectively.
+
 > **Checkpoint J:** [image audit](docs/checkpoint-J-image-audit.md) and
 > [results](results/2026-09-12-codex-checkpoint-J.md). Three target-era faces
 > (UTC+0/+1/+2), 272 letters frozen. ATHEN absence retracted. EXP-031: 29,184
