@@ -1,3 +1,5 @@
+> **HISTORICAL PLANNING FILE — 2026-09-21 NOTICE.** Many "not yet tested" and "still not started" statements below predate later checkpoints and EXP-040–043. Use `docs/current-status.md` and `autonomous/KNOWN_STATE.md` for current coverage; use this file only to understand how ideas evolved.
+
 # Attack ideas
 
 Rewritten 2026-09-12 after the second research session. Status keys follow
