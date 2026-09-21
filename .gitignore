@@ -12,4 +12,46 @@ results/*
 !results/logs/
 results/logs/*
 !results/logs/*.txt
+!results/exp030/
+!results/exp030/summary.json
+!results/exp030/cases.jsonl.gz
 scratch/
+
+# Checkpoint J complete, bounded experiment results.
+!results/exp031/
+!results/exp031/*.json
+
+# Checkpoint K/L/M experiment results. These are the exact artifacts the committed
+# verifiers load, so without them a clean checkout cannot reproduce the checkpoints.
+# Curated only: small summaries, plus gzipped per-case rows for the two experiments whose
+# raw summary was megabytes. No bulk candidate dumps.
+!results/exp032/
+!results/exp032/summary.json
+!results/exp033/
+!results/exp033/summary.json
+!results/exp034/
+!results/exp034/summary.json
+!results/exp034/rows.jsonl.gz
+!results/exp035/
+!results/exp035/summary.json
+!results/exp035/rows.jsonl.gz
+!results/exp036/
+!results/exp036/summary.json
+
+# Checkpoint N.
+!results/exp037/
+!results/exp037/summary.json
+
+# Checkpoint Q.
+!results/exp038/
+!results/exp038/summary.json
+
+# Checkpoint R.
+!results/exp039/
+!results/exp039/summary.json
+!results/checkpoint_AC/
+!results/checkpoint_AC/*.json
+!results/checkpoint_AC/*.trace.jsonl.gz
+
+# Autonomous Luna worker raw stdout is retained locally, not versioned.
+autonomous/session-*-output.log

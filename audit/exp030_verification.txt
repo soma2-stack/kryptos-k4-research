@@ -1,0 +1,1 @@
+PASS: 172800/172800 contradiction witnesses verified independently; complete parameter coverage and input/result hashes verified.

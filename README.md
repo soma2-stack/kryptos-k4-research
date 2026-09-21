@@ -1,3 +1,15 @@
+> **Checkpoint J:** [image audit](docs/checkpoint-J-image-audit.md) and
+> [results](results/2026-09-12-codex-checkpoint-J.md). Three target-era faces
+> (UTC+0/+1/+2), 272 letters frozen. ATHEN absence retracted. EXP-031: 29,184
+> new multi-face cases, zero exact hits; 384 controls pass; independently verified.
+> K4 remains unsolved. Older statuses below are historical.
+
+> **Current audit (Checkpoint I):** see [Codex audit](docs/codex-audit.md) and
+> [verified continuation](results/2026-09-12-codex-checkpoint-I.md). Historical
+> entries below include superseded interpretations; the audit takes precedence.
+> EXP-030: 172,800 constant-step CET tape cases, any fixed letter-to-number lookup,
+> zero feasible mappings; 120 controls and independent certificates pass. K4 unsolved.
+
 # Kryptos K4 research handoff
 
 This repository preserves an ongoing, **unsolved** investigation into the 97-character
@@ -5,6 +17,153 @@ K4 cryptogram on Jim Sanborn's *Kryptos* sculpture. It is a reproducible handoff
 human, ChatGPT, or another research agent — not a claimed solution.
 
 ## Current position
+
+> **Checkpoint S (2026-09-12, `claude/k4-post-j`).** Documentary synthesis, **no experiment run
+> and no EXP-040 created** — the reported result. A newly audited first-person Sanborn manuscript
+> supersedes the waterjet fabrication story: the automated route was **rejected on cost** and the
+> letters were hand-cut from **metal stencils traced on scribed horizontal row lines**. So row
+> order is meaningful but pitch, a common x-grid and 31 physical columns are **unestablished** —
+> the physical models stay parked and **Request 4 is demoted**. The record also strengthens one
+> interpretation to SUPPORTED: the harder process was **custom-built and then modified by
+> Sanborn**, which makes searching for an unchanged textbook cipher materially less justified —
+> a coherent explanation for thirty-nine negatives rather than a reason to pick a fortieth
+> family. One new filter falls out: Sanborn intended K4 to be solved *later*, not never, so any
+> proposal's key entropy must sit inside EXP-019's ~66–76 letter unicity bound. The closest
+> EXP-040 candidate (`k[i] = f(row(i))`, 21 constraints against 3 free values) was worked and
+> **rejected on the gate** — a three-valued key contradicts the masking evidence. The manuscript
+> announces embedded K4 clues and is therefore **locked, not mined**. See
+> [Checkpoint S](results/2026-09-12-claude-checkpoint-S.md).
+
+> **Checkpoint R (2026-09-12, `claude/k4-post-j`).** **EXP-039** closed the last
+> structurally-motivated composition: a fixed monoalphabetic substitution after **double**
+> columnar transposition, both keys from the precommitted list `{KRYPTOS, PALIMPSEST,
+> ABSCISSA}`. All 9 ordered pairs give **distinct** composed permutations, none is the
+> identity or a single pass, all three pairs fail to commute, and all 9 were shown
+> **structurally** to lie outside EXP-033's corpus — by a run-decomposition test self-checked
+> against the single passes it correctly finds. Exact null recomputed for this family
+> (9.81×10⁻¹⁷ function, 5.52×10⁻¹⁸ bijection → 8.83×10⁻¹⁶ expected survivors). Result:
+> **0 FEASIBLE-FUNCTION, 0 FEASIBLE-BIJECTION** — contradiction at the strongest level, no
+> fixed map of any kind. Controls 9/9 planted, 9/9 adversarial (each mutating a repeated-letter
+> group), plus a non-bijective plant correctly separating the two criteria; verified
+> independently 35/35 with a selection sort and explicit grid simulation. Read narrowly: this
+> is **not** "double transposition is eliminated". See
+> [Checkpoint R](results/2026-09-12-claude-checkpoint-R.md).
+
+> **Checkpoint Q (2026-09-12, `claude/k4-post-j`).** **EXP-038** closed the stateful
+> recursive-key gap at its second-order affine scope: `k[n] = a·k[n-1] + b·k[n-2] (+ c) mod 26`
+> over the **full Z26**, message-aligned, all 12 committed conventions. The state was decided
+> **existentially** — the closed form makes each `(a,b,c)` a 24×2 exact linear system, so
+> 210,912 solves replaced 143 million trials. **Zero feasible**, and *neither crib block is
+> satisfiable on its own*, so it is not a near-miss. The null was computed from the family's
+> own realised image (4,481,750 distinct crib projections of 26²⁴ → 5.9×10⁻²⁷ expected
+> survivors), and the duplicate audit is quantitative: 11.9M tuples collapse to 7,585,006
+> streams, of which 1,701,518 have a 97-prefix periodic with `p ≤ 23` and are tagged ALREADY
+> COVERED. Verified **exhaustively and independently** — both 26⁴ and 26⁵ re-decided by direct
+> iteration without importing `k4lib`, 16/16. Read narrowly: this is **not** "recursive keys
+> are eliminated". See [Checkpoint Q](results/2026-09-12-claude-checkpoint-Q.md).
+
+> **Checkpoint P (2026-09-12, `claude/k4-post-j`).** The public crib positions are now
+> **externally verified** rather than inherited convention: contemporaneous NYT reporting
+> fixes `BERLIN` at one-based 64–69, `CLOCK` at 70–74 and `NORTHEAST` at 26–34, and `EAST` is
+> reporter-confirmed as the four letters immediately before `NORTHEAST` (grade B+, one step
+> weaker, and recorded as such). Audited against the repository: every span reproduces the
+> committed ciphertext and **no crib text or index changed**. Two consequences, both kept
+> narrow: standard Fractionated Morse is now **structurally incompatible with the published
+> positional crib semantics** (BERLIN needs 21 ternary symbols where six ciphertext letters
+> supply 18) — *not* generalised to all Morse or all fractionation; and the alignment
+> contingency on the **reflector-machine and Playfair** eliminations is **lifted**, checked by
+> confirming their witnesses sit in the directly numbered spans (reflector at 33 and 74; 7 of
+> Playfair's 10 pairs). No experiment was run. See
+> [Checkpoint P](results/2026-09-12-claude-checkpoint-P.md).
+
+> **Checkpoint O (2026-09-12, `claude/k4-post-j`).** Conservative session: symbolic audit
+> only, **no new experiment run** — both candidate families were closed by exact structural
+> observations costing seconds. **CM Bifid** reduces to EXP-012 (two 5×5 squares cannot emit
+> the `J` K4 carries). **Digrafid** is closed by the primality of 97: a block system emitting
+> `c > 1` per block gives length `c·m`, and no `c` in 2…96 divides 97. **Fractionated Morse**
+> got real work, because EXP-023 left Morse-as-structure open: `n` ciphertext letters supply
+> `3n` ternary symbols, and `BERLIN` needs 21 vs 18, `BERLINCLOCK` 44 vs 33, `NORTHEAST` 28
+> vs 27 — while a 97-letter plaintext would need a mean of 2.01 Morse marks against an
+> alphabet mean of 3.15. (`EASTNORTHEAST` fits *exactly* at 39 = 13×3; recorded, not
+> pursued.) **Gromark** was rejected before any primer search — its key values are digits
+> 0–9 and 11–16 of the 24 crib pairs demand a shift outside that set under every evidenced
+> alphabet pair, so **EXP-038 was not assigned**. Named classical fractionators are now
+> substantially exhausted; this is *not* "K4 is not fractionated". Next action: **verify the
+> primary wording of the public clues** and pin the 24 crib constraints to a cited source —
+> every experiment here consumes them as given. See
+> [Checkpoint O](results/2026-09-12-claude-checkpoint-O.md).
+
+> **Checkpoint M (2026-09-12, `claude/k4-post-j`).** Two of my own Checkpoint-L claims are
+> **retracted**. (1) The "432 vs 435" discrepancy was my unit error: K1 = 63 characters,
+> K2 = 372 *physical* characters = 369 letters + 3 `?`, so rows 1–14 = 435 characters = 432
+> letters + 3 `?`. **Request 5 fulfilled, no discrepancy.** (2) The "alphabet frontier" was
+> wrong: rebuilding the KRYPTOS keyword-mixed sequence from the keyword gives exactly
+> `k4lib`'s `KRY`, all four STD/KRY plaintext×ciphertext combinations were already
+> enumerated, and NSA gives KRYPTOS-mixed as both components for K1 *and* K2 — so the
+> evidenced alphabet was covered all along. `PALIMPSEST`/`ABSCISSA` are repeating **keys**,
+> not component keywords, so alphabets built from them are speculative; that candidate is
+> **rejected**.
+> Instead **EXP-036** closed the real gap — the hybrid the section sequence points at:
+> K1/K2's **periodic polyalphabetic** over K3's **transposition**, sitting between EXP-003
+> (this gate, 9,312 permutations) and EXP-033 (175 M permutations, one fixed monoalphabetic
+> map). Decidability was computed *before* naming it: contiguous crib runs keep 7–22
+> constraints across periods 2–23, and p = 24 was excluded in advance by the preregistered
+> `N·26⁻ᶜ < 0.01` rule. The key is decided existentially, so every repeating key word of
+> those lengths — `PALIMPSEST` and `ABSCISSA` included — is covered without adding
+> parameters. **4,313,878,272 cases, zero feasible**, both composition orders; controls
+> 72/72 planted, 72/72 adversarial (all capable of flipping the verdict), 72/72 period
+> discrimination; independently verified 17/17 with 1.84 M cases re-decided by explicit
+> grid simulation. Next: **vary the combiner** — the one structural assumption every
+> experiment here still shares. See
+> [Checkpoint M](results/2026-09-12-claude-checkpoint-M.md).
+
+> **Checkpoint L (2026-09-12, `claude/k4-post-j`).** Checkpoint K's evidence request was
+> fulfilled — the authoritative CIA/NSA cipher-side rows 1–24 — and it **corrected the
+> geometry**: rows 1–24 hold **29–33** characters, not a uniform 31, so `32 + 27×31 = 869`
+> gives the right total but is a false description and is retracted. Verified here, with
+> three independent corroborations (336 K3 letters, `OBKR` + K4 = 97, canonical K1/K3
+> openings) and one new unresolved discrepancy of my own finding (rows 1–14 give 432
+> letters against the commonly cited 435).
+> **No earlier result changes:** `audit/verify_geometry_correction.py` tests this per
+> experiment, 25/25 — EXP-032 uses rows 25–28 only, EXP-033's F3 was checked cell by cell
+> and never assumed a uniform panel, EXP-034 is purely textual. EXP-032's own printed
+> assertion of the false arithmetic is corrected in place.
+> **The physical "same column above" model is PARKED, not tested with a manufactured
+> lattice:** with a monospaced punch and a common row width every row would hold the same
+> count, so 29–33 means the pitch varies by up to 13.8% between rows and no common lattice
+> exists. Checkpoint K's "parameter-free" description of it is withdrawn.
+> Instead **EXP-035** used what the source *is* authoritative for — row content and order —
+> and tested a running key drawn from the 745 characters engraved directly above K4, with
+> an arbitrary letter-to-key function decided exactly: **43,824 cases, 41,412
+> contradictions, zero feasible, zero undecided**, constraint counts 4–16, all controls
+> capable of flipping the verdict, independently verified 14/14. That is a real loss for
+> the architecture Checkpoint K ranked first. It also exposed a frontier: every experiment
+> here assumes **shift** combiners over just two indexing alphabets, so the next step is to
+> re-test under a precommitted set of keyword-derived mixed alphabets. See
+> [Checkpoint L](results/2026-09-12-claude-checkpoint-L.md).
+
+> **Checkpoint K (2026-09-12, `claude/k4-post-j`).** Continued from Codex Checkpoint J.
+> The decisive audit finding is that **every experiment through EXP-031 assumes the key is
+> a function of message position**, and the argument for that (EXP-021's K4/K5
+> correspondence) is withdrawn by `docs/codex-audit.md` finding 7 — so architectures that
+> *move* the plaintext were reopened. Three preregistered exact experiments, all negative,
+> all independently verified:
+> **EXP-032** key as an arbitrary function of engraving column — 12/12 contradictions;
+> **EXP-033** arbitrary monoalphabetic substitution composed with a declared transposition
+> family (keyed columnar widths 2–11 with **all** column orders, rectangle routes at every
+> width, and routes on K4's real ragged engraving grid) — **175,820,784 cases, zero
+> feasible**, against a computed chance-survival of 6.6×10⁻¹⁷ per permutation;
+> **EXP-034** text-dependent keys as arbitrary functions of one source letter at one lag —
+> 2,676 decided, zero feasible, 6,540 honestly reported UNDECIDED for lack of constraint.
+> In none of these was the substitution or lookup enumerated: it is decided exactly by
+> consistency, which is what keeps the families falsifiable.
+> Also recorded: the corrected `OBKR` geometry **cannot** change any crib-constrained
+> position- or column-indexed result, because no crib lies at K4 positions 0–3 and the
+> corrected and old column maps agree for every i ≥ 4. The highest-information next step is
+> an **evidence request**, not a search — the NSA cipher-side transcription of rows 1–24,
+> which would make a key drawn from the characters physically above K4 testable. See
+> [Checkpoint K](results/2026-09-12-claude-checkpoint-K.md) and
+> [external evidence requests](docs/external-evidence-requests.md).
 
 > **Checkpoint H, Tier 1 met (2026-09-12).** A 4 Nov 1989 press photograph — dated from its
 > own `NEUES FORUM` / `SDP` banners, not from caption metadata — shows the **complete CET /

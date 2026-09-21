@@ -1,0 +1,55 @@
+{
+ "experiment": "EXP-035",
+ "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+ "cipher_side_rows_sha256": "320cb6db1516af7a7fafacd8168cad68e209a98951821af020ccaef8e4b145f2",
+ "prereg": "docs/exp035-preregistration.md",
+ "model": "k[i] = f(S[g(i)]), f any function, decided exactly",
+ "min_constraints": 4,
+ "streams": {
+  "above": 745,
+  "above_rev": 745,
+  "k12": 435,
+  "k3": 337,
+  "full28": 869,
+  "full28_rev": 869
+ },
+ "stats": {
+  "cases": 43824,
+  "contradiction": 41412,
+  "blocked": 2412
+ },
+ "deduplicated": 80952,
+ "constraint_distribution": {
+  "6": 1968,
+  "7": 4800,
+  "8": 7620,
+  "9": 7848,
+  "10": 7968,
+  "11": 6660,
+  "12": 4188,
+  "5": 420,
+  "4": 24,
+  "13": 1632,
+  "14": 432,
+  "15": 240,
+  "16": 24
+ },
+ "feasible": [],
+ "controls": {
+  "g1_planted_total": 36,
+  "g1_planted_pass": 36,
+  "g1_adv_total": 36,
+  "g1_adv_pass": 36,
+  "g2_planted_total": 15,
+  "g2_planted_pass": 15,
+  "g2_adv_total": 15,
+  "g2_adv_pass": 15
+ },
+ "rows_file": "rows.jsonl.gz",
+ "rows_count": 43824,
+ "repackaging": {
+  "why": "The original single summary.json from the run was too large to version sensibly (1.28 MB / 8.98 MB). It was split LOSSLESSLY into this file plus rows.jsonl.gz so the verifier can run from a clean checkout. Nothing was recomputed or reconstructed from prose; the round trip was checked to reproduce the original object exactly.",
+  "original_summary_sha256": "5085192999e465e284ed85250147829eaff0e6e5756eab08d9699419d8c48f7f",
+  "round_trip_verified": true
+ }
+}

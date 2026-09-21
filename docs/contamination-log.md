@@ -194,4 +194,247 @@ Protocol points worth recording:
   OBSERVATION, NOT EVIDENCE and refused as grounds to run the test, which is the only reason
   nothing downstream was built on it.
 
+## Session 13 (Checkpoint K, branch claude/k4-post-j) — clean, no incidents
+
+Inputs were repository state at the Codex Checkpoint J head and five external Perplexity
+research documents. All of it is documentary research about published sources: NSA
+declassified PDFs, two 2005 WIRED interviews, a 2009 WIRED feature, and a picture-agency
+collection page. No claimed-solution site was used or cited; no alleged K4 plaintext,
+solution dump, or private K5 material was sought, accessed or inferred. Cribs used:
+EASTNORTHEAST and BERLINCLOCK only.
+
+Two protocol points:
+
+- Two attempts to fetch primary sources (`www.nsa.gov`, `media.defense.gov`) were refused
+  by the proxy with 403. The missing material was written up as an exact external evidence
+  request in `docs/external-evidence-requests.md` rather than reconstructed from memory —
+  specifically the K1–K3 cipher-side transcription, which I do know approximately and
+  deliberately did not write down, because an approximate transcription is what produced
+  the retracted LONDON misreading at Checkpoint H.
+- Preregistrations for EXP-032/033/034 were committed before implementation, and each
+  names its prohibited post-hoc expansions. No result was tuned around.
+
+## Session 14 (Checkpoint L, branch claude/k4-post-j) — clean, no incidents
+
+Input was the fulfilled evidence request: the CIA Panel 1 cipher-side text version with NSA
+corroboration, supplied in `docs/external/checkpoint-K-nsa-cipher-rows-1-24.md`. This is
+public *ciphertext* and public institutional transcription. No claimed-solution site was
+used or cited; no alleged K4 plaintext, solution dump, or private K5 material was sought,
+accessed or inferred. Cribs used: EASTNORTHEAST and BERLINCLOCK only.
+
+Protocol points:
+
+- The supplied transcription was verified before use rather than accepted, and three
+  independent corroborations are recorded in `data/cipher_side_rows.json` alongside one
+  discrepancy left explicitly UNRESOLVED.
+- The physical alignment model was **parked** rather than rescued with an invented lattice,
+  and the reasoning is recorded in the EXP-035 preregistration so it can be checked.
+- `k12` (rows 1–14) is flagged in the data and in every verdict that touches it, because of
+  the unresolved 432-vs-435 letter count.
+
+## Session 15 (Checkpoint M, branch claude/k4-post-j) — clean, no incidents
+
+Input was `docs/external/checkpoint-L-web-audit-requests-4-5.md`: CIA and NSA primary
+transcription and solution material, two WIRED reports, a Library of Congress catalogue
+record, and a Smithsonian finding aid. All public documentary evidence. No
+claimed-solution site used or cited; no alleged K4 plaintext, solution dump, or private K5
+material sought, accessed or inferred. Cribs used: EASTNORTHEAST and BERLINCLOCK only.
+
+Protocol points:
+
+- Both corrections in the handoff were **verified against repository data before use**, and
+  both turned out to be corrections of my own errors rather than of the evidence.
+- The physical/intended source distinction is now recorded explicitly: the omitted `X`
+  Sanborn removed from a K2 line belongs to an *intended pre-aesthetic* source and will
+  only ever be tested as a separately preregistered source variant, never inserted
+  silently into the physical stream.
+- Candidate A (alphabets built from PALIMPSEST/ABSCISSA) was **rejected for lack of
+  documentary support**, not tested speculatively — the same gate that admitted EXP-036.
+
+## Session 16 (Checkpoint O, branch claude/k4-post-j) — clean, no incidents
+
+Symbolic audit session. Inputs were the repository's own data and published descriptions of
+classical ciphers. No claimed-solution site used or cited; no alleged K4 plaintext, solution
+dump, or private K5 material sought, accessed or inferred. Cribs used: EASTNORTHEAST and
+BERLINCLOCK only.
+
+Protocol points:
+
+- Two cipher families were closed by exact structural arguments and **no search was run** on
+  either, in line with the session's conservative budget rule.
+- Where I lacked an authoritative offline definition — Digrafid's block ratio, the ACA
+  columnar Gromark alphabet — I said so and routed around it rather than reconstructing a
+  "standard" from memory.
+- A near-miss was recorded and deliberately not pursued: EASTNORTHEAST fits Fractionated
+  Morse exactly at 39 = 13x3, while BERLINCLOCK in the same message fails by 11.
+
+## Session 17 (Checkpoint P, branch claude/k4-post-j) — clean, no incidents
+
+Input was an external evidence handoff citing contemporaneous New York Times reporting, an
+NPR interview transcript, and a reporter's public confirmation, all concerning the *positions*
+of Sanborn's published clue words. Public reporting about public clues; no alleged K4
+plaintext, purported solution, or private K5 material was sought, accessed or inferred beyond
+the four already-public clue words this repository has always used.
+
+Protocol points:
+
+- The handoff's positional claims were re-derived against the committed ciphertext before
+  acceptance; no crib text or index changed.
+- The four clue releases were graded separately rather than flattened; `EAST` is recorded at
+  B+ because its position is inferred from "immediately before NORTHEAST".
+- The upgrade was propagated only as far as the evidence licenses: the Fractionated-Morse
+  rejection was made unconditional against the *published* semantics and explicitly not
+  generalised, and the lifted Playfair/reflector contingency was checked against the directly
+  numbered spans rather than assumed.
+
+## Session 18 (Checkpoint Q, branch claude/k4-post-j) — clean, no incidents
+
+Pure computation on repository data: the public ciphertext, the public-verified crib
+positions, and an ordinary classical-cipher construction. No claimed-solution site used or
+cited; no alleged K4 plaintext, purported solution, or private K5 material sought, accessed or
+inferred.
+
+Protocol points:
+
+- The family-structure and null figures were computed **without touching the real target
+  vectors**, so the information-gain gate was decided before the experiment could see its
+  answer; the preregistration was committed before implementation.
+- A stale input hash in the first draft of the preregistration was corrected **before
+  execution**, with the substitution recorded in the file rather than silently swapped.
+- F1 and F2 were admitted together in advance specifically so that a negative on F1 could not
+  be followed by adding the affine term as a rescue.
+
+## Session 19 (Checkpoint R, branch claude/k4-post-j) — clean, no incidents
+
+Pure computation on repository data: the public ciphertext, the public-verified crib positions,
+and three keywords already documented in the repository. No claimed-solution site used or
+cited; no alleged K4 plaintext, purported solution, or private K5 material sought, accessed or
+inferred.
+
+Protocol points:
+
+- The permutation audit and the exact null were computed **before** any crib verdict, and the
+  preregistration was committed before the verdicts were evaluated.
+- The keyword list stayed closed after the result: nothing was added, no tie rule was varied,
+  no width was extended, and nothing was optimised.
+- The next action recommended is an **evidence** request rather than another family, because
+  every nameable public-evidence architecture has now been tested.
+
+## Session 20 (Checkpoint S, branch claude/k4-post-j) — clean, no incidents
+
+Documentary synthesis only; no cryptanalytic experiment was run. Inputs were the repository's
+own archive audit notes for Box 6 Folder 9, Series 9 Box 16 Folder 2, and the existing Scheidt
+material. No claimed-solution site used or cited; no alleged K4 plaintext, purported solution, or
+private K5 material sought, accessed or inferred.
+
+**A protocol point of unusual importance.** Box 6 Folder 9 is a first-person Sanborn manuscript
+that **explicitly states it contains embedded K4 clues**. Only explicit factual statements about
+fabrication, collaboration, custody and design intent were admitted. No acrostic, first/last
+letter, numeric, capitalisation, chapter-title, word-count, place-name or repeated-phrase mining
+was performed. An intentionally clue-bearing text must not be used as an answer oracle, and
+unlocking it would require a deliberate, separately recorded protocol change — which is not
+recommended and was not made.
+
+Also recorded: the Webster partial-plaintext/partial-key custody item (Folder 9 pp.20–21) was
+noted as provenance only and deliberately **not** pursued this session, since partial plaintext
+would engage the contamination protocol directly.
+
 ## Incidents 2+ — none recorded.
+
+## Codex Checkpoint I — no plaintext contamination incident
+
+Audited the specified commit and tested only the existing public crib constraints.
+Synthetic controls use X filler; no candidate full plaintext was ingested. Exact-ID
+archive searches for the three supplied photo targets yielded no usable image.
+One archive snippet and unrelated numeric-ID search matches were returned; no
+claimed-solution source was accessed and no new historical transcription was added.
+No external verifier submission. See codex-image-request.md for the paused evidence task.
+
+## Codex Checkpoint J — clean historical image evidence
+
+Three supplied images inspected. Publisher previews and a larger bpb source were
+retrieved only via the exact historical archive links already in the repository.
+No modern list, claimed K4 solution, leaked text or extra plaintext assumption was
+used. ATHEN absence retracted from direct pixels. Reconstruction and EXP-031
+preregistration published before execution; checksum repair of two transferred
+JPEGs completed before scoring. 384 synthetic X-filler controls, public cribs only.
+No external verifier contacted.
+
+## Claude Checkpoint S2 — no contamination incident
+
+Documentary re-evaluation of the 1991 ABC World News Tonight Scheidt B-roll transcript only.
+No experiment was designed or run, no plaintext candidate was ingested, no claimed-solution
+source was consulted, and no external verifier was contacted. The muffled interview fragment
+was quarantined rather than mined; no words from it were promoted to key material, and the
+Box 6 Folder 9 contamination lock remains in force.
+
+## Claude Checkpoint T — no contamination incident
+
+Constraint-first architecture pass using only the pinned 97-character ciphertext, the two
+public-source-verified cribs, the authoritative cipher-side row transcription, and
+documentary evidence already admitted under protocol. No alleged plaintext, claimed
+solution, solution dump, leaked material, private K5 material or quarantined Folder 8 page
+was accessed, and no latent-clue mining of the Folder 9 manuscript was performed. No
+external verifier was contacted. No new experiment was created; no plaintext beyond the 24
+verified crib letters was assumed at any point.
+
+## Claude Checkpoint U — no contamination incident
+
+Public-clue audit of 2025 Sanborn statements. Web search repeatedly surfaced pages
+purporting to carry the 2025-discovered K4 plaintext, reconstructions and solution
+write-ups; none was opened, and later queries blocked those domains explicitly. No
+auction-secret material, no private K5 material, no quarantined Folder 8 page and no
+alleged plaintext was accessed, and no plaintext word was inferred from a thematic clue.
+No primary source was reachable from this environment, so every 2025 statement is graded
+C+/B- and recorded as requiring primary verification before use. No experiment was created.
+
+## Claude Checkpoint AA — no contamination incident
+
+Repo- and mathematics-driven residual architecture elimination. No web search was performed.
+No alleged full K4 plaintext, 2025 discovered or leaked plaintext, reconstruction, proposed
+solution, solution dump, private K5 material, auction-secret material or post-solution reverse
+engineering was accessed. Only the pinned ciphertext and the two public-source-verified cribs
+were used; no additional plaintext was assumed or inferred at any point. No experiment code and
+no EXP-040 preregistration were created.
+
+## Claude Checkpoint AC — no contamination incident
+
+Independent audit of Codex Checkpoint AB and exact CSP closure of its Trifid residual. No web
+search. Only the pinned ciphertext and the two public-source-verified cribs were used. No
+alleged, leaked, discovered or reconstructed K4 plaintext, no proposed solution, no private K5
+material, no auction-secret material and no post-solution reverse engineering was accessed.
+Unknown plaintext positions were kept as variables throughout and never filled with guessed
+English; no language scoring of any kind was used. SAT certificates deliberately record cube
+cells only and omit any letter labelling of the 73 unknown positions, since every bijection
+from unused cells to unused letters completes the model equally and a labelling would amount to
+manufacturing a plaintext candidate. Codex files were read from their commit but never copied
+or modified, and no branch was merged.
+
+## Claude Checkpoint AD — no contamination incident
+
+Verification strengthening only. No web search, no new cryptanalytic family, no plaintext
+beyond the two public-source-verified cribs. The 15 SAT configurations were not chased,
+optimised, language-scored or relabelled, and no keywords were added; unknown plaintext
+positions remained variables throughout. No alleged, leaked or reconstructed K4 plaintext, no
+solution dump, no private K5 material and no auction-secret material was accessed. Codex files
+were not read, copied or modified in this checkpoint and no branch was merged.
+
+## Claude Checkpoint AE — no contamination incident
+
+Decidability census: algebra and constraint counting only. No cipher sweep, no new family, no
+keyspace search, no language scoring. No web search. Only the two public-source-verified cribs
+were used; the 2025 archival plaintext discovery was not treated as licensing any use of its
+contents, and no alleged, leaked or reconstructed K4 plaintext, solution site, private K5
+material or auction-secret material was searched for, fetched, quoted or inferred. The 15
+conditionally-SAT Trifid configurations were not chased, optimised, scored or relabelled.
+
+## Claude Checkpoint AF — no contamination incident
+
+Documentary retrieval attempt only; no cipher experiment, no keyspace search, no language
+scoring, and the 15 conditionally-SAT Trifid configurations were not touched. The
+`ScheidtNova.doc` payload was not retrieved and no transcript content was quoted, paraphrased or
+inferred from the filename, index metadata or search snippets. Search results surfaced at least
+one site advertising a B-roll transcript said to disclose techniques and concepts about K4, plus
+other solution-adjacent pages; none was accessed, cited, or allowed into the analysis. No alleged
+full K4 plaintext, leaked or reconstructed solution, auction-secret material or private K5
+material was searched for, fetched, quoted or inferred. No duplicate outreach was sent to GBH.

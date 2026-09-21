@@ -1,0 +1,1 @@
+Blocked: the workspace command runner failed before execution (`apply deny-read ACLs`). I could not read the required files or update state/ledger, so no scout task was performed and no files changed.

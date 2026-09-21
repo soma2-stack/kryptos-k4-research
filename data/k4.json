@@ -19,7 +19,7 @@
   ],
   "kryptos_alphabet": "KRYPTOSABCDEFGHIJLMNQUVWXZ",
   "notes": [
-    "The crib positions are the canonical working positions used in the inherited research. Verify against a primary transcript before relying on them for publication.",
+    "The crib positions are public-source verified: contemporaneous New York Times reporting explicitly fixes BERLIN at one-based 64-69, CLOCK at 70-74, and NORTHEAST at 26-34; EAST was publicly confirmed by NYT reporter John Schwartz as the four plaintext letters immediately before NORTHEAST after checking Sanborn's private release. See docs/external/checkpoint-O-public-crib-primary-verification.md.",
     "No unverified full plaintext is included here."
   ]
 }

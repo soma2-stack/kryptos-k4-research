@@ -46,7 +46,7 @@ check("target-era CET face carries no unknowns", t["unknown"] == [], str(t["unkn
 check("target-era CET face is COMPLETE", g.face_complete(TGT))
 check("target-era CET letter total is 120",
       sum(len(n.replace(" ", "")) for n in t["upper"] + t["lower"]) == 120)
-check("target-era CET lower band is strictly latitude-descending (internal corroboration)",
+check("target-era CET lower band matches the frozen order (not a latitude verification)",
       LOWER89 == ["KOPENHAGEN", "WIEN", "BERN", "BELGRAD", "ROM", "TUNIS",
                   "BRAZZAVILLE", "KINSHASA", "LUANDA"])
 check("LONDON is on the UTC+0 face, not CET",

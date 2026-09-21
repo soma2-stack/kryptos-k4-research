@@ -1,0 +1,101 @@
+2026-09-14 setup: isolated Luna scout initialized from a41cee0.
+2026-09-14T00:48:06 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1
+2026-09-14T00:48:06 RUN 1 begin
+2026-09-14T00:48:06 RUN 1 failure count=1 error=Codex exited with status 2
+2026-09-14T00:48:06 Repeated failure limit reached; exiting.
+2026-09-14T00:48:06 END runs=1 failures=1
+2026-09-14T00:49:37 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1
+2026-09-14T00:49:37 RUN 1 begin
+2026-09-14T00:52:00 RUN 1 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-01-final.md
+ M autonomous/supervisor.log
+ M run-scout.ps1
+?? autonomous/session-01-final.md
+?? autonomous/session-01-output.log
+remote: 
+remote: Create a pull request for 'luna/k4-autonomous-scout' on GitHub by visiting:        
+remote:      https://github.com/soma2-stack/kryptos-k4-research/pull/new/luna/k4-autonomous-scout        
+remote: 
+To https://github.com/soma2-stack/kryptos-k4-research.git
+ * [new branch]      luna/k4-autonomous-scout -> luna/k4-autonomous-scout
+2026-09-14T00:52:04 RUN 1 push success
+2026-09-14T00:52:04 END runs=1 failures=0
+2026-09-14T00:59:29 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=12
+2026-09-14T00:59:29 RUN 1 begin
+2026-09-14T01:13:33 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=2
+2026-09-14T01:13:33 RUN 2 begin
+2026-09-14T01:13:33 RUN 2 exit=1
+2026-09-14T01:13:33 RUN 2 failure count=1 error=Codex exited with status 1
+2026-09-14T01:13:33 Repeated failure limit reached; exiting.
+2026-09-14T01:13:33 END runs=1 failures=1
+2026-09-14T01:24:16 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=3
+2026-09-14T01:24:16 RUN 3 begin
+2026-09-14T01:24:16 RUN 3 exit=1
+2026-09-14T01:24:16 RUN 3 failure count=1 error=Codex exited with status 1
+2026-09-14T01:24:16 Repeated failure limit reached; exiting.
+2026-09-14T01:24:16 END runs=1 failures=1
+2026-09-14T01:28:30 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=4 mcp=disabled
+2026-09-14T01:28:30 RUN 4 begin
+2026-09-14T01:28:56 RUN 4 exit=0
+2026-09-14T01:28:56 RUN 4 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-04-final.md
+To https://github.com/soma2-stack/kryptos-k4-research.git
+   6921f9e..7923323  luna/k4-autonomous-scout -> luna/k4-autonomous-scout
+2026-09-14T01:28:58 RUN 4 push success
+2026-09-14T01:28:58 END runs=1 failures=0
+2026-09-14T01:30:19 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=5 mcp=disabled
+2026-09-14T01:30:19 RUN 5 begin
+2026-09-14T01:31:06 RUN 5 exit=0
+2026-09-14T01:31:06 RUN 5 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-05-final.md
+Everything up-to-date
+2026-09-14T01:31:07 RUN 5 push success
+2026-09-14T01:31:07 END runs=1 failures=0
+2026-09-14T01:34:50 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=6 mcp=disabled
+2026-09-14T01:34:50 RUN 6 begin
+2026-09-14T01:35:17 RUN 6 exit=0
+2026-09-14T01:35:17 RUN 6 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-06-final.md
+Everything up-to-date
+2026-09-14T01:35:18 RUN 6 push success
+2026-09-14T01:35:18 END runs=1 failures=0
+2026-09-14T01:39:39 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=7 mcp=disabled
+2026-09-14T01:39:39 RUN 7 begin
+2026-09-14T01:40:03 RUN 7 exit=0
+2026-09-14T01:40:03 RUN 7 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-07-final.md
+Everything up-to-date
+2026-09-14T01:40:03 RUN 7 push success
+2026-09-14T01:40:04 END runs=1 failures=0
+2026-09-14T01:41:15 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=8 mcp=disabled
+2026-09-14T01:41:15 RUN 8 begin
+2026-09-14T01:41:42 RUN 8 exit=0
+2026-09-14T01:41:42 RUN 8 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-08-final.md
+Everything up-to-date
+2026-09-14T01:41:43 RUN 8 push success
+2026-09-14T01:41:43 END runs=1 failures=0
+2026-09-14T01:44:28 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=9 mcp=disabled
+2026-09-14T01:44:28 RUN 9 begin
+2026-09-14T01:44:48 RUN 9 exit=0
+2026-09-14T01:44:48 RUN 9 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-09-final.md
+Everything up-to-date
+2026-09-14T01:44:49 RUN 9 push success
+2026-09-14T01:44:49 END runs=1 failures=0
+2026-09-14T01:48:55 START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout model=gpt-5.6-luna maxRuns=1 timeoutSeconds=600 sessionStart=10 mcp=disabled
+2026-09-14T01:48:55 RUN 10 begin
+2026-09-14T01:49:22 RUN 10 exit=0
+2026-09-14T01:49:22 RUN 10 success final=C:\Users\coler\Documents\Codex\k4-luna-scout\autonomous\session-10-final.md
+Everything up-to-date
+2026-09-14T01:49:23 RUN 10 push success
+2026-09-14T01:49:23 END runs=1 failures=0
+2026-09-14T06:23:23Z KEEP_AWAKE unavailable: Cannot convert argument "flags", with value: "-2147483647", for "SetThreadExecutionState" to type "System.UInt32": "Cannot convert value "-2147483647" to type "System.UInt32". Error: "Value was either too large or too small for a UInt32.""
+2026-09-14T06:23:23Z START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout-standalone model=gpt-5.6-luna effort=xhigh sol=gpt-5.6-sol solEffort=low maxRuns=0 lunaTimeoutSeconds=600 solTimeoutSeconds=300 sessionStart=2
+2026-09-14T06:23:23Z VALIDATION FAILURE: Luna validation exit 1
+2026-09-14T06:23:23Z KEEP_AWAKE restored; supervisor exited.
+2026-09-14T06:28:19Z KEEP_AWAKE enabled (thread-scoped).
+2026-09-14T06:28:19Z START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout-standalone model=gpt-5.6-luna effort=xhigh sol=gpt-5.6-sol solEffort=low maxRuns=0 lunaTimeoutSeconds=600 solTimeoutSeconds=300 sessionStart=2
+2026-09-14T06:29:27Z VALIDATION FAILURE: Luna validation did not report PASS
+2026-09-14T06:29:27Z KEEP_AWAKE restored; supervisor exited.
+2026-09-14T06:33:32Z KEEP_AWAKE enabled (thread-scoped).
+2026-09-14T06:33:32Z START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout-standalone model=gpt-5.6-luna effort=xhigh sol=gpt-5.6-sol solEffort=low maxRuns=0 lunaTimeoutSeconds=600 solTimeoutSeconds=300 sessionStart=2
+2026-09-14T06:34:57Z VALIDATION FAILURE: Luna validation did not report PASS
+2026-09-14T06:34:57Z KEEP_AWAKE restored; supervisor exited.
+2026-09-14T10:05:48Z KEEP_AWAKE enabled (thread-scoped).
+2026-09-14T10:05:48Z START branch=luna/k4-autonomous-scout root=C:\Users\coler\Documents\Codex\k4-luna-scout-standalone model=gpt-5.6-luna effort=xhigh sol=gpt-5.6-sol solEffort=low maxRuns=1 lunaTimeoutSeconds=600 solTimeoutSeconds=300 sessionStart=2
+2026-09-14T10:07:59Z VALIDATION FAILURE: Luna validation did not report PASS
+2026-09-14T10:07:59Z KEEP_AWAKE restored; supervisor exited.

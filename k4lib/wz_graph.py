@@ -20,8 +20,9 @@ partially read face can never count as complete.
 Within one era, a PARTIAL reading of a band never degrades a COMPLETE reading of the
 same band: if the partial's names are already in the complete list it is recorded as
 corroboration from a second frame. A complete reading clears any incompleteness marker
-an earlier partial left. Only a partial naming something the complete list lacks is a
-CONFLICT, and that is recorded rather than silently resolved.
+an earlier partial left. Membership or order disagreements are CONFLICTS, recorded
+rather than silently resolved. The first complete observation is preserved when
+another complete observation disagrees. Conflicts block completeness.
 
 Faces are keyed by (sector, era): the same sector photographed in two decades is two
 nodes, because completeness is a per-era property and a later frame must never dilute
@@ -56,12 +57,19 @@ class DrumGraph:
             f["utc"] = utc
         for band in complete_bands:
             val = list({"upper": upper, "lower": lower}[band] or [])
+            if band in f["complete_bands"]:
+                if val != f[band]:
+                    f["conflicts"].append(
+                        f"{source}: competing complete {band} order: {val}")
+                continue  # preserve the first complete observation, even on conflict
             # a complete reading is AUTHORITATIVE: it REPLACES whatever partial readings
             # left behind, so the transcribed order is preserved exactly as read
             earlier = [n for n in f[band] if n not in val]
             if earlier:
                 f["conflicts"].append(
                     f"{source}: complete {band} reading omits names an earlier partial reported: {earlier}")
+            elif f[band] and [n for n in val if n in f[band]] != f[band]:
+                f["conflicts"].append(f"{source}: complete {band} contradicts earlier partial order")
             elif f[band]:
                 f["corroborated"].append(
                     f"earlier partial {band} reading is a subset of {source}'s complete reading")
@@ -76,6 +84,9 @@ class DrumGraph:
                        if n not in f[band]]
                 if new:
                     f["conflicts"].append(f"{source}: {band} names not in the complete reading: {new}")
+                elif (observed := list({"upper": upper, "lower": lower}[band] or [])) != [
+                        n for n in f[band] if n in observed]:
+                    f["conflicts"].append(f"{source}: partial {band} contradicts complete order")
                 elif source and source not in f["corroborated"]:
                     f["corroborated"].append(f"{source} corroborates {band}")
                 continue
@@ -133,7 +144,9 @@ class DrumGraph:
 
     def face_complete(self, fid):
         f = self.faces[fid]
-        return bool(f["upper"]) and bool(f["lower"]) and not f["unknown"]
+        return (bool(f["upper"]) and bool(f["lower"]) and not f["unknown"]
+                and not f["conflicts"]
+                and all(b in f["complete_bands"] for b in ("upper", "lower")))
 
     PSEUDO = ("lower", "half-hour")
 
@@ -159,9 +172,13 @@ class DrumGraph:
         with_lower = [f for f in sect if self.faces[f]["lower"]]
         upper_complete = [f for f in sect
                           if self.faces[f]["upper"]
+                          and "upper" in self.faces[f]["complete_bands"]
+                          and not self.faces[f]["conflicts"]
                           and not any("upper" in u for u in self.faces[f]["unknown"])]
         lower_complete = [f for f in sect
                           if self.faces[f]["lower"]
+                          and "lower" in self.faces[f]["complete_bands"]
+                          and not self.faces[f]["conflicts"]
                           and not any("lower" in u for u in self.faces[f]["unknown"])]
         return {
             "faces_total": total_faces,

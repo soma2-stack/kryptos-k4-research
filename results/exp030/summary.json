@@ -1,0 +1,85 @@
+{
+  "base": "0cb2b38d2b81980d9c7b099c3727423335f9d86e",
+  "case_format": "JSONL: zero-based crib-list indices in contradiction witness",
+  "case_gzip_sha256": "0659c04aebe56f74295fae23b9910266192568c92061f0af02de049381304f2b",
+  "case_uncompressed_sha256": "63921dde6928dba2e43ea81ab4df1df3276ed3fddaf21b5833dc22c3694c1087",
+  "cases": 172800,
+  "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+  "controls_passed": 120,
+  "counts": {
+    "contradiction": 172800
+  },
+  "experiment": "EXP-030",
+  "frozen_reconstruction": {
+    "basis": "PA-19891104-demo-CET, LOCAL VISUAL, dated 4 Nov 1989 (content-corroborated), both band ends visible",
+    "confidence": {
+      "lower": "MEDIUM-HIGH",
+      "upper": "HIGH"
+    },
+    "declared": "2026-09-12, session 12, BEFORE any test was run against it",
+    "freeze_rule": "This reconstruction is FROZEN. It may be changed only by new image evidence, never in response to a test result. Any test reported against it must cite this block verbatim.",
+    "known_risk": "A single misread lower-band name changes the tape and invalidates the specific alignments tested. A NEGATIVE result is therefore conditional on this transcription; it is not a claim about every possible CET tape.",
+    "letters": {
+      "lower": 58,
+      "total": 120,
+      "upper": 62
+    },
+    "lower": [
+      "KOPENHAGEN",
+      "WIEN",
+      "BERN",
+      "BELGRAD",
+      "ROM",
+      "TUNIS",
+      "BRAZZAVILLE",
+      "KINSHASA",
+      "LUANDA"
+    ],
+    "sector": "UTC+1 (Berlin / CET) - the face named by the BERLINCLOCK crib",
+    "upper": [
+      "AMSTERDAM",
+      "BERLIN",
+      "BRUSSEL",
+      "BUDAPEST",
+      "MADRID",
+      "PARIS",
+      "PRAG",
+      "STOCKHOLM",
+      "WARSCHAU"
+    ]
+  },
+  "grade": "EXHAUSTIVELY ELIMINATED WITHIN SPECIFIED MODEL",
+  "independent_pairwise_checks": 172800,
+  "parameters": {
+    "conventions": [
+      "vigenere/P=STD/C=STD",
+      "vigenere/P=STD/C=KRY",
+      "vigenere/P=KRY/C=STD",
+      "vigenere/P=KRY/C=KRY",
+      "beaufort/P=STD/C=STD",
+      "beaufort/P=STD/C=KRY",
+      "beaufort/P=KRY/C=STD",
+      "beaufort/P=KRY/C=KRY",
+      "variant_beaufort/P=STD/C=STD",
+      "variant_beaufort/P=STD/C=KRY",
+      "variant_beaufort/P=KRY/C=STD",
+      "variant_beaufort/P=KRY/C=KRY"
+    ],
+    "lookup": "all functions A-Z to Z26; bijections also classified",
+    "offset": [
+      0,
+      119
+    ],
+    "step": [
+      0,
+      119
+    ]
+  },
+  "photo_dataset_sha256": "fa534e3eaf2511f0f845e219101739ce7e6e158570b399c35fcaf9c36ecd5384",
+  "preregistration_commit": "56ab721",
+  "sequential_counts": {
+    "contradiction": 2880
+  },
+  "survivors": [],
+  "tape_sha256": "28440952c36bd6bb5ab77e239df95f1a259925f43bc23f96a9bae5b25fea1311"
+}

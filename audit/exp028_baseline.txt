@@ -1,0 +1,25 @@
+# EXP-028 graph invariants
+
+   [PASS] the CET 1970s face exists
+   [PASS] the 1970s CET upper band is verbatim
+   [PASS] the 1970s CET lower band is NO LONGER claimed complete (LONDON misassignment)
+   [PASS] the retracted 97-letter reading is not resurrected anywhere
+   [PASS] the target-era CET face exists
+   [PASS] target-era CET upper band verbatim
+   [PASS] target-era CET lower band verbatim, in transcribed order
+   [PASS] target-era CET face carries no unknowns
+   [PASS] target-era CET face is COMPLETE
+   [PASS] target-era CET letter total is 120
+   [PASS] target-era CET lower band is strictly latitude-descending (internal corroboration)
+   [PASS] LONDON is on the UTC+0 face, not CET
+   [PASS] no unresolved conflicts on either CET face
+   [PASS] frozen block matches the graph's target-era face
+   [PASS] frozen block letter total is self-consistent
+   [PASS] faces are keyed by (sector, era), never merged across eras
+   [PASS] a sector seen in two eras yields two records, not one
+   [PASS] circumference counts distinct sectors, not face-era records
+   [PASS] exactly ONE complete target-era face is claimed
+   [PASS] every photograph declares an era
+   [PASS] every face traces to a catalogued photograph
+
+   21/21 invariants hold

@@ -1,0 +1,11 @@
+Planted controls PASS: 120; contradictory and non-injective unit cases PASS
+{
+  "cases": 172800,
+  "counts": {
+    "contradiction": 172800
+  },
+  "sequential_counts": {
+    "contradiction": 2880
+  },
+  "grade": "EXHAUSTIVELY ELIMINATED WITHIN SPECIFIED MODEL"
+}
