@@ -34,10 +34,11 @@ invariant (the rank of a signed, anchored crib graph) rather than an instruction
 rank, and it subsumes the 27–29 blind spot, the 5/3/1 counts, the two-mask bound with the AE
 disconnection correction, the crib-span law, AA-Theorem 1 and AC-Result 1 as corollaries.
 
-Its **Schedule Partition Corollary** closes a whole direction: for any deterministic schedule
-`k_eff[i] = k[s(i)] + g(i)` with `s` and `g` known, `d_eff` depends only on the partition `s`
-induces on the 24 crib positions, so a progressive key is budget-identical to its underlying
-periodic key. Irregularity buys discrimination only where it *collides* crib positions.
+Its **Schedule Partition Corollary** reduces deterministic-schedule proposals to their induced
+crib-slot partition: for `k_eff[i] = k[s(i)] + g(i)` with `s` and `g` known, additive
+`g(i)` does not affect rank, and `d_eff` depends only on the partition induced by `s`.
+A progressive key is budget-identical to its underlying periodic key when the partition is the
+same; a genuinely different irregular `s` matters only through the different partition it creates.
 
 After EXP-044 the motivated-and-discriminating bucket is **empty again**.
 
