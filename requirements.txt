@@ -1,0 +1,4 @@
+# Minimal dependency manifest for the full research suite.
+# The fast smoke test and most audit scripts use only the Python standard library.
+# Several large transposition experiments/checkpoints use NumPy.
+numpy>=2.0,<3
