@@ -167,3 +167,14 @@ for the exact conditions that would unblock it.
 - Original correspondence/header not recovered, so provenance is not promoted to highest-grade primary evidence.
 - No new plaintext letter at indices 1, 3, 91, 93, 95 or 96.
 - Consequence: sharpens the masking evidence but still does not select a finite experiment; EXP-044 remains unjustified on this fact alone.
+
+
+## Checkpoint AO — Scheidt “Stego” provenance correction
+**Status:** PROSPECTIVE CORRECTION / LOW-GRADE LEAD.
+- Follow-up investigation did not recover the original Scheidt email/message/letter, headers, recording, transcript, or independent contemporary copy.
+- Wilson's page remains the sole provenance chain and labels the underlying 2004 talk report unreliable before saying parts were later confirmed directly.
+- Correct grade: **C — lead**, not A/strong-B evidence.
+- Canonical correction: do not treat “a piece relating to Stego” as an authenticated K4 structural constraint.
+- No carrier, mechanism, stage, order, period, key length, alphabet, reset, recurrence or alignment is established.
+- No new plaintext letter was recovered.
+- EXP-044 remains unjustified.
