@@ -43,8 +43,16 @@ and the number of independent constraints the cribs impose is the **cycle rank**
 
     mu  =  24 - d_eff .
 
-A family of `N` classes has expected accidental survivors `N * 26^(-mu)` and can
-discriminate only if `log26(N) < mu`, which is the old criterion rearranged.
+Let `r2` and `r13` be the exact coefficient-matrix ranks over GF(2) and GF(13).
+The exact random-right-hand-side survival probability is
+
+    2^(r2-24) * 13^(r13-24).
+
+The graph invariant gives `r13 = d_eff`. Therefore `N * 26^(-mu)`, with
+`mu = 24-r13`, is exact when `r2=r13` and otherwise is a conservative upper bound
+for the signed systems used here (the mod-2 rank can be lower because signs collapse).
+Thus `log26(N) < mu` remains a sufficient discrimination gate, not an exact null
+identity in every CRT case.
 
 **Why balance.** An unbalanced cycle multiplies to `-1` on return, forcing
 `2u = const`, which pins an *absolute* value rather than only a difference — exactly
@@ -103,9 +111,12 @@ Measured consequences:
 | row-structured `4/31/31/31` | 3 | 21 | 21 |
 
 **A progressive key is budget-identical to the plain periodic key it is built on.**
-This eliminates, in one line, the entire "make the schedule irregular" direction as a
-route to *more* discrimination: irregularity helps only insofar as it **collides** crib
-positions into the same slot, and collision is the only thing that ever mattered.
+This collapses the vague "make the schedule irregular" direction to a much smaller question:
+**what partition of the 24 crib positions does the schedule induce?** Arithmetic decoration
+`g(i)` is irrelevant to rank, while a different slot map `s(i)` can change discrimination
+only by changing that partition (especially by creating crib collisions). A separately
+motivated irregular `s(i)` is therefore not forbidden; it must be evaluated by its induced
+partition rather than by its apparent irregularity.
 
 ## 5. Census verdicts
 
