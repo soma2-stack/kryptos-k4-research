@@ -53,3 +53,27 @@ No Round-2 finding supplies a K4-specific operational parameter, new plaintext, 
 - LOC Highsmith tableau-terminal audit: the official derivative ladder is multiple scales/formats of the same oblique view, not an alternate angle. Curvature, foreshortening, incomplete terminal visibility, and source metadata prevent a physical judgment on the extra N-row `L`. Classification: CONFIRMATION (medium). Sol review: NOVELTY VALID; EVIDENCE MEDIUM; IMPACT MINOR; ACTION RECORD.
 
 Final supervised conclusion: no new operational parameter, authenticated plaintext letter, contradiction, or deterministic 97-character method was found. EXP-040 remains unjustified and K4 remains unsolved.
+
+
+### Claude continuation — 2026-09-21 — EXP-040 executed
+
+- Task: find a repository-novel, finite, non-vacuous, evidence-motivated Layer-A family and test it.
+- Gap identified: EXP-008 tested data-dependent keys only as local affine taps, and its plaintext
+  source returns a value only when the lagged position is itself inside a crib, so it never
+  propagates and never solves the autokey recursion.
+- Model: propagating text-autokey with a short primer. A primer of m letters determines all 97
+  plaintext letters, so the unknowns are the m primer letters alone — the Checkpoint AC
+  parameter-sharing property.
+- Budget computed BEFORE implementation: 23 down to 5 constraints for m = 1..24; m >= 25 excluded
+  in advance as undecidable (3/1/0/0/0 at m = 25..29).
+- Preregistered at 5ac21b6 before any code was written.
+- Result: 2,592 exact decisions, **0 FEASIBLE**, exhaustively negative at the registered scope.
+- Controls: positive (primer recovered), adversarial (straddling corruption flips the verdict),
+  and non-vacuity — a planted autokey whose plaintext carries the REAL cribs at the REAL positions
+  was recovered exactly with a unique primer and the full 97-letter plaintext, on 17 constraints.
+  A true autokey K4 would have been detected.
+- Independently verified three ways (encrypt-direction whole-primer enumeration over 438,672
+  primers; backward solve from the first pinned crib; structural partition and budget rebuild).
+- New structural fact: the autokey blind region — a ciphertext change downstream of every crib in
+  its chain is absorbed by the primer, so feedback power is bounded by crib span, not crib count.
+- Classification: NEW (strong). K4 remains unsolved.

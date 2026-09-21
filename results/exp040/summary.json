@@ -1,0 +1,14 @@
+{
+  "cases": 2592,
+  "controls": {
+    "adversarial": true,
+    "non_vacuity": true,
+    "positive": true
+  },
+  "experiment": "EXP-040",
+  "feasible": [],
+  "prereg": "docs/exp040-preregistration.md",
+  "tally": {
+    "INFEASIBLE": 2592
+  }
+}

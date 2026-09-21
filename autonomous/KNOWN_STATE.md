@@ -46,6 +46,13 @@ finite domains are required; compatibility is not evidence.
   models were rejected at their documented scopes. Do not broaden those negatives silently.
 - Free inner/outer masks, free polygraphic maps, arbitrary position functions, and arbitrary
   26x26 combiners are vacuous or underconstrained under the present crib geometry.
+- EXP-040 (2026-09-21): propagating text-autokey is exhaustively negative at its registered
+  scope — plaintext or ciphertext fed back, forward or reversed, primer 1–24 letters, 12
+  committed conventions, both key-index alphabets, with and without physical-row reset at m<=3;
+  2,592 exact decisions, 0 feasible, 3 controls pass, independently verified three ways. All
+  keyword primers are subsumed (every primer value per chain was enumerated). This does NOT
+  eliminate two-tap/mixed feedback, feedback through a non-identity function, feedback composed
+  with a transposition, or primers longer than 24.
 - Hidden trigraphic stages behind additive masks are refuted only for periods 1, 3, and 9 by
   the repeated crib trigrams; this is not a universal fractionation negative.
 
@@ -58,6 +65,12 @@ specifically declared low-state recurrence outside EXP-038. Structured fractiona
 deterministic non-position-preserving alignment remain open only as templates. Periods 27–29
 receive zero current crib constraints. None has a puzzle-selected finite parameter set, so no
 EXP-040 is justified.
+
+**Autokey blind region (EXP-040, new).** In a propagating feedback model a ciphertext change
+downstream of every crib position in its own chain is absorbed by the primer and is undetectable.
+So a feedback family's power is bounded by crib **span**, not crib count: the tail beyond each
+chain's last crib carries zero constraint. This is the feedback analogue of the period 27–29 blind
+spot and should be quoted whenever a feedback model is proposed.
 
 Useful authenticated missing-plaintext targets are indices 1, 3, 91, 93, 95, and 96. One
 legitimate letter there would constrain the blind periods and materially increase information.
