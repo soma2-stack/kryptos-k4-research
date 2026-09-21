@@ -2,10 +2,46 @@
 
 This is the compact handoff for future sessions. It does **not** replace historical checkpoints.
 
-**Current cryptanalytic checkpoint:** Checkpoint AE
+## Prospective canonical update — 2026-09-21
+
+**K4 remains UNSOLVED.** The authenticated plaintext constraint set is unchanged at 24 letters:
+zero-based `[21,34) = EASTNORTHEAST` and `[63,74) = BERLINCLOCK`.
+
+Since the historical AE–AL frontier was written, four bounded experiments have run on the Claude
+continuation branch and are now part of the canonical prospective state:
+
+- **EXP-040:** registered propagating one-tap text-autokey / feedback families — exhaustively negative.
+- **EXP-041:** registered additive two-tap plaintext feedback — exhaustively negative with full
+  infeasibility-certificate coverage.
+- **EXP-042:** registered mixed plaintext/ciphertext two-tap feedback — exhaustively negative;
+  the simple feedback corridor is provisionally exhausted at the tested scopes.
+- **EXP-043:** K1–K3-derived `M2 . pi . M1` search using the faithful prime-length affine-mod-97
+  surrogate for K3's recovered transposition principle — 15,197,184 configurations, zero feasible,
+  independently verified.
+
+The organising discrimination theorem is now:
+
+`log26(N) + d_eff < 24`
+
+with `d_eff` the effective rank of parameter influence on the 24 authenticated crib values.
+Every surviving class is presently either underdetermined by the 24 letters or discriminating but
+lacks an independently selected parameter. The productive bucket — **motivated and discriminating** —
+is currently empty. New authenticated information is higher-value than another unconstrained family.
+
+**Checkpoint AM:** the reported 2015 workshop exchange “Would you consider it periodic?” / “Yeah.”
+remains **UNRESOLVED** and is **not** admitted as evidence. The primary audio was unreachable from the
+Claude environment, so no audio was assessed and speaker/referent/polarity remain unauthenticated.
+Authenticated workshop evidence remains only: K4 is **more than one stage**, and masking is part of
+Layer A. No period, period value, reset rule, or schedule is licensed.
+
+Generic modern K4 clue searches now risk surfacing solution-dump contamination. Prefer named
+primary-source domains and preserve the existing contamination firewall.
+
+**Historical cryptanalytic baseline:** Checkpoint AE
 (`results/2026-09-13-checkpoint-AE.md`), the **K4 decidability census**
 (`docs/analysis/k4-decidability-census.md`): a per-class account of what the 24 verified crib
-letters can actually falsify. **No architecture is eligible for EXP-040.** Read the census
+letters could falsify at that checkpoint. Its gate logic remains binding, but later prospectively
+registered EXP-040 through EXP-043 have now executed at their documented scopes. Read the census
 before proposing any family - it exists to prevent another post-hoc selection, and it carries
 the reduction rules that reject duplicate "new" families before any code is written.
 
@@ -24,7 +60,8 @@ conclusion changes.
 
 ## Evidence-acquisition status (prospectively reconciled at Checkpoint AG)
 
-**The current cryptanalytic checkpoint remains AE. No EXP-040 is justified.**
+**Historical note:** at the AG reconciliation stage, AE remained the cryptanalytic checkpoint and
+no EXP-040 was then justified. See the 2026-09-21 prospective update above for the later state.
 
 Request 2 is split into two distinct states, and both must be reported separately:
 
