@@ -1,3 +1,5 @@
+> **DO NOT USE THE HISTORICAL PROMPT BELOW AS-IS. CURRENT RESUME CONTRACT — 2026-09-21:** read `docs/current-status.md`, `autonomous/KNOWN_STATE.md`, `data/k4.json`, and `docs/repo-audit-2026-09-21.md` first. EXP-040 through EXP-043 exist. Do not rerun old inherited tasks, do not treat Checkpoint J/S/AE/AL as current, and do not run `./run_all.sh` as a smoke test. Historical prompt text is retained below only for provenance.
+
 > **Current: Checkpoint J.** Read [the report](../results/2026-09-12-codex-checkpoint-J.md).
 > Use the separate frozen checkpoint_J dataset for the three-face arc; preserve old
 > snapshots. ATHEN is present. EXP-029/030/031 are scoped negatives; do not repeat them.
