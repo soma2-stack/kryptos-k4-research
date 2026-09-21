@@ -61,6 +61,16 @@ finite domains are required; compatibility is not evidence.
   EXP-040 because a < b. Ciphertext two-tap is a DUPLICATE of EXP-008 and was excluded. Does NOT
   eliminate nonlinear or table feedback, >=3 taps, mixed plaintext/ciphertext taps, feedback with
   transposition, irregular schedules, or position-dependent functions.
+- EXP-042 (2026-09-21): mixed plaintext/ciphertext two-tap propagating feedback is exhaustively
+  negative — a,b in 1..24, alpha/beta in {+-1} with beta != 0, gamma zero or free, 3 combiners,
+  STD/KRY both sides, forward and reverse; 110,592 raw, 68,972 distinct, 0 feasible, all 110,592
+  carrying verified infeasibility certificates. PROVEN during screening: the ciphertext tap is a
+  known driving term, so the recurrence is FIRST ORDER in k with lag a alone and unknowns equal
+  the PLAINTEXT-tap lag; the two orientations are byte-identical with lags exchanged (126/126 and
+  336/336 independently); beta=0 is exactly EXP-040.
+- **The simple feedback corridor is PROVISIONALLY EXHAUSTED** (EXP-040/041/042). Do NOT escalate
+  to three taps, nonlinear f, 26x26 feedback tables or arbitrary state machines: those add
+  flexibility without evidence and fail the discrimination budget below.
 - Hidden trigraphic stages behind additive masks are refuted only for periods 1, 3, and 9 by
   the repeated crib trigrams; this is not a universal fractionation negative.
 
@@ -74,7 +84,25 @@ deterministic non-position-preserving alignment remain open only as templates. P
 receive zero current crib constraints. None has a puzzle-selected finite parameter set, so no
 EXP-040 is justified.
 
-**Crib-span law (EXP-040, reconfirmed independently by EXP-041).** In a propagating feedback model a ciphertext change
+**DISCRIMINATION BUDGET (the organising theorem; apply before writing any code).**
+With `d_eff` = rank over Z26 of the map (parameters -> the 24 crib plaintext values), a family of
+N classes has expected accidental survivors `N * 26^(d_eff - 24)` and can discriminate only if
+
+    log26(N) + d_eff < 24
+
+`d_eff` counts only parameters a crib actually reaches — that IS the crib-span law. Using the
+nominal parameter count instead is wrong and mislabels decisive families as undecidable. The
+inequality reproduces every measured result: EXP-040 21.4, EXP-041 23.1, EXP-042 23.6, periodic
+p=24 19.8, p=27 24.8 (cannot discriminate), AC Trifid 47.6, shared 26x26 feedback table 677. See
+`results/2026-09-21-frontier-after-feedback-corridor.md`.
+
+Every surviving class is now in one of two buckets: (i) log26(N)+d_eff >= 24, undiscriminable by
+24 letters no matter the compute; or (ii) discriminable but with no evidence selecting its
+parameters (M2.pi.M1, periods 24-26). The productive third bucket — decisive AND motivated — is
+EMPTY. Further progress requires new information, not new search. One extra authenticated letter
+is worth a factor of 26.
+
+**Crib-span law (EXP-040, reconfirmed independently by EXP-041 and EXP-042).** In a propagating feedback model a ciphertext change
 downstream of every crib position in its own chain is absorbed by the primer and is undetectable.
 So a feedback family's power is bounded by crib **span**, not crib count: the tail beyond each
 chain's last crib carries zero constraint. This is the feedback analogue of the period 27–29 blind

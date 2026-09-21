@@ -101,3 +101,29 @@ Final supervised conclusion: no new operational parameter, authenticated plainte
   in the feedback corridor clears the gate; shared-table variants fail non-vacuity on parameter
   count alone. Next action recorded as mixed plaintext/ciphertext two-tap feedback.
 - Classification: NEW (strong). K4 remains unsolved.
+
+
+### Claude continuation — 2026-09-21 — EXP-042 executed; feedback corridor closed
+
+- Phase 1 screen proved, not assumed: substituting the encryption relation gives
+  k[i] + alpha*k[i-a] = alpha*C[i-a] + beta*C[i-b] + gamma, so the ciphertext tap is a KNOWN
+  DRIVING TERM and the recurrence is first order in k with lag a alone. Unknowns equal the
+  plaintext-tap lag; components are chains mod a; the budget matches EXP-040's exactly.
+- Orientation swap proven identical with lags exchanged (126/126 in the experiment, 336/336 in
+  the independent verifier), so only one orientation was enumerated. beta=0 shown to be exactly
+  EXP-040 and excluded.
+- Phase 3 computed in advance: 110,592 raw configurations, worst chance 8.417e-8, expected
+  accidental survivors 3.970e-4. Caveat recorded before the result: the C tap inflates the
+  hypothesis count ~24x while adding no constraints, and no source names the construction.
+- Preregistered at 1fe7673 before implementation. Result: 68,972 distinct tests, 0 FEASIBLE.
+- Controls: positive (unique solution, exact 97-letter rebuild), contradiction (rejects), and
+  blind-region (absorbed) — the crib-span law now confirmed in a THIRD family.
+- Verified independently: full-coverage infeasibility certificates for all 110,592 configurations
+  plus a no-linear-algebra brute force for a = 1, 2 (404,352 warm-ups).
+- STOP CONDITION INVOKED: simple feedback corridor declared provisionally exhausted; no escalation.
+- Frontier comparison A-E written, including the DISCRIMINATION BUDGET theorem
+  log26(N) + d_eff < 24, which reproduces every measured result in the repository. A self-caught
+  error is recorded: the naive form using nominal parameter count mislabels EXP-040 and EXP-042.
+- Assessment: evidence points substantially toward the 24 letters being insufficient to
+  discriminate the surviving classes. The productive bucket (decisive AND motivated) is empty.
+- Classification: NEW (strong). K4 remains unsolved.
