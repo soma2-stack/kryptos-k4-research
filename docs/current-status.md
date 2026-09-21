@@ -182,10 +182,12 @@ mask of period 1, 3 or 9. The repeated trigrams `EAS` (21/30) and `AST` (22/31) 
 9, so such a mask would force a ciphertext repeat that is absent. Three periods is the complete
 extent of what the current cribs can say about any hidden polygraphic stage.
 
-**Strongest surviving architecture:** the sandwich `M2 . pi . M1`, the only class that survives
-purely because a non-commuting permutation separates two masks. Its bipartite constraint system
-yields `24 - (p + q - 1)` independent constraints - only **7** at the K1/K2 pair (8, 10). It
-fails EXP-040 gate condition 5: no source states any period, key, or inheritance from K1/K2.
+**Historical Checkpoint-AA frontier (pre-EXP-040):** the sandwich `M2 . pi . M1` was then the
+strongest surviving architecture because a non-commuting permutation separates two masks. Its
+bipartite constraint system yields `24 - (p + q - 1)` independent constraints. EXP-043 later
+tested one independently declared affine-mod-97 `pi` family with two short periodic masks and
+found zero feasible configurations; that does **not** eliminate arbitrary sandwiches or arbitrary
+K3-derived/non-affine permutations.
 
 **Current documentary checkpoint:** Checkpoint U (`results/2026-09-12-claude-checkpoint-U.md`),
 the 2025 Sanborn public-clue audit: also **`NO EXP-040 JUSTIFIED`**.
@@ -411,8 +413,9 @@ published article is self-described as a partial transcript edited for length.
 
 Do **not** fill the gap with order-3 recursion, generic double transposition, arbitrary grid
 routes, random alphabets, arbitrary long keys, generic modern stream ciphers, or another
-historical-cipher catalogue. **No EXP-040 exists**, and Checkpoint S §7 records exactly which gate
-conditions the closest candidate failed.
+historical-cipher catalogue. **Historical Checkpoint S note:** no EXP-040 existed at that time,
+and §7 records which gate conditions the then-closest candidate failed. EXP-040–043 were created
+later under new prospective preregistrations and must be read at their registered scopes.
 
 **Filter for any future proposal** (Checkpoint S §5): key entropy must lie within the EXP-019
 unicity bound of roughly 66–76 letters. Sanborn intended K4 to be solved *later*, not never, so a
