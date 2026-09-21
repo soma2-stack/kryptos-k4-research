@@ -11,7 +11,7 @@ This is the compact handoff for future sessions. It does **not** replace histori
 **K4 remains UNSOLVED.** The authenticated plaintext constraint set is unchanged at 24 letters:
 zero-based `[21,34) = EASTNORTHEAST` and `[63,74) = BERLINCLOCK`.
 
-Since the historical AE–AL frontier was written, four bounded experiments have run on the Claude
+Since the historical AE–AL frontier was written, five bounded experiments have run on the Claude
 continuation branch and are now part of the canonical prospective state:
 
 - **EXP-040:** registered propagating one-tap text-autokey / feedback families — exhaustively negative.
@@ -63,13 +63,14 @@ primary-source domains and preserve the existing contamination firewall.
 **C-grade provenance-limited lead, not an authenticated K4 constraint**. The original communication,
 metadata, underlying 2004 talk record, and independent contemporary corroboration were not recovered.
 It may guide provenance work, but it selects no carrier, method, stage order, period, key length,
-alphabet, reset, recurrence, or alignment and does not justify EXP-044.
+alphabet, reset, recurrence, or alignment. At Checkpoint AO it did not justify a new experiment;
+EXP-044 was later justified independently by Checkpoint AP's code-derived frontier census.
 
 **Historical cryptanalytic baseline:** Checkpoint AE
 (`results/2026-09-13-checkpoint-AE.md`), the **K4 decidability census**
 (`docs/analysis/k4-decidability-census.md`): a per-class account of what the 24 verified crib
 letters could falsify at that checkpoint. Its gate logic remains binding, but later prospectively
-registered EXP-040 through EXP-043 have now executed at their documented scopes. Read the census
+registered EXP-040 through EXP-044 have now executed at their documented scopes. Read the census
 before proposing any family - it exists to prevent another post-hoc selection, and it carries
 the reduction rules that reject duplicate "new" families before any code is written.
 
