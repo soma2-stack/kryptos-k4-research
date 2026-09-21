@@ -2,13 +2,13 @@
 
 # Compact canonical K4 knowledge state
 
-Updated 2026-09-21 through EXP-043 and Checkpoint AM. This file is memory, not a
+Updated 2026-09-21 through EXP-044 and Checkpoint AP, with documentary corrections through AO. This file is memory, not a
 replacement for historical checkpoint documents. Read it before selecting work.
 
 ## Current status
 
 K4 remains UNSOLVED. No complete plaintext, key, or deterministic 97-character method is
-admitted. EXP-040 through EXP-043 have now run at their registered scopes; do not revive or
+admitted. EXP-040 through EXP-044 have now run at their registered scopes; do not revive or
 broaden them without a genuinely new, independently motivated constraint.
 
 ## Canonical ciphertext and verified cribs
