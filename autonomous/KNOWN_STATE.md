@@ -93,8 +93,56 @@ independent verification of the K3-to-affine motivation; see `docs/repo-audit-20
 - **No period rule exists across K1-K3** — any extrapolation from PALIMPSEST(10)/ABSCISSA(8)
   requires K3 to have a key length, and K3 has none. The (8,10) pair is NOT independently
   warranted; treat it only as an ordinary member of a declared sweep.
+- EXP-044 (2026-09-21): the engraved-geometry route corpus (`k4lib.transpositions.
+  engraved_routes()` x 2 orientations, deduplicated to 12 distinct permutations) inside TWO
+  additive periodic masks, p,q in 1..10, 12 committed conventions -- 14,400 configurations,
+  0 feasible, budget 21.94 < 24, four controls pass including a blind-region control.
+  Verified by 4,000/4,000 cycle certificates and brute-force forward simulation. The corpus is
+  VERIFIED DISJOINT from EXP-043's 9,312 affine permutations. Closes ONLY this corpus at
+  p,q <= 10; says nothing about other permutations, p or q > 10, non-additive masks, or >=3 stages.
 - Hidden trigraphic stages behind additive masks are refuted only for periods 1, 3, and 9 by
   the repeated crib trigrams; this is not a universal fractionation negative.
+
+## CRIB CYCLE-RANK THEOREM (Checkpoint AP) -- use this instead of guessing d_eff
+
+`audit/frontier_census_AP.py`, `docs/analysis/checkpoint-AP-crib-cycle-rank-theorem.md`.
+
+If every crib equation is affine over Z26 with at most two unknowns and +-1 coefficients,
+build the multigraph on the unknowns: a 2-unknown crib is an EDGE with sign -eps_u*eps_v,
+a 1-unknown crib ANCHORS its vertex. Then over GF(13)
+
+    d_eff = sum over components K of   |K|      if K is anchored or UNBALANCED
+                                       |K| - 1  otherwise
+    mu    = 24 - d_eff = the number of independent constraints
+
+A component is UNBALANCED if some cycle has sign product -1; such a cycle pins an absolute
+value exactly as an anchor does. Balance is INVISIBLE mod 2, so state it over GF(13) and
+report the mod-2 rank separately -- Z26 is not a field. The sign-blind formula |V|-c is
+wrong in 4,000/4,000 random cases; the balance correction is load-bearing.
+
+Verified with 0 mismatches against exact Z26 rank on every architecture shape in this
+repository plus 4,000 random signed systems.
+
+It SUBSUMES, as corollaries rather than separate facts: the zero at periods 27-29; the
+5/3/1 counts at 24-26; the two-mask `24-(p+q-1)` bound AND the AE correction that
+disconnection RAISES the count; the crib-span law; AA-Theorem 1; AC-Result 1.
+
+**SCHEDULE PARTITION COROLLARY.** For any deterministic schedule `k_eff[i] = k[s(i)] + g(i)`
+with s and g KNOWN, the additive g moves to the right-hand side, so d_eff depends ONLY on the
+partition s induces on the 24 crib positions. A progressive key is budget-identical to its
+underlying periodic key. Irregularity helps only where it COLLIDES crib positions into one
+slot. Do NOT propose "make the schedule irregular" as a route to more discrimination.
+
+Measured: periodic p=13 -> mu 11; progressive p=13 -> mu 11 (identical); Fibonacci mod 13 ->
+15; squares/triangular mod 13 -> 17; row-structured 4/31/31/31 -> 21.
+
+## Census verdicts (Checkpoint AP)
+
+- Non-shift combiners such as the affine `a*P+k`: finite and discriminating, but NOTHING in
+  the Kryptos record selects a multiplicative combiner. Category C -- do not run on cheapness.
+- Multi-stage fractionation: Trifid residual budget is 47.6 against 24 available. Category B,
+  underdetermined. SAT there is what the budget predicts, not evidence.
+- Deterministic irregular schedules: category D as a DISTINCT direction, by the corollary above.
 
 ## Historical AL frontier (superseded prospectively by EXP-040–043)
 

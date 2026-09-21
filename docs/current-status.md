@@ -23,6 +23,24 @@ continuation branch and are now part of the canonical prospective state:
   surrogate for K3's recovered transposition principle — 15,197,184 configurations, zero feasible,
   independently verified.
 
+- **EXP-044:** the engraved-geometry route corpus inside two periodic masks, `p,q <= 10` —
+  14,400 configurations, zero feasible, verified by 4,000 cycle certificates and brute-force
+  forward simulation. The corpus is verified disjoint from EXP-043's affine permutations.
+
+**Checkpoint AP (2026-09-21)** supplies the current organising theorem and a census built from
+the code and registered scopes rather than inherited rankings. See
+`docs/analysis/checkpoint-AP-crib-cycle-rank-theorem.md`. `d_eff` is now a computable graph
+invariant (the rank of a signed, anchored crib graph) rather than an instruction to compute a
+rank, and it subsumes the 27–29 blind spot, the 5/3/1 counts, the two-mask bound with the AE
+disconnection correction, the crib-span law, AA-Theorem 1 and AC-Result 1 as corollaries.
+
+Its **Schedule Partition Corollary** closes a whole direction: for any deterministic schedule
+`k_eff[i] = k[s(i)] + g(i)` with `s` and `g` known, `d_eff` depends only on the partition `s`
+induces on the 24 crib positions, so a progressive key is budget-identical to its underlying
+periodic key. Irregularity buys discrimination only where it *collides* crib positions.
+
+After EXP-044 the motivated-and-discriminating bucket is **empty again**.
+
 The organising discrimination theorem is now:
 
 `log26(N) + d_eff < 24`

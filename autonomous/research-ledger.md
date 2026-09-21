@@ -178,3 +178,13 @@ for the exact conditions that would unblock it.
 - No carrier, mechanism, stage, order, period, key length, alphabet, reset, recurrence or alignment is established.
 - No new plaintext letter was recovered.
 - EXP-044 remains unjustified.
+
+## Checkpoint AP + EXP-044 — frontier census from code, and the crib cycle-rank theorem
+**Status:** NEW. Theorem: `d_eff` is the rank of a signed, anchored crib graph (balanced
+components contribute |K|-1, anchored or unbalanced ones |K|), verified with 0 mismatches
+against exact Z26 rank plus 4,000 random signed systems; the sign-blind formula fails
+4,000/4,000. Subsumes six previously separate results. New Schedule Partition Corollary
+eliminates "irregular deterministic schedule" as a distinct direction.
+Census: one category-A candidate found and tested as EXP-044 (engraved routes in two
+periodic masks) — 14,400 configurations, 0 feasible, budget 21.94.
+Categories: non-shift combiners C, fractionation B, irregular schedules D.
