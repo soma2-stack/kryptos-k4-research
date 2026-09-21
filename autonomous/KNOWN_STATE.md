@@ -21,9 +21,16 @@ plaintext letters. Do not slide, extend, or infer additional plaintext.
 
 ## Canonical cryptanalytic frontier
 
-Checkpoint AE remains canonical. Checkpoints AF–AL are prospective clarifications/audits and
-did not justify EXP-040. Constraint density, shared parameters, and independently motivated
-finite domains are required; compatibility is not evidence.
+The current prospective state is **post-EXP-043**. Checkpoint AE remains an important historical
+decidability census, and AF–AL remain useful scope clarifications/audits, but they are no longer
+the latest operational frontier because EXP-040 through EXP-043 were subsequently preregistered,
+run, and recorded. The binding rule is unchanged: constraint density, shared parameters, and
+independently motivated finite domains are required; compatibility is not evidence.
+
+For current work, treat EXP-040–043 as scoped negatives at their registered domains. Do not infer
+that all feedback, all two-mask sandwiches, or all K3-derived permutations are eliminated. In
+particular, the EXP-043 affine-family negative is stronger than its currently committed
+independent verification of the K3-to-affine motivation; see `docs/repo-audit-2026-09-21.md`.
 
 ### Documented scoped negatives
 
@@ -87,7 +94,7 @@ finite domains are required; compatibility is not evidence.
 - Hidden trigraphic stages behind additive masks are refuted only for periods 1, 3, and 9 by
   the repeated crib trigrams; this is not a universal fractionation negative.
 
-## Open frontier (Checkpoint AL)
+## Historical AL frontier (superseded prospectively by EXP-040–043)
 
 Six practical classes were reviewed. The conditional top three are: (1) declared periodic
 masks at p=24–26 (5/3/1 crib constraints), (2) two short masks around a fixed permutation
