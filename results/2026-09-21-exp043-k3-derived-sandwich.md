@@ -1,3 +1,5 @@
+> **Prospective verification correction — 2026-09-21.** The registered affine-mod-97 EXP-043 negative remains unchanged. The K3 motivation is now independently reproduced by `audit/verify_exp043_k3_derivation.py`: an explicit 8x42 -> 24x14 double-rotation route reproduces all 336 K3 ciphertext letters and yields the cited 191/192 differences and 168+168 cycle type. The historical claim of "12 exact route descriptions" is not load-bearing because that scratch enumeration was not committed. K3 plaintext provenance remains `verified:false` pending a separately frozen primary/public source. See `docs/exp043-k3-derivation-verification-2026-09-21.md`.
+
 # EXP-043 — `M2 ∘ π ∘ M1` with `π` derived from K3
 
 **Branch:** `claude/dreamy-archimedes-79k6u0`. **Starting HEAD:** `5b8fcac`.
