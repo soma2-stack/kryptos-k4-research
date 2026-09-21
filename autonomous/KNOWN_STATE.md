@@ -120,8 +120,11 @@ value exactly as an anchor does. Balance is INVISIBLE mod 2, so state it over GF
 report the mod-2 rank separately -- Z26 is not a field. The sign-blind formula |V|-c is
 wrong in 4,000/4,000 random cases; the balance correction is load-bearing.
 
-Verified with 0 mismatches against exact Z26 rank on every architecture shape in this
-repository plus 4,000 random signed systems.
+Verified with 0 mismatches against GF(13) rank on every architecture shape in this
+repository plus 4,000 random signed systems, with the GF(2) rank reported separately.
+For null calculations, use the exact CRT probability
+`2^(r2-24) * 13^(r13-24)`; `26^(-mu)` is exact only when `r2=r13` and otherwise is
+a conservative upper bound for these signed systems.
 
 It SUBSUMES, as corollaries rather than separate facts: the zero at periods 27-29; the
 5/3/1 counts at 24-26; the two-mask `24-(p+q-1)` bound AND the AE correction that
@@ -130,8 +133,8 @@ disconnection RAISES the count; the crib-span law; AA-Theorem 1; AC-Result 1.
 **SCHEDULE PARTITION COROLLARY.** For any deterministic schedule `k_eff[i] = k[s(i)] + g(i)`
 with s and g KNOWN, the additive g moves to the right-hand side, so d_eff depends ONLY on the
 partition s induces on the 24 crib positions. A progressive key is budget-identical to its
-underlying periodic key. Irregularity helps only where it COLLIDES crib positions into one
-slot. Do NOT propose "make the schedule irregular" as a route to more discrimination.
+underlying periodic key when it induces the same partition. Apparent irregularity is not itself
+a new source of discrimination; only a changed crib-slot partition can change the rank.
 
 Measured: periodic p=13 -> mu 11; progressive p=13 -> mu 11 (identical); Fibonacci mod 13 ->
 15; squares/triangular mod 13 -> 17; row-structured 4/31/31/31 -> 21.
