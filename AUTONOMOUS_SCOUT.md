@@ -1,3 +1,5 @@
+> **HISTORICAL / FROZEN LUNA SCOUT CONTRACT — 2026-09-21.** This file describes the pre-EXP-040 autonomous Luna campaign on `luna/k4-autonomous-scout`. It is **not** the current Claude-branch research contract. EXP-040 through EXP-043 now exist, so statements below such as "do not launch EXP-040", "Checkpoint AE remains canonical", and "no EXP-040 is justified" are historical. Do not resume this supervisor from the Claude branch. Current state: `docs/current-status.md`, `autonomous/KNOWN_STATE.md`, and `docs/repo-audit-2026-09-21.md`.
+
 # Autonomous Kryptos K4 scout instructions
 
 ## Role
